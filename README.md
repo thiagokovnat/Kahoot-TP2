@@ -30,6 +30,39 @@ Explicación de como ejecutar las pruebas
 
 Explicación de como ejecutar la aplicación
 
+## Pruebas
+
+### Entrega 0 (21/7)
+
+- Planteo de modelo tentativo
+- Una Pregunta de Verdadero/Falso clásico puede crearse indicándole cual es la respuesta correcta: 
+- Una Pregunta de Verdadero/Falso clásico recibe una lista de respuestas y asigna correctamente puntos a los jugadores que respondieron correctamente:
+
+### Entrega 1 (28/7)
+
+- Una Pregunta de Verdadero/Falso con penalidad puede crearse indicándole cual es la respuesta correcta:
+- Una Pregunta de Múltiple Choice clásico puede crearse indicándole cuales son las opciones correctas:
+- Una Pregunta de Múltiple Choice con puntaje parcial puede crearse indicándole cuales son las opciones correctas:
+- Una Pregunta de Verdadero/Falso con penalidad recibe una lista de respuestas y asigna correctamente puntos a los jugadores que respondieron correctamente, y resta correctamente puntos a los jugadores que respondieron en forma incorrecta:
+- Una Pregunta de Multiple Choice clasico recibe una lista de respuestas y asigna correctamente puntos a los jugadores que respondieron correctamente:
+- Una Pregunta de Multiple Choice con puntaje parcial recibe una lista de respuestas y asigna correctamente puntos a los jugadores según las opciones correctas que hayan respondido:
+
+### Entrega 2 (4/8)
+
+- Pruebas similares a las de la entrega 1, con el resto de los tipos de preguntas:
+- Agregado de multiplicadores a cada tipo de pregunta, verificando que cumplan con el efecto indicado (x2 o x3):
+- Planteo inicial de interfaz gráfica, pantalla donde se muestra una pregunta con sus opciones:
+
+### Entrega 3 (11/8)
+
+- Modelo del juego terminado
+- Interfaz gráfica inicial básica: comienzo del juego y visualización del tablero e interfaz de usuario básica
+- Modelo del manejo de turnos en el juego
+
+### Entrega 4 (18/8)
+
+- Trabajo practico terminado con interfaz grafica final e informe completo
+
 ## Licencia
 
 Este repositorio está bajo la Licencia MIT

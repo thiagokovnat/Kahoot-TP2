@@ -1,4 +1,0 @@
---patch-module
-edu.fiuba.algo3=_
---add-reads
-edu.fiuba.algo3=ALL-UNNAMED
