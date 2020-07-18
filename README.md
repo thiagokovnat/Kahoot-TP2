@@ -10,7 +10,7 @@ Trabajo Práctico número 2 de la materia Algoritmos y Programación III de FIUB
 * **Santiago Locatelli** - [GitHub](https://github.com/santiagolocatelli)
 * **Matías Alberto Venglar** - [GitHub](https://github.com/matias-av)
 
-Corrector: **{Corrector}**
+Corrector: **Sebastián Blázquez**
 
 ### Pre-requisitos
 
