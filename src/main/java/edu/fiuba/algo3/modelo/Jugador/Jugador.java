@@ -6,6 +6,8 @@ import edu.fiuba.algo3.modelo.Pregunta.Pregunta;
 public class Jugador {
     private String nickname;
     private int puntuacion;
+    /*private Bonificacion bonificacion;
+    falta implementar la clase Bonificacion pero lo dejo para no olvidarlo a futuro */
 
     public Respuesta responder( Pregunta unaPregunta ){
 
