@@ -1,3 +1,6 @@
+[![Build Status](https://travis-ci.org/thiagokovnat/Kahoot-TP2.svg?branch=master)](https://travis-ci.org/thiagokovnat/Kahoot-TP2.svg?branch=master)
+<br />
+
 # TP2 Algoritmos 3: Kahoot
 
 Trabajo Práctico número 2 de la materia Algoritmos y Programación III de FIUBA
