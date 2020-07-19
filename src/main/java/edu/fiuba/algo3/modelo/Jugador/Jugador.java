@@ -1,3 +1,7 @@
+package edu.fiuba.algo3.modelo;
+import edu.fiuba.algo3.modelo.Respuesta;
+import edu.fiuba.algo3.modelo.Pregunta;
+
 
 public class Jugador {
     private String nickname;
@@ -7,7 +11,7 @@ public class Jugador {
 
         String opcionesElegidas = elegirOpciones( unaPregunta );
 
-        return Respuesta( this, opcionesElegidas );
+        return new Respuesta( this, opcionesElegidas );
     }
 
     public void modificarPuntos( int puntos ){

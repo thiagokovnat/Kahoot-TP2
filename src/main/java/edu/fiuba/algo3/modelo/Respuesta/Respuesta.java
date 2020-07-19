@@ -1,8 +1,11 @@
+package edu.fiuba.algo3.modelo;
+import edu.fiuba.algo3.modelo.Jugador;
+
 
 public class Respuesta{
 
-    private Jugador jugador;
-    private String opcionElegida;
+    public Jugador jugador;
+    public String opcionElegida;
 
     public Respuesta( Jugador unJugador, String opcionElegida ){
 
