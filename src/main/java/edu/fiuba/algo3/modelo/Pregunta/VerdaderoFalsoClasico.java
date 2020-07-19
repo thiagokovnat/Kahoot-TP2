@@ -1,5 +1,5 @@
-package edu.fiuba.algo3.modelo;
-import edu.fiuba.algo3.modelo.Respuesta;
+package edu.fiuba.algo3.modelo.Pregunta;
+import edu.fiuba.algo3.modelo.Respuesta.Respuesta;
 
 import java.util.HashMap;
 import java.util.List;

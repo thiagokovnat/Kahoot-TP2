@@ -1,6 +1,6 @@
-package edu.fiuba.algo3.modelo;
-import edu.fiuba.algo3.modelo.Respuesta;
-import edu.fiuba.algo3.modelo.Pregunta;
+package edu.fiuba.algo3.modelo.Jugador;
+import edu.fiuba.algo3.modelo.Respuesta.Respuesta;
+import edu.fiuba.algo3.modelo.Pregunta.Pregunta;
 
 
 public class Jugador {
