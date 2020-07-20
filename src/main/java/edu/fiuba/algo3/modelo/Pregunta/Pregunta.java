@@ -1,4 +1,6 @@
 package edu.fiuba.algo3.modelo.Pregunta;
+import edu.fiuba.algo3.modelo.Respuesta.Respuesta;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -28,20 +30,26 @@ public class Pregunta {
 
     }
 
-    // Cambia el tipo de la pregunta a Verdadero/Falso Clasico.
+    // Cambia el tipo de la pregunta a Verdadero/Falso Clásico.
     public void crearVerdaderoFalsoClasico(){
 
         this.tipoDePregunta = new VerdaderoFalsoClasico(this.respuestasCorrectas);
 
     }
 
-    // Metodo de clase, instancia una Pregunta con su tipo seteado en Verdadero/Falso Clasico.
+    // Método de clase, instancia una Pregunta con su tipo seteado en Verdadero/Falso Clásico.
     public static Pregunta crearPreguntaVerdaderoFalsoClasico(String pregunta, List<String> opciones, List<String> respuestasCorrectas){
 
         Pregunta nuevaPregunta = new Pregunta(pregunta, opciones, respuestasCorrectas);
         nuevaPregunta.crearVerdaderoFalsoClasico();
 
         return nuevaPregunta;
+
+    }
+
+    public void puntuarRespuesta(Respuesta respuesta){
+
+        this.tipoDePregunta.puntuarRespuesta(respuesta);
 
     }
 }

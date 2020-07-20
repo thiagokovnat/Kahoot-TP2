@@ -1,6 +1,6 @@
 package edu.fiuba.algo3.modelo.Pregunta;
-import edu.fiuba.algo3.modelo.Respuesta.Respuesta;
 
+import edu.fiuba.algo3.modelo.Respuesta.Respuesta;
 import java.util.HashMap;
 import java.util.List;
 
@@ -20,12 +20,11 @@ public class VerdaderoFalsoClasico implements VerdaderoFalso {
     }
 
     // Recibe una Respuesta y comprueba si esta guardada en el HashMap para saber si la respuesta es correcta.
-    public void comprobarRespuesta(Respuesta respuesta) {
+    public void puntuarRespuesta(Respuesta respuesta) {
 
         if(respuestasCorrectas.get(respuesta.opcionElegida) != null){
             respuesta.jugador.modificarPuntos(1);
         }
 
     }
-
 }

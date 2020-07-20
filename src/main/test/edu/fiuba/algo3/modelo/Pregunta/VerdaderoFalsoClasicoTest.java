@@ -5,6 +5,8 @@ import org.junit.jupiter.api.Test;
 import java.util.ArrayList;
 import java.util.List;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
 class VerdaderoFalsoClasicoTest {
 
     @Test
@@ -22,6 +24,7 @@ class VerdaderoFalsoClasicoTest {
 
         Pregunta nuevaPregunta = Pregunta.crearPreguntaVerdaderoFalsoClasico(textoPregunta, opciones, opcionesCorrectas);
 
-        // Falta terminar y falta el assert.
+        assertEquals("Verdadero", nuevaPregunta.getRespuesta(0));
+
     }
 }
