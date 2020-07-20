@@ -9,22 +9,22 @@ public class Jugador {
     /*private Bonificacion bonificacion;
     falta implementar la clase Bonificacion pero lo dejo para no olvidarlo a futuro */
 
-    public Respuesta responder( Pregunta unaPregunta ){
+    public Respuesta responder(Pregunta unaPregunta, int opcion){
 
-        String opcionesElegidas = elegirOpciones( unaPregunta );
+        String opcionesElegidas = elegirOpciones(unaPregunta, opcion);
 
-        return new Respuesta( this, opcionesElegidas );
+        return new Respuesta(this, opcionesElegidas);
     }
 
-    public void modificarPuntos( int puntos ){
+    public void modificarPuntos(int puntos){
 
         puntuacion += puntos;
     }
 
     // tal vez, en un futuro sea mas optimo cambiar el tipo de dato a List<String>, por ahora solo es un string
     // para pasar las primeras pruebas.
-    private String elegirOpciones( Pregunta unaPregunta ){
+    private String elegirOpciones(Pregunta unaPregunta, int opcion){
         
-        return unaPregunta.getRespuesta( 1 );
+        return unaPregunta.getRespuesta(opcion);
     }
 }
