@@ -17,10 +17,10 @@ public class Pregunta {
 
     }
 
-    public String getRespuesta(int opcion){
+    public String getRespuesta(int index){
 
         try{
-            return opciones.get(opcion);
+            return opciones.get(index);
         }
         catch(IndexOutOfBoundsException e) {
             return null;
