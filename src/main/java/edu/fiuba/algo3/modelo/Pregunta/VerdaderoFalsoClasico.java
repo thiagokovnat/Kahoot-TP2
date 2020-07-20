@@ -19,6 +19,16 @@ public class VerdaderoFalsoClasico implements VerdaderoFalso {
 
     }
 
+
+    /*
+    Dejo esta alternativa para el constructor con una sola respuesta correcta (Luke).
+    public VerdaderoFalsoClasico(String respuestaCorrecta){
+        this.respuestasCorrectas = new HashMap<String, Boolean>();
+        this.respuestasCorrectas.put(respuestaCorrecta, true);
+    }
+    */
+
+
     // Recibe una Respuesta y comprueba si esta guardada en el HashMap para saber si la respuesta es correcta.
     public void puntuarRespuesta(Respuesta respuesta) {
 

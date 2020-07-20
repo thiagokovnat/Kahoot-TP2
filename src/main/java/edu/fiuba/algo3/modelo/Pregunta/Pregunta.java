@@ -47,9 +47,11 @@ public class Pregunta {
 
     }
 
-    public void puntuarRespuesta(Respuesta respuesta){
+    public void puntuarRespuesta(List<Respuesta> respuestas){
 
-        this.tipoDePregunta.puntuarRespuesta(respuesta);
+        for(Respuesta respuesta : respuestas){
+            this.tipoDePregunta.puntuarRespuesta(respuesta);
+        }
 
     }
 }
