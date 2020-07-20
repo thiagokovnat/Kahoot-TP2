@@ -6,5 +6,5 @@ public class SistemaDePuntuacion {
     public void puntuarRespuestaCorrecta(Jugador unJugador){
         unJugador.modificarPuntos(1);
     }
-
+	// Luego agregar casos donde hay multiplicadores activos. 	
 }
