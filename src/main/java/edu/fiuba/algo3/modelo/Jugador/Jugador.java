@@ -23,7 +23,7 @@ public class Jugador {
 
     // tal vez, en un futuro sea mas optimo cambiar el tipo de dato a List<String>, por ahora solo es un string
     // para pasar las primeras pruebas.
-    private  String elegirOpciones( Pregunta unaPregunta ){
+    private String elegirOpciones( Pregunta unaPregunta ){
         
         return unaPregunta.getRespuesta( 1 );
     }
