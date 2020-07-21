@@ -7,7 +7,7 @@ Trabajo Práctico número 2 de la materia Algoritmos y Programación III de FIUB
 
 ## Grupo 
 
-* **Thiago Kovnat** - [GitHub](https://github.com/thiagokovant)
+* **Thiago Kovnat** - [GitHub](https://github.com/thiagokovnat)
 * **Lucas Sebastián Leoni** - [GitHub](https://github.com/lucassleoni)
 * **Jonathan David Rosenblatt** - [GitHub](https://github.com/jonathan-r0)
 * **Santiago Locatelli** - [GitHub](https://github.com/santiagolocatelli)
