@@ -20,9 +20,9 @@ public class Juego {
         return instanciaJuego;
     }
 
-    public void crearJugador(String nickname) {
+    public void crearJugador(String nickname) throws CantidadMaximaDeJugadoresSuperadaException {
         if (this.jugadores.size() >= this.CANTIDAD_MAXIMA_JUGADORES) {
-            // Lanzar Excepción CantidadMaximaDeJugadoresSuperadaError
+            throw new CantidadMaximaDeJugadoresSuperadaException();
         }
         Jugador jugador = new Jugador(nickname);
         this.jugadores.put(nickname, jugador);
