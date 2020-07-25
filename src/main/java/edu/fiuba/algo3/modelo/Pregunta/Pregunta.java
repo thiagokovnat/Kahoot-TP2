@@ -1,19 +1,19 @@
 package edu.fiuba.algo3.modelo.Pregunta;
-import edu.fiuba.algo3.modelo.Modalidad.Modalidad;
-import edu.fiuba.algo3.modelo.Modalidad.VerdaderoFalso;
+import edu.fiuba.algo3.modelo.TipoDePregunta.TipoDePregunta;
+import edu.fiuba.algo3.modelo.TipoDePregunta.VerdaderoFalso;
 import edu.fiuba.algo3.modelo.Respuesta.Respuesta;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import static edu.fiuba.algo3.modelo.Modalidad.VerdaderoFalso.VerdaderoFalsoClasico;
+import static edu.fiuba.algo3.modelo.TipoDePregunta.VerdaderoFalso.VerdaderoFalsoClasico;
 
 public class Pregunta {
 
     private String pregunta;
     private List<String> opciones;
     private List<String> respuestasCorrectas;
-    private Modalidad tipoDePregunta;
+    private TipoDePregunta tipoDePregunta;
 
     public Pregunta(String pregunta, List<String> opciones, List<String> respuestasCorrectas){
 

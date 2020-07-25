@@ -1,8 +1,8 @@
-package edu.fiuba.algo3.modelo.TipoDePregunta;
+package edu.fiuba.algo3.modelo.Modalidad;
 import java.util.HashMap;
 import edu.fiuba.algo3.modelo.Respuesta.Respuesta;
 
-public class Clasica implements TipoDePregunta{
+public class Clasica implements Modalidad {
 
     // Dada una respuesta y hash de datos válido, puntúa al jugador asociado si su respuesta es correcta según el hash.
     public void puntuarVerdaderoFalso(Respuesta respuesta, HashMap <String,Boolean> respuestasCorrectas){
