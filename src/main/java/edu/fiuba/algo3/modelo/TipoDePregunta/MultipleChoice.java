@@ -1,4 +1,5 @@
 package edu.fiuba.algo3.modelo.TipoDePregunta;
+import edu.fiuba.algo3.modelo.TipoDePregunta.TipoDePregunta;
 
 import edu.fiuba.algo3.modelo.Respuesta.Respuesta;
 

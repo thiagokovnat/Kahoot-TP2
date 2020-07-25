@@ -1,10 +1,12 @@
 package edu.fiuba.algo3.modelo.Juego;
 
 import edu.fiuba.algo3.modelo.Jugador.Jugador;
+import edu.fiuba.algo3.modelo.Opcion.Opcion;
 import edu.fiuba.algo3.modelo.Pregunta.Pregunta;
 import edu.fiuba.algo3.modelo.Respuesta.Respuesta;
 
 import java.util.HashMap;
+import java.util.List;
 
 public class Juego {
 
@@ -28,7 +30,7 @@ public class Juego {
         this.jugadores.put(nickname, jugador);
     }
 
-    public Respuesta responder(String nickname, Pregunta unaPregunta, int opcion) {
+    public Respuesta responder(String nickname, Pregunta unaPregunta, List<Opcion> opcion) {
         Jugador jugador = this.jugadores.get(nickname);
         return jugador.responder(unaPregunta, opcion);
     }
