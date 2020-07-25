@@ -1,15 +1,19 @@
 package edu.fiuba.algo3.modelo.Pregunta;
+import edu.fiuba.algo3.modelo.Modalidad.Modalidad;
+import edu.fiuba.algo3.modelo.Modalidad.VerdaderoFalso;
 import edu.fiuba.algo3.modelo.Respuesta.Respuesta;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import static edu.fiuba.algo3.modelo.Modalidad.VerdaderoFalso.VerdaderoFalsoClasico;
 
 public class Pregunta {
 
     private String pregunta;
     private List<String> opciones;
     private List<String> respuestasCorrectas;
-    private TipoDePregunta tipoDePregunta;
+    private Modalidad tipoDePregunta;
 
     public Pregunta(String pregunta, List<String> opciones, List<String> respuestasCorrectas){
 
@@ -33,7 +37,14 @@ public class Pregunta {
     // Cambia el tipo de la pregunta a Verdadero/Falso Clásico.
     public void crearVerdaderoFalsoClasico(){
 
-        this.tipoDePregunta = new VerdaderoFalsoClasico(this.respuestasCorrectas);
+        this.tipoDePregunta = VerdaderoFalsoClasico(this.respuestasCorrectas);
+
+    }
+
+    // Cambia el tipo de la pregunta a Verdadero/Falso con Penalidad.
+    public void crearVerdaderoFalsoPenalidad(){
+
+        this.tipoDePregunta = VerdaderoFalsoClasico(this.respuestasCorrectas);
 
     }
 
