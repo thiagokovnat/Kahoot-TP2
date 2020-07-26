@@ -8,4 +8,6 @@ public class MultipleChoice implements TipoDePregunta {
     //Puntúa la respuesta del jugador de forma correspondiente al tipo de pregunta del mismo.
     public void puntuarRespuesta(Respuesta respuesta){}
 
+    public void puntuarRespuestaExclusiva(Respuesta respuesta){}
+
 }

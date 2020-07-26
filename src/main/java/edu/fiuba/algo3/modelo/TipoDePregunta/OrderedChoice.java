@@ -6,4 +6,6 @@ public class OrderedChoice implements TipoDePregunta {
     public void puntuarRespuesta(Respuesta respuesta){
 
     }
+
+    public void puntuarRespuestaExclusiva(Respuesta respuesta){}
 }

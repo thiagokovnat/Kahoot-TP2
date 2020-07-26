@@ -6,4 +6,7 @@ public class GroupChoice implements TipoDePregunta {
     public void puntuarRespuesta(Respuesta respuesta){
 
     }
+
+    public void puntuarRespuestaExclusiva(Respuesta respuesta){}
+
 }

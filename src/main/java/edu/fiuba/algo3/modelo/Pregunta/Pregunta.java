@@ -1,6 +1,8 @@
 package edu.fiuba.algo3.modelo.Pregunta;
 
 import edu.fiuba.algo3.modelo.Opcion.Opcion;
+import edu.fiuba.algo3.modelo.TipoDeEstado.Clasico;
+import edu.fiuba.algo3.modelo.TipoDeEstado.Exclusivo;
 import edu.fiuba.algo3.modelo.TipoDeEstado.TipoDeEstado;
 import edu.fiuba.algo3.modelo.TipoDePregunta.TipoDePregunta;
 import edu.fiuba.algo3.modelo.TipoDePregunta.VerdaderoFalso;
@@ -9,7 +11,7 @@ import edu.fiuba.algo3.modelo.Respuesta.Respuesta;
 import java.util.ArrayList;
 import java.util.List;
 
-import static edu.fiuba.algo3.modelo.TipoDePregunta.VerdaderoFalso.VerdaderoFalsoClasico;
+
 
 public class Pregunta {
 
@@ -17,7 +19,7 @@ public class Pregunta {
     private List<Opcion> opciones;
     private List<Opcion> respuestasCorrectas;
     private TipoDePregunta tipoDePregunta;
-    private TipoDeEstado tipoDeEstado;
+    private TipoDeEstado estado;
 
     public Pregunta(String pregunta, List<Opcion> opciones, List<Opcion> respuestasCorrectas){
 
@@ -25,6 +27,7 @@ public class Pregunta {
         this.opciones = new ArrayList<Opcion>(opciones);
         this.respuestasCorrectas = new ArrayList<Opcion>();
         this.respuestasCorrectas.addAll(respuestasCorrectas);
+        this.estado = new Clasico();
     }
 
     public Opcion getRespuesta(int index){
@@ -40,13 +43,13 @@ public class Pregunta {
     // Cambia el tipo de la pregunta a Verdadero/Falso Clásico.
     public void crearVerdaderoFalsoClasico(){
 
-        this.tipoDePregunta = VerdaderoFalsoClasico(this.respuestasCorrectas);
+        this.tipoDePregunta = VerdaderoFalso.VerdaderoFalsoClasico(this.respuestasCorrectas);
     }
 
     // Cambia el tipo de la pregunta a Verdadero/Falso con Penalidad.
     public void crearVerdaderoFalsoPenalidad(){
 
-        this.tipoDePregunta = VerdaderoFalsoClasico(this.respuestasCorrectas);
+        this.tipoDePregunta = VerdaderoFalso.VerdaderoFalsoPenalidad(this.respuestasCorrectas);
     }
 
     // Método de clase, instancia una Pregunta con su tipo seteado en Verdadero/Falso Clásico.
@@ -56,14 +59,17 @@ public class Pregunta {
         nuevaPregunta.crearVerdaderoFalsoClasico();
 
         return nuevaPregunta;
-
     }
 
     public void puntuarRespuesta(List<Respuesta> respuestas){
 
         for(Respuesta respuesta : respuestas){
-            this.tipoDePregunta.puntuarRespuesta(respuesta);
+            this.estado.responder(respuesta, this.tipoDePregunta);
         }
 
+    }
+
+    public void setExclusividad() {
+        this.estado = new Exclusivo();
     }
 }
