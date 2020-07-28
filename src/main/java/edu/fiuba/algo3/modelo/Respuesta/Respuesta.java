@@ -8,13 +8,13 @@ import java.util.List;
 
 public class Respuesta{
 
-    private List<Opcion> ArrayList;
     public Jugador jugador;
-    public List<Opcion> opcionesElegida;
+    public List<Opcion> opcionesElegidas;
 
-    public Respuesta( Jugador unJugador, List<Opcion> opcionElegida ){
+    public Respuesta(Jugador unJugador, List<Opcion> opcionElegida){
+
         this.jugador = unJugador;
-        this.opcionesElegida = new ArrayList<Opcion>();
-        this.opcionesElegida.addAll( opcionElegida);
+        this.opcionesElegidas = new ArrayList<>();
+        this.opcionesElegidas.addAll( opcionElegida);
     }
 }

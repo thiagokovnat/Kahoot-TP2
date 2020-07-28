@@ -9,8 +9,8 @@ import java.util.List;
 public class Jugador {
     private String nickname;
     private int puntuacion;
-    /* private Bonificacion bonificacion;
-    falta implementar la clase Bonificacion pero lo dejo para no olvidarlo a futuro */
+    /* private Multiplicador multiplicador;
+    falta implementar la clase Multiplicador pero lo dejo para no olvidarlo a futuro */
 
     public Jugador(String nickname){
 
@@ -19,9 +19,12 @@ public class Jugador {
     }
 
     public Respuesta responder(Pregunta unaPregunta, List<Opcion> opcion){
+
         return new Respuesta(this, opcion);
     }
 
+    // Luke: "Sugiero separar en 2 métodos para aumentar/reducir la puntuación
+    //        o sino usar constantes para pasar los puntajes '+1' o '-1'"
     public void modificarPuntos(int puntos){
 
         puntuacion += puntos;
@@ -35,6 +38,7 @@ public class Jugador {
     }
 
     public int getPuntos(){
+
         return this.puntuacion;
     }
 }

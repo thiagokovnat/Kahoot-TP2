@@ -40,23 +40,20 @@ public class Pregunta {
         }
     }
 
-    // Cambia el tipo de la pregunta a Verdadero/Falso Clásico.
-    public void crearVerdaderoFalsoClasico(){
-
-        this.tipoDePregunta = VerdaderoFalso.VerdaderoFalsoClasico(this.respuestasCorrectas);
-    }
-
-    // Cambia el tipo de la pregunta a Verdadero/Falso con Penalidad.
-    public void crearVerdaderoFalsoPenalidad(){
-
-        this.tipoDePregunta = VerdaderoFalso.VerdaderoFalsoPenalidad(this.respuestasCorrectas);
-    }
-
     // Método de clase, instancia una Pregunta con su tipo seteado en Verdadero/Falso Clásico.
     public static Pregunta crearPreguntaVerdaderoFalsoClasico(String pregunta, List<Opcion> opciones, List<Opcion> respuestasCorrectas){
 
         Pregunta nuevaPregunta = new Pregunta(pregunta, opciones, respuestasCorrectas);
-        nuevaPregunta.crearVerdaderoFalsoClasico();
+        nuevaPregunta.tipoDePregunta = VerdaderoFalso.VerdaderoFalsoClasico(nuevaPregunta.respuestasCorrectas);
+
+        return nuevaPregunta;
+    }
+
+    // Método de clase, instancia una Pregunta con su tipo seteado en Verdadero/Falso con Penalidad.
+    public static Pregunta crearPreguntaVerdaderoFalsoConPenalidad(String pregunta, List<Opcion> opciones, List<Opcion> respuestasCorrectas){
+
+        Pregunta nuevaPregunta = new Pregunta(pregunta, opciones, respuestasCorrectas);
+        nuevaPregunta.tipoDePregunta = VerdaderoFalso.VerdaderoFalsoPenalidad(nuevaPregunta.respuestasCorrectas);
 
         return nuevaPregunta;
     }

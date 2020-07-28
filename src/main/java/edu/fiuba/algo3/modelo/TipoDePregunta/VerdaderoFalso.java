@@ -24,17 +24,19 @@ public class VerdaderoFalso implements TipoDePregunta{
 
     // Devuelve una instancia de VF clásico dada una lista de respuestas correctas.
     public static VerdaderoFalso VerdaderoFalsoClasico(List<Opcion> respuestasCorrectas){
+
         VerdaderoFalso nuevaPregunta = new VerdaderoFalso(respuestasCorrectas);
         nuevaPregunta.modalidadDePregunta = new Clasica();
-        return (nuevaPregunta);
+        return nuevaPregunta;
     }
 
 
     // Devuelve una instancia de VF con penalidad dada una lista de respuestas correctas.
     public static VerdaderoFalso VerdaderoFalsoPenalidad(List<Opcion> respuestasCorrectas){
+
         VerdaderoFalso nuevaPregunta = new VerdaderoFalso(respuestasCorrectas);
         nuevaPregunta.modalidadDePregunta = new Penalidad();
-        return (nuevaPregunta);
+        return nuevaPregunta;
     }
 
     //Puntúa la respuesta del jugador de forma correspondiente al tipo de pregunta del mismo.

@@ -6,17 +6,18 @@ import edu.fiuba.algo3.modelo.Respuesta.Respuesta;
 import java.util.HashMap;
 import java.util.List;
 
-// Lo dejo en interfaz para evitar errores de compilación, peo es una clase.
-/*
-Debería ser:
 
-public class Penalidad implements TipoDePregunta{...}
-*/
-//public interface Penalidad{
 public class Penalidad implements Modalidad {
     public void puntuarVerdaderoFalso(Respuesta respuesta, List<Opcion> respuestasCorrectas){
 
+        for(Opcion opcion : respuesta.opcionesElegidas){
+            if (respuestasCorrectas.contains(opcion)){
+                respuesta.jugador.modificarPuntos(1);
+            }
 
-    } //WIP
-
+            else{
+                respuesta.jugador.modificarPuntos(-1);
+            }
+        }
+    }
 }
