@@ -16,17 +16,17 @@ import java.util.List;
 public class Pregunta {
 
     private String pregunta;
-    private List<Opcion> opciones;
-    private List<Opcion> respuestasCorrectas;
+    private List<Opcion> opcionesDisponibles;
+    private List<Opcion> respuestasCorrectas; // Matias: "Este atributo está presente también en TipoDePregunta"
     private TipoDePregunta tipoDePregunta;
     private TipoDeEstado estado;
     // Tal vez usemos 'Modalidad' como atributo de Pregunta
     // private Modalidad modalidad;
 
-    private Pregunta(String pregunta, List<Opcion> opciones, List<Opcion> respuestasCorrectas){
+    private Pregunta(String pregunta, List<Opcion> opcionesDisponibles, List<Opcion> respuestasCorrectas){
 
         this.pregunta = pregunta;
-        this.opciones = new ArrayList<Opcion>(opciones);
+        this.opcionesDisponibles = new ArrayList<Opcion>(opcionesDisponibles);
         this.respuestasCorrectas = new ArrayList<Opcion>();
         this.respuestasCorrectas.addAll(respuestasCorrectas);
         this.estado = new Clasico();
@@ -35,7 +35,7 @@ public class Pregunta {
     public Opcion getRespuesta(int index){
 
         try{
-            return opciones.get(index);
+            return opcionesDisponibles.get(index);
         }
         catch(IndexOutOfBoundsException e) {
             return null;
@@ -43,40 +43,42 @@ public class Pregunta {
     }
 
     // Método de clase, instancia una Pregunta con su tipo seteado en Verdadero/Falso Clásico.
-    public static Pregunta crearPreguntaVerdaderoFalsoClasico(String pregunta, List<Opcion> opciones, List<Opcion> respuestasCorrectas){
+    public static Pregunta crearPreguntaVerdaderoFalsoClasico(String pregunta, List<Opcion> opcionesDisponibles, List<Opcion> respuestasCorrectas){
 
-        Pregunta nuevaPregunta = new Pregunta(pregunta, opciones, respuestasCorrectas);
+        Pregunta nuevaPregunta = new Pregunta(pregunta, opcionesDisponibles, respuestasCorrectas);
         nuevaPregunta.tipoDePregunta = VerdaderoFalso.VerdaderoFalsoClasico(nuevaPregunta.respuestasCorrectas);
 
         return nuevaPregunta;
     }
 
     // Método de clase, instancia una Pregunta con su tipo seteado en Verdadero/Falso con Penalidad.
-    public static Pregunta crearPreguntaVerdaderoFalsoConPenalidad(String pregunta, List<Opcion> opciones, List<Opcion> respuestasCorrectas){
+    public static Pregunta crearPreguntaVerdaderoFalsoConPenalidad(String pregunta, List<Opcion> opcionesDisponibles, List<Opcion> respuestasCorrectas){
 
-        Pregunta nuevaPregunta = new Pregunta(pregunta, opciones, respuestasCorrectas);
+        Pregunta nuevaPregunta = new Pregunta(pregunta, opcionesDisponibles, respuestasCorrectas);
         nuevaPregunta.tipoDePregunta = VerdaderoFalso.VerdaderoFalsoPenalidad(nuevaPregunta.respuestasCorrectas);
 
         return nuevaPregunta;
     }
 
-    public static Pregunta crearPreguntaMultipleChoiceClasico(String pregunta, List<Opcion> opciones, List<Opcion> respuestasCorrectas) {
+    public static Pregunta crearPreguntaMultipleChoiceClasico(String pregunta, List<Opcion> opcionesDisponibles, List<Opcion> respuestasCorrectas) {
 
-        Pregunta nuevaPregunta = new Pregunta(pregunta, opciones, respuestasCorrectas);
+        Pregunta nuevaPregunta = new Pregunta(pregunta, opcionesDisponibles, respuestasCorrectas);
         nuevaPregunta.tipoDePregunta = MultipleChoice.MultipleChoiceClasico(nuevaPregunta.respuestasCorrectas);
 
         return nuevaPregunta;
     }
 
-    public static Pregunta crearPreguntaMultipleChoiceParcial(String pregunta, List<Opcion> opciones, List<Opcion> respuestasCorrectas) {
-        Pregunta nuevaPregunta = new Pregunta(pregunta, opciones, respuestasCorrectas);
+    public static Pregunta crearPreguntaMultipleChoiceParcial(String pregunta, List<Opcion> opcionesDisponibles, List<Opcion> respuestasCorrectas) {
+
+        Pregunta nuevaPregunta = new Pregunta(pregunta, opcionesDisponibles, respuestasCorrectas);
         nuevaPregunta.tipoDePregunta = MultipleChoice.MultipleChoiceParcial(nuevaPregunta.respuestasCorrectas);
 
         return nuevaPregunta;
     }
 
-    public void puntuarRespuesta(List<Respuesta> respuestas){
-        for(Respuesta respuesta : respuestas){
+    public void puntuarRespuesta(List<Respuesta> respuestasElegidas){
+
+        for(Respuesta respuesta : respuestasElegidas){
             this.estado.responder(respuesta, this.tipoDePregunta);
         }
     }
