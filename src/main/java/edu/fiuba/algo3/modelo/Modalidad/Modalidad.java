@@ -14,4 +14,5 @@ public interface Modalidad{
 
     // void puntuarMultipleChoice();
     // Luego analizar caso del group choice.
+    void puntuarMultipleChoice(Respuesta respuesta, List<Opcion> respuestasCorrectas);
 }

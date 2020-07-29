@@ -4,6 +4,7 @@ import edu.fiuba.algo3.modelo.Opcion.Opcion;
 import edu.fiuba.algo3.modelo.TipoDeEstado.Clasico;
 import edu.fiuba.algo3.modelo.TipoDeEstado.Exclusivo;
 import edu.fiuba.algo3.modelo.TipoDeEstado.TipoDeEstado;
+import edu.fiuba.algo3.modelo.TipoDePregunta.MultipleChoice;
 import edu.fiuba.algo3.modelo.TipoDePregunta.TipoDePregunta;
 import edu.fiuba.algo3.modelo.TipoDePregunta.VerdaderoFalso;
 import edu.fiuba.algo3.modelo.Respuesta.Respuesta;
@@ -60,8 +61,9 @@ public class Pregunta {
     }
 
     public static Pregunta crearPreguntaMultipleChoiceClasico(String pregunta, List<Opcion> opciones, List<Opcion> respuestasCorrectas) {
+
         Pregunta nuevaPregunta = new Pregunta(pregunta, opciones, respuestasCorrectas);
-        // nuevaPregunta.tipoDePregunta = MultipleChoice.MultipleChoiceClasico(nuevaPregunta.respuestasCorrectas);
+        nuevaPregunta.tipoDePregunta = MultipleChoice.MultipleChoiceClasico(nuevaPregunta.respuestasCorrectas);
 
         return nuevaPregunta;
     }

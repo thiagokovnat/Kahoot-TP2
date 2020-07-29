@@ -20,4 +20,8 @@ public class Penalidad implements Modalidad {
             }
         }
     }
+    public void puntuarMultipleChoice(Respuesta respuesta, List<Opcion> respuestasCorrectas){
+
+
+    }
 }

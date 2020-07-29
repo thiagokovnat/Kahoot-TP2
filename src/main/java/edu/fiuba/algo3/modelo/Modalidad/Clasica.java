@@ -6,7 +6,7 @@ import edu.fiuba.algo3.modelo.Respuesta.Respuesta;
 
 public class Clasica implements Modalidad {
 
-    // Dada una respuesta y hash de datos válido, puntúa al jugador asociado si su respuesta es correcta.
+    // Dada una respuesta y lista de datos válidos, puntúa al jugador asociado si su respuesta es correcta.
     public void puntuarVerdaderoFalso(Respuesta respuesta, List<Opcion> respuestasCorrectas){
 
         if(respuestasCorrectas.containsAll(respuesta.opcionesElegidas)){
@@ -14,9 +14,12 @@ public class Clasica implements Modalidad {
         }
     }
 
-    void puntuarMultipleChoice(Respuesta respuesta, List<Opcion> respuestasCorrectas){
+    // Dada una respuesta y lista de datos válidos, puntúa al jugador asociado si su respuesta es correcta.
+    public void puntuarMultipleChoice(Respuesta respuesta, List<Opcion> respuestasCorrectas){
+        System.out.println("No entró");
         if((respuestasCorrectas.size() == respuesta.opcionesElegidas.size()) &&
                 (respuestasCorrectas.containsAll(respuesta.opcionesElegidas))){
+            System.out.println("Entró");
             respuesta.jugador.modificarPuntos(1);
         }
 

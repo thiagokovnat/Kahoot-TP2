@@ -33,7 +33,7 @@ class VerdaderoFalsoTest {
     }
 
     @Test
-    public void unaPreguntaVFClasicoAsignaCorrectamenteElPunjateACadaJugadorQueRepondioBien(){
+    public void unaPreguntaVFClasicoAsignaCorrectamenteElPuntaje(){
         String textoPregunta = "¿Se aprueba el TP2?";
 
         List<Opcion> opciones = new ArrayList<>();
