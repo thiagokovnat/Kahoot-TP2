@@ -13,32 +13,21 @@ public class Jugador {
     falta implementar la clase Multiplicador pero lo dejo para no olvidarlo a futuro */
 
     public Jugador(String nickname){
-
         this.nickname = nickname;
         this.puntuacion = 0;
     }
 
     public Respuesta responder(Pregunta unaPregunta, List<Opcion> opcion){
-
         return new Respuesta(this, opcion);
     }
 
     // Luke: "Sugiero separar en 2 métodos para aumentar/reducir la puntuación
     //        o sino usar constantes para pasar los puntajes '+1' o '-1'"
     public void modificarPuntos(int puntos){
-
         puntuacion += puntos;
     }
 
-    // tal vez, en un futuro sea mas optimo cambiar el tipo de dato a List<String>, por ahora solo es un string
-    // para pasar las primeras pruebas.
-    private Opcion elegirOpcion(Pregunta unaPregunta, int opcion){
-
-        return unaPregunta.getRespuesta(opcion);
-    }
-
     public int getPuntos(){
-
         return this.puntuacion;
     }
 }
