@@ -14,4 +14,20 @@ public class Parcial implements Modalidad {
 
     } //WIP
 
+    void puntuarMultipleChoice(Respuesta respuesta, List<Opcion> respuestasCorrectas){
+        if(respuestasCorrectas.containsAll(respuesta.opcionesElegidas)){
+
+        }
+
+        for(Opcion opcion : respuesta.opcionesElegidas){
+            if (respuestasCorrectas.contains(opcion)){
+                respuesta.jugador.modificarPuntos(1);
+            }
+
+            else{
+                respuesta.jugador.modificarPuntos(-1);
+            }
+        }
+    }
+
 }

@@ -13,4 +13,12 @@ public class Clasica implements Modalidad {
             respuesta.jugador.modificarPuntos(1);
         }
     }
+
+    void puntuarMultipleChoice(Respuesta respuesta, List<Opcion> respuestasCorrectas){
+        if((respuestasCorrectas.size() == respuesta.opcionesElegidas.size()) &&
+                (respuestasCorrectas.containsAll(respuesta.opcionesElegidas))){
+            respuesta.jugador.modificarPuntos(1);
+        }
+
+    }
 }

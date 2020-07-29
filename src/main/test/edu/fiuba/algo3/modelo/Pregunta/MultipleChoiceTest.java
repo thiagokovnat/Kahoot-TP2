@@ -8,10 +8,13 @@ import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-class MultipleChoiceClasicoTest {
+class MultipleChoiceTest {
+
     @Test
     public void unaPreguntaMCClasicoPuedeCrearseIndicandoLasRespuestasCorrectas() {
+
         String textoPregunta = "¿Que lenguajes se ven en Algo III?";
+
         Opcion opcionUno = new Opcion("Smalltalk");
         Opcion opcionDos = new Opcion("Java");
         Opcion opcionTres = new Opcion("Python");
