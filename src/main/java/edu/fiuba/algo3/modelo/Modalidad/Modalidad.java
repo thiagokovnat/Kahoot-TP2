@@ -7,7 +7,11 @@ import java.util.HashMap;
 import java.util.List;
 
 public interface Modalidad{
+
+    // Luke: "Propongo dividir las modalidades en interfaces para diferenciar las que tienen
+    //        y no tienen Penalidad"
     void puntuarVerdaderoFalso(Respuesta respuesta, List<Opcion> respuestasCorrectas);
-    //void puntuarMultipleChoice();
+
+    // void puntuarMultipleChoice();
     // Luego analizar caso del group choice.
 }

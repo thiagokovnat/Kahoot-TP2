@@ -12,7 +12,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-
 public class Pregunta {
 
     private String pregunta;
@@ -20,8 +19,10 @@ public class Pregunta {
     private List<Opcion> respuestasCorrectas;
     private TipoDePregunta tipoDePregunta;
     private TipoDeEstado estado;
+    // Tal vez usemos 'Modalidad' como atributo de Pregunta
+    // private Modalidad modalidad;
 
-    public Pregunta(String pregunta, List<Opcion> opciones, List<Opcion> respuestasCorrectas){
+    private Pregunta(String pregunta, List<Opcion> opciones, List<Opcion> respuestasCorrectas){
 
         this.pregunta = pregunta;
         this.opciones = new ArrayList<Opcion>(opciones);
@@ -66,7 +67,8 @@ public class Pregunta {
 
     }
 
-    public void setExclusividad() {
+    public void setExclusividad(){
+
         this.estado = new Exclusivo();
     }
 }

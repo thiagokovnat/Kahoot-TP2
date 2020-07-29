@@ -15,7 +15,7 @@ public class VerdaderoFalso implements TipoDePregunta{
     private List<Opcion> respuestasCorrectas;
 
     // Recibe una lista de las respuestas correctas y crea la pregunta guardando dichas respuestas.
-    public VerdaderoFalso(List<Opcion> respuestasCorrectas) {
+    private VerdaderoFalso(List<Opcion> respuestasCorrectas) {
 
         this.respuestasCorrectas = new ArrayList<Opcion>();
         this.respuestasCorrectas.addAll(respuestasCorrectas);
@@ -39,7 +39,7 @@ public class VerdaderoFalso implements TipoDePregunta{
         return nuevaPregunta;
     }
 
-    //Puntúa la respuesta del jugador de forma correspondiente al tipo de pregunta del mismo.
+    // Puntúa la respuesta del jugador de forma correspondiente al tipo de pregunta del mismo.
     public void puntuarRespuesta(Respuesta respuesta) {
 
         this.modalidadDePregunta.puntuarVerdaderoFalso(respuesta,respuestasCorrectas);

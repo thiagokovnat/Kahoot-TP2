@@ -6,8 +6,11 @@ import java.util.List;
 
 
 public class Parcial implements Modalidad {
-    public void puntuarVerdaderoFalso(Respuesta respuesta, List<Opcion> respuestasCorrectas){
 
+    // Hay que lograr erradicar este método de Parcial con otras interfaces.
+    // O poner un excepción para evitar que se acceda a este método con una pregunta
+    // de modalidad Parcial.
+    public void puntuarVerdaderoFalso(Respuesta respuesta, List<Opcion> respuestasCorrectas){
 
     } //WIP
 
