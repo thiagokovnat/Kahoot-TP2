@@ -13,14 +13,11 @@ import java.util.List;
 public class MultipleChoice implements TipoDePregunta {
 
     private Modalidad modalidadDePregunta;
-    private List<Opcion> respuestasCorrectas;
+    private List<Opcion> respuestasCorrectas = new ArrayList<Opcion>();
 
     // Recibe una lista de las respuestas correctas y crea la pregunta guardando dichas respuestas.
     private MultipleChoice(List<Opcion> respuestasCorrectas) {
-
-        this.respuestasCorrectas = new ArrayList<Opcion>();
         this.respuestasCorrectas.addAll(respuestasCorrectas);
-
     }
 
     // Devuelve una instancia de MC clásico dada una lista de respuestas correctas.
