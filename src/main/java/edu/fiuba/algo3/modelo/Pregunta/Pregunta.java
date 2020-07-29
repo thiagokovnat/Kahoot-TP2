@@ -58,6 +58,13 @@ public class Pregunta {
         return nuevaPregunta;
     }
 
+    public static Pregunta crearPreguntaMultipleChoiceClasico(String pregunta, List<Opcion> opciones, List<Opcion> respuestasCorrectas) {
+        Pregunta nuevaPregunta = new Pregunta(pregunta, opciones, respuestasCorrectas);
+        // nuevaPregunta.tipoDePregunta = MultipleChoice.MultipleChoiceClasico(nuevaPregunta.respuestasCorrectas);
+
+        return nuevaPregunta;
+    }
+
     public void puntuarRespuesta(List<Respuesta> respuestas){
 
         for(Respuesta respuesta : respuestas){
