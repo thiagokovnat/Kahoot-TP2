@@ -16,10 +16,8 @@ public class Clasica implements Modalidad {
 
     // Dada una respuesta y lista de datos válidos, puntúa al jugador asociado si su respuesta es correcta.
     public void puntuarMultipleChoice(Respuesta respuesta, List<Opcion> respuestasCorrectas){
-        System.out.println("No entró");
         if((respuestasCorrectas.size() == respuesta.opcionesElegidas.size()) &&
                 (respuestasCorrectas.containsAll(respuesta.opcionesElegidas))){
-            System.out.println("Entró");
             respuesta.jugador.modificarPuntos(1);
         }
 
