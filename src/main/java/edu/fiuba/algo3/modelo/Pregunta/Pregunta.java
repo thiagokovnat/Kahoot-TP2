@@ -68,12 +68,17 @@ public class Pregunta {
         return nuevaPregunta;
     }
 
-    public void puntuarRespuesta(List<Respuesta> respuestas){
+    public static Pregunta crearPreguntaMultipleChoiceParcial(String pregunta, List<Opcion> opciones, List<Opcion> respuestasCorrectas) {
+        Pregunta nuevaPregunta = new Pregunta(pregunta, opciones, respuestasCorrectas);
+        nuevaPregunta.tipoDePregunta = MultipleChoice.MultipleChoiceParcial(nuevaPregunta.respuestasCorrectas);
 
+        return nuevaPregunta;
+    }
+
+    public void puntuarRespuesta(List<Respuesta> respuestas){
         for(Respuesta respuesta : respuestas){
             this.estado.responder(respuesta, this.tipoDePregunta);
         }
-
     }
 
     public void setExclusividad(){
