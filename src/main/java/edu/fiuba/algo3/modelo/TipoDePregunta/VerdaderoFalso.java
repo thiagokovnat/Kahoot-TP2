@@ -12,14 +12,11 @@ import java.util.List;
 public class VerdaderoFalso implements TipoDePregunta{
 
     private Modalidad modalidadDePregunta;
-    private List<Opcion> respuestasCorrectas;
+    private List<Opcion> respuestasCorrectas = new ArrayList<Opcion>();
 
     // Recibe una lista de las respuestas correctas y crea la pregunta guardando dichas respuestas.
     private VerdaderoFalso(List<Opcion> respuestasCorrectas) {
-
-        this.respuestasCorrectas = new ArrayList<Opcion>();
         this.respuestasCorrectas.addAll(respuestasCorrectas);
-
     }
 
     // Devuelve una instancia de VF clásico dada una lista de respuestas correctas.
@@ -41,13 +38,8 @@ public class VerdaderoFalso implements TipoDePregunta{
 
     // Puntúa la respuesta del jugador de forma correspondiente al tipo de pregunta del mismo.
     public void puntuarRespuesta(Respuesta respuesta) {
-
         this.modalidadDePregunta.puntuarVerdaderoFalso(respuesta,respuestasCorrectas);
-
     }
 
-    public void puntuarRespuestaExclusiva(Respuesta respuesta){
-
-    }
-
+    public void puntuarRespuestaExclusiva(Respuesta respuesta){}
 }

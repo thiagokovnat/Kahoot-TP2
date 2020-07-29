@@ -13,15 +13,10 @@ public class Penalidad implements Modalidad {
         for(Opcion opcion : respuesta.opcionesElegidas){
             if (respuestasCorrectas.contains(opcion)){
                 respuesta.jugador.modificarPuntos(1);
-            }
-
-            else{
+            } else {
                 respuesta.jugador.modificarPuntos(-1);
             }
         }
     }
-    public void puntuarMultipleChoice(Respuesta respuesta, List<Opcion> respuestasCorrectas){
-
-
-    }
+    public void puntuarMultipleChoice(Respuesta respuesta, List<Opcion> respuestasCorrectas){}
 }

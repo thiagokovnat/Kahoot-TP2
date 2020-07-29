@@ -5,23 +5,19 @@ public class Opcion {
     private String grupo;
 
     public Opcion(String texto){
-
         this.texto = texto;
         this.grupo = null;
     }
 
     public boolean textoEsIgual(String texto){
-
         return (this.texto.equals(texto));
     }
 
     public boolean esIgualA(Opcion unaOpcion){
-
         return unaOpcion.textoEsIgual(this.texto);
     }
 
     public String getTexto(){
-
         return this.texto;
     }
 
