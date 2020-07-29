@@ -17,8 +17,8 @@ public class Jugador {
         this.puntuacion = 0;
     }
 
-    public Respuesta responder(Pregunta unaPregunta, List<Opcion> opcion){
-        return new Respuesta(this, opcion);
+    public Respuesta responder(List<Opcion> opcionesElegidas){
+        return new Respuesta(this, opcionesElegidas);
     }
 
     // Luke: "Sugiero separar en 2 métodos para aumentar/reducir la puntuación

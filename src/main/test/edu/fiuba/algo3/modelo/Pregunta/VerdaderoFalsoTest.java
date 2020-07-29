@@ -56,8 +56,8 @@ class VerdaderoFalsoTest {
         Pregunta nuevaPregunta = Pregunta.crearPreguntaVerdaderoFalsoClasico(textoPregunta, opciones, opcionesCorrectas);
 
         List<Respuesta> respuestas = new ArrayList<>();
-        respuestas.add(jugador1.responder(nuevaPregunta,respuestaJugadorUno)); // Responde bien
-        respuestas.add(jugador2.responder(nuevaPregunta,respuestaJugadorDos)); // Responde mal
+        respuestas.add(jugador1.responder(respuestaJugadorUno)); // Responde bien
+        respuestas.add(jugador2.responder(respuestaJugadorDos)); // Responde mal
 
         nuevaPregunta.puntuarRespuesta(respuestas);
 
@@ -110,8 +110,8 @@ class VerdaderoFalsoTest {
         Pregunta nuevaPregunta = Pregunta.crearPreguntaVerdaderoFalsoConPenalidad(textoPregunta, opciones, opcionesCorrectas);
 
         List<Respuesta> respuestas = new ArrayList<>();
-        respuestas.add(jugador1.responder(nuevaPregunta,respuestaJugadorUno)); // Responde bien
-        respuestas.add(jugador2.responder(nuevaPregunta,respuestaJugadorDos)); // Responde mal
+        respuestas.add(jugador1.responder(respuestaJugadorUno)); // Responde bien
+        respuestas.add(jugador2.responder(respuestaJugadorDos)); // Responde mal
 
         nuevaPregunta.puntuarRespuesta(respuestas);
 

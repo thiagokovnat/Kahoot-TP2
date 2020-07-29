@@ -71,8 +71,8 @@ class MultipleChoiceTest {
         Pregunta nuevaPregunta = Pregunta.crearPreguntaMultipleChoiceClasico(textoPregunta, opciones, opcionesCorrectas);
 
         List<Respuesta> respuestas = new ArrayList<>();
-        respuestas.add(jugador1.responder(nuevaPregunta,respuestaJugadorUno));
-        respuestas.add(jugador2.responder(nuevaPregunta,respuestaJugadorDos));
+        respuestas.add(jugador1.responder(respuestaJugadorUno));
+        respuestas.add(jugador2.responder(respuestaJugadorDos));
 
         nuevaPregunta.puntuarRespuesta(respuestas);
 
@@ -143,9 +143,9 @@ class MultipleChoiceTest {
         Pregunta nuevaPregunta = Pregunta.crearPreguntaMultipleChoiceParcial(textoPregunta, opciones, opcionesCorrectas);
 
         List<Respuesta> respuestas = new ArrayList<>();
-        respuestas.add(jugador1.responder(nuevaPregunta,respuestaJugadorUno));
-        respuestas.add(jugador2.responder(nuevaPregunta,respuestaJugadorDos));
-        respuestas.add(jugador3.responder(nuevaPregunta,respuestaJugadorTres));
+        respuestas.add(jugador1.responder(respuestaJugadorUno));
+        respuestas.add(jugador2.responder(respuestaJugadorDos));
+        respuestas.add(jugador3.responder(respuestaJugadorTres));
 
         nuevaPregunta.puntuarRespuesta(respuestas);
 

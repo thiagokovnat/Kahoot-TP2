@@ -30,8 +30,8 @@ public class Juego {
         this.jugadores.put(nickname, jugador);
     }
 
-    public Respuesta responder(String nickname, Pregunta unaPregunta, List<Opcion> opcion) {
+    public Respuesta responder(String nickname, List<Opcion> opcionesElegidas) {
         Jugador jugador = this.jugadores.get(nickname);
-        return jugador.responder(unaPregunta, opcion);
+        return jugador.responder(opcionesElegidas);
     }
 }
