@@ -11,8 +11,8 @@ public class Respuesta{
     public Jugador jugador;
     public List<Opcion> opcionesElegidas = new ArrayList<Opcion>();
 
-    public Respuesta(Jugador unJugador, List<Opcion> opcionElegida){
+    public Respuesta(Jugador unJugador, List<Opcion> opcionesElegidas){
         this.jugador = unJugador;
-        this.opcionesElegidas.addAll(opcionElegida);
+        this.opcionesElegidas.addAll(opcionesElegidas);
     }
 }
