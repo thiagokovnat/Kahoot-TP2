@@ -114,7 +114,7 @@ El hecho de que cada objeto Pregunta y TipoDePregunta tenga objetos asociados qu
 \subsection{Jugador}
 Cada instancia de Jugador tendrá un nombre, puntos y un multiplicador asociados al mismo. Se inicializa con puntaje en cero y nombre recibido por parámetro. Esta clase posee los métodos:
 \begin{enumerate}
-\item \begin{verbatim}public Respuesta responder(List<Opcion> opcionesElegidas);\end{verbatim} Recibe una lista de opciones seleccionadas por el jugador durante el turno vigente para crear y devolver una instancia de Respuesta que posee el nombre del jugador y dichas opciones. 
+\item \begin{verbatim}public Respuesta responder(List<Opcion> opcionesElegidas);\end{verbatim} Recibe una lista de opciones seleccionadas por el jugador durante el turno vigente, y devuelve una instancia de Respuesta que posee una referencia al jugador y dichas opciones.
 \item \begin{verbatim}public void modificarPuntos(int puntos);\end{verbatim} Este método recibe el número de puntos que se le deben añadir al jugador, ya sean positivos o negativos. 
 \end{enumerate}
 
@@ -132,10 +132,10 @@ Por cada turno, la pregunta en curso recibirá una lista de respuestas emitidas 
 
 \begin{enumerate}
 \item \begin{verbatim}public static Pregunta crearPreguntaTipoYModalidad\end{verbatim} \begin{verbatim} (String pregunta, List<Opcion> opcionesDisponibles, List<Opcion> respuestasCorrectas);\end{verbatim}
- Recibe la pregunta literal, una lista de opciones seleccionadas por el jugador durante el turno vigente y la lista de opciones correctas, para crear y devolver una instancia de Pregunta del tipo y modalidad especificados.
+ Recibe el texto de la pregunta, una lista de opciones disponibles y una lista de opciones correctas, y devuelve una instancia de Pregunta del tipo y modalidad especificados.
 \item \begin{verbatim}
 public void puntuarRespuesta(List<Respuesta> respuestasElegidas);\end{verbatim}
-Este método recibe una lista con las respuestas elegidas por el jugador y por cada una se evalúa su veracidad, para determinar si se debe modificar el puntaje del jugador.
+Este método recibe una lista con las respuestas elegidas por cada uno de los jugadores, evalúa la veracidad de cada una, y modifica el puntaje de cada jugador según corresponda.
 \end{enumerate}
 
 
