@@ -57,29 +57,54 @@ Dejamos a continuación el diagrama de clases que representa las relaciones esta
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.8\textwidth]{img/UMLClases1.png}
+\includegraphics[width=1\textwidth]{img/UMLClases1.png}
+\caption{\label{fig:class01}Diagrama de clases general.}
+\end{figure}
+
+\newpage
+Los siguientes diagramas muestran como las clases núcleo, es decir, las más impórtantes están relacionadas:
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=1\textwidth]{img/UMLClases2.png}
+\caption{\label{fig:class01}Principales relaciones entre Pregunta, Jugador, Respuesta, Opción, Multiplicador y Juego.}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=1\textwidth]{img/UMLClases3.png}
+\caption{\label{fig:class01}Cada instancia de Pregunta posee un tipoDePregunta, y esta última una instancia de la Modalidad.}
+\end{figure}
+
+\newpage
+Cada pregunta conoce el tipo de estado actual y este puede ser clásico o exclusivo:
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=1\textwidth]{img/UMLClases4.png}
 \caption{\label{fig:class01}Diagrama de clases.}
 \end{figure}
 
+\newpage
 \section{Diagramas de Secuencia}
 
 Dejamos a continuación los diagramas de secuencia que muestran las acciones más importantes:
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.8\textwidth]{img/UMLSeq2.png}
+\includegraphics[width=1\textwidth]{img/UMLSeq2.png}
 \caption{\label{fig:class01}Creación de la instancia de Pregunta.}
 \end{figure}
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.8\textwidth]{img/UMLSeq3.png}
+\includegraphics[width=1\textwidth]{img/UMLSeq3.png}
 \caption{\label{fig:class01}Evaluado de respuestas (1/2).}
 \end{figure}
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.8\textwidth]{img/UMLSeq4.png}
+\includegraphics[width=1\textwidth]{img/UMLSeq4.png}
 \caption{\label{fig:class01}Evaluado de respuestas (2/2).}
 \end{figure}
 
@@ -137,13 +162,5 @@ Por cada turno, la pregunta en curso recibirá una lista de respuestas emitidas 
 public void puntuarRespuesta(List<Respuesta> respuestasElegidas);\end{verbatim}
 Este método recibe una lista con las respuestas elegidas por cada uno de los jugadores, evalúa la veracidad de cada una, y modifica el puntaje de cada jugador según corresponda.
 \end{enumerate}
-
-
-\section{Excepciones}
-% Explicación de cada una de las excepciones creadas y con qué fin fueron creadas.
-
-\begin{description}
-\item[Exception] COMPLETAR
-\end{description}
 
 \end{document}
