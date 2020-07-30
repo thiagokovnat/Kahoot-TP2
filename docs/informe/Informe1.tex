@@ -96,7 +96,18 @@ No se solicita para esta entrega.
 \section{Detalles de implementación}
 % Explicaciones sobre la implementación interna de algunas clases que consideren que puedan llegar a resultar interesantes.
 
-En esta sección explicaremos las partes más importantes del código, con algunas clases y métodos críticos.
+\subsection{Como se contesta una pregunta}
+
+Una vez creada una Pregunta usando varios objetos Opcion, y creado uno o varios objetos Jugador, estos últimos generan cada uno un objeto Respuesta (mediante el método responder) el cual contiene una referencia al propio Jugador y una lista de (algunos o todos) los objetos Opcion usados en Pregunta. Esta lista corresponde a las opciones que el correspondiente Jugador eligió.
+
+Después de eso se le da a Pregunta, mediante el método puntuarRespuesta, una lista compuesta de las Respuestas creadas por cada uno de los objetos Jugador. Entonces, puntuarRespuesta hace lo siguiente:
+\begin{enumerate}
+\item Itera por todas las Respuestas de la lista, y delega la verificación de las mismas, así como la correspondiente asignación de puntaje para cada Jugador, al objeto Estado (asociado a Pregunta), que a su vez se lo delega a TipoDePregunta, que a su vez se lo delega a Modalidad.
+\item Por último, Modalidad se encarga de comparar los objetos Opcion de la pregunta con los objetos Opcion de la Respuesta, y asigna los puntos correspondientes al Jugador asociado a esa respuesta, usando el método puntuarRespuesta.
+\end{enumerate}
+
+El hecho de que cada objeto Pregunta y TipoDePregunta tenga objetos asociados que definan el comportamiento del mismo (Pregunta tiene Estado y TipoDePregunta, mientras que TipoDePregunta tiene Modalidad), corresponde al patrón de diseño Strategy.
+
 
 \section{Documentación}
 
