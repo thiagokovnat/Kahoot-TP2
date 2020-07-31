@@ -2,6 +2,7 @@ package edu.fiuba.algo3.modelo.TipoDePregunta;
 import edu.fiuba.algo3.modelo.Modalidad.Clasica;
 import edu.fiuba.algo3.modelo.Modalidad.Modalidad;
 import edu.fiuba.algo3.modelo.Modalidad.Parcial;
+import edu.fiuba.algo3.modelo.Modalidad.Penalidad;
 import edu.fiuba.algo3.modelo.Opcion.Opcion;
 import edu.fiuba.algo3.modelo.TipoDePregunta.TipoDePregunta;
 
@@ -32,6 +33,13 @@ public class MultipleChoice implements TipoDePregunta {
 
         MultipleChoice nuevaPregunta = new MultipleChoice(respuestasCorrectas);
         nuevaPregunta.modalidadDePregunta = new Parcial();
+        return nuevaPregunta;
+    }
+
+    public static TipoDePregunta MultipleChoicePenalidad(List<Opcion> respuestasCorrectas) {
+
+        MultipleChoice nuevaPregunta = new MultipleChoice(respuestasCorrectas);
+        nuevaPregunta.modalidadDePregunta = new Penalidad();
         return nuevaPregunta;
     }
 

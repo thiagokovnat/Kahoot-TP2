@@ -8,15 +8,21 @@ import java.util.List;
 
 
 public class Penalidad implements Modalidad {
+
     public void puntuarVerdaderoFalso(Respuesta respuesta, List<Opcion> respuestasCorrectas){
 
-        for(Opcion opcion : respuesta.opcionesElegidas){
-            if (respuestasCorrectas.contains(opcion)){
-                respuesta.jugador.modificarPuntos(1);
-            } else {
-                respuesta.jugador.modificarPuntos(-1);
-            }
-        }
+        int cantidadCorrectas = respuesta.cantidadCorrectas(respuestasCorrectas);
+        int cantidadIncorrectas = respuesta.cantidadIncorrectas(respuestasCorrectas);
+
+        respuesta.jugador.modificarPuntos(cantidadCorrectas-cantidadIncorrectas);
     }
-    public void puntuarMultipleChoice(Respuesta respuesta, List<Opcion> respuestasCorrectas){}
+
+    public void puntuarMultipleChoice(Respuesta respuesta, List<Opcion> respuestasCorrectas){
+
+
+        int cantidadCorrectas = respuesta.cantidadCorrectas(respuestasCorrectas);
+        int cantidadIncorrectas = respuesta.cantidadIncorrectas(respuestasCorrectas);
+
+        respuesta.jugador.modificarPuntos(cantidadCorrectas-cantidadIncorrectas);
+    }
 }

@@ -9,17 +9,22 @@ public class Clasica implements Modalidad {
     // Dada una respuesta y lista de datos válidos, puntúa al jugador asociado si su respuesta es correcta.
     public void puntuarVerdaderoFalso(Respuesta respuesta, List<Opcion> respuestasCorrectas){
 
-        if(respuestasCorrectas.containsAll(respuesta.opcionesElegidas)){
+        int cantidadCorrectas = respuesta.cantidadCorrectas(respuestasCorrectas);
+        int cantidadIncorrectas = respuesta.cantidadIncorrectas(respuestasCorrectas);
+
+        if(respuestasCorrectas.size() == cantidadCorrectas && cantidadIncorrectas == 0){
             respuesta.jugador.modificarPuntos(1);
         }
     }
 
     // Dada una respuesta y lista de datos válidos, puntúa al jugador asociado si su respuesta es correcta.
     public void puntuarMultipleChoice(Respuesta respuesta, List<Opcion> respuestasCorrectas){
-        if((respuestasCorrectas.size() == respuesta.opcionesElegidas.size()) &&
-                (respuestasCorrectas.containsAll(respuesta.opcionesElegidas))){
+
+        int cantidadCorrectas = respuesta.cantidadCorrectas(respuestasCorrectas);
+        int cantidadIncorrectas = respuesta.cantidadIncorrectas(respuestasCorrectas);
+
+        if(respuestasCorrectas.size() == cantidadCorrectas && cantidadIncorrectas == 0){
             respuesta.jugador.modificarPuntos(1);
         }
-
     }
 }

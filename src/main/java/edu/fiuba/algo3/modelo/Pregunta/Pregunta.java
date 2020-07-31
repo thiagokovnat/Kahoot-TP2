@@ -76,6 +76,14 @@ public class Pregunta {
         return nuevaPregunta;
     }
 
+    public static Pregunta crearPreguntaMultipleChoicePenalidad(String pregunta, List<Opcion> opcionesDisponibles, List<Opcion> respuestasCorrectas) {
+
+        Pregunta nuevaPregunta = new Pregunta(pregunta, opcionesDisponibles, respuestasCorrectas);
+        nuevaPregunta.tipoDePregunta = MultipleChoice.MultipleChoicePenalidad(nuevaPregunta.respuestasCorrectas);
+
+        return nuevaPregunta;
+    }
+
     public void puntuarRespuesta(List<Respuesta> respuestasElegidas){
 
         for(Respuesta respuesta : respuestasElegidas){

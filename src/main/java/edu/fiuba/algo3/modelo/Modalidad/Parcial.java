@@ -7,6 +7,7 @@ import java.util.List;
 
 public class Parcial implements Modalidad {
 
+
     // Hay que lograr erradicar este método de Parcial con otras interfaces.
     // O poner un excepción para evitar que se acceda a este método con una pregunta
     // de modalidad Parcial.
@@ -15,8 +16,12 @@ public class Parcial implements Modalidad {
     } //WIP
 
     public void puntuarMultipleChoice(Respuesta respuesta, List<Opcion> respuestasCorrectas) {
-        if (respuestasCorrectas.containsAll(respuesta.opcionesElegidas)) {
-            respuesta.jugador.modificarPuntos(respuesta.opcionesElegidas.size());
+
+        int cantidadCorrectas = respuesta.cantidadCorrectas(respuestasCorrectas);
+        int cantidadIncorrectas = respuesta.cantidadIncorrectas(respuestasCorrectas);
+
+        if (cantidadIncorrectas == 0) {
+            respuesta.jugador.modificarPuntos(cantidadCorrectas);
         }
     }
 }
