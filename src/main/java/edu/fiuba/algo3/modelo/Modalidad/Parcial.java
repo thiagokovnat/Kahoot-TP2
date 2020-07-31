@@ -24,4 +24,6 @@ public class Parcial implements Modalidad {
             respuesta.jugador.modificarPuntos(cantidadCorrectas);
         }
     }
+
+    public void puntuarOrderedChoice(Respuesta respuesta, List<Opcion> respuestasCorrectas){}
 }

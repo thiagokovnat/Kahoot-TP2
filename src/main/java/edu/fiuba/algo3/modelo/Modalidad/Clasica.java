@@ -27,4 +27,10 @@ public class Clasica implements Modalidad {
             respuesta.jugador.modificarPuntos(1);
         }
     }
+
+    public void puntuarOrderedChoice(Respuesta respuesta, List<Opcion> respuestasCorrectas){
+
+        if(respuesta.opcionesEnOrden(respuestasCorrectas))
+            respuesta.jugador.modificarPuntos(1);
+    }
 }

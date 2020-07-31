@@ -5,6 +5,7 @@ import edu.fiuba.algo3.modelo.TipoDeEstado.Clasico;
 import edu.fiuba.algo3.modelo.TipoDeEstado.Exclusivo;
 import edu.fiuba.algo3.modelo.TipoDeEstado.TipoDeEstado;
 import edu.fiuba.algo3.modelo.TipoDePregunta.MultipleChoice;
+import edu.fiuba.algo3.modelo.TipoDePregunta.OrderedChoice;
 import edu.fiuba.algo3.modelo.TipoDePregunta.TipoDePregunta;
 import edu.fiuba.algo3.modelo.TipoDePregunta.VerdaderoFalso;
 import edu.fiuba.algo3.modelo.Respuesta.Respuesta;
@@ -17,11 +18,10 @@ public class Pregunta {
 
     private String pregunta;
     private List<Opcion> opcionesDisponibles;
-    private List<Opcion> respuestasCorrectas; // Matias: "Este atributo está presente también en TipoDePregunta"
+    private List<Opcion> respuestasCorrectas;
     private TipoDePregunta tipoDePregunta;
     private TipoDeEstado estado;
-    // Tal vez usemos 'Modalidad' como atributo de Pregunta
-    // private Modalidad modalidad;
+
 
     private Pregunta(String pregunta, List<Opcion> opcionesDisponibles, List<Opcion> respuestasCorrectas){
 
@@ -80,6 +80,14 @@ public class Pregunta {
 
         Pregunta nuevaPregunta = new Pregunta(pregunta, opcionesDisponibles, respuestasCorrectas);
         nuevaPregunta.tipoDePregunta = MultipleChoice.MultipleChoicePenalidad(nuevaPregunta.respuestasCorrectas);
+
+        return nuevaPregunta;
+    }
+
+    public static Pregunta crearPreguntaOrderedChoiceClasico(String pregunta, List<Opcion> opcionesDisponibles, List<Opcion> respuestasCorrectas){
+
+        Pregunta nuevaPregunta = new Pregunta(pregunta, opcionesDisponibles, respuestasCorrectas);
+        nuevaPregunta.tipoDePregunta = OrderedChoice.OrderedChoiceClasico(nuevaPregunta.respuestasCorrectas);
 
         return nuevaPregunta;
     }

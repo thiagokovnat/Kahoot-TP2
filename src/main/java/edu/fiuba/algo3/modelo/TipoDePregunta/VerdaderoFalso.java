@@ -16,6 +16,7 @@ public class VerdaderoFalso implements TipoDePregunta{
 
     // Recibe una lista de las respuestas correctas y crea la pregunta guardando dichas respuestas.
     private VerdaderoFalso(List<Opcion> respuestasCorrectas) {
+
         this.respuestasCorrectas.addAll(respuestasCorrectas);
     }
 

@@ -25,4 +25,6 @@ public class Penalidad implements Modalidad {
 
         respuesta.jugador.modificarPuntos(cantidadCorrectas-cantidadIncorrectas);
     }
+
+    public void puntuarOrderedChoice(Respuesta respuesta, List<Opcion> respuestasCorrectas){}
 }

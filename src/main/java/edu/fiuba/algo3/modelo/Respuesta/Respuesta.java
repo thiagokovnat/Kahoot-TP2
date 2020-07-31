@@ -10,17 +10,12 @@ public class Respuesta{
 
     public Jugador jugador;
     private List<Opcion> opcionesElegidas = new ArrayList<Opcion>();
+
     public Respuesta(Jugador unJugador, List<Opcion> opcionesElegidas){
 
         this.jugador = unJugador;
         this.opcionesElegidas.addAll(opcionesElegidas);
     }
-
-    /*public boolean esCorrecta(List<Opcion> respuestasCorrectas) {
-
-        return((respuestasCorrectas.size() == this.opcionesElegidas.size()) &&
-                    (respuestasCorrectas.containsAll(this.opcionesElegidas)));
-    }*/
 
     public int cantidadCorrectas(List<Opcion> respuestasCorrectas){
 
@@ -38,5 +33,10 @@ public class Respuesta{
             if(!respuestasCorrectas.contains(opcion)) cantIncorrectas++;
         }
         return cantIncorrectas;
+    }
+
+    public boolean opcionesEnOrden(List<Opcion> opcionesOrdenadas){
+
+        return opcionesOrdenadas.equals(opcionesElegidas);
     }
 }
