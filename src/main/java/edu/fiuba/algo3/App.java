@@ -1,29 +1,51 @@
 package edu.fiuba.algo3;
 
+import edu.fiuba.algo3.modelo.Juego.Juego;
+import edu.fiuba.algo3.vista.Loader;
+import edu.fiuba.algo3.vista.StartButton;
 import javafx.application.Application;
+
+
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
-import javafx.scene.layout.StackPane;
+import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
+;
 
 /**
  * JavaFX App
  */
 public class App extends Application {
 
+    private static Stage stage;
+    private static Juego juego = Juego.obtenerInstancia();
+
     @Override
     public void start(Stage stage) {
-        var javaVersion = SystemInfo.javaVersion();
-        var javafxVersion = SystemInfo.javafxVersion();
 
-        var label = new Label("Hello, JavaFX " + javafxVersion + ", running on Java " + javaVersion + ".");
-        var scene = new Scene(new StackPane(label), 640, 480);
-        stage.setScene(scene);
-        stage.show();
+        App.stage = stage;
+
+        stage.setTitle("Algohoot!");
+
+        Loader.mainLoader();
+
+
     }
 
     public static void main(String[] args) {
+
         launch();
     }
+
+    public static Stage getStage(){
+        return stage;
+    }
+
+    public static Juego getJuego(){
+        return juego;
+    }
+
+
+
 
 }
