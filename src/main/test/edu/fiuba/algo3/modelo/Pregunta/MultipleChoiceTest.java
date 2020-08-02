@@ -34,8 +34,8 @@ class MultipleChoiceTest {
 
         Pregunta nuevaPregunta = Pregunta.crearPreguntaMultipleChoiceClasico(textoPregunta, opciones, opcionesCorrectas);
 
-        assertEquals(opcionUno, nuevaPregunta.getRespuesta(0));
-        assertEquals(opcionDos, nuevaPregunta.getRespuesta(1));
+        assertEquals(opcionUno, nuevaPregunta.getOpcion(0));
+        assertEquals(opcionDos, nuevaPregunta.getOpcion(1));
     }
 
     @Test
@@ -74,7 +74,7 @@ class MultipleChoiceTest {
         respuestas.add(jugador1.responder(respuestaJugadorUno));
         respuestas.add(jugador2.responder(respuestaJugadorDos));
 
-        nuevaPregunta.puntuarRespuesta(respuestas);
+        nuevaPregunta.puntuarRespuestas(respuestas);
 
         assertEquals(1, jugador2.getPuntos()); // Respondió todas bien.
         assertEquals(0, jugador1.getPuntos()); // No respondió todas bien.
@@ -102,8 +102,8 @@ class MultipleChoiceTest {
 
         Pregunta nuevaPregunta = Pregunta.crearPreguntaMultipleChoiceParcial(textoPregunta, opciones, opcionesCorrectas);
 
-        assertEquals(opcionTres, nuevaPregunta.getRespuesta(2));
-        assertEquals(opcionCuatro, nuevaPregunta.getRespuesta(3));
+        assertEquals(opcionTres, nuevaPregunta.getOpcion(2));
+        assertEquals(opcionCuatro, nuevaPregunta.getOpcion(3));
     }
 
     @Test
@@ -147,7 +147,7 @@ class MultipleChoiceTest {
         respuestas.add(jugador2.responder(respuestaJugadorDos));
         respuestas.add(jugador3.responder(respuestaJugadorTres));
 
-        nuevaPregunta.puntuarRespuesta(respuestas);
+        nuevaPregunta.puntuarRespuestas(respuestas);
 
         assertEquals(1, jugador1.getPuntos()); // Respondió una bien.
         assertEquals(2, jugador2.getPuntos()); // Respondió todas (dos) bien.
@@ -176,8 +176,8 @@ class MultipleChoiceTest {
 
         Pregunta nuevaPregunta = Pregunta.crearPreguntaMultipleChoicePenalidad(textoPregunta, opciones, opcionesCorrectas);
 
-        assertEquals(opcionDos, nuevaPregunta.getRespuesta(1));
-        assertEquals(opcionTres, nuevaPregunta.getRespuesta(2));
+        assertEquals(opcionDos, nuevaPregunta.getOpcion(1));
+        assertEquals(opcionTres, nuevaPregunta.getOpcion(2));
     }
 
     @Test
@@ -248,7 +248,7 @@ class MultipleChoiceTest {
         respuestas.add(jugador5.responder(respuestaJugadorCinco));
         respuestas.add(jugador6.responder(respuestaJugadorSeis));
 
-        nuevaPregunta.puntuarRespuesta(respuestas);
+        nuevaPregunta.puntuarRespuestas(respuestas);
 
         assertEquals(1, jugador1.getPuntos()); // Respondió una bien.
         assertEquals(2, jugador2.getPuntos()); // Respondió todas (dos) bien.

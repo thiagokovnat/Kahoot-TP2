@@ -28,7 +28,7 @@ class VerdaderoFalsoTest {
 
         Pregunta nuevaPregunta = Pregunta.crearPreguntaVerdaderoFalsoClasico(textoPregunta, opciones, opcionesCorrectas);
 
-        assertEquals(opcionUno, nuevaPregunta.getRespuesta(0));
+        assertEquals(opcionUno, nuevaPregunta.getOpcion(0));
 
     }
 
@@ -59,7 +59,7 @@ class VerdaderoFalsoTest {
         respuestas.add(jugador1.responder(respuestaJugadorUno)); // Responde bien
         respuestas.add(jugador2.responder(respuestaJugadorDos)); // Responde mal
 
-        nuevaPregunta.puntuarRespuesta(respuestas);
+        nuevaPregunta.puntuarRespuestas(respuestas);
 
         assertEquals(1, jugador1.getPuntos());
         assertEquals(0, jugador2.getPuntos());
@@ -82,7 +82,7 @@ class VerdaderoFalsoTest {
 
         Pregunta nuevaPregunta = Pregunta.crearPreguntaVerdaderoFalsoConPenalidad(textoPregunta, opciones, opcionesCorrectas);
 
-        assertEquals(opcionUno, nuevaPregunta.getRespuesta(0));
+        assertEquals(opcionUno, nuevaPregunta.getOpcion(0));
 
     }
 
@@ -113,7 +113,7 @@ class VerdaderoFalsoTest {
         respuestas.add(jugador1.responder(respuestaJugadorUno)); // Responde bien
         respuestas.add(jugador2.responder(respuestaJugadorDos)); // Responde mal
 
-        nuevaPregunta.puntuarRespuesta(respuestas);
+        nuevaPregunta.puntuarRespuestas(respuestas);
 
         assertEquals(1, jugador1.getPuntos());
         assertEquals(-1, jugador2.getPuntos());

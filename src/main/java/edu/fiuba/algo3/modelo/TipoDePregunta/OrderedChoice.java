@@ -10,26 +10,26 @@ import java.util.List;
 
 public class OrderedChoice implements TipoDePregunta {
 
-    private Modalidad modalidadDePregunta;
+    private Modalidad modalidad;
     private List<Opcion> respuestasCorrectas = new ArrayList<Opcion>();
 
     private OrderedChoice(List<Opcion> respuestasCorrectas){
 
         this.respuestasCorrectas.addAll(respuestasCorrectas);
+        this.modalidad = new Clasica();
     }
 
-    public static OrderedChoice OrderedChoiceClasico(List<Opcion> respuestasCorrectas){
+    public static OrderedChoice OrderedChoice(List<Opcion> respuestasCorrectas){
 
         OrderedChoice unaPregunta = new OrderedChoice(respuestasCorrectas);
-        unaPregunta.modalidadDePregunta = new Clasica();
+        unaPregunta.modalidad = new Clasica();
 
         return unaPregunta;
     }
 
     public void puntuarRespuesta(Respuesta respuesta){
 
-        this.modalidadDePregunta.puntuarOrderedChoice(respuesta, respuestasCorrectas);
-
+        this.modalidad.puntuarOrderedChoice(respuesta, respuestasCorrectas);
     }
 
     public void puntuarRespuestaExclusiva(Respuesta respuesta){}

@@ -24,9 +24,9 @@ public class OrderedChoiceTest {
         opcionesOrdenadas.add(OpcionUno);
         opcionesOrdenadas.add(OpcionDos);
 
-        Pregunta pregunta = Pregunta.crearPreguntaOrderedChoiceClasico(texto, opcionesOrdenadas, opcionesOrdenadas);
+        Pregunta pregunta = Pregunta.crearPreguntaOrderedChoice(texto, opcionesOrdenadas, opcionesOrdenadas);
 
-        assertEquals(OpcionUno, pregunta.getRespuesta(0));
+        assertEquals(OpcionUno, pregunta.getOpcion(0));
 
     }
 
@@ -41,24 +41,24 @@ public class OrderedChoiceTest {
         opcionesOrdenadas.add(OpcionUno);
         opcionesOrdenadas.add(OpcionDos);
 
-        Pregunta pregunta = Pregunta.crearPreguntaOrderedChoiceClasico(texto, opcionesOrdenadas, opcionesOrdenadas);
+        Pregunta pregunta = Pregunta.crearPreguntaOrderedChoice(texto, opcionesOrdenadas, opcionesOrdenadas);
 
-        Jugador playerOne = new Jugador("Jugador1");
-        Jugador playerTwo = new Jugador("Jugador2");
+        Jugador JugadorUno = new Jugador("Jugador1");
+        Jugador JugadorDos = new Jugador("Jugador2");
 
-        List<Opcion> respuestasPlayerOne = new ArrayList<>(opcionesOrdenadas);
+        List<Opcion> respuestasJugadorUno = new ArrayList<>(opcionesOrdenadas);
 
-        List<Opcion> respuestasPlayerTwo = new ArrayList<>();
-        respuestasPlayerTwo.add(OpcionDos);
-        respuestasPlayerTwo.add(OpcionUno);
+        List<Opcion> respuestasJugadorDos = new ArrayList<>();
+        respuestasJugadorDos.add(OpcionDos);
+        respuestasJugadorDos.add(OpcionUno);
 
         List<Respuesta> respuestasJugadores = new ArrayList<>();
-        respuestasJugadores.add(playerOne.responder(respuestasPlayerOne));
-        respuestasJugadores.add(playerTwo.responder(respuestasPlayerTwo));
+        respuestasJugadores.add(JugadorUno.responder(respuestasJugadorUno));
+        respuestasJugadores.add(JugadorDos.responder(respuestasJugadorDos));
 
-        pregunta.puntuarRespuesta(respuestasJugadores);
+        pregunta.puntuarRespuestas(respuestasJugadores);
 
-        assertEquals(1, playerOne.getPuntos()); // Las ordeno bien
-        assertEquals(0, playerTwo.getPuntos()); // Las ordeno mal
+        assertEquals(1, JugadorUno.getPuntos()); // Las ordeno bien
+        assertEquals(0, JugadorDos.getPuntos()); // Las ordeno mal
     }
 }

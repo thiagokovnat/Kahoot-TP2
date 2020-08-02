@@ -9,12 +9,8 @@ public class Opcion {
         this.grupo = null;
     }
 
-    public boolean textoEsIgual(String texto){
-        return (this.texto.equals(texto));
-    }
-
-    public boolean esIgualA(Opcion unaOpcion){
-        return unaOpcion.textoEsIgual(this.texto);
+    public void setGrupo( String grupo ){
+        this.grupo = grupo;
     }
 
     public String getTexto(){

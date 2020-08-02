@@ -39,4 +39,8 @@ public class Respuesta{
 
         return opcionesOrdenadas.equals(opcionesElegidas);
     }
+
+    public boolean contieneLasOpciones(List<Opcion> opciones ){
+        return opciones.containsAll(opcionesElegidas);
+    }
 }

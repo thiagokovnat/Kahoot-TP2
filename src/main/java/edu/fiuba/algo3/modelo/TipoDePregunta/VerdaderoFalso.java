@@ -11,7 +11,7 @@ import java.util.List;
 
 public class VerdaderoFalso implements TipoDePregunta{
 
-    private Modalidad modalidadDePregunta;
+    private Modalidad modalidad;
     private List<Opcion> respuestasCorrectas = new ArrayList<Opcion>();
 
     // Recibe una lista de las respuestas correctas y crea la pregunta guardando dichas respuestas.
@@ -24,7 +24,7 @@ public class VerdaderoFalso implements TipoDePregunta{
     public static VerdaderoFalso VerdaderoFalsoClasico(List<Opcion> respuestasCorrectas){
 
         VerdaderoFalso nuevaPregunta = new VerdaderoFalso(respuestasCorrectas);
-        nuevaPregunta.modalidadDePregunta = new Clasica();
+        nuevaPregunta.modalidad = new Clasica();
         return nuevaPregunta;
     }
 
@@ -33,13 +33,13 @@ public class VerdaderoFalso implements TipoDePregunta{
     public static VerdaderoFalso VerdaderoFalsoPenalidad(List<Opcion> respuestasCorrectas){
 
         VerdaderoFalso nuevaPregunta = new VerdaderoFalso(respuestasCorrectas);
-        nuevaPregunta.modalidadDePregunta = new Penalidad();
+        nuevaPregunta.modalidad = new Penalidad();
         return nuevaPregunta;
     }
 
     // Puntúa la respuesta del jugador de forma correspondiente al tipo de pregunta del mismo.
     public void puntuarRespuesta(Respuesta respuesta) {
-        this.modalidadDePregunta.puntuarVerdaderoFalso(respuesta,respuestasCorrectas);
+        this.modalidad.puntuarVerdaderoFalso(respuesta,respuestasCorrectas);
     }
 
     public void puntuarRespuestaExclusiva(Respuesta respuesta){}
