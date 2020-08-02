@@ -22,15 +22,15 @@ class GroupChoiceTest {
         Opcion opcionTres = new Opcion( "Smalltalk" );
         Opcion opcionCuatro = new Opcion( "Python" );
 
-        List<Opcion> opcionesDisponibles = new ArrayList<>();
+        List<Opcion> opcionesDisponibles = new ArrayList<Opcion>();
 
         opcionesDisponibles.add(opcionUno);
         opcionesDisponibles.add(opcionDos);
         opcionesDisponibles.add(opcionTres);
         opcionesDisponibles.add(opcionCuatro);
 
-        List<Opcion> correctasGrupoUno = new ArrayList<>();
-        List<Opcion> correctasGrupoDos = new ArrayList<>();
+        List<Opcion> correctasGrupoUno = new ArrayList<Opcion>();
+        List<Opcion> correctasGrupoDos = new ArrayList<Opcion>();
 
         correctasGrupoUno.add(opcionUno);
         correctasGrupoUno.add(opcionDos);
@@ -55,56 +55,58 @@ class GroupChoiceTest {
     public void unaPreguntaGroupChoiceAsignaCorrectamenteElPuntaje(){
         String texto = "Poner en el grupo 1 los lenguajes de tipado estático, y en el grupo 2 los de tipado dinámico:";
 
-        Opcion opcionUno = new Opcion( "Java" );
-        Opcion opcionDos = new Opcion( "C" );
-        Opcion opcionTres = new Opcion( "Smalltalk" );
-        Opcion opcionCuatro = new Opcion( "Python" );
+        Opcion opcionUnoBien = new Opcion( "Java" );
+        Opcion opcionDosBien = new Opcion( "C" );
+        Opcion opcionTresBien = new Opcion( "Smalltalk" );
+        Opcion opcionCuatroBien = new Opcion( "Python" );
 
-        List<Opcion> opcionesDisponibles = new ArrayList<>();
+        Opcion opcionUnoMal = new Opcion( "Java" );
+        Opcion opcionDosMal = new Opcion( "C" );
+        Opcion opcionTresMal = new Opcion( "Smalltalk" );
+        Opcion opcionCuatroMal = new Opcion( "Python" );
 
-        opcionesDisponibles.add(opcionUno);
-        opcionesDisponibles.add(opcionDos);
-        opcionesDisponibles.add(opcionTres);
-        opcionesDisponibles.add(opcionCuatro);
+        opcionUnoMal.setGrupo("2");
+        opcionDosMal.setGrupo("2");
+        opcionTresMal.setGrupo("1");
+        opcionCuatroMal.setGrupo("1");
 
-        List<Opcion> correctasGrupoUno = new ArrayList<>();
-        List<Opcion> correctasGrupoDos = new ArrayList<>();
+        List<Opcion> opcionesDisponibles = new ArrayList<Opcion>();
 
-        correctasGrupoUno.add(opcionUno);
-        correctasGrupoUno.add(opcionDos);
+        opcionesDisponibles.add(opcionUnoBien);
+        opcionesDisponibles.add(opcionDosBien);
+        opcionesDisponibles.add(opcionTresBien);
+        opcionesDisponibles.add(opcionCuatroBien);
 
-        correctasGrupoDos.add(opcionTres);
-        correctasGrupoDos.add(opcionCuatro);
+        List<Opcion> correctasGrupoUno = new ArrayList<Opcion>();
+        List<Opcion> correctasGrupoDos = new ArrayList<Opcion>();
+
+        correctasGrupoUno.add(opcionUnoBien);
+        correctasGrupoUno.add(opcionDosBien);
+
+        correctasGrupoDos.add(opcionTresBien);
+        correctasGrupoDos.add(opcionCuatroBien);
 
         Pregunta nuevaPregunta = Pregunta.crearPreguntaGroupChoice(texto, opcionesDisponibles, correctasGrupoUno, correctasGrupoDos );
 
         Jugador jugadorUno = new Jugador("Jugador_1");
         Jugador jugadorDos = new Jugador("Jugador_2");
 
-        opcionUno.setGrupo("1");
-        opcionDos.setGrupo("1");
-        opcionTres.setGrupo("2");
-        opcionCuatro.setGrupo("2");
-
         List<Respuesta> respuestas = new ArrayList<>();
+
         // Todas las opciones de jugador 1 estan bien
-        List<Opcion> respuestaJugadorUno = new ArrayList<>();
-        respuestaJugadorUno.add( opcionUno );
-        respuestaJugadorUno.add( opcionDos );
-        respuestaJugadorUno.add( opcionTres );
-        respuestaJugadorUno.add( opcionCuatro );
+        List<Opcion> respuestaJugadorUno = new ArrayList<Opcion>();
+        respuestaJugadorUno.add( opcionUnoBien );
+        respuestaJugadorUno.add( opcionDosBien );
+        respuestaJugadorUno.add( opcionTresBien );
+        respuestaJugadorUno.add( opcionCuatroBien );
 
         // Cambio de grupo para el jugador 2
-        opcionUno.setGrupo("1");
-        opcionDos.setGrupo("2");
-        opcionTres.setGrupo("1");
-        opcionCuatro.setGrupo("2");
 
-        List<Opcion> respuestaJugadorDos = new ArrayList<>();
-        respuestaJugadorDos.add( opcionUno );
-        respuestaJugadorDos.add( opcionDos );
-        respuestaJugadorDos.add( opcionTres );
-        respuestaJugadorDos.add( opcionCuatro );
+        List<Opcion> respuestaJugadorDos = new ArrayList<Opcion>();
+        respuestaJugadorDos.add( opcionUnoMal );
+        respuestaJugadorDos.add( opcionDosMal );
+        respuestaJugadorDos.add( opcionTresMal );
+        respuestaJugadorDos.add( opcionCuatroMal );
 
         respuestas.add( jugadorUno.responder(respuestaJugadorUno) );
         respuestas.add( jugadorDos.responder(respuestaJugadorDos) );

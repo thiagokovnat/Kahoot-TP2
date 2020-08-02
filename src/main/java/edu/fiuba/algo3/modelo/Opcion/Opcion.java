@@ -1,5 +1,7 @@
 package edu.fiuba.algo3.modelo.Opcion;
 
+import java.util.List;
+
 public class Opcion {
     private String texto;
     private String grupo;
@@ -18,11 +20,11 @@ public class Opcion {
     }
 
     @Override
-    public boolean equals(Object obj){
-        if(obj == null || (obj.getClass() != this.getClass()))
+    public boolean equals(Object obj) {
+        if (obj == null || (obj.getClass() != this.getClass()))
             return false;
 
-        if(this == obj)
+        if (this == obj)
             return true;
 
         Opcion opc = (Opcion) obj;
