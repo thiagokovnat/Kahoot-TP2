@@ -18,14 +18,17 @@ public class Juego {
         this.jugadores = new HashMap<String, Jugador>();
     }
 
-    public Juego obtenerInstancia() {
+    public static Juego obtenerInstancia() {
+
         return instanciaJuego;
     }
 
     public void crearJugador(String nickname) throws CantidadMaximaDeJugadoresSuperadaException {
+
         if (this.jugadores.size() >= this.CANTIDAD_MAXIMA_JUGADORES) {
             throw new CantidadMaximaDeJugadoresSuperadaException();
         }
+
         Jugador jugador = new Jugador(nickname);
         this.jugadores.put(nickname, jugador);
     }
@@ -34,4 +37,5 @@ public class Juego {
         Jugador jugador = this.jugadores.get(nickname);
         return jugador.responder(opcionesElegidas);
     }
+
 }
