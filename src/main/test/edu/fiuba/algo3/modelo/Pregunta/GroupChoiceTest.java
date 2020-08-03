@@ -113,7 +113,7 @@ class GroupChoiceTest {
 
         nuevaPregunta.puntuarRespuestas(respuestas);
 
-        assertEquals(2, jugadorUno.getPuntos()); // respondio todo bien
+        assertEquals(1, jugadorUno.getPuntos()); // respondio todo bien
         assertEquals(0, jugadorDos.getPuntos()); // respondio todo mal
     }
 }

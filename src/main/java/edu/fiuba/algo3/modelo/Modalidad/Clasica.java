@@ -36,10 +36,7 @@ public class Clasica implements Modalidad {
 
     public void puntuarGroupChoice( Respuesta respuesta, List<Opcion> opcionesCorrectas){
 
-        if( opcionesCorrectas.containsAll(respuesta.getOpcionesGrupo("1")) ){
-            respuesta.jugador.modificarPuntos(1);
-        }
-        if( opcionesCorrectas.containsAll(respuesta.getOpcionesGrupo("2")) ){
+        if( respuesta.contieneLasOpciones(opcionesCorrectas) ){
             respuesta.jugador.modificarPuntos(1);
         }
     }

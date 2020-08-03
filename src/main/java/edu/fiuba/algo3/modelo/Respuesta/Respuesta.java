@@ -45,13 +45,4 @@ public class Respuesta{
         return opcionesElegidas.containsAll(opcionesCorrectas);
     }
 
-    public List<Opcion> getOpcionesGrupo( String grupo ){
-        List<Opcion> opciones = new ArrayList<Opcion>();
-        for( Opcion opcion : opcionesElegidas ){
-            if( opcion.getGrupo() == grupo ){
-                opciones.add(opcion);
-            }
-        }
-        return opciones;
-    }
 }
