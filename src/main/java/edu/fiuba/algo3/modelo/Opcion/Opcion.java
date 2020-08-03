@@ -31,4 +31,8 @@ public class Opcion {
 
         return (this.texto.equals(opc.texto) && (this.grupo == null || this.grupo.equals(opc.grupo)));
     }
+
+    public String getGrupo(){
+        return grupo;
+    }
 }

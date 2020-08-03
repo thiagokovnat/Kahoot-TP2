@@ -12,34 +12,34 @@ import java.util.List;
 public class VerdaderoFalso implements TipoDePregunta{
 
     private Modalidad modalidad;
-    private List<Opcion> respuestasCorrectas = new ArrayList<Opcion>();
+    private List<Opcion> opcionesCorrectas = new ArrayList<Opcion>();
 
     // Recibe una lista de las respuestas correctas y crea la pregunta guardando dichas respuestas.
-    private VerdaderoFalso(List<Opcion> respuestasCorrectas) {
+    private VerdaderoFalso(List<Opcion> opcionesCorrectas) {
 
-        this.respuestasCorrectas.addAll(respuestasCorrectas);
+        this.opcionesCorrectas.addAll(opcionesCorrectas);
     }
 
     // Devuelve una instancia de VF clásico dada una lista de respuestas correctas.
-    public static VerdaderoFalso VerdaderoFalsoClasico(List<Opcion> respuestasCorrectas){
+    public static VerdaderoFalso VerdaderoFalsoClasico(List<Opcion> opcionesCorrectas){
 
-        VerdaderoFalso nuevaPregunta = new VerdaderoFalso(respuestasCorrectas);
+        VerdaderoFalso nuevaPregunta = new VerdaderoFalso(opcionesCorrectas);
         nuevaPregunta.modalidad = new Clasica();
         return nuevaPregunta;
     }
 
 
     // Devuelve una instancia de VF con penalidad dada una lista de respuestas correctas.
-    public static VerdaderoFalso VerdaderoFalsoPenalidad(List<Opcion> respuestasCorrectas){
+    public static VerdaderoFalso VerdaderoFalsoPenalidad(List<Opcion> opcionesCorrectas){
 
-        VerdaderoFalso nuevaPregunta = new VerdaderoFalso(respuestasCorrectas);
+        VerdaderoFalso nuevaPregunta = new VerdaderoFalso(opcionesCorrectas);
         nuevaPregunta.modalidad = new Penalidad();
         return nuevaPregunta;
     }
 
     // Puntúa la respuesta del jugador de forma correspondiente al tipo de pregunta del mismo.
     public void puntuarRespuesta(Respuesta respuesta) {
-        this.modalidad.puntuarVerdaderoFalso(respuesta,respuestasCorrectas);
+        this.modalidad.puntuarVerdaderoFalso(respuesta, opcionesCorrectas);
     }
 
     public void puntuarRespuestaExclusiva(Respuesta respuesta){}

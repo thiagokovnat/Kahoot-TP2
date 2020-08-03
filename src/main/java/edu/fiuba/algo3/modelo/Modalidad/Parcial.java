@@ -27,6 +27,6 @@ public class Parcial implements Modalidad {
 
     public void puntuarOrderedChoice(Respuesta respuesta, List<Opcion> respuestasCorrectas){}
 
-    public void puntuarGroupChoice( Respuesta respuesta, List<Opcion> correctasGrupoUno, List<Opcion> correctasGrupoDos ){}
+    public void puntuarGroupChoice( Respuesta respuesta, List<Opcion> respuestasCorrectas){}
 
 }

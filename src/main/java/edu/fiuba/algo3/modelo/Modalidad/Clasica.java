@@ -7,38 +7,39 @@ import edu.fiuba.algo3.modelo.Respuesta.Respuesta;
 public class Clasica implements Modalidad {
 
     // Dada una respuesta y lista de datos válidos, puntúa al jugador asociado si su respuesta es correcta.
-    public void puntuarVerdaderoFalso(Respuesta respuesta, List<Opcion> respuestasCorrectas){
+    public void puntuarVerdaderoFalso(Respuesta respuesta, List<Opcion> opcionesCorrectas){
 
-        int cantidadCorrectas = respuesta.cantidadCorrectas(respuestasCorrectas);
-        int cantidadIncorrectas = respuesta.cantidadIncorrectas(respuestasCorrectas);
+        int cantidadCorrectas = respuesta.cantidadCorrectas(opcionesCorrectas);
+        int cantidadIncorrectas = respuesta.cantidadIncorrectas(opcionesCorrectas);
 
-        if(respuestasCorrectas.size() == cantidadCorrectas && cantidadIncorrectas == 0){
+        if(opcionesCorrectas.size() == cantidadCorrectas && cantidadIncorrectas == 0){
             respuesta.jugador.modificarPuntos(1);
         }
     }
 
     // Dada una respuesta y lista de datos válidos, puntúa al jugador asociado si su respuesta es correcta.
-    public void puntuarMultipleChoice(Respuesta respuesta, List<Opcion> respuestasCorrectas){
+    public void puntuarMultipleChoice(Respuesta respuesta, List<Opcion> opcionesCorrectas){
 
-        int cantidadCorrectas = respuesta.cantidadCorrectas(respuestasCorrectas);
-        int cantidadIncorrectas = respuesta.cantidadIncorrectas(respuestasCorrectas);
+        int cantidadCorrectas = respuesta.cantidadCorrectas(opcionesCorrectas);
+        int cantidadIncorrectas = respuesta.cantidadIncorrectas(opcionesCorrectas);
 
-        if(respuestasCorrectas.size() == cantidadCorrectas && cantidadIncorrectas == 0){
+        if(opcionesCorrectas.size() == cantidadCorrectas && cantidadIncorrectas == 0){
             respuesta.jugador.modificarPuntos(1);
         }
     }
 
-    public void puntuarOrderedChoice(Respuesta respuesta, List<Opcion> respuestasCorrectas){
+    public void puntuarOrderedChoice(Respuesta respuesta, List<Opcion> opcionesCorrectas){
 
-        if(respuesta.opcionesEnOrden(respuestasCorrectas))
+        if(respuesta.opcionesEnOrden(opcionesCorrectas))
             respuesta.jugador.modificarPuntos(1);
     }
 
-    public void puntuarGroupChoice( Respuesta respuesta, List<Opcion> correctasGrupoUno, List<Opcion> correctasGrupoDos ){
-        if( respuesta.contieneLasOpciones(correctasGrupoUno) ){
+    public void puntuarGroupChoice( Respuesta respuesta, List<Opcion> opcionesCorrectas){
+
+        if( opcionesCorrectas.containsAll(respuesta.getOpcionesGrupo("1")) ){
             respuesta.jugador.modificarPuntos(1);
         }
-        if(respuesta.contieneLasOpciones(correctasGrupoDos) ){
+        if( opcionesCorrectas.containsAll(respuesta.getOpcionesGrupo("2")) ){
             respuesta.jugador.modificarPuntos(1);
         }
     }

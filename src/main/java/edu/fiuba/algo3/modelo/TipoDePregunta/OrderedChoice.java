@@ -11,17 +11,17 @@ import java.util.List;
 public class OrderedChoice implements TipoDePregunta {
 
     private Modalidad modalidad;
-    private List<Opcion> respuestasCorrectas = new ArrayList<Opcion>();
+    private List<Opcion> opcionesCorrectas = new ArrayList<Opcion>();
 
-    private OrderedChoice(List<Opcion> respuestasCorrectas){
+    private OrderedChoice(List<Opcion> opcionesCorrectas){
 
-        this.respuestasCorrectas.addAll(respuestasCorrectas);
+        this.opcionesCorrectas.addAll(opcionesCorrectas);
         this.modalidad = new Clasica();
     }
 
-    public static OrderedChoice OrderedChoice(List<Opcion> respuestasCorrectas){
+    public static OrderedChoice OrderedChoice(List<Opcion> opcionesCorrectas){
 
-        OrderedChoice unaPregunta = new OrderedChoice(respuestasCorrectas);
+        OrderedChoice unaPregunta = new OrderedChoice(opcionesCorrectas);
         unaPregunta.modalidad = new Clasica();
 
         return unaPregunta;
@@ -29,7 +29,7 @@ public class OrderedChoice implements TipoDePregunta {
 
     public void puntuarRespuesta(Respuesta respuesta){
 
-        this.modalidad.puntuarOrderedChoice(respuesta, respuestasCorrectas);
+        this.modalidad.puntuarOrderedChoice(respuesta, opcionesCorrectas);
     }
 
     public void puntuarRespuestaExclusiva(Respuesta respuesta){}

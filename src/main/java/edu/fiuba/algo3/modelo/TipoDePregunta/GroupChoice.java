@@ -11,8 +11,7 @@ import java.util.List;
 public class GroupChoice implements TipoDePregunta {
 
     private Modalidad modalidad;
-    private List<Opcion> correctasGrupoUno = new ArrayList<Opcion>();
-    private List<Opcion> correctasGrupoDos = new ArrayList<Opcion>();
+    private List<Opcion> opcionesCorrectas = new ArrayList<Opcion>();
 
     private void setGrupo( List<Opcion> opciones, String grupo ){
         for( Opcion opcion : opciones ){
@@ -23,8 +22,8 @@ public class GroupChoice implements TipoDePregunta {
     private GroupChoice(List<Opcion> grupoUno, List<Opcion> grupoDos){
         setGrupo(grupoUno, "1");
         setGrupo(grupoDos, "2");
-        correctasGrupoUno.addAll( grupoUno );
-        correctasGrupoDos.addAll( grupoDos );
+        this.opcionesCorrectas.addAll( grupoUno );
+        this.opcionesCorrectas.addAll( grupoDos );
     }
 
     public static GroupChoice GroupChoice(List<Opcion> grupoUno, List<Opcion> grupoDos){
@@ -34,7 +33,7 @@ public class GroupChoice implements TipoDePregunta {
     }
 
     public void puntuarRespuesta(Respuesta respuesta){
-        this.modalidad.puntuarGroupChoice(respuesta, correctasGrupoUno, correctasGrupoDos);
+        this.modalidad.puntuarGroupChoice(respuesta, opcionesCorrectas);
     }
 
     public void puntuarRespuestaExclusiva(Respuesta respuesta){}

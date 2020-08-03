@@ -17,20 +17,21 @@ public class Respuesta{
         this.opcionesElegidas.addAll(opcionesElegidas);
     }
 
-    public int cantidadCorrectas(List<Opcion> respuestasCorrectas){
+    public int cantidadCorrectas(List<Opcion> opcionesCorrectas){
 
         int cantCorrectas = 0;
         for(Opcion opcion: opcionesElegidas){
-            if(respuestasCorrectas.contains(opcion)) cantCorrectas++;
+            if(opcionesCorrectas.contains(opcion)) cantCorrectas++;
         }
         return cantCorrectas;
+
     }
 
-    public int cantidadIncorrectas(List<Opcion> respuestasCorrectas){
+    public int cantidadIncorrectas(List<Opcion> opcionesCorrectas){
 
         int cantIncorrectas = 0;
         for(Opcion opcion: opcionesElegidas){
-            if(!respuestasCorrectas.contains(opcion)) cantIncorrectas++;
+            if(!opcionesCorrectas.contains(opcion)) cantIncorrectas++;
         }
         return cantIncorrectas;
     }
@@ -42,5 +43,15 @@ public class Respuesta{
 
     public boolean contieneLasOpciones(List<Opcion> opcionesCorrectas ){
         return opcionesElegidas.containsAll(opcionesCorrectas);
+    }
+
+    public List<Opcion> getOpcionesGrupo( String grupo ){
+        List<Opcion> opciones = new ArrayList<Opcion>();
+        for( Opcion opcion : opcionesElegidas ){
+            if( opcion.getGrupo() == grupo ){
+                opciones.add(opcion);
+            }
+        }
+        return opciones;
     }
 }
