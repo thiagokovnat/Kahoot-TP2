@@ -11,11 +11,11 @@ public class MainPageController {
 
     public void agregarJugador(){
 
-        Loader.addPlayerLoader();
+        Loader.cargarEscena("addPlayer");
     }
 
     public void agregarPregunta(){
 
-        System.out.println("PlaceHolder");
+        Loader.cargarEscena("agregarPregunta");
     }
 }
