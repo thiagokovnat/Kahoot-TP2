@@ -27,7 +27,9 @@ public class App extends Application {
 
         stage.setTitle("Algohoot!");
 
-        Loader.mainLoader();
+        Loader.cargarEscena("mainPage");
+
+
 
 
     }
