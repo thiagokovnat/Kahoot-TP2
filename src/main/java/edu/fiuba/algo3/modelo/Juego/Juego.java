@@ -5,6 +5,7 @@ import edu.fiuba.algo3.modelo.Opcion.Opcion;
 import edu.fiuba.algo3.modelo.Pregunta.Pregunta;
 import edu.fiuba.algo3.modelo.Respuesta.Respuesta;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
@@ -13,6 +14,7 @@ public class Juego {
     private final int CANTIDAD_MAXIMA_JUGADORES = 2;
     private final static Juego instanciaJuego = new Juego();
     private final HashMap<String, Jugador> jugadores;
+    private List<Pregunta> preguntas = new ArrayList<>();
 
     private Juego() {
         this.jugadores = new HashMap<String, Jugador>();
@@ -36,6 +38,10 @@ public class Juego {
     public Respuesta responder(String nickname, List<Opcion> opcionesElegidas) {
         Jugador jugador = this.jugadores.get(nickname);
         return jugador.responder(opcionesElegidas);
+    }
+
+    public void agregarPregunta(Pregunta pregunta){
+        this.preguntas.add(pregunta);
     }
 
 }

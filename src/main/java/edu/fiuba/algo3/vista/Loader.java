@@ -22,30 +22,10 @@ public class Loader {
         URL path = App.class.getResource("/vista/" + fileName + ".fxml");
         loader = new FXMLLoader(path);
     }
-    public static void mainLoader(){
+    public static void cargarEscena(String escena){
 
 
-        loadFXML("mainPage");
-
-        Parent mainNode = null;
-
-        try{
-            mainNode = loader.load();
-        }
-        catch(IOException e){
-            e.printStackTrace();
-        }
-
-        Scene scene = new Scene(mainNode);
-        Stage stage = App.getStage();
-        stage.setScene(scene);
-        stage.show();
-
-    }
-
-    public static void addPlayerLoader(){
-
-        loadFXML("addPlayer");
+        loadFXML(escena);
 
         Parent mainNode = null;
 
@@ -63,22 +43,5 @@ public class Loader {
 
     }
 
-    public static void loadErrorPage(){
 
-        loadFXML("errorPage");
-
-        Parent mainNode = null;
-
-        try{
-            mainNode = loader.load();
-        }
-        catch(IOException e){
-            e.printStackTrace();
-        }
-
-        Scene scene = new Scene(mainNode);
-        Stage stage = App.getStage();
-        stage.setScene(scene);
-        stage.show();
-    }
 }
