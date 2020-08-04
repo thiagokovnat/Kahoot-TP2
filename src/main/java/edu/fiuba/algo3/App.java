@@ -11,7 +11,7 @@ import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
-;
+;import java.net.URL;
 
 /**
  * JavaFX App
@@ -27,7 +27,10 @@ public class App extends Application {
         App.stage = stage;
 
         stage.setTitle("Algohoot!");
-        stage.getIcons().add(new Image("../../../../resources/images/icon.png"));
+
+        URL path = App.class.getResource("/images/icon.png");
+        stage.getIcons().add(new Image(path.toExternalForm()));
+
         Loader.cargarEscena("mainPage");
 
     }
@@ -44,8 +47,5 @@ public class App extends Application {
     public static Juego getJuego(){
         return juego;
     }
-
-
-
 
 }
