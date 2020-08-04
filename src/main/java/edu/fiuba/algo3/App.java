@@ -8,6 +8,7 @@ import javafx.application.Application;
 
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
+import javafx.scene.image.Image;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 ;
@@ -26,11 +27,8 @@ public class App extends Application {
         App.stage = stage;
 
         stage.setTitle("Algohoot!");
-
+        stage.getIcons().add(new Image("../../../../resources/images/icon.png"));
         Loader.cargarEscena("mainPage");
-
-
-
 
     }
 
