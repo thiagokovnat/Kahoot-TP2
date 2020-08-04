@@ -30,14 +30,14 @@ public class AgregarJugadorController {
         if(!textField.getText().isEmpty()) {
             try {
                 juego.crearJugador(textField.getText());
-                Loader.mainLoader();
+                Loader.cargarEscena("mainPage");
             } catch (CantidadMaximaDeJugadoresSuperadaException e) {
-                Loader.loadErrorPage();
+                Loader.cargarEscena("errorPage");
             }
         }
     }
 
     public void volverMenuPrincipal(ActionEvent event){
-        Loader.mainLoader();
+        Loader.cargarEscena("mainPage");
     }
 }
