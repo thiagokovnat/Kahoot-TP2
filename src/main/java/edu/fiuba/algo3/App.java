@@ -27,6 +27,7 @@ public class App extends Application {
         App.stage = stage;
 
         stage.setTitle("Algohoot!");
+        stage.setResizable(false);
 
         URL path = App.class.getResource("/images/icon.png");
         stage.getIcons().add(new Image(path.toExternalForm()));

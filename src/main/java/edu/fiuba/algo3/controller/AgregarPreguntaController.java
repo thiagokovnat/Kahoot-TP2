@@ -47,5 +47,7 @@ public class AgregarPreguntaController {
 
     public void onMCParcial(){}
 
-
+    public void volverMenuPrincipal(ActionEvent event){
+        Loader.cargarEscena("mainPage");
+    }
 }

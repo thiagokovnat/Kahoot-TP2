@@ -6,16 +6,15 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: BLACK;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.fiuba.algo3.controller.AgregarJugadorController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="511.0" prefWidth="779.0" style="-fx-background-color: BLACK;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.fiuba.algo3.controller.AgregarJugadorController">
    <children>
-      <TextField fx:id="textField" layoutX="121.0" layoutY="206.0" prefHeight="26.0" prefWidth="355.0" />
-      <Text fill="#f8f7f7" layoutX="144.0" layoutY="188.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ingrese el nombre del jugador" wrappingWidth="311.7294921875">
+      <TextField fx:id="textField" layoutX="212.0" layoutY="222.0" prefHeight="26.0" prefWidth="355.0" />
+      <Text fill="#f8f7f7" layoutX="212.0" layoutY="202.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ingrese el nombre del jugador" wrappingWidth="311.7294921875">
          <font>
             <Font name="FreeMono" size="17.0" />
          </font>
       </Text>
-      <Button fx:id="goBackButton" layoutX="20.0" layoutY="36.0" mnemonicParsing="false" onAction="#volverMenuPrincipal" prefHeight="26.0" prefWidth="95.0" text="Volver" />
-      <Button fx:id="confirmButton" layoutX="121.0" layoutY="244.0" mnemonicParsing="false" onAction="#agregarJugador" prefHeight="26.0" prefWidth="105.0" text="Añadir" />
+      <Button fx:id="goBackButton" layoutX="20.0" layoutY="14.0" mnemonicParsing="false" onAction="#volverMenuPrincipal" prefHeight="26.0" prefWidth="95.0" text="Volver" />
+      <Button fx:id="confirmButton" layoutX="212.0" layoutY="268.0" mnemonicParsing="false" onAction="#agregarJugador" prefHeight="26.0" prefWidth="105.0" text="Añadir" />
    </children>
 </AnchorPane>

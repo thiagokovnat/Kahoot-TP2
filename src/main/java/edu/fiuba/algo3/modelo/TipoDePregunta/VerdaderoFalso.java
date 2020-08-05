@@ -28,9 +28,8 @@ public class VerdaderoFalso implements TipoDePregunta{
         return nuevaPregunta;
     }
 
-
     // Devuelve una instancia de VF con penalidad dada una lista de respuestas correctas.
-    public static VerdaderoFalso VerdaderoFalsoPenalidad(List<Opcion> opcionesCorrectas){
+    public static VerdaderoFalso VerdaderoFalsoConPenalidad(List<Opcion> opcionesCorrectas){
 
         VerdaderoFalso nuevaPregunta = new VerdaderoFalso(opcionesCorrectas);
         nuevaPregunta.modalidad = new Penalidad();

@@ -7,14 +7,14 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: BLACK;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.fiuba.algo3.controller.AgregarPreguntaController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="511.0" prefWidth="779.0" style="-fx-background-color: BLACK;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.fiuba.algo3.controller.AgregarPreguntaController">
    <children>
-      <Text fill="WHITE" layoutX="14.0" layoutY="39.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Agregar Pregunta" textAlignment="CENTER" wrappingWidth="559.7294921875">
+      <Text fill="WHITE" layoutX="110.0" layoutY="83.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Agregar Pregunta" textAlignment="CENTER" wrappingWidth="559.7294921875">
          <font>
             <Font name="FreeMono" size="28.0" />
          </font>
       </Text>
-      <VBox alignment="CENTER" layoutX="16.0" layoutY="62.0" prefHeight="324.0" prefWidth="560.0" spacing="15.0">
+      <VBox alignment="CENTER" layoutX="110.0" layoutY="114.0" prefHeight="324.0" prefWidth="560.0" spacing="15.0">
          <children>
             <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Seleccione el tipo de Pregunta" textAlignment="CENTER" wrappingWidth="478.7294921875" />
             <Button fx:id="GroupChoice" mnemonicParsing="false" prefHeight="26.0" prefWidth="480.0" text="Group Choice Clasico" />
@@ -26,7 +26,8 @@
             <Button fx:id="MCParcial" mnemonicParsing="false" onAction="#onMCParcial" prefHeight="26.0" prefWidth="484.0" text="Multiple Choice Parcial" />
          </children>
       </VBox>
-      <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="76.0" text="Ayuda" />
-      <Line endX="600.0" endY="60.5" startX="-1.52587890625E-5" startY="60.49998474121094" stroke="WHITE" />
+      <Button fx:id="goBackButton" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#volverMenuPrincipal" prefHeight="26.0" prefWidth="95.0" text="Volver" />
+      <Button layoutX="689.0" layoutY="14.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="76.0" text="Ayuda" />
+      <Line endX="764.0" endY="60.5" layoutX="15.0" layoutY="45.0" startX="-15.0" startY="60.5" stroke="WHITE" />
    </children>
 </AnchorPane>

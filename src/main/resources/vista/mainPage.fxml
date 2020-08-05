@@ -7,9 +7,9 @@
 
 <AnchorPane prefHeight="511.0" prefWidth="779.0" style="-fx-background-color: BLACK;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.fiuba.algo3.controller.MainPageController">
    <children>
-      <ImageView fitHeight="152.0" fitWidth="399.0" layoutX="193.0" layoutY="106.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="291.0" AnchorPane.leftAnchor="193.0" AnchorPane.rightAnchor="187.0" AnchorPane.topAnchor="106.0">
+      <ImageView fitHeight="152.0" fitWidth="399.0" layoutX="193.0" layoutY="106.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../images/Logo5.png" />
+            <Image url="@../images/Newlogo5.png" />
          </image>
       </ImageView>
       <Button layoutX="319.0" layoutY="268.0" mnemonicParsing="false" onAction="#comenzarJuego" prefHeight="26.0" prefWidth="147.0" text="Comenzar" />

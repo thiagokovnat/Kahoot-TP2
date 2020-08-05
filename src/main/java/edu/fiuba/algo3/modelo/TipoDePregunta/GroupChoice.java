@@ -13,7 +13,7 @@ public class GroupChoice implements TipoDePregunta {
     private Modalidad modalidad;
     private List<Opcion> opcionesCorrectas = new ArrayList<Opcion>();
 
-    private void setGrupo( List<Opcion> opciones, String grupo ){
+    private void setGrupo(List<Opcion> opciones, String grupo ){
         for( Opcion opcion : opciones ){
             opcion.setGrupo(grupo);
         }

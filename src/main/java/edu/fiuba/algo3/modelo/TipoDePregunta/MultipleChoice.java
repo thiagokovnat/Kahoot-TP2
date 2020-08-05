@@ -28,14 +28,14 @@ public class MultipleChoice implements TipoDePregunta {
         return nuevaPregunta;
     }
 
-    public static TipoDePregunta MultipleChoiceParcial(List<Opcion> opcionesCorrectas) {
+    public static MultipleChoice MultipleChoiceParcial(List<Opcion> opcionesCorrectas) {
 
         MultipleChoice nuevaPregunta = new MultipleChoice(opcionesCorrectas);
         nuevaPregunta.modalidad = new Parcial();
         return nuevaPregunta;
     }
 
-    public static TipoDePregunta MultipleChoicePenalidad(List<Opcion> opcionesCorrectas) {
+    public static MultipleChoice MultipleChoicePenalidad(List<Opcion> opcionesCorrectas) {
 
         MultipleChoice nuevaPregunta = new MultipleChoice(opcionesCorrectas);
         nuevaPregunta.modalidad = new Penalidad();

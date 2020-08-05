@@ -51,7 +51,7 @@ public class Pregunta {
     public static Pregunta crearPreguntaVerdaderoFalsoConPenalidad(String pregunta, List<Opcion> opcionesDisponibles, List<Opcion> respuestasCorrectas){
 
         Pregunta nuevaPregunta = new Pregunta(pregunta, opcionesDisponibles);
-        nuevaPregunta.tipoDePregunta = VerdaderoFalso.VerdaderoFalsoPenalidad(respuestasCorrectas);
+        nuevaPregunta.tipoDePregunta = VerdaderoFalso.VerdaderoFalsoConPenalidad(respuestasCorrectas);
 
         return nuevaPregunta;
     }
@@ -72,7 +72,7 @@ public class Pregunta {
         return nuevaPregunta;
     }
 
-    public static Pregunta crearPreguntaMultipleChoicePenalidad(String pregunta, List<Opcion> opcionesDisponibles, List<Opcion> respuestasCorrectas) {
+    public static Pregunta crearPreguntaMultipleChoiceConPenalidad(String pregunta, List<Opcion> opcionesDisponibles, List<Opcion> respuestasCorrectas) {
 
         Pregunta nuevaPregunta = new Pregunta(pregunta, opcionesDisponibles);
         nuevaPregunta.tipoDePregunta = MultipleChoice.MultipleChoicePenalidad(respuestasCorrectas);
