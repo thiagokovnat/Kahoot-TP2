@@ -1,6 +1,9 @@
 package edu.fiuba.algo3.modelo.Pregunta;
 
 import edu.fiuba.algo3.modelo.Jugador.Jugador;
+import edu.fiuba.algo3.modelo.Jugador.PreguntaNoAdmiteMultiplicadorException;
+import edu.fiuba.algo3.modelo.Multiplicador.MultiplicadorX2;
+import edu.fiuba.algo3.modelo.Multiplicador.MultiplicadorX3;
 import edu.fiuba.algo3.modelo.Opcion.Opcion;
 import edu.fiuba.algo3.modelo.Respuesta.Respuesta;
 
@@ -82,7 +85,17 @@ class VerdaderoFalsoTest {
 
         Pregunta nuevaPregunta = Pregunta.crearPreguntaVerdaderoFalsoClasico(textoPregunta, opciones, opcionesCorrectas);
 
+        Jugador jugador1 = new Jugador("Jugador_1");
+
         assertFalse(nuevaPregunta.admiteMultiplicador());
+        assertThrows(PreguntaNoAdmiteMultiplicadorException.class,
+                ()->{
+                    jugador1.activarMultiplicador(new MultiplicadorX2(), nuevaPregunta);
+                });
+        assertThrows(PreguntaNoAdmiteMultiplicadorException.class,
+                ()->{
+                    jugador1.activarMultiplicador(new MultiplicadorX3(), nuevaPregunta);
+                });
     }
 
     // Tests VF con Penalidad

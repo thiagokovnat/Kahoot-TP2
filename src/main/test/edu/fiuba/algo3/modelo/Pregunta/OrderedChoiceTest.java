@@ -1,6 +1,9 @@
 package edu.fiuba.algo3.modelo.Pregunta;
 
 import edu.fiuba.algo3.modelo.Jugador.Jugador;
+import edu.fiuba.algo3.modelo.Jugador.PreguntaNoAdmiteMultiplicadorException;
+import edu.fiuba.algo3.modelo.Multiplicador.MultiplicadorX2;
+import edu.fiuba.algo3.modelo.Multiplicador.MultiplicadorX3;
 import edu.fiuba.algo3.modelo.Opcion.Opcion;
 import edu.fiuba.algo3.modelo.Respuesta.Respuesta;
 
@@ -9,8 +12,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.junit.jupiter.api.Test;
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertFalse;
+
+import static org.junit.jupiter.api.Assertions.*;
 
 public class OrderedChoiceTest {
 
@@ -76,6 +79,16 @@ public class OrderedChoiceTest {
 
         Pregunta pregunta = Pregunta.crearPreguntaOrderedChoice(texto, opcionesOrdenadas, opcionesOrdenadas);
 
+        Jugador jugador1 = new Jugador("Jugador_1");
+
         assertFalse(pregunta.admiteMultiplicador());
+        assertThrows(PreguntaNoAdmiteMultiplicadorException.class,
+                ()->{
+                    jugador1.activarMultiplicador(new MultiplicadorX2(), pregunta);
+                });
+        assertThrows(PreguntaNoAdmiteMultiplicadorException.class,
+                ()->{
+                    jugador1.activarMultiplicador(new MultiplicadorX3(), pregunta);
+                });
     }
 }

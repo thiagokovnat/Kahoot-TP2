@@ -2,6 +2,7 @@ package edu.fiuba.algo3.modelo.Jugador;
 import edu.fiuba.algo3.modelo.Multiplicador.Multiplicador;
 import edu.fiuba.algo3.modelo.Multiplicador.MultiplicadorX1;
 import edu.fiuba.algo3.modelo.Opcion.Opcion;
+import edu.fiuba.algo3.modelo.Pregunta.Pregunta;
 import edu.fiuba.algo3.modelo.Respuesta.Respuesta;
 
 import java.util.HashMap;
@@ -49,11 +50,15 @@ public class Jugador {
 
     }
 
-    public void activarMultiplicador(Multiplicador multiplicador) throws CantidadUsoMultiplicadorExcedidoException {
+    public void activarMultiplicador(Multiplicador multiplicador, Pregunta pregunta) throws CantidadUsoMultiplicadorExcedidoException, PreguntaNoAdmiteMultiplicadorException {
 
-        if(multiplicadorDisponible(multiplicador))
-            this.multiplicador = multiplicador;
-        else
+        if(!pregunta.admiteMultiplicador()) {
+            throw new PreguntaNoAdmiteMultiplicadorException();
+        }
+        if(!multiplicadorDisponible(multiplicador)) {
             throw new CantidadUsoMultiplicadorExcedidoException();
+        }
+
+        this.multiplicador = multiplicador;
     }
 }

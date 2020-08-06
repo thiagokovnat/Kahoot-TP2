@@ -40,9 +40,9 @@ public class MultiplicadoresTest {
         respuestas.add(jugador1.responder(respuestaJugadorUno));
 
         try{
-            jugador1.activarMultiplicador(new MultiplicadorX2());
+            jugador1.activarMultiplicador(new MultiplicadorX2(), nuevaPregunta);
         }
-        catch(CantidadUsoMultiplicadorExcedidoException e){
+        catch(Exception e){
             e.printStackTrace();
         }
 
@@ -86,9 +86,9 @@ public class MultiplicadoresTest {
         respuestas.add(jugador1.responder(respuestaJugadorDos));
 
         try{
-            jugador1.activarMultiplicador(new MultiplicadorX3());
+            jugador1.activarMultiplicador(new MultiplicadorX3(), nuevaPregunta);
         }
-        catch(CantidadUsoMultiplicadorExcedidoException e){
+        catch(Exception e){
             e.printStackTrace();
         }
 
@@ -99,32 +99,27 @@ public class MultiplicadoresTest {
 
     @Test
     public void unJugadorNoPuedeActivarTresVecesUnMultiplicadorX2(){
+        String textoPregunta = "¿Se aprueba el TP2?";
 
-        Boolean lanzada = false;
+        List<Opcion> opciones = new ArrayList<>();
+        List<Opcion> opcionesCorrectas = new ArrayList<>();
 
-        Jugador jugador1 = new Jugador("J1");
+        Jugador jugador1 = new Jugador("Jugador_1");
 
-        try{
-            jugador1.activarMultiplicador(new MultiplicadorX2());
-        }
-        catch(CantidadUsoMultiplicadorExcedidoException e){
-            e.printStackTrace();
-        }
+        Opcion opcionUno = new Opcion("Verdadero");
+        Opcion opcionDos = new Opcion("Falso");
 
-        try{
-            jugador1.activarMultiplicador(new MultiplicadorX2());
-        }
-        catch(CantidadUsoMultiplicadorExcedidoException e){
-            e.printStackTrace();
-        }
+        opciones.add(opcionUno);
+        opciones.add(opcionDos);
+        opcionesCorrectas.add(opcionUno);
 
-        try{
-            jugador1.activarMultiplicador(new MultiplicadorX2());
-        }
-        catch(CantidadUsoMultiplicadorExcedidoException e){
-            lanzada = true;
-        }
+        Pregunta nuevaPregunta = Pregunta.crearPreguntaVerdaderoFalsoConPenalidad(textoPregunta, opciones, opcionesCorrectas);
 
-        assertTrue(lanzada);
+        assertThrows(CantidadUsoMultiplicadorExcedidoException.class,
+                ()->{
+                    jugador1.activarMultiplicador(new MultiplicadorX2(), nuevaPregunta);
+                    jugador1.activarMultiplicador(new MultiplicadorX2(), nuevaPregunta);
+                    jugador1.activarMultiplicador(new MultiplicadorX2(), nuevaPregunta);
+                });
     }
 }
