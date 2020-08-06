@@ -140,7 +140,7 @@ El hecho de que cada objeto Pregunta y TipoDePregunta tenga objetos asociados qu
 Cada instancia de Jugador tendrá un nombre, puntos y un multiplicador asociados al mismo. Se inicializa con puntaje en cero y nombre recibido por parámetro. Esta clase posee los métodos:
 \begin{enumerate}
 \item \begin{verbatim}public Respuesta responder(List<Opcion> opcionesElegidas);\end{verbatim} Recibe una lista de opciones seleccionadas por el jugador durante el turno vigente, y devuelve una instancia de Respuesta que posee una referencia al jugador y dichas opciones.
-\item \begin{verbatim}public void modificarPuntos(int puntos);\end{verbatim} Este método recibe el número de puntos que se le deben añadir al jugador, ya sean positivos o negativos. 
+\item \begin{verbatim}public void modificarPuntos(int puntos);\end{verbatim} Este método recibe el número de puntos que obtuvo el jugador (ya sean positivos o negativos), se les aplica un multiplicador si el Jugador tiene uno activado, y se los añade.
 \end{enumerate}
 
 \subsection{Pregunta}
