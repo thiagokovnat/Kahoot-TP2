@@ -1,6 +1,6 @@
 package edu.fiuba.algo3.modelo;
 
-import edu.fiuba.algo3.modelo.Jugador.CantidadUsoMultiplicadorExcedido;
+import edu.fiuba.algo3.modelo.Jugador.CantidadUsoMultiplicadorExcedidoException;
 import edu.fiuba.algo3.modelo.Multiplicador.MultiplicadorX2;
 import edu.fiuba.algo3.modelo.Jugador.*;
 import edu.fiuba.algo3.modelo.Multiplicador.MultiplicadorX3;
@@ -42,7 +42,7 @@ public class MultiplicadoresTest {
         try{
             jugador1.activarMultiplicador(new MultiplicadorX2());
         }
-        catch(CantidadUsoMultiplicadorExcedido e){
+        catch(CantidadUsoMultiplicadorExcedidoException e){
             e.printStackTrace();
         }
 
@@ -88,7 +88,7 @@ public class MultiplicadoresTest {
         try{
             jugador1.activarMultiplicador(new MultiplicadorX3());
         }
-        catch(CantidadUsoMultiplicadorExcedido e){
+        catch(CantidadUsoMultiplicadorExcedidoException e){
             e.printStackTrace();
         }
 
@@ -107,21 +107,21 @@ public class MultiplicadoresTest {
         try{
             jugador1.activarMultiplicador(new MultiplicadorX2());
         }
-        catch(CantidadUsoMultiplicadorExcedido e){
+        catch(CantidadUsoMultiplicadorExcedidoException e){
             e.printStackTrace();
         }
 
         try{
             jugador1.activarMultiplicador(new MultiplicadorX2());
         }
-        catch(CantidadUsoMultiplicadorExcedido e){
+        catch(CantidadUsoMultiplicadorExcedidoException e){
             e.printStackTrace();
         }
 
         try{
             jugador1.activarMultiplicador(new MultiplicadorX2());
         }
-        catch(CantidadUsoMultiplicadorExcedido e){
+        catch(CantidadUsoMultiplicadorExcedidoException e){
             lanzada = true;
         }
 

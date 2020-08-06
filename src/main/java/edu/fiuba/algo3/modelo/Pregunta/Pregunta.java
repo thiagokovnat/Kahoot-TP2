@@ -97,7 +97,7 @@ public class Pregunta {
     public void puntuarRespuestas(List<Respuesta> respuestasElegidas){
 
         for(Respuesta respuesta : respuestasElegidas){
-            this.estado.responder(respuesta, this.tipoDePregunta);
+            this.estado.puntuarRespuesta(respuesta, this.tipoDePregunta);
         }
     }
 
