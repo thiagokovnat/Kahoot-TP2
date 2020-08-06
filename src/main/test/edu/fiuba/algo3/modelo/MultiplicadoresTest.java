@@ -1,7 +1,8 @@
 package edu.fiuba.algo3.modelo;
 
+import edu.fiuba.algo3.modelo.Jugador.CantidadUsoMultiplicadorExcedido;
 import edu.fiuba.algo3.modelo.Multiplicador.MultiplicadorX2;
-import edu.fiuba.algo3.modelo.Jugador.Jugador;
+import edu.fiuba.algo3.modelo.Jugador.*;
 import edu.fiuba.algo3.modelo.Multiplicador.MultiplicadorX3;
 import edu.fiuba.algo3.modelo.Opcion.Opcion;
 import edu.fiuba.algo3.modelo.Pregunta.Pregunta;
@@ -11,7 +12,7 @@ import org.junit.jupiter.api.Test;
 import java.util.ArrayList;
 import java.util.List;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class MultiplicadoresTest {
 
@@ -38,7 +39,12 @@ public class MultiplicadoresTest {
         List<Respuesta> respuestas = new ArrayList<>();
         respuestas.add(jugador1.responder(respuestaJugadorUno));
 
-        jugador1.activarMultiplicador(new MultiplicadorX2());
+        try{
+            jugador1.activarMultiplicador(new MultiplicadorX2());
+        }
+        catch(CantidadUsoMultiplicadorExcedido e){
+            e.printStackTrace();
+        }
 
         nuevaPregunta.puntuarRespuestas(respuestas);
 
@@ -79,10 +85,46 @@ public class MultiplicadoresTest {
         List<Respuesta> respuestas = new ArrayList<>();
         respuestas.add(jugador1.responder(respuestaJugadorDos));
 
-        jugador1.activarMultiplicador(new MultiplicadorX3());
+        try{
+            jugador1.activarMultiplicador(new MultiplicadorX3());
+        }
+        catch(CantidadUsoMultiplicadorExcedido e){
+            e.printStackTrace();
+        }
 
         nuevaPregunta.puntuarRespuestas(respuestas);
 
         assertEquals(6, jugador1.getPuntos());
+    }
+
+    @Test
+    public void unJugadorNoPuedeActivarTresVecesUnMultiplicadorX2(){
+
+        Boolean lanzada = false;
+
+        Jugador jugador1 = new Jugador("J1");
+
+        try{
+            jugador1.activarMultiplicador(new MultiplicadorX2());
+        }
+        catch(CantidadUsoMultiplicadorExcedido e){
+            e.printStackTrace();
+        }
+
+        try{
+            jugador1.activarMultiplicador(new MultiplicadorX2());
+        }
+        catch(CantidadUsoMultiplicadorExcedido e){
+            e.printStackTrace();
+        }
+
+        try{
+            jugador1.activarMultiplicador(new MultiplicadorX2());
+        }
+        catch(CantidadUsoMultiplicadorExcedido e){
+            lanzada = true;
+        }
+
+        assertTrue(lanzada);
     }
 }
