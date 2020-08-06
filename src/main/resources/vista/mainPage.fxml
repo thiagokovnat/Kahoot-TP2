@@ -7,13 +7,13 @@
 
 <AnchorPane prefHeight="511.0" prefWidth="779.0" style="-fx-background-color: BLACK;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.fiuba.algo3.controller.MainPageController">
    <children>
-      <ImageView fitHeight="152.0" fitWidth="399.0" layoutX="193.0" layoutY="106.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="511.0" fitWidth="779.0">
          <image>
-            <Image url="@../images/Newlogo5.png" />
+            <Image url="@../images/fondo.png" />
          </image>
       </ImageView>
-      <Button layoutX="319.0" layoutY="268.0" mnemonicParsing="false" onAction="#comenzarJuego" prefHeight="26.0" prefWidth="147.0" text="Comenzar" />
-      <Button layoutX="319.0" layoutY="308.0" mnemonicParsing="false" onAction="#agregarJugador" prefHeight="26.0" prefWidth="147.0" text="Agregar Jugador" />
-      <Button layoutX="319.0" layoutY="346.0" mnemonicParsing="false" onAction="#agregarPregunta" prefHeight="26.0" prefWidth="147.0" text="Añadir Pregunta" />
+      <Button layoutX="20.0" layoutY="384.0" mnemonicParsing="false" onAction="#comenzarJuego" prefHeight="26.0" prefWidth="147.0" text="Comenzar" />
+      <Button layoutX="20.0" layoutY="424.0" mnemonicParsing="false" onAction="#agregarJugador" prefHeight="26.0" prefWidth="147.0" text="Agregar Jugador" />
+      <Button layoutX="20.0" layoutY="462.0" mnemonicParsing="false" onAction="#agregarPregunta" prefHeight="26.0" prefWidth="147.0" text="Añadir Pregunta" />
    </children>
 </AnchorPane>

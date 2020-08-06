@@ -25,6 +25,12 @@ public class Juego {
         return instanciaJuego;
     }
 
+    //TEST ONLY
+    public Pregunta tomarPregunta(){
+
+        return this.preguntas.get(0);
+    }
+
     public void crearJugador(String nickname) throws CantidadMaximaDeJugadoresSuperadaException {
 
         if (this.jugadores.size() >= this.CANTIDAD_MAXIMA_JUGADORES) {

@@ -6,7 +6,7 @@ public class MainPageController {
 
     public void comenzarJuego(){
 
-        System.out.println("Comienza el juego");
+        Loader.cargarEscena("VFJuego");
     }
 
     public void agregarJugador(){

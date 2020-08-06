@@ -105,6 +105,11 @@ public class Pregunta {
         return tipoDePregunta.admiteMultiplicador();
     }
 
+    public String getTexto(){
+
+        return this.pregunta;
+    }
+
     public void setExclusividad(){
 
         this.estado = new Exclusivo();
