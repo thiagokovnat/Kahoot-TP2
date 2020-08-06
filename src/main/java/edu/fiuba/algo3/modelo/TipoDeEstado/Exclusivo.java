@@ -4,5 +4,5 @@ import edu.fiuba.algo3.modelo.TipoDePregunta.TipoDePregunta;
 
 public class Exclusivo implements TipoDeEstado{
 
-    public void responder(Respuesta respuesta, TipoDePregunta pregunta){ pregunta.puntuarRespuestaExclusiva(respuesta); }
+    public void puntuarRespuesta(Respuesta respuesta, TipoDePregunta pregunta){ pregunta.puntuarRespuestaExclusiva(respuesta); }
 }
