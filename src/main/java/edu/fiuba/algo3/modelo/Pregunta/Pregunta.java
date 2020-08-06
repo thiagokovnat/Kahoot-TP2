@@ -72,7 +72,7 @@ public class Pregunta {
         return nuevaPregunta;
     }
 
-    public static Pregunta crearPreguntaMultipleChoiceConPenalidad(String pregunta, List<Opcion> opcionesDisponibles, List<Opcion> respuestasCorrectas) {
+    public static Pregunta crearPreguntaMultipleChoicePenalidad(String pregunta, List<Opcion> opcionesDisponibles, List<Opcion> respuestasCorrectas) {
 
         Pregunta nuevaPregunta = new Pregunta(pregunta, opcionesDisponibles);
         nuevaPregunta.tipoDePregunta = MultipleChoice.MultipleChoicePenalidad(respuestasCorrectas);
