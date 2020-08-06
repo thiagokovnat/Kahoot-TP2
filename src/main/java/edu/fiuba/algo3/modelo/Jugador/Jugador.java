@@ -1,5 +1,4 @@
 package edu.fiuba.algo3.modelo.Jugador;
-import edu.fiuba.algo3.modelo.Juego.CantidadMaximaDeJugadoresSuperadaException;
 import edu.fiuba.algo3.modelo.Multiplicador.Multiplicador;
 import edu.fiuba.algo3.modelo.Multiplicador.MultiplicadorX1;
 import edu.fiuba.algo3.modelo.Opcion.Opcion;
@@ -50,11 +49,11 @@ public class Jugador {
 
     }
 
-    public void activarMultiplicador(Multiplicador multiplicador) throws CantidadUsoMultiplicadorExcedido {
+    public void activarMultiplicador(Multiplicador multiplicador) throws CantidadUsoMultiplicadorExcedidoException {
 
         if(multiplicadorDisponible(multiplicador))
             this.multiplicador = multiplicador;
         else
-            throw new CantidadUsoMultiplicadorExcedido();
+            throw new CantidadUsoMultiplicadorExcedidoException();
     }
 }
