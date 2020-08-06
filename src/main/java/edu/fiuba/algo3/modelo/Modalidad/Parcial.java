@@ -29,4 +29,9 @@ public class Parcial implements Modalidad {
 
     public void puntuarGroupChoice( Respuesta respuesta, List<Opcion> respuestasCorrectas){}
 
+    @Override
+    public boolean admiteMultiplicador() {
+        return false;
+    }
+
 }

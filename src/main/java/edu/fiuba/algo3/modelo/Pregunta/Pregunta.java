@@ -101,6 +101,10 @@ public class Pregunta {
         }
     }
 
+    public boolean admiteMultiplicador() {
+        return tipoDePregunta.admiteMultiplicador();
+    }
+
     public void setExclusividad(){
 
         this.estado = new Exclusivo();

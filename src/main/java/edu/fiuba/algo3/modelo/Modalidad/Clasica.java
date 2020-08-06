@@ -41,5 +41,10 @@ public class Clasica implements Modalidad {
         }
     }
 
+    @Override
+    public boolean admiteMultiplicador() {
+        return false;
+    }
+
 
 }

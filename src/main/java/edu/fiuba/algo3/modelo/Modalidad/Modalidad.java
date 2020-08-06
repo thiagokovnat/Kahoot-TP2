@@ -20,4 +20,5 @@ public interface Modalidad{
 
     public void puntuarGroupChoice( Respuesta respuesta, List<Opcion> respuestasCorrectas );
 
-    }
+    boolean admiteMultiplicador();
+}

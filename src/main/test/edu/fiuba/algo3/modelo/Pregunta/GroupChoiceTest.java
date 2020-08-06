@@ -9,6 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertFalse;
 
 class GroupChoiceTest {
 
@@ -115,5 +116,41 @@ class GroupChoiceTest {
 
         assertEquals(1, jugadorUno.getPuntos()); // respondio bien
         assertEquals(0, jugadorDos.getPuntos()); // respondio mal
+    }
+
+    @Test
+    public void unaPreguntaGroupChoiceNoAdmiteMultiplicadores(){
+
+        String texto = "Poner en el grupo 1 los lenguajes de tipado estático, y en el grupo 2 los de tipado dinámico:";
+
+        Opcion opcionUno = new Opcion( "Java" );
+        Opcion opcionDos = new Opcion( "C" );
+        Opcion opcionTres = new Opcion( "Smalltalk" );
+        Opcion opcionCuatro = new Opcion( "Python" );
+
+        List<Opcion> opcionesDisponibles = new ArrayList<Opcion>();
+
+        opcionesDisponibles.add(opcionUno);
+        opcionesDisponibles.add(opcionDos);
+        opcionesDisponibles.add(opcionTres);
+        opcionesDisponibles.add(opcionCuatro);
+
+        List<Opcion> correctasGrupoUno = new ArrayList<Opcion>();
+        List<Opcion> correctasGrupoDos = new ArrayList<Opcion>();
+
+        correctasGrupoUno.add(opcionUno);
+        correctasGrupoUno.add(opcionDos);
+
+        correctasGrupoDos.add(opcionTres);
+        correctasGrupoDos.add(opcionCuatro);
+
+        Pregunta pregunta = Pregunta.crearPreguntaGroupChoice(texto, opcionesDisponibles, correctasGrupoUno, correctasGrupoDos );
+
+        opcionUno.setGrupo("1");
+        opcionDos.setGrupo("1");
+        opcionTres.setGrupo("2");
+        opcionCuatro.setGrupo("2");
+
+        assertFalse(pregunta.admiteMultiplicador());
     }
 }

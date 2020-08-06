@@ -52,7 +52,7 @@ public class MultiplicadoresTest {
     }
 
     @Test
-    public void unaPreguntaMCconPenalidadAsignaCorrectamenteElPuntaje(){
+    public void activarMultiplicadorX3ModificaCorrectamenteElPuntaje(){
         String textoPregunta = "¿Que lenguajes se ven en Algo III?";
 
         Opcion opcionUno = new Opcion("C++");

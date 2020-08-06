@@ -29,4 +29,9 @@ public class Penalidad implements Modalidad {
     public void puntuarOrderedChoice(Respuesta respuesta, List<Opcion> respuestasCorrectas){}
 
     public void puntuarGroupChoice( Respuesta respuesta, List<Opcion> respuestasCorrectas ){}
+
+    @Override
+    public boolean admiteMultiplicador() {
+        return true;
+    }
 }

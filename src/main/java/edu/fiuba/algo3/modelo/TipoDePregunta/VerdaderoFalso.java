@@ -42,4 +42,9 @@ public class VerdaderoFalso implements TipoDePregunta{
     }
 
     public void puntuarRespuestaExclusiva(Respuesta respuesta){}
+
+    @Override
+    public boolean admiteMultiplicador() {
+        return modalidad.admiteMultiplicador();
+    }
 }

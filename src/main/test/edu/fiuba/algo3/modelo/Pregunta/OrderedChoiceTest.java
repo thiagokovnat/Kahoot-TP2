@@ -10,6 +10,7 @@ import java.util.List;
 
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertFalse;
 
 public class OrderedChoiceTest {
 
@@ -60,5 +61,21 @@ public class OrderedChoiceTest {
 
         assertEquals(1, JugadorUno.getPuntos()); // Las ordeno bien
         assertEquals(0, JugadorDos.getPuntos()); // Las ordeno mal
+    }
+
+    @Test
+    public void unaPreguntaOrderedChoiceNoAdmiteMultiplicador(){
+
+        String texto = "Ordenar los siguientes lenguajes por orden enseñado en Algoritmos 3";
+        Opcion OpcionUno = new Opcion("Smalltalk");
+        Opcion OpcionDos = new Opcion("Java");
+
+        List<Opcion> opcionesOrdenadas = new ArrayList<>();
+        opcionesOrdenadas.add(OpcionUno);
+        opcionesOrdenadas.add(OpcionDos);
+
+        Pregunta pregunta = Pregunta.crearPreguntaOrderedChoice(texto, opcionesOrdenadas, opcionesOrdenadas);
+
+        assertFalse(pregunta.admiteMultiplicador());
     }
 }

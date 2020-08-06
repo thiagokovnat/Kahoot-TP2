@@ -8,7 +8,7 @@ import org.junit.jupiter.api.Test;
 import java.util.ArrayList;
 import java.util.List;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.*;
 
 class MultipleChoiceTest {
 
@@ -78,6 +78,31 @@ class MultipleChoiceTest {
 
         assertEquals(1, jugador2.getPuntos()); // Respondió todas bien.
         assertEquals(0, jugador1.getPuntos()); // No respondió todas bien.
+    }
+
+    @Test
+    public void unaPreguntaMCClasicoNoAdmiteMultiplicador() {
+
+        String textoPregunta = "¿Que lenguajes se ven en Algo III?";
+
+        Opcion opcionUno = new Opcion("Smalltalk");
+        Opcion opcionDos = new Opcion("Java");
+        Opcion opcionTres = new Opcion("Python");
+        Opcion opcionCuatro = new Opcion("C#");
+
+        List<Opcion> opciones = new ArrayList<>();
+        List<Opcion> opcionesCorrectas = new ArrayList<>();
+
+        opciones.add(opcionUno);
+        opciones.add(opcionDos);
+        opciones.add(opcionTres);
+        opciones.add(opcionCuatro);
+        opcionesCorrectas.add(opcionUno);
+        opcionesCorrectas.add(opcionDos);
+
+        Pregunta nuevaPregunta = Pregunta.crearPreguntaMultipleChoiceClasico(textoPregunta, opciones, opcionesCorrectas);
+
+        assertFalse(nuevaPregunta.admiteMultiplicador());
     }
 
     @Test
@@ -189,6 +214,31 @@ class MultipleChoiceTest {
 
         assertEquals(0, jugador1.getPuntos()); // Respondió solo una mal.
         assertEquals(0, jugador2.getPuntos()); // Respondió todas las incorrectas.
+    }
+
+    @Test
+    public void unaPreguntaMCParcialNoAdmiteMultiplicador() {
+
+        String textoPregunta = "¿Que lenguajes se ven en Algo III?";
+
+        Opcion opcionUno = new Opcion("Python");
+        Opcion opcionDos = new Opcion("C#");
+        Opcion opcionTres = new Opcion("Smalltalk");
+        Opcion opcionCuatro = new Opcion("Java");
+
+        List<Opcion> opciones = new ArrayList<>();
+        List<Opcion> opcionesCorrectas = new ArrayList<>();
+
+        opciones.add(opcionUno);
+        opciones.add(opcionDos);
+        opciones.add(opcionTres);
+        opciones.add(opcionCuatro);
+        opcionesCorrectas.add(opcionTres);
+        opcionesCorrectas.add(opcionCuatro);
+
+        Pregunta nuevaPregunta = Pregunta.crearPreguntaMultipleChoiceParcial(textoPregunta, opciones, opcionesCorrectas);
+
+        assertFalse(nuevaPregunta.admiteMultiplicador());
     }
 
     @Test
@@ -355,5 +405,29 @@ class MultipleChoiceTest {
 
         assertEquals(-4, jugador1.getPuntos()); // Respondió todas mal.
         assertEquals(-2, jugador2.getPuntos()); // Respondió todas las opciones posibles.
+    }
+
+    @Test
+    public void unaPreguntaMCconPenalidadAdmiteMultiplicador(){
+        String textoPregunta = "¿Que lenguajes se ven en Algo III?";
+
+        Opcion opcionUno = new Opcion("C++");
+        Opcion opcionDos = new Opcion("C#");
+        Opcion opcionTres = new Opcion("Java");
+        Opcion opcionCuatro = new Opcion("Smalltalk");
+
+        List<Opcion> opciones = new ArrayList<>();
+        List<Opcion> opcionesCorrectas = new ArrayList<>();
+
+        opciones.add(opcionUno);
+        opciones.add(opcionDos);
+        opciones.add(opcionTres);
+        opciones.add(opcionCuatro);
+        opcionesCorrectas.add(opcionTres);
+        opcionesCorrectas.add(opcionCuatro);
+
+        Pregunta nuevaPregunta = Pregunta.crearPreguntaMultipleChoicePenalidad(textoPregunta, opciones, opcionesCorrectas);
+
+        assertTrue(nuevaPregunta.admiteMultiplicador());
     }
 }

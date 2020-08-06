@@ -8,7 +8,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.junit.jupiter.api.Test;
-import static org.junit.jupiter.api.Assertions.assertEquals;
+
+import static org.junit.jupiter.api.Assertions.*;
 
 class VerdaderoFalsoTest {
 
@@ -65,6 +66,25 @@ class VerdaderoFalsoTest {
         assertEquals(0, jugador2.getPuntos());
     }
 
+    @Test
+    public void unaPreguntaVFClasicoNoAdmiteMultiplicador(){
+
+        String textoPregunta = "¿Se aprueba el TP2?";
+        Opcion opcionUno = new Opcion("Verdadero");
+        Opcion opcionDos = new Opcion("Falso");
+
+        List<Opcion> opciones = new ArrayList<>();
+        List<Opcion> opcionesCorrectas = new ArrayList<>();
+
+        opciones.add(opcionUno);
+        opciones.add(opcionDos);
+        opcionesCorrectas.add(opcionUno);
+
+        Pregunta nuevaPregunta = Pregunta.crearPreguntaVerdaderoFalsoClasico(textoPregunta, opciones, opcionesCorrectas);
+
+        assertFalse(nuevaPregunta.admiteMultiplicador());
+    }
+
     // Tests VF con Penalidad
     @Test
     public void unaPreguntaVFConPenalidadPuedeCrearseIndicandoLaRespuestaCorrecta(){
@@ -117,5 +137,24 @@ class VerdaderoFalsoTest {
 
         assertEquals(1, jugador1.getPuntos());
         assertEquals(-1, jugador2.getPuntos());
+    }
+
+    @Test
+    public void unaPreguntaVFConPenalidadAdmiteMultiplicador(){
+
+        String textoPregunta = "¿Se aprueba el TP2?";
+        Opcion opcionUno = new Opcion("Verdadero");
+        Opcion opcionDos = new Opcion("Falso");
+
+        List<Opcion> opciones = new ArrayList<>();
+        List<Opcion> opcionesCorrectas = new ArrayList<>();
+
+        opciones.add(opcionUno);
+        opciones.add(opcionDos);
+        opcionesCorrectas.add(opcionUno);
+
+        Pregunta nuevaPregunta = Pregunta.crearPreguntaVerdaderoFalsoConPenalidad(textoPregunta, opciones, opcionesCorrectas);
+
+        assertTrue(nuevaPregunta.admiteMultiplicador());
     }
 }

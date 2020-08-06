@@ -10,4 +10,6 @@ public interface TipoDePregunta {
     //        porque TipoDePregunta no discrimina Modalidad, pero una pregunta con Penalidad
     //        no tiene posibilidad de Exclusividad"
     void puntuarRespuestaExclusiva(Respuesta respuesta);
+
+    boolean admiteMultiplicador();
 }

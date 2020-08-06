@@ -51,4 +51,9 @@ public class MultipleChoice implements TipoDePregunta {
     public void puntuarRespuestaParcial(Respuesta respuesta){}
 
     public void puntuarRespuestaExclusiva(Respuesta respuesta){}
+
+    @Override
+    public boolean admiteMultiplicador() {
+        return modalidad.admiteMultiplicador();
+    }
 }
