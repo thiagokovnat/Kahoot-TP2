@@ -9,16 +9,16 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="511.0" prefWidth="779.0" style="-fx-background-color: RED;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.fiuba.algo3.controller.AgregarJugadorController">
    <children>
-      <Text layoutX="178.0" layoutY="299.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Error, no se permiten más de dos jugadores." wrappingWidth="424.72216796875">
-         <font>
-            <Font name="Humnst777 BT Roman" size="21.0" />
-         </font>
-      </Text>
-      <ImageView fitHeight="150.0" fitWidth="388.0" layoutX="196.0" layoutY="121.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="511.0" fitWidth="779.0">
          <image>
-            <Image url="@../images/Newlogonobackground.png" />
+            <Image url="@../images/error.png" />
          </image>
       </ImageView>
-      <Button layoutX="354.0" layoutY="312.0" mnemonicParsing="false" onAction="#volverMenuPrincipal" text="Entendido" />
+      <Text fill="WHITE" layoutX="14.0" layoutY="455.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Error, no se permiten más de dos jugadores." wrappingWidth="498.72216796875">
+         <font>
+            <Font name="Montserrat Bold" size="21.0" />
+         </font>
+      </Text>
+      <Button layoutX="14.0" layoutY="469.0" mnemonicParsing="false" onAction="#volverMenuPrincipal" text="Entendido" />
    </children>
 </AnchorPane>
