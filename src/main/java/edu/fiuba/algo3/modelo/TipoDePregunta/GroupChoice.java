@@ -13,21 +13,14 @@ public class GroupChoice implements TipoDePregunta {
     private Modalidad modalidad;
     private List<Opcion> opcionesCorrectas = new ArrayList<Opcion>();
 
-    private void setGrupo(List<Opcion> opciones, String grupo ){
-        for( Opcion opcion : opciones ){
-            opcion.setGrupo(grupo);
-        }
+
+    private GroupChoice(List<Opcion> opcionesCorrectas){
+
+        this.opcionesCorrectas.addAll( opcionesCorrectas );
     }
 
-    private GroupChoice(List<Opcion> grupoUno, List<Opcion> grupoDos){
-        setGrupo(grupoUno, "1");
-        setGrupo(grupoDos, "2");
-        this.opcionesCorrectas.addAll( grupoUno );
-        this.opcionesCorrectas.addAll( grupoDos );
-    }
-
-    public static GroupChoice GroupChoice(List<Opcion> grupoUno, List<Opcion> grupoDos){
-        GroupChoice nuevaPregunta = new GroupChoice( grupoUno, grupoDos );
+    public static GroupChoice GroupChoice(List<Opcion> opcionesCorrectas){
+        GroupChoice nuevaPregunta = new GroupChoice( opcionesCorrectas );
         nuevaPregunta.modalidad = new Clasica();
         return nuevaPregunta;
     }

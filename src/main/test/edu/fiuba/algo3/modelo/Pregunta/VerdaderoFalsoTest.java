@@ -5,6 +5,7 @@ import edu.fiuba.algo3.modelo.Jugador.PreguntaNoAdmiteMultiplicadorException;
 import edu.fiuba.algo3.modelo.Multiplicador.MultiplicadorX2;
 import edu.fiuba.algo3.modelo.Multiplicador.MultiplicadorX3;
 import edu.fiuba.algo3.modelo.Opcion.Opcion;
+import edu.fiuba.algo3.modelo.Opcion.OpcionConGrupo;
 import edu.fiuba.algo3.modelo.Respuesta.Respuesta;
 
 import java.util.ArrayList;
@@ -20,8 +21,8 @@ class VerdaderoFalsoTest {
     public void unaPreguntaVFClasicoPuedeCrearseIndicandoLaRespuestaCorrecta(){
 
         String textoPregunta = "¿Se aprueba el TP2?";
-        Opcion opcionUno = new Opcion("Verdadero");
-        Opcion opcionDos = new Opcion("Falso");
+        OpcionConGrupo opcionUno = new OpcionConGrupo("Verdadero");
+        OpcionConGrupo opcionDos = new OpcionConGrupo("Falso");
 
         List<Opcion> opciones = new ArrayList<>();
         List<Opcion> opcionesCorrectas = new ArrayList<>();
@@ -46,8 +47,8 @@ class VerdaderoFalsoTest {
         Jugador jugador1 = new Jugador("Jugador_1");
         Jugador jugador2 = new Jugador("Jugador_2");
 
-        Opcion opcionUno = new Opcion("Verdadero");
-        Opcion opcionDos = new Opcion("Falso");
+        OpcionConGrupo opcionUno = new OpcionConGrupo("Verdadero");
+        OpcionConGrupo opcionDos = new OpcionConGrupo("Falso");
 
         opciones.add(opcionUno);
         opciones.add(opcionDos);
@@ -73,8 +74,8 @@ class VerdaderoFalsoTest {
     public void unaPreguntaVFClasicoNoAdmiteMultiplicador(){
 
         String textoPregunta = "¿Se aprueba el TP2?";
-        Opcion opcionUno = new Opcion("Verdadero");
-        Opcion opcionDos = new Opcion("Falso");
+        OpcionConGrupo opcionUno = new OpcionConGrupo("Verdadero");
+        OpcionConGrupo opcionDos = new OpcionConGrupo("Falso");
 
         List<Opcion> opciones = new ArrayList<>();
         List<Opcion> opcionesCorrectas = new ArrayList<>();
@@ -103,8 +104,8 @@ class VerdaderoFalsoTest {
     public void unaPreguntaVFConPenalidadPuedeCrearseIndicandoLaRespuestaCorrecta(){
 
         String textoPregunta = "¿Se aprueba el TP2?";
-        Opcion opcionUno = new Opcion("Verdadero");
-        Opcion opcionDos = new Opcion("Falso");
+        OpcionConGrupo opcionUno = new OpcionConGrupo("Verdadero");
+        OpcionConGrupo opcionDos = new OpcionConGrupo("Falso");
 
         List<Opcion> opciones = new ArrayList<>();
         List<Opcion> opcionesCorrectas = new ArrayList<>();
@@ -129,8 +130,8 @@ class VerdaderoFalsoTest {
         Jugador jugador1 = new Jugador("Jugador_1");
         Jugador jugador2 = new Jugador("Jugador_2");
 
-        Opcion opcionUno = new Opcion("Verdadero");
-        Opcion opcionDos = new Opcion("Falso");
+        OpcionConGrupo opcionUno = new OpcionConGrupo("Verdadero");
+        OpcionConGrupo opcionDos = new OpcionConGrupo("Falso");
 
         opciones.add(opcionUno);
         opciones.add(opcionDos);
@@ -156,8 +157,8 @@ class VerdaderoFalsoTest {
     public void unaPreguntaVFConPenalidadAdmiteMultiplicador(){
 
         String textoPregunta = "¿Se aprueba el TP2?";
-        Opcion opcionUno = new Opcion("Verdadero");
-        Opcion opcionDos = new Opcion("Falso");
+        OpcionConGrupo opcionUno = new OpcionConGrupo("Verdadero");
+        OpcionConGrupo opcionDos = new OpcionConGrupo("Falso");
 
         List<Opcion> opciones = new ArrayList<>();
         List<Opcion> opcionesCorrectas = new ArrayList<>();

@@ -1,11 +1,11 @@
 package edu.fiuba.algo3.modelo.Pregunta;
 
-import edu.fiuba.algo3.modelo.Jugador.CantidadUsoMultiplicadorExcedidoException;
 import edu.fiuba.algo3.modelo.Jugador.Jugador;
 import edu.fiuba.algo3.modelo.Jugador.PreguntaNoAdmiteMultiplicadorException;
 import edu.fiuba.algo3.modelo.Multiplicador.MultiplicadorX2;
 import edu.fiuba.algo3.modelo.Multiplicador.MultiplicadorX3;
 import edu.fiuba.algo3.modelo.Opcion.Opcion;
+import edu.fiuba.algo3.modelo.Opcion.OpcionConGrupo;
 import edu.fiuba.algo3.modelo.Respuesta.Respuesta;
 import org.junit.jupiter.api.Test;
 
@@ -21,10 +21,16 @@ class GroupChoiceTest {
 
         String texto = "Poner en el grupo 1 los lenguajes de tipado estático, y en el grupo 2 los de tipado dinámico:";
 
-        Opcion opcionUno = new Opcion( "Java" );
-        Opcion opcionDos = new Opcion( "C" );
-        Opcion opcionTres = new Opcion( "Smalltalk" );
-        Opcion opcionCuatro = new Opcion( "Python" );
+        OpcionConGrupo opcionUno = new OpcionConGrupo( "Java");
+        OpcionConGrupo opcionDos = new OpcionConGrupo( "C");
+        OpcionConGrupo opcionTres = new OpcionConGrupo( "Smalltalk");
+        OpcionConGrupo opcionCuatro = new OpcionConGrupo( "Python");
+
+
+        opcionUno.setGrupo("1");
+        opcionDos.setGrupo("1");
+        opcionTres.setGrupo("2");
+        opcionCuatro.setGrupo("2");
 
         List<Opcion> opcionesDisponibles = new ArrayList<Opcion>();
 
@@ -33,21 +39,8 @@ class GroupChoiceTest {
         opcionesDisponibles.add(opcionTres);
         opcionesDisponibles.add(opcionCuatro);
 
-        List<Opcion> correctasGrupoUno = new ArrayList<Opcion>();
-        List<Opcion> correctasGrupoDos = new ArrayList<Opcion>();
 
-        correctasGrupoUno.add(opcionUno);
-        correctasGrupoUno.add(opcionDos);
-
-        correctasGrupoDos.add(opcionTres);
-        correctasGrupoDos.add(opcionCuatro);
-
-        Pregunta pregunta = Pregunta.crearPreguntaGroupChoice(texto, opcionesDisponibles, correctasGrupoUno, correctasGrupoDos );
-
-        opcionUno.setGrupo("1");
-        opcionDos.setGrupo("1");
-        opcionTres.setGrupo("2");
-        opcionCuatro.setGrupo("2");
+        Pregunta pregunta = Pregunta.crearPreguntaGroupChoice(texto, opcionesDisponibles );
 
         assertEquals( opcionUno, pregunta.getOpcion(0) );
         assertEquals( opcionDos, pregunta.getOpcion(1) );
@@ -59,15 +52,20 @@ class GroupChoiceTest {
     public void unaPreguntaGroupChoiceAsignaCorrectamenteElPuntaje(){
         String texto = "Poner en el grupo 1 los lenguajes de tipado estático, y en el grupo 2 los de tipado dinámico:";
 
-        Opcion opcionUnoBien = new Opcion( "Java" );
-        Opcion opcionDosBien = new Opcion( "C" );
-        Opcion opcionTresBien = new Opcion( "Smalltalk" );
-        Opcion opcionCuatroBien = new Opcion( "Python" );
+        OpcionConGrupo opcionUnoBien = new OpcionConGrupo( "Java" );
+        OpcionConGrupo opcionDosBien = new OpcionConGrupo( "C" );
+        OpcionConGrupo opcionTresBien = new OpcionConGrupo( "Smalltalk" );
+        OpcionConGrupo opcionCuatroBien = new OpcionConGrupo( "Python" );
 
-        Opcion opcionUnoMal = new Opcion( "Java" );
-        Opcion opcionDosMal = new Opcion( "C" );
-        Opcion opcionTresMal = new Opcion( "Smalltalk" );
-        Opcion opcionCuatroMal = new Opcion( "Python" );
+        OpcionConGrupo opcionUnoMal = new OpcionConGrupo( "Java" );
+        OpcionConGrupo opcionDosMal = new OpcionConGrupo( "C" );
+        OpcionConGrupo opcionTresMal = new OpcionConGrupo( "Smalltalk" );
+        OpcionConGrupo opcionCuatroMal = new OpcionConGrupo( "Python" );
+
+        opcionUnoBien.setGrupo("1");
+        opcionDosBien.setGrupo("1");
+        opcionTresBien.setGrupo("2");
+        opcionCuatroBien.setGrupo("2");
 
         opcionUnoMal.setGrupo("2");
         opcionDosMal.setGrupo("2");
@@ -81,16 +79,8 @@ class GroupChoiceTest {
         opcionesDisponibles.add(opcionTresBien);
         opcionesDisponibles.add(opcionCuatroBien);
 
-        List<Opcion> correctasGrupoUno = new ArrayList<Opcion>();
-        List<Opcion> correctasGrupoDos = new ArrayList<Opcion>();
 
-        correctasGrupoUno.add(opcionUnoBien);
-        correctasGrupoUno.add(opcionDosBien);
-
-        correctasGrupoDos.add(opcionTresBien);
-        correctasGrupoDos.add(opcionCuatroBien);
-
-        Pregunta nuevaPregunta = Pregunta.crearPreguntaGroupChoice(texto, opcionesDisponibles, correctasGrupoUno, correctasGrupoDos );
+        Pregunta nuevaPregunta = Pregunta.crearPreguntaGroupChoice(texto, opcionesDisponibles );
 
         Jugador jugadorUno = new Jugador("Jugador_1");
         Jugador jugadorDos = new Jugador("Jugador_2");
@@ -126,10 +116,10 @@ class GroupChoiceTest {
 
         String texto = "Poner en el grupo 1 los lenguajes de tipado estático, y en el grupo 2 los de tipado dinámico:";
 
-        Opcion opcionUno = new Opcion( "Java" );
-        Opcion opcionDos = new Opcion( "C" );
-        Opcion opcionTres = new Opcion( "Smalltalk" );
-        Opcion opcionCuatro = new Opcion( "Python" );
+        OpcionConGrupo opcionUno = new OpcionConGrupo( "Java" );
+        OpcionConGrupo opcionDos = new OpcionConGrupo( "C" );
+        OpcionConGrupo opcionTres = new OpcionConGrupo( "Smalltalk" );
+        OpcionConGrupo opcionCuatro = new OpcionConGrupo( "Python" );
 
         List<Opcion> opcionesDisponibles = new ArrayList<Opcion>();
 
@@ -147,7 +137,7 @@ class GroupChoiceTest {
         correctasGrupoDos.add(opcionTres);
         correctasGrupoDos.add(opcionCuatro);
 
-        Pregunta pregunta = Pregunta.crearPreguntaGroupChoice(texto, opcionesDisponibles, correctasGrupoUno, correctasGrupoDos );
+        Pregunta pregunta = Pregunta.crearPreguntaGroupChoice(texto, opcionesDisponibles );
 
         opcionUno.setGrupo("1");
         opcionDos.setGrupo("1");

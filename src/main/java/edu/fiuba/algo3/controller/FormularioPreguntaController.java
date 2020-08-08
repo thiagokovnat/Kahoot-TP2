@@ -3,16 +3,14 @@ package edu.fiuba.algo3.controller;
 import edu.fiuba.algo3.App;
 import edu.fiuba.algo3.modelo.Juego.Juego;
 import edu.fiuba.algo3.modelo.Opcion.Opcion;
+import edu.fiuba.algo3.modelo.Opcion.OpcionSinGrupo;
 import edu.fiuba.algo3.modelo.Pregunta.Pregunta;
 import edu.fiuba.algo3.vista.Loader;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
-import javafx.scene.control.ToggleButton;
-import javafx.util.Pair;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -35,22 +33,22 @@ public class FormularioPreguntaController {
 
     public void initialize(){
 
-        Opcion verdadero = new Opcion("Verdadero");
-        Opcion falso = new Opcion("Falso");
+        OpcionSinGrupo verdadero = new OpcionSinGrupo("Verdadero");
+        OpcionSinGrupo falso = new OpcionSinGrupo("Falso");
 
         opcionesDisponibles.add(verdadero);
         opcionesDisponibles.add(falso);
     }
     public void onOpcionUnoCorrecta(ActionEvent event){
 
-        Opcion opcionVerdadera = new Opcion("Verdadero");
+        OpcionSinGrupo opcionVerdadera = new OpcionSinGrupo("Verdadero");
         opcionesCorrectas.add(opcionVerdadera);
         toggleOpcionUno.setVisible(false);
         toggleOpcionDos.setVisible(false);
     }
 
     public void onOpcionDosCorrecta(ActionEvent event){
-        Opcion opcionFalsa = new Opcion("Falso");
+        OpcionSinGrupo opcionFalsa = new OpcionSinGrupo("Falso");
         opcionesCorrectas.add(opcionFalsa);
         toggleOpcionUno.setVisible(false);
         toggleOpcionDos.setVisible(false);

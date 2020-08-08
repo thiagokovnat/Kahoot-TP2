@@ -88,9 +88,9 @@ public class Pregunta {
         return nuevaPregunta;
     }
 
-    public static Pregunta crearPreguntaGroupChoice( String pregunta, List<Opcion> opcionesDisponibles, List<Opcion> correctasGrupoUno, List<Opcion> correctasGrupoDos ){
+    public static Pregunta crearPreguntaGroupChoice(String pregunta, List<Opcion> opcionesDisponibles ){
         Pregunta nuevaPregunta = new Pregunta( pregunta, opcionesDisponibles );
-        nuevaPregunta.tipoDePregunta = GroupChoice.GroupChoice( correctasGrupoUno, correctasGrupoDos );
+        nuevaPregunta.tipoDePregunta = GroupChoice.GroupChoice( opcionesDisponibles );
         return nuevaPregunta;
     }
 

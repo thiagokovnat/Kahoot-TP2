@@ -2,6 +2,7 @@ package edu.fiuba.algo3.modelo.Modalidad;
 import java.util.List;
 
 import edu.fiuba.algo3.modelo.Opcion.Opcion;
+import edu.fiuba.algo3.modelo.Opcion.OpcionConGrupo;
 import edu.fiuba.algo3.modelo.Respuesta.Respuesta;
 
 public class Clasica implements Modalidad {
