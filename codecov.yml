@@ -1,2 +1,4 @@
 ignore:
  - "src/main/java/edu/fiuba/algo3/controller"
+ - "src/main/java/edu/fiuba/algo3/modelo/SistemaDePuntuacion"
+ - "src/main/java/edu/fiuba/algo3/App.java"
