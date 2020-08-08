@@ -1,4 +1,5 @@
 [![Build Status](https://travis-ci.org/thiagokovnat/Kahoot-TP2.svg?branch=master)](https://travis-ci.org/thiagokovnat/Kahoot-TP2.svg?branch=master)
+[![codecov](https://codecov.io/gh/thiagokovnat/Kahoot-TP2/branch/master/graph/badge.svg)](https://codecov.io/gh/thiagokovnat/Kahoot-TP2)
 <br />
 
 # TP2 Algoritmos 3: Kahoot
