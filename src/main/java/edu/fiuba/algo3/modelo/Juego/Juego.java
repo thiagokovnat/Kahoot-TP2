@@ -13,7 +13,7 @@ public class Juego {
 
     private final int CANTIDAD_MAXIMA_JUGADORES = 2;
     private final static Juego instanciaJuego = new Juego();
-    private final HashMap<String, Jugador> jugadores;
+    private HashMap<String, Jugador> jugadores;
     private List<Pregunta> preguntas = new ArrayList<>();
 
     private Juego() {
@@ -54,5 +54,10 @@ public class Juego {
     public boolean sePuedenCrearJugadores() {
 
         return (jugadores.size() < CANTIDAD_MAXIMA_JUGADORES);
+    }
+
+    public void quitarJugadores() {
+
+        this.jugadores = new HashMap<String, Jugador>();
     }
 }

@@ -55,7 +55,9 @@ public class AgregarJugadorController {
         Loader.cargarEscena("agregarPregunta");
     }
 
-    public void volverMenuPrincipal(ActionEvent event){
+    public void volverAtras(ActionEvent event){
+
+        App.getJuego().quitarJugadores();
         Loader.cargarEscena("mainPage");
     }
 }

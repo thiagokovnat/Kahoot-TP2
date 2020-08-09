@@ -26,7 +26,7 @@
             <Button fx:id="MCParcial" mnemonicParsing="false" onAction="#onMCParcial" prefHeight="26.0" prefWidth="484.0" text="Multiple Choice Parcial" />
          </children>
       </VBox>
-      <Button fx:id="goBackButton" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#volverMenuPrincipal" prefHeight="26.0" prefWidth="95.0" text="Volver" />
+      <Button fx:id="goBackButton" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#volverAtras" prefHeight="26.0" prefWidth="95.0" text="Volver atrás" />
       <Button layoutX="689.0" layoutY="14.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="76.0" text="Ayuda" />
       <Line endX="764.0" endY="60.5" layoutX="15.0" layoutY="45.0" startX="-15.0" startY="60.5" stroke="WHITE" />
    </children>
