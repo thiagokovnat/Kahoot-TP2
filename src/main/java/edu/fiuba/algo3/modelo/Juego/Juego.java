@@ -53,10 +53,6 @@ public class Juego {
 
     public boolean sePuedenCrearJugadores() {
 
-        System.out.printf(
-                "Jugadores: %d\n",jugadores.size()
-        );
-
         return (jugadores.size() < CANTIDAD_MAXIMA_JUGADORES);
     }
 }
