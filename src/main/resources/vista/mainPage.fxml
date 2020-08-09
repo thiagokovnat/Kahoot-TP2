@@ -4,6 +4,7 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
 <AnchorPane prefHeight="511.0" prefWidth="779.0" style="-fx-background-color: BLACK;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.fiuba.algo3.controller.MainPageController">
    <children>
@@ -12,8 +13,9 @@
             <Image url="@../images/fondo.png" />
          </image>
       </ImageView>
-      <Button layoutX="20.0" layoutY="384.0" mnemonicParsing="false" onAction="#comenzarJuego" prefHeight="26.0" prefWidth="147.0" text="Comenzar" />
-      <Button layoutX="20.0" layoutY="424.0" mnemonicParsing="false" onAction="#agregarJugador" prefHeight="26.0" prefWidth="147.0" text="Agregar Jugador" />
-      <Button layoutX="20.0" layoutY="462.0" mnemonicParsing="false" onAction="#agregarPregunta" prefHeight="26.0" prefWidth="147.0" text="Añadir Pregunta" />
+      <Button layoutX="37.0" layoutY="367.0" mnemonicParsing="false" onAction="#comenzarJuego" prefHeight="99.0" prefWidth="198.0" text="Comenzar">
+         <font>
+            <Font size="34.0" />
+         </font></Button>
    </children>
 </AnchorPane>

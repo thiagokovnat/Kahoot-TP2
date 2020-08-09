@@ -10,6 +10,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 import javafx.fxml.FXML;
+import edu.fiuba.algo3.vista.Loader;
 
 public class AgregarJugadorController {
 
@@ -17,24 +18,41 @@ public class AgregarJugadorController {
     public TextField textField;
 
     @FXML
+    public Button addPlayer;
+
+    @FXML
     public Button confirmButton;
 
     @FXML
     public Button goBackButton;
 
+    // Verificamos al principio de instanciar el controlador si se pueden añadir jugadores.
+    public void initialize(){
+
+        addPlayer.setDisable(!App.getJuego().sePuedenCrearJugadores());
+    }
 
     public void agregarJugador(ActionEvent event) {
 
         Juego juego = App.getJuego();
 
-        if(!textField.getText().isEmpty()) {
+        if (!textField.getText().isEmpty()){
             try {
                 juego.crearJugador(textField.getText());
-                Loader.cargarEscena("mainPage");
+                textField.clear();
             } catch (CantidadMaximaDeJugadoresSuperadaException e) {
                 Loader.cargarEscena("errorPage");
             }
         }
+
+        if(!juego.sePuedenCrearJugadores()) {
+            addPlayer.setDisable(true);
+        }
+    }
+
+    public void continuar(){
+
+        Loader.cargarEscena("agregarPregunta");
     }
 
     public void volverMenuPrincipal(ActionEvent event){

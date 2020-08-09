@@ -17,6 +17,7 @@ public class Juego {
     private List<Pregunta> preguntas = new ArrayList<>();
 
     private Juego() {
+
         this.jugadores = new HashMap<String, Jugador>();
     }
 
@@ -50,4 +51,12 @@ public class Juego {
         this.preguntas.add(pregunta);
     }
 
+    public boolean sePuedenCrearJugadores() {
+
+        System.out.printf(
+                "Jugadores: %d\n",jugadores.size()
+        );
+
+        return (jugadores.size() < CANTIDAD_MAXIMA_JUGADORES);
+    }
 }

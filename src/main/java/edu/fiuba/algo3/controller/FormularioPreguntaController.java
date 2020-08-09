@@ -70,7 +70,8 @@ public class FormularioPreguntaController {
         Juego juego = App.getJuego();
         juego.agregarPregunta(pregunta);
 
-        Loader.cargarEscena("mainPage");
+        Loader.cargarEscena("VFJuego");
+        //Loader.cargarEscena("mainPage");
 
     }
 }
