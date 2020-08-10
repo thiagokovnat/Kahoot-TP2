@@ -29,6 +29,7 @@ public class AgregarJugadorController {
     // Verificamos al principio de instanciar el controlador si se pueden añadir jugadores.
     public void initialize(){
 
+        confirmButton.setDisable(true);
         addPlayer.setDisable(!App.getJuego().sePuedenCrearJugadores());
     }
 
@@ -43,6 +44,7 @@ public class AgregarJugadorController {
             } catch (CantidadMaximaDeJugadoresSuperadaException e) {
                 Loader.cargarEscena("errorPage");
             }
+            confirmButton.setDisable(false);
         }
 
         if(!juego.sePuedenCrearJugadores()) {
@@ -55,7 +57,7 @@ public class AgregarJugadorController {
         Loader.cargarEscena("agregarPregunta");
     }
 
-    public void volverAtras(ActionEvent event){
+    public void volver(ActionEvent event){
 
         App.getJuego().quitarJugadores();
         Loader.cargarEscena("mainPage");

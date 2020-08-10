@@ -13,9 +13,9 @@
             <Image url="@../images/fondo.png" />
          </image>
       </ImageView>
-      <Button layoutX="37.0" layoutY="367.0" mnemonicParsing="false" onAction="#comenzarJuego" prefHeight="99.0" prefWidth="198.0" text="Comenzar">
+      <Button layoutX="37.0" layoutY="367.0" mnemonicParsing="false" onAction="#comenzarJuego" prefHeight="99.0" prefWidth="199.0" style="-fx-background-color: BLACK; -fx-text-fill: WHITE; -fx-background-radius: 22; -fx-border-color: WHITE; -fx-border-radius: 22;" text="Comenzar">
          <font>
-            <Font size="34.0" />
+            <Font size="33.0" />
          </font></Button>
    </children>
 </AnchorPane>

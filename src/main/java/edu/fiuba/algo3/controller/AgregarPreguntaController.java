@@ -47,7 +47,9 @@ public class AgregarPreguntaController {
 
     public void onMCParcial(){}
 
-    public void volverAtras(ActionEvent event){
-        Loader.cargarEscena("addPlayer");
+    public void volver(ActionEvent event){
+
+        App.getJuego().quitarJugadores();
+        Loader.cargarEscena("mainPage");
     }
 }

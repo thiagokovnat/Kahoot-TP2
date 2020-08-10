@@ -23,6 +23,8 @@ public class VFClasicoJugar {
     }
 
     public void volverMenuPrincipal(ActionEvent event){
+
+        App.getJuego().quitarJugadores();
         Loader.cargarEscena("mainPage");
     }
 
