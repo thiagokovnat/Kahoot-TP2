@@ -14,7 +14,7 @@ public class Clasica implements Modalidad {
         int cantidadIncorrectas = respuesta.cantidadIncorrectas(opcionesCorrectas);
 
         if(opcionesCorrectas.size() == cantidadCorrectas && cantidadIncorrectas == 0){
-            respuesta.jugador.modificarPuntos(1);
+            respuesta.setPuntuacion(1);
         }
     }
 
@@ -25,20 +25,20 @@ public class Clasica implements Modalidad {
         int cantidadIncorrectas = respuesta.cantidadIncorrectas(opcionesCorrectas);
 
         if(opcionesCorrectas.size() == cantidadCorrectas && cantidadIncorrectas == 0){
-            respuesta.jugador.modificarPuntos(1);
+            respuesta.setPuntuacion(1);
         }
     }
 
     public void puntuarOrderedChoice(Respuesta respuesta, List<Opcion> opcionesCorrectas){
 
         if(respuesta.opcionesEnOrden(opcionesCorrectas))
-            respuesta.jugador.modificarPuntos(1);
+            respuesta.setPuntuacion(1);
     }
 
     public void puntuarGroupChoice( Respuesta respuesta, List<Opcion> opcionesCorrectas){
 
         if( respuesta.contieneLasOpciones(opcionesCorrectas) ){
-            respuesta.jugador.modificarPuntos(1);
+            respuesta.setPuntuacion(1);
         }
     }
 

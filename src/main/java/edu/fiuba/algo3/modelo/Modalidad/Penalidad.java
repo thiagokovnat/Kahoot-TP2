@@ -13,7 +13,7 @@ public class Penalidad implements Modalidad {
         int cantidadCorrectas = respuesta.cantidadCorrectas(respuestasCorrectas);
         int cantidadIncorrectas = respuesta.cantidadIncorrectas(respuestasCorrectas);
 
-        respuesta.jugador.modificarPuntos(cantidadCorrectas-cantidadIncorrectas);
+        respuesta.setPuntuacion(cantidadCorrectas-cantidadIncorrectas);
     }
 
     public void puntuarMultipleChoice(Respuesta respuesta, List<Opcion> respuestasCorrectas){
@@ -22,7 +22,7 @@ public class Penalidad implements Modalidad {
         int cantidadCorrectas = respuesta.cantidadCorrectas(respuestasCorrectas);
         int cantidadIncorrectas = respuesta.cantidadIncorrectas(respuestasCorrectas);
 
-        respuesta.jugador.modificarPuntos(cantidadCorrectas-cantidadIncorrectas);
+        respuesta.setPuntuacion(cantidadCorrectas-cantidadIncorrectas);
     }
 
     public void puntuarOrderedChoice(Respuesta respuesta, List<Opcion> respuestasCorrectas){}

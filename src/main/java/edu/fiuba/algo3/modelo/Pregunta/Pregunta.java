@@ -97,8 +97,10 @@ public class Pregunta {
     public void puntuarRespuestas(List<Respuesta> respuestasElegidas){
 
         for(Respuesta respuesta : respuestasElegidas){
-            this.estado.puntuarRespuesta(respuesta, this.tipoDePregunta);
+            this.tipoDePregunta.puntuarRespuesta(respuesta);
         }
+
+        this.estado.asignarPuntaje(respuestasElegidas);
     }
 
     public boolean admiteMultiplicador() {

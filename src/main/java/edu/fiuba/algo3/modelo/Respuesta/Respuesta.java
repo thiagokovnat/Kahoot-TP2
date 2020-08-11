@@ -10,11 +10,13 @@ public class Respuesta{
 
     public Jugador jugador;
     private List<Opcion> opcionesElegidas = new ArrayList<Opcion>();
+    private int puntuacion;
 
     public Respuesta(Jugador unJugador, List<Opcion> opcionesElegidas){
 
         this.jugador = unJugador;
         this.opcionesElegidas.addAll(opcionesElegidas);
+        this.puntuacion = 0;
     }
 
     public int cantidadCorrectas(List<Opcion> opcionesCorrectas){
@@ -25,6 +27,14 @@ public class Respuesta{
         }
         return cantCorrectas;
 
+    }
+
+    public Jugador getJugador(){
+        return this.jugador;
+    }
+
+    public int getPuntaje(){
+        return this.puntuacion;
     }
 
     public int cantidadIncorrectas(List<Opcion> opcionesCorrectas){
@@ -43,6 +53,10 @@ public class Respuesta{
 
     public boolean contieneLasOpciones(List<Opcion> opcionesCorrectas){
         return opcionesElegidas.containsAll(opcionesCorrectas);
+    }
+
+    public void setPuntuacion(int nuevoPuntaje){
+        this.puntuacion = nuevoPuntaje;
     }
 
 }

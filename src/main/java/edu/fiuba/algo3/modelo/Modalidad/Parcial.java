@@ -21,7 +21,7 @@ public class Parcial implements Modalidad {
         int cantidadIncorrectas = respuesta.cantidadIncorrectas(respuestasCorrectas);
 
         if (cantidadIncorrectas == 0) {
-            respuesta.jugador.modificarPuntos(cantidadCorrectas);
+            respuesta.setPuntuacion(cantidadCorrectas);
         }
     }
 
