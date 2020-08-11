@@ -29,8 +29,6 @@ public class GroupChoice implements TipoDePregunta {
         this.modalidad.puntuarGroupChoice(respuesta, opcionesCorrectas);
     }
 
-    public void puntuarRespuestaExclusiva(Respuesta respuesta){}
-
     @Override
     public boolean admiteMultiplicador() {
         return modalidad.admiteMultiplicador();

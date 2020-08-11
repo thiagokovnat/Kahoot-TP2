@@ -41,8 +41,6 @@ public class VerdaderoFalso implements TipoDePregunta{
         this.modalidad.puntuarVerdaderoFalso(respuesta, opcionesCorrectas);
     }
 
-    public void puntuarRespuestaExclusiva(Respuesta respuesta){}
-
     @Override
     public boolean admiteMultiplicador() {
         return modalidad.admiteMultiplicador();

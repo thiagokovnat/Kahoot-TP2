@@ -47,11 +47,6 @@ public class MultipleChoice implements TipoDePregunta {
         this.modalidad.puntuarMultipleChoice(respuesta, opcionesCorrectas);
     }
 
-    // Tal vez este método se borre, solo se tiene como posibilidad.
-    public void puntuarRespuestaParcial(Respuesta respuesta){}
-
-    public void puntuarRespuestaExclusiva(Respuesta respuesta){}
-
     @Override
     public boolean admiteMultiplicador() {
         return modalidad.admiteMultiplicador();
