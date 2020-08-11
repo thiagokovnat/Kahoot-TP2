@@ -8,4 +8,9 @@ public class MainPageController {
 
         Loader.cargarEscena("addPlayer");
     }
+
+    public void agregarPreguntas(){
+
+        Loader.cargarEscena("agregarPregunta");
+    }
 }

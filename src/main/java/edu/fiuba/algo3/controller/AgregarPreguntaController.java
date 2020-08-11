@@ -49,7 +49,6 @@ public class AgregarPreguntaController {
 
     public void volver(ActionEvent event){
 
-        App.getJuego().quitarJugadores();
         Loader.cargarEscena("mainPage");
     }
 }

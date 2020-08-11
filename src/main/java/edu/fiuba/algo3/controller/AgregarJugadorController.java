@@ -54,7 +54,7 @@ public class AgregarJugadorController {
 
     public void continuar(){
 
-        Loader.cargarEscena("agregarPregunta");
+        Loader.cargarEscena("VFJuego");
     }
 
     public void volver(ActionEvent event){
