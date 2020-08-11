@@ -5,16 +5,9 @@ import edu.fiuba.algo3.modelo.Respuesta.Respuesta;
 import java.util.List;
 
 
-public class Parcial implements Modalidad {
+public class Parcial implements ModalidadMultipleChoice {
 
-
-    // Hay que lograr erradicar este método de Parcial con otras interfaces.
-    // O poner un excepción para evitar que se acceda a este método con una pregunta
-    // de modalidad Parcial.
-    public void puntuarVerdaderoFalso(Respuesta respuesta, List<Opcion> respuestasCorrectas){
-
-    } //WIP
-
+    @Override
     public void puntuarMultipleChoice(Respuesta respuesta, List<Opcion> respuestasCorrectas) {
 
         int cantidadCorrectas = respuesta.cantidadCorrectas(respuestasCorrectas);
@@ -25,13 +18,8 @@ public class Parcial implements Modalidad {
         }
     }
 
-    public void puntuarOrderedChoice(Respuesta respuesta, List<Opcion> respuestasCorrectas){}
-
-    public void puntuarGroupChoice( Respuesta respuesta, List<Opcion> respuestasCorrectas){}
-
     @Override
     public boolean admiteMultiplicador() {
         return false;
     }
-
 }

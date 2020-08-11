@@ -1,7 +1,7 @@
 package edu.fiuba.algo3.modelo.TipoDePregunta;
 
 import edu.fiuba.algo3.modelo.Modalidad.Clasica;
-import edu.fiuba.algo3.modelo.Modalidad.Modalidad;
+import edu.fiuba.algo3.modelo.Modalidad.ModalidadVerdaderoFalso;
 import edu.fiuba.algo3.modelo.Modalidad.Penalidad;
 import edu.fiuba.algo3.modelo.Opcion.Opcion;
 import edu.fiuba.algo3.modelo.Respuesta.Respuesta;
@@ -11,7 +11,7 @@ import java.util.List;
 
 public class VerdaderoFalso implements TipoDePregunta{
 
-    private Modalidad modalidad;
+    private ModalidadVerdaderoFalso modalidad;
     private List<Opcion> opcionesCorrectas = new ArrayList<Opcion>();
 
     // Recibe una lista de las respuestas correctas y crea la pregunta guardando dichas respuestas.
@@ -37,6 +37,7 @@ public class VerdaderoFalso implements TipoDePregunta{
     }
 
     // Puntúa la respuesta del jugador de forma correspondiente al tipo de pregunta del mismo.
+    @Override
     public void puntuarRespuesta(Respuesta respuesta) {
         this.modalidad.puntuarVerdaderoFalso(respuesta, opcionesCorrectas);
     }

@@ -1,7 +1,7 @@
 package edu.fiuba.algo3.modelo.TipoDePregunta;
 
-
-import edu.fiuba.algo3.modelo.Modalidad.*;
+import edu.fiuba.algo3.modelo.Modalidad.Clasica;
+import edu.fiuba.algo3.modelo.Modalidad.ModalidadOrderedChoice;
 import edu.fiuba.algo3.modelo.Opcion.Opcion;
 import edu.fiuba.algo3.modelo.Respuesta.Respuesta;
 
@@ -10,7 +10,7 @@ import java.util.List;
 
 public class OrderedChoice implements TipoDePregunta {
 
-    private Modalidad modalidad;
+    private ModalidadOrderedChoice modalidad;
     private List<Opcion> opcionesCorrectas = new ArrayList<Opcion>();
 
     private OrderedChoice(List<Opcion> opcionesCorrectas){
@@ -27,6 +27,7 @@ public class OrderedChoice implements TipoDePregunta {
         return unaPregunta;
     }
 
+    @Override
     public void puntuarRespuesta(Respuesta respuesta){
 
         this.modalidad.puntuarOrderedChoice(respuesta, opcionesCorrectas);
