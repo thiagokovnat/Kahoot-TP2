@@ -26,7 +26,7 @@ public class FormularioPreguntaController {
     Button toggleOpcionDos;
 
     @FXML
-    Button enterButton;
+    Button terminar;
 
     private List<Opcion> opcionesDisponibles = new ArrayList<>();
     private List<Opcion> opcionesCorrectas = new ArrayList<>();
@@ -36,22 +36,31 @@ public class FormularioPreguntaController {
         OpcionSinGrupo verdadero = new OpcionSinGrupo("Verdadero");
         OpcionSinGrupo falso = new OpcionSinGrupo("Falso");
 
+        terminar.setDisable(true);
+        
         opcionesDisponibles.add(verdadero);
         opcionesDisponibles.add(falso);
     }
     public void onOpcionUnoCorrecta(ActionEvent event){
 
-        OpcionSinGrupo opcionVerdadera = new OpcionSinGrupo("Verdadero");
-        opcionesCorrectas.add(opcionVerdadera);
-        toggleOpcionUno.setVisible(false);
-        toggleOpcionDos.setVisible(false);
+        if (!campoPregunta.getText().isEmpty()) {
+            OpcionSinGrupo opcionVerdadera = new OpcionSinGrupo("Verdadero");
+            opcionesCorrectas.add(opcionVerdadera);
+            toggleOpcionUno.setVisible(false);
+            toggleOpcionDos.setVisible(false);
+            terminar.setDisable(false);
+        }
     }
 
     public void onOpcionDosCorrecta(ActionEvent event){
-        OpcionSinGrupo opcionFalsa = new OpcionSinGrupo("Falso");
-        opcionesCorrectas.add(opcionFalsa);
-        toggleOpcionUno.setVisible(false);
-        toggleOpcionDos.setVisible(false);
+
+        if (!campoPregunta.getText().isEmpty()) {
+            OpcionSinGrupo opcionFalsa = new OpcionSinGrupo("Falso");
+            opcionesCorrectas.add(opcionFalsa);
+            toggleOpcionUno.setVisible(false);
+            toggleOpcionDos.setVisible(false);
+            terminar.setDisable(false);
+        }
     }
 
     public void onEnter(ActionEvent event){

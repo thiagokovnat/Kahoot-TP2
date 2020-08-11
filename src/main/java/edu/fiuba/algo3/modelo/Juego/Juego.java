@@ -56,6 +56,11 @@ public class Juego {
         return (jugadores.size() < CANTIDAD_MAXIMA_JUGADORES);
     }
 
+    public boolean noHayPreguntasCargadas(){
+
+        return (preguntas.size() == 0);
+    }
+
     public void quitarJugadores() {
 
         this.jugadores = new HashMap<String, Jugador>();

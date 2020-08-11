@@ -44,7 +44,7 @@ public class AgregarJugadorController {
             } catch (CantidadMaximaDeJugadoresSuperadaException e) {
                 Loader.cargarEscena("errorPage");
             }
-            confirmButton.setDisable(false);
+            confirmButton.setDisable(juego.noHayPreguntasCargadas());
         }
 
         if(!juego.sePuedenCrearJugadores()) {
