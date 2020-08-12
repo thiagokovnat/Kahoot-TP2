@@ -1,4 +1,6 @@
 package edu.fiuba.algo3.modelo.Jugador;
+import edu.fiuba.algo3.modelo.Exceptions.CantidadUsoMultiplicadorExcedidoException;
+import edu.fiuba.algo3.modelo.Exceptions.PreguntaNoAdmiteMultiplicadorException;
 import edu.fiuba.algo3.modelo.Multiplicador.Multiplicador;
 import edu.fiuba.algo3.modelo.Multiplicador.MultiplicadorX1;
 import edu.fiuba.algo3.modelo.Opcion.Opcion;

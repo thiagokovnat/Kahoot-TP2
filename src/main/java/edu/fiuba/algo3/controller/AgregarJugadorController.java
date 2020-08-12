@@ -1,16 +1,13 @@
 package edu.fiuba.algo3.controller;
 
 import edu.fiuba.algo3.App;
-import edu.fiuba.algo3.modelo.Juego.CantidadMaximaDeJugadoresSuperadaException;
+import edu.fiuba.algo3.modelo.Exceptions.CantidadMaximaDeJugadoresSuperadaException;
 import edu.fiuba.algo3.modelo.Juego.Juego;
 import edu.fiuba.algo3.vista.Loader;
 import javafx.event.ActionEvent;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
-import javafx.scene.input.KeyCode;
-import javafx.scene.input.KeyEvent;
 import javafx.fxml.FXML;
-import edu.fiuba.algo3.vista.Loader;
 
 public class AgregarJugadorController {
 

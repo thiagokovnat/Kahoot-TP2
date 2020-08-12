@@ -1,8 +1,7 @@
 package edu.fiuba.algo3.modelo;
 
-import edu.fiuba.algo3.modelo.Juego.CantidadMaximaDeJugadoresSuperadaException;
+import edu.fiuba.algo3.modelo.Exceptions.CantidadMaximaDeJugadoresSuperadaException;
 import edu.fiuba.algo3.modelo.Juego.Juego;
-import edu.fiuba.algo3.modelo.Jugador.Jugador;
 import edu.fiuba.algo3.modelo.Opcion.Opcion;
 import edu.fiuba.algo3.modelo.Opcion.OpcionSinGrupo;
 import edu.fiuba.algo3.modelo.Pregunta.Pregunta;
