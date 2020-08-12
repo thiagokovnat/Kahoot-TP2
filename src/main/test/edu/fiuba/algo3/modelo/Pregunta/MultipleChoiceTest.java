@@ -6,6 +6,7 @@ import edu.fiuba.algo3.modelo.Multiplicador.MultiplicadorX2;
 import edu.fiuba.algo3.modelo.Multiplicador.MultiplicadorX3;
 import edu.fiuba.algo3.modelo.Opcion.Opcion;
 import edu.fiuba.algo3.modelo.Opcion.OpcionConGrupo;
+import edu.fiuba.algo3.modelo.Opcion.OpcionSinGrupo;
 import edu.fiuba.algo3.modelo.Respuesta.Respuesta;
 import org.junit.jupiter.api.Test;
 
@@ -21,10 +22,10 @@ class MultipleChoiceTest {
 
         String textoPregunta = "¿Que lenguajes se ven en Algo III?";
 
-        OpcionConGrupo opcionUno = new OpcionConGrupo("Smalltalk");
-        OpcionConGrupo opcionDos = new OpcionConGrupo("Java");
-        OpcionConGrupo opcionTres = new OpcionConGrupo("Python");
-        OpcionConGrupo opcionCuatro = new OpcionConGrupo("C#");
+        OpcionSinGrupo opcionUno = new OpcionSinGrupo("Smalltalk");
+        OpcionSinGrupo opcionDos = new OpcionSinGrupo("Java");
+        OpcionSinGrupo opcionTres = new OpcionSinGrupo("Python");
+        OpcionSinGrupo opcionCuatro = new OpcionSinGrupo("C#");
 
         List<Opcion> opciones = new ArrayList<>();
         List<Opcion> opcionesCorrectas = new ArrayList<>();
@@ -46,11 +47,11 @@ class MultipleChoiceTest {
     public void unaPreguntaMCClasicoAsignaCorrectamenteElPuntaje(){
         String textoPregunta = "¿Que lenguajes se ven en Algo III?";
 
-        OpcionConGrupo opcionUno = new OpcionConGrupo("C++");
-        OpcionConGrupo opcionDos = new OpcionConGrupo("Assembly");
-        OpcionConGrupo opcionTres = new OpcionConGrupo("C");
-        OpcionConGrupo opcionCuatro = new OpcionConGrupo("Java");
-        OpcionConGrupo opcionCinco = new OpcionConGrupo("Smalltalk");
+        OpcionSinGrupo opcionUno = new OpcionSinGrupo("C++");
+        OpcionSinGrupo opcionDos = new OpcionSinGrupo("Assembly");
+        OpcionSinGrupo opcionTres = new OpcionSinGrupo("C");
+        OpcionSinGrupo opcionCuatro = new OpcionSinGrupo("Java");
+        OpcionSinGrupo opcionCinco = new OpcionSinGrupo("Smalltalk");
 
         List<Opcion> opciones = new ArrayList<>();
         List<Opcion> opcionesCorrectas = new ArrayList<>();
@@ -89,10 +90,10 @@ class MultipleChoiceTest {
 
         String textoPregunta = "¿Que lenguajes se ven en Algo III?";
 
-        OpcionConGrupo opcionUno = new OpcionConGrupo("Smalltalk");
-        OpcionConGrupo opcionDos = new OpcionConGrupo("Java");
-        OpcionConGrupo opcionTres = new OpcionConGrupo("Python");
-        OpcionConGrupo opcionCuatro = new OpcionConGrupo("C#");
+        OpcionSinGrupo opcionUno = new OpcionSinGrupo("Smalltalk");
+        OpcionSinGrupo opcionDos = new OpcionSinGrupo("Java");
+        OpcionSinGrupo opcionTres = new OpcionSinGrupo("Python");
+        OpcionSinGrupo opcionCuatro = new OpcionSinGrupo("C#");
 
         List<Opcion> opciones = new ArrayList<>();
         List<Opcion> opcionesCorrectas = new ArrayList<>();
@@ -124,10 +125,10 @@ class MultipleChoiceTest {
 
         String textoPregunta = "¿Que lenguajes se ven en Algo III?";
 
-        OpcionConGrupo opcionUno = new OpcionConGrupo("Python");
-        OpcionConGrupo opcionDos = new OpcionConGrupo("C#");
-        OpcionConGrupo opcionTres = new OpcionConGrupo("Smalltalk");
-        OpcionConGrupo opcionCuatro = new OpcionConGrupo("Java");
+        OpcionSinGrupo opcionUno = new OpcionSinGrupo("Python");
+        OpcionSinGrupo opcionDos = new OpcionSinGrupo("C#");
+        OpcionSinGrupo opcionTres = new OpcionSinGrupo("Smalltalk");
+        OpcionSinGrupo opcionCuatro = new OpcionSinGrupo("Java");
 
         List<Opcion> opciones = new ArrayList<>();
         List<Opcion> opcionesCorrectas = new ArrayList<>();
@@ -149,11 +150,11 @@ class MultipleChoiceTest {
     public void unaPreguntaMCParcialAsignaCorrectamenteElPuntaje(){
         String textoPregunta = "¿Que lenguajes se ven en Algo III?";
 
-        OpcionConGrupo opcionUno = new OpcionConGrupo("C++");
-        OpcionConGrupo opcionDos = new OpcionConGrupo("Assembly");
-        OpcionConGrupo opcionTres = new OpcionConGrupo("C");
-        OpcionConGrupo opcionCuatro = new OpcionConGrupo("Java");
-        OpcionConGrupo opcionCinco = new OpcionConGrupo("Smalltalk");
+        OpcionSinGrupo opcionUno = new OpcionSinGrupo("C++");
+        OpcionSinGrupo opcionDos = new OpcionSinGrupo("Assembly");
+        OpcionSinGrupo opcionTres = new OpcionSinGrupo("C");
+        OpcionSinGrupo opcionCuatro = new OpcionSinGrupo("Java");
+        OpcionSinGrupo opcionCinco = new OpcionSinGrupo("Smalltalk");
 
         List<Opcion> opciones = new ArrayList<>();
         List<Opcion> opcionesCorrectas = new ArrayList<>();
@@ -191,11 +192,11 @@ class MultipleChoiceTest {
     public void unaPreguntaMCParcialAsignaCorrectamenteElPuntajeAJugadoresQueRespondieronMal(){
         String textoPregunta = "¿Que lenguajes se ven en Algo III?";
 
-        OpcionConGrupo opcionUno = new OpcionConGrupo("C++");
-        OpcionConGrupo opcionDos = new OpcionConGrupo("Assembly");
-        OpcionConGrupo opcionTres = new OpcionConGrupo("C");
-        OpcionConGrupo opcionCuatro = new OpcionConGrupo("Java");
-        OpcionConGrupo opcionCinco = new OpcionConGrupo("Smalltalk");
+        OpcionSinGrupo opcionUno = new OpcionSinGrupo("C++");
+        OpcionSinGrupo opcionDos = new OpcionSinGrupo("Assembly");
+        OpcionSinGrupo opcionTres = new OpcionSinGrupo("C");
+        OpcionSinGrupo opcionCuatro = new OpcionSinGrupo("Java");
+        OpcionSinGrupo opcionCinco = new OpcionSinGrupo("Smalltalk");
 
         List<Opcion> opciones = new ArrayList<>();
         List<Opcion> opcionesCorrectas = new ArrayList<>();
@@ -235,10 +236,10 @@ class MultipleChoiceTest {
 
         String textoPregunta = "¿Que lenguajes se ven en Algo III?";
 
-        OpcionConGrupo opcionUno = new OpcionConGrupo("Python");
-        OpcionConGrupo opcionDos = new OpcionConGrupo("C#");
-        OpcionConGrupo opcionTres = new OpcionConGrupo("Smalltalk");
-        OpcionConGrupo opcionCuatro = new OpcionConGrupo("Java");
+        OpcionSinGrupo opcionUno = new OpcionSinGrupo("Python");
+        OpcionSinGrupo opcionDos = new OpcionSinGrupo("C#");
+        OpcionSinGrupo opcionTres = new OpcionSinGrupo("Smalltalk");
+        OpcionSinGrupo opcionCuatro = new OpcionSinGrupo("Java");
 
         List<Opcion> opciones = new ArrayList<>();
         List<Opcion> opcionesCorrectas = new ArrayList<>();
@@ -270,10 +271,10 @@ class MultipleChoiceTest {
 
         String textoPregunta = "¿Que números son primos?";
 
-        OpcionConGrupo opcionUno = new OpcionConGrupo("10");
-        OpcionConGrupo opcionDos = new OpcionConGrupo("5");
-        OpcionConGrupo opcionTres = new OpcionConGrupo("7");
-        OpcionConGrupo opcionCuatro = new OpcionConGrupo("20");
+        OpcionSinGrupo opcionUno = new OpcionSinGrupo("10");
+        OpcionSinGrupo opcionDos = new OpcionSinGrupo("5");
+        OpcionSinGrupo opcionTres = new OpcionSinGrupo("7");
+        OpcionSinGrupo opcionCuatro = new OpcionSinGrupo("20");
 
         List<Opcion> opciones = new ArrayList<>();
         List<Opcion> opcionesCorrectas = new ArrayList<>();
@@ -295,12 +296,13 @@ class MultipleChoiceTest {
     public void unaPreguntaMCconPenalidadAsignaCorrectamenteElPuntajeAQuienesNoContestaronMal(){
         String textoPregunta = "¿Que lenguajes se ven en Algo III?";
 
-        OpcionConGrupo opcionUno = new OpcionConGrupo("C++");
-        OpcionConGrupo opcionDos = new OpcionConGrupo("C##++++xxv2.0420_Xx");
-        OpcionConGrupo opcionTres = new OpcionConGrupo("C#");
-        OpcionConGrupo opcionCuatro = new OpcionConGrupo("Java");
-        OpcionConGrupo opcionCinco = new OpcionConGrupo("C");
-        OpcionConGrupo opcionSeis = new OpcionConGrupo("Smalltalk");
+        OpcionSinGrupo opcionUno = new OpcionSinGrupo("C++");
+        OpcionSinGrupo opcionDos = new OpcionSinGrupo("C##++++xxv2.0420_Xx");
+        OpcionSinGrupo opcionTres = new OpcionSinGrupo("C#");
+        OpcionSinGrupo opcionCuatro = new OpcionSinGrupo("Java");
+        OpcionSinGrupo opcionCinco = new OpcionSinGrupo("C");
+        OpcionSinGrupo opcionSeis = new OpcionSinGrupo("Smalltalk");
+
 
         List<Opcion> opciones = new ArrayList<>();
         List<Opcion> opcionesCorrectas = new ArrayList<>();
@@ -339,12 +341,12 @@ class MultipleChoiceTest {
     public void unaPreguntaMCconPenalidadAsignaCorrectamenteElPuntajeCuandoEsteResultaSerNulo(){
         String textoPregunta = "¿Que lenguajes se ven en Algo III?";
 
-        OpcionConGrupo opcionUno = new OpcionConGrupo("C++");
-        OpcionConGrupo opcionDos = new OpcionConGrupo("C##++++xxv2.0420_Xx");
-        OpcionConGrupo opcionTres = new OpcionConGrupo("C#");
-        OpcionConGrupo opcionCuatro = new OpcionConGrupo("Java");
-        OpcionConGrupo opcionCinco = new OpcionConGrupo("C");
-        OpcionConGrupo opcionSeis = new OpcionConGrupo("Smalltalk");
+        OpcionSinGrupo opcionUno = new OpcionSinGrupo("C++");
+        OpcionSinGrupo opcionDos = new OpcionSinGrupo("C##++++xxv2.0420_Xx");
+        OpcionSinGrupo opcionTres = new OpcionSinGrupo("C#");
+        OpcionSinGrupo opcionCuatro = new OpcionSinGrupo("Java");
+        OpcionSinGrupo opcionCinco = new OpcionSinGrupo("C");
+        OpcionSinGrupo opcionSeis = new OpcionSinGrupo("Smalltalk");
 
         List<Opcion> opciones = new ArrayList<>();
         List<Opcion> opcionesCorrectas = new ArrayList<>();
@@ -382,12 +384,12 @@ class MultipleChoiceTest {
     public void unaPreguntaMCconPenalidadAsignaCorrectamenteElPuntajeCuandoResultaNegativo(){
         String textoPregunta = "¿Que lenguajes se ven en Algo III?";
 
-        OpcionConGrupo opcionUno = new OpcionConGrupo("C++");
-        OpcionConGrupo opcionDos = new OpcionConGrupo("C##++++xxv2.0420_Xx");
-        OpcionConGrupo opcionTres = new OpcionConGrupo("C#");
-        OpcionConGrupo opcionCuatro = new OpcionConGrupo("Java");
-        OpcionConGrupo opcionCinco = new OpcionConGrupo("C");
-        OpcionConGrupo opcionSeis = new OpcionConGrupo("Smalltalk");
+        OpcionSinGrupo opcionUno = new OpcionSinGrupo("C++");
+        OpcionSinGrupo opcionDos = new OpcionSinGrupo("C##++++xxv2.0420_Xx");
+        OpcionSinGrupo opcionTres = new OpcionSinGrupo("C#");
+        OpcionSinGrupo opcionCuatro = new OpcionSinGrupo("Java");
+        OpcionSinGrupo opcionCinco = new OpcionSinGrupo("C");
+        OpcionSinGrupo opcionSeis = new OpcionSinGrupo("Smalltalk");
 
         List<Opcion> opciones = new ArrayList<>();
         List<Opcion> opcionesCorrectas = new ArrayList<>();
@@ -435,10 +437,10 @@ class MultipleChoiceTest {
     public void unaPreguntaMCconPenalidadAdmiteMultiplicador(){
         String textoPregunta = "¿Que lenguajes se ven en Algo III?";
 
-        OpcionConGrupo opcionUno = new OpcionConGrupo("C++");
-        OpcionConGrupo opcionDos = new OpcionConGrupo("C#");
-        OpcionConGrupo opcionTres = new OpcionConGrupo("Java");
-        OpcionConGrupo opcionCuatro = new OpcionConGrupo("Smalltalk");
+        OpcionSinGrupo opcionUno = new OpcionSinGrupo("C++");
+        OpcionSinGrupo opcionDos = new OpcionSinGrupo("C#");
+        OpcionSinGrupo opcionTres = new OpcionSinGrupo("Java");
+        OpcionSinGrupo opcionCuatro = new OpcionSinGrupo("Smalltalk");
 
         List<Opcion> opciones = new ArrayList<>();
         List<Opcion> opcionesCorrectas = new ArrayList<>();

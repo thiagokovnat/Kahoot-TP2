@@ -6,6 +6,7 @@ import edu.fiuba.algo3.modelo.Multiplicador.MultiplicadorX2;
 import edu.fiuba.algo3.modelo.Multiplicador.MultiplicadorX3;
 import edu.fiuba.algo3.modelo.Opcion.Opcion;
 import edu.fiuba.algo3.modelo.Opcion.OpcionConGrupo;
+import edu.fiuba.algo3.modelo.Opcion.OpcionSinGrupo;
 import edu.fiuba.algo3.modelo.Respuesta.Respuesta;
 
 import java.util.ArrayList;
@@ -21,8 +22,8 @@ class VerdaderoFalsoTest {
     public void unaPreguntaVFClasicoPuedeCrearseIndicandoLaRespuestaCorrecta(){
 
         String textoPregunta = "¿Se aprueba el TP2?";
-        OpcionConGrupo opcionUno = new OpcionConGrupo("Verdadero");
-        OpcionConGrupo opcionDos = new OpcionConGrupo("Falso");
+        OpcionSinGrupo opcionUno = new OpcionSinGrupo("Verdadero");
+        OpcionSinGrupo opcionDos = new OpcionSinGrupo("Falso");
 
         List<Opcion> opciones = new ArrayList<>();
         List<Opcion> opcionesCorrectas = new ArrayList<>();
@@ -47,8 +48,8 @@ class VerdaderoFalsoTest {
         Jugador jugador1 = new Jugador("Jugador_1");
         Jugador jugador2 = new Jugador("Jugador_2");
 
-        OpcionConGrupo opcionUno = new OpcionConGrupo("Verdadero");
-        OpcionConGrupo opcionDos = new OpcionConGrupo("Falso");
+        OpcionSinGrupo opcionUno = new OpcionSinGrupo("Verdadero");
+        OpcionSinGrupo opcionDos = new OpcionSinGrupo("Falso");
 
         opciones.add(opcionUno);
         opciones.add(opcionDos);
@@ -74,8 +75,8 @@ class VerdaderoFalsoTest {
     public void unaPreguntaVFClasicoNoAdmiteMultiplicador(){
 
         String textoPregunta = "¿Se aprueba el TP2?";
-        OpcionConGrupo opcionUno = new OpcionConGrupo("Verdadero");
-        OpcionConGrupo opcionDos = new OpcionConGrupo("Falso");
+        OpcionSinGrupo opcionUno = new OpcionSinGrupo("Verdadero");
+        OpcionSinGrupo opcionDos = new OpcionSinGrupo("Falso");
 
         List<Opcion> opciones = new ArrayList<>();
         List<Opcion> opcionesCorrectas = new ArrayList<>();
@@ -104,8 +105,8 @@ class VerdaderoFalsoTest {
     public void unaPreguntaVFConPenalidadPuedeCrearseIndicandoLaRespuestaCorrecta(){
 
         String textoPregunta = "¿Se aprueba el TP2?";
-        OpcionConGrupo opcionUno = new OpcionConGrupo("Verdadero");
-        OpcionConGrupo opcionDos = new OpcionConGrupo("Falso");
+        OpcionSinGrupo opcionUno = new OpcionSinGrupo("Verdadero");
+        OpcionSinGrupo opcionDos = new OpcionSinGrupo("Falso");
 
         List<Opcion> opciones = new ArrayList<>();
         List<Opcion> opcionesCorrectas = new ArrayList<>();
@@ -130,8 +131,8 @@ class VerdaderoFalsoTest {
         Jugador jugador1 = new Jugador("Jugador_1");
         Jugador jugador2 = new Jugador("Jugador_2");
 
-        OpcionConGrupo opcionUno = new OpcionConGrupo("Verdadero");
-        OpcionConGrupo opcionDos = new OpcionConGrupo("Falso");
+        OpcionSinGrupo opcionUno = new OpcionSinGrupo("Verdadero");
+        OpcionSinGrupo opcionDos = new OpcionSinGrupo("Falso");
 
         opciones.add(opcionUno);
         opciones.add(opcionDos);
@@ -157,8 +158,8 @@ class VerdaderoFalsoTest {
     public void unaPreguntaVFConPenalidadAdmiteMultiplicador(){
 
         String textoPregunta = "¿Se aprueba el TP2?";
-        OpcionConGrupo opcionUno = new OpcionConGrupo("Verdadero");
-        OpcionConGrupo opcionDos = new OpcionConGrupo("Falso");
+        OpcionSinGrupo opcionUno = new OpcionSinGrupo("Verdadero");
+        OpcionSinGrupo opcionDos = new OpcionSinGrupo("Falso");
 
         List<Opcion> opciones = new ArrayList<>();
         List<Opcion> opcionesCorrectas = new ArrayList<>();
@@ -170,5 +171,42 @@ class VerdaderoFalsoTest {
         Pregunta nuevaPregunta = Pregunta.crearPreguntaVerdaderoFalsoConPenalidad(textoPregunta, opciones, opcionesCorrectas);
 
         assertTrue(nuevaPregunta.admiteMultiplicador());
+    }
+
+    @Test
+    public void unaPreguntaVFClasicoConExclusividad(){
+
+        String textoPregunta = "¿Se aprueba el TP2?";
+        OpcionSinGrupo opcionUno = new OpcionSinGrupo("Verdadero");
+        OpcionSinGrupo opcionDos = new OpcionSinGrupo("Falso");
+
+        Jugador jugador1 = new Jugador("Jugador_1");
+        Jugador jugador2 = new Jugador("Jugador_2");
+
+        List<Opcion> opciones = new ArrayList<>();
+        List<Opcion> opcionesCorrectas = new ArrayList<>();
+
+        opciones.add(opcionUno);
+        opciones.add(opcionDos);
+        opcionesCorrectas.add(opcionUno);
+
+        Pregunta nuevaPregunta = Pregunta.crearPreguntaVerdaderoFalsoClasico(textoPregunta, opciones, opcionesCorrectas);
+        nuevaPregunta.setExclusividad();
+
+        List<Opcion> respuestaJugadorUno = new ArrayList<Opcion>();
+        List<Opcion> respuestaJugadorDos = new ArrayList<Opcion>();
+
+        respuestaJugadorUno.add(opcionUno);
+        respuestaJugadorDos.add(opcionDos);
+
+        List<Respuesta> respuestas = new ArrayList<>();
+
+        respuestas.add( jugador1.responder(respuestaJugadorUno) );
+        respuestas.add( jugador2.responder(respuestaJugadorDos) );
+
+        nuevaPregunta.puntuarRespuestas(respuestas);
+
+        assertEquals(2, jugador1.getPuntos() );
+        assertEquals( 0, jugador2.getPuntos() );
     }
 }

@@ -6,6 +6,7 @@ import edu.fiuba.algo3.modelo.Multiplicador.MultiplicadorX2;
 import edu.fiuba.algo3.modelo.Multiplicador.MultiplicadorX3;
 import edu.fiuba.algo3.modelo.Opcion.Opcion;
 import edu.fiuba.algo3.modelo.Opcion.OpcionConGrupo;
+import edu.fiuba.algo3.modelo.Opcion.OpcionSinGrupo;
 import edu.fiuba.algo3.modelo.Respuesta.Respuesta;
 
 
@@ -22,8 +23,8 @@ public class OrderedChoiceTest {
     public void unaPreguntaOrderedChoicePuedeCrearseIndicandoleRespuestasCorrectas(){
 
         String texto = "Ordenar los siguientes lenguajes por orden enseñado en Algoritmos 3";
-        OpcionConGrupo OpcionUno = new OpcionConGrupo("Smalltalk");
-        OpcionConGrupo OpcionDos = new OpcionConGrupo("Java");
+        OpcionSinGrupo OpcionUno = new OpcionSinGrupo("Smalltalk");
+        OpcionSinGrupo OpcionDos = new OpcionSinGrupo("Java");
 
         List<Opcion> opcionesOrdenadas = new ArrayList<>();
         opcionesOrdenadas.add(OpcionUno);
@@ -39,8 +40,8 @@ public class OrderedChoiceTest {
     public void unaPreguntaOrderedChoiceClasicoAsignaPuntajeCorrectamente(){
 
         String texto = "Ordenar los siguientes lenguajes por orden enseñado en Algoritmos 3";
-        OpcionConGrupo OpcionUno = new OpcionConGrupo("Smalltalk");
-        OpcionConGrupo OpcionDos = new OpcionConGrupo("Java");
+        OpcionSinGrupo OpcionUno = new OpcionSinGrupo("Smalltalk");
+        OpcionSinGrupo OpcionDos = new OpcionSinGrupo("Java");
 
         List<Opcion> opcionesOrdenadas = new ArrayList<>();
         opcionesOrdenadas.add(OpcionUno);
@@ -71,8 +72,8 @@ public class OrderedChoiceTest {
     public void unaPreguntaOrderedChoiceNoAdmiteMultiplicador(){
 
         String texto = "Ordenar los siguientes lenguajes por orden enseñado en Algoritmos 3";
-        OpcionConGrupo OpcionUno = new OpcionConGrupo("Smalltalk");
-        OpcionConGrupo OpcionDos = new OpcionConGrupo("Java");
+        OpcionSinGrupo OpcionUno = new OpcionSinGrupo("Smalltalk");
+        OpcionSinGrupo OpcionDos = new OpcionSinGrupo("Java");
 
         List<Opcion> opcionesOrdenadas = new ArrayList<>();
         opcionesOrdenadas.add(OpcionUno);

@@ -8,6 +8,7 @@ import edu.fiuba.algo3.modelo.Opcion.Opcion;
 import edu.fiuba.algo3.modelo.Opcion.OpcionConGrupo;
 
 
+import edu.fiuba.algo3.modelo.Opcion.OpcionSinGrupo;
 import edu.fiuba.algo3.modelo.Pregunta.Pregunta;
 import edu.fiuba.algo3.modelo.Respuesta.Respuesta;
 import org.junit.jupiter.api.Test;
@@ -28,8 +29,8 @@ public class MultiplicadoresTest {
 
         Jugador jugador1 = new Jugador("Jugador_1");
 
-        OpcionConGrupo opcionUno = new OpcionConGrupo("Verdadero");
-        OpcionConGrupo opcionDos = new OpcionConGrupo("Falso");
+        OpcionSinGrupo opcionUno = new OpcionSinGrupo("Verdadero");
+        OpcionSinGrupo opcionDos = new OpcionSinGrupo("Falso");
 
         opciones.add(opcionUno);
         opciones.add(opcionDos);
@@ -58,12 +59,12 @@ public class MultiplicadoresTest {
     public void activarMultiplicadorX3ModificaCorrectamenteElPuntaje(){
         String textoPregunta = "¿Que lenguajes se ven en Algo III?";
 
-        OpcionConGrupo opcionUno = new OpcionConGrupo("C++");
-        OpcionConGrupo opcionDos = new OpcionConGrupo("C##++++xxv2.0420_Xx");
-        OpcionConGrupo opcionTres = new OpcionConGrupo("C#");
-        OpcionConGrupo opcionCuatro = new OpcionConGrupo("Java");
-        OpcionConGrupo opcionCinco = new OpcionConGrupo("C");
-        OpcionConGrupo opcionSeis = new OpcionConGrupo("Smalltalk");
+        OpcionSinGrupo opcionUno = new OpcionSinGrupo("C++");
+        OpcionSinGrupo opcionDos = new OpcionSinGrupo("C##++++xxv2.0420_Xx");
+        OpcionSinGrupo opcionTres = new OpcionSinGrupo("C#");
+        OpcionSinGrupo opcionCuatro = new OpcionSinGrupo("Java");
+        OpcionSinGrupo opcionCinco = new OpcionSinGrupo("C");
+        OpcionSinGrupo opcionSeis = new OpcionSinGrupo("Smalltalk");
 
         List<Opcion> opciones = new ArrayList<>();
         List<Opcion> opcionesCorrectas = new ArrayList<>();
@@ -109,8 +110,8 @@ public class MultiplicadoresTest {
 
         Jugador jugador1 = new Jugador("Jugador_1");
 
-        OpcionConGrupo opcionUno = new OpcionConGrupo("Verdadero");
-        OpcionConGrupo opcionDos = new OpcionConGrupo("Falso");
+        OpcionSinGrupo opcionUno = new OpcionSinGrupo("Verdadero");
+        OpcionSinGrupo opcionDos = new OpcionSinGrupo("Falso");
 
         opciones.add(opcionUno);
         opciones.add(opcionDos);

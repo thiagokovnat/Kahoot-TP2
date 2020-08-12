@@ -29,6 +29,11 @@ public class Respuesta{
 
     }
 
+    public boolean esExclusivaCon( Respuesta respuesta ){
+
+        return( this.puntuacion > 0 && respuesta.getPuntaje() == 0 );
+    }
+
     public Jugador getJugador(){
         return this.jugador;
     }
