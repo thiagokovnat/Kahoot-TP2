@@ -1,0 +1,12 @@
+\babel@toc {spanish}{}
+\contentsline {section}{\numberline {1}Introducción}{2}{section.1}%
+\contentsline {section}{\numberline {2}Supuestos}{2}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Puntaje Negativo}{2}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Carga de Datos}{2}{subsection.2.2}%
+\contentsline {section}{\numberline {3}Diagramas de Clases}{2}{section.3}%
+\contentsline {section}{\numberline {4}Diagramas de Secuencia}{6}{section.4}%
+\contentsline {section}{\numberline {5}Diagrama de Paquetes}{8}{section.5}%
+\contentsline {section}{\numberline {6}Diagramas de Estados}{8}{section.6}%
+\contentsline {section}{\numberline {7}Detalles de implementación}{8}{section.7}%
+\contentsline {subsection}{\numberline {7.1}Como se contesta una pregunta}{8}{subsection.7.1}%
+\contentsline {subsection}{\numberline {7.2}Conexión entre el Controlador y el Modelo}{9}{subsection.7.2}%
