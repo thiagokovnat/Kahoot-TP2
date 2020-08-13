@@ -36,18 +36,23 @@ public class Jugador {
         return this.puntuacion;
     }
 
-    public Boolean multiplicadorDisponible(Multiplicador multiplicador){
-
-        if(!usosMultiplicadores.containsKey(multiplicador.getIdentificador())) {
-            usosMultiplicadores.put(multiplicador.getIdentificador(), multiplicador.getCantidadUsosPermitidos() - 1);
-            return true;
-        }
+    public void usarMultiplicador(Multiplicador multiplicador){
 
         int usosDisponibles = usosMultiplicadores.get(multiplicador.getIdentificador());
 
         if(usosDisponibles > 0)
             usosMultiplicadores.put(multiplicador.getIdentificador(), usosDisponibles - 1);
-        
+    }
+
+    public Boolean multiplicadorDisponible(Multiplicador multiplicador){
+
+        if(!usosMultiplicadores.containsKey(multiplicador.getIdentificador())) {
+            usosMultiplicadores.put(multiplicador.getIdentificador(), multiplicador.getCantidadUsosPermitidos());
+            return true;
+        }
+
+        int usosDisponibles = usosMultiplicadores.get(multiplicador.getIdentificador());
+
         return usosDisponibles > 0;
 
     }
@@ -60,7 +65,7 @@ public class Jugador {
         if(!multiplicadorDisponible(multiplicador)) {
             throw new CantidadUsoMultiplicadorExcedidoException();
         }
-
+        usarMultiplicador(multiplicador);
         this.multiplicador = multiplicador;
     }
 
