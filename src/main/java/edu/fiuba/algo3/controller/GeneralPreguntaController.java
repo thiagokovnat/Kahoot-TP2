@@ -49,13 +49,13 @@ public abstract class GeneralPreguntaController {
 
     public void initialize(){
 
-        boolean sePuedeUsarElMultiplicadorX2 = !rondaActual.getJugadorActual().multiplicadorDisponible(new MultiplicadorX2()) ||
-                                               !rondaActual.admiteMultiplicador();
+        boolean sePuedeUsarElMultiplicadorX2 = !rondaActual.sePuedeActivarMultiplicador(new MultiplicadorX2());
 
-        boolean sePuedeUsarElMultiplicadorX3 = !rondaActual.getJugadorActual().multiplicadorDisponible(new MultiplicadorX3()) ||
-                                               !rondaActual.admiteMultiplicador();
+        boolean sePuedeUsarElMultiplicadorX3 = !rondaActual.sePuedeActivarMultiplicador(new MultiplicadorX3());
 
-        boolean sePuedeUsarLaExclusividad = !rondaActual.admiteExclusividad() || !rondaActual.juegoAdmiteExclusividad();
+        boolean sePuedeUsarLaExclusividad = !rondaActual.admiteExclusividad();
+
+
 
         opcionesSeleccionadas = new ArrayList<>();
         multiplicadorDoble.setDisable(sePuedeUsarElMultiplicadorX2);

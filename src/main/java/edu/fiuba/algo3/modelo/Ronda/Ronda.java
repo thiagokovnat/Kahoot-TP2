@@ -5,6 +5,7 @@ import edu.fiuba.algo3.modelo.Exceptions.CantidadUsoMultiplicadorExcedidoExcepti
 import edu.fiuba.algo3.modelo.Exceptions.PreguntaNoAdmiteMultiplicadorException;
 import edu.fiuba.algo3.modelo.Jugador.Jugador;
 import edu.fiuba.algo3.modelo.Multiplicador.Multiplicador;
+import edu.fiuba.algo3.modelo.Multiplicador.MultiplicadorX3;
 import edu.fiuba.algo3.modelo.Opcion.Opcion;
 import edu.fiuba.algo3.modelo.Pregunta.Pregunta;
 import edu.fiuba.algo3.modelo.Respuesta.Respuesta;
@@ -39,10 +40,16 @@ public class Ronda {
         respuestas.add(respuesta);
     }
 
+    public boolean sePuedeActivarMultiplicador( Multiplicador multiplicador ){
+        return (getJugadorActual().multiplicadorDisponible(multiplicador) || this.pregunta.admiteMultiplicador());
+    }
+
     public void activarMultiplicador(Multiplicador multiplicador) throws CantidadUsoMultiplicadorExcedidoException, PreguntaNoAdmiteMultiplicadorException {
 
         jugadorActual.activarMultiplicador(multiplicador, this.pregunta);
     }
+
+
 
     // Devuelve true si sigue habiendo jugadores para que respondan, caso contrario false.
     public boolean hayProximoTurno(){
@@ -61,13 +68,9 @@ public class Ronda {
         return jugadorActual;
     }
 
-    public boolean admiteMultiplicador(){ return this.pregunta.admiteMultiplicador(); }
-
     public boolean admiteExclusividad(){
-        return this.pregunta.admiteExclusividad();
+        return (this.pregunta.admiteExclusividad() && (this.jugadores.size() == 2));
     }
-
-    public boolean juegoAdmiteExclusividad(){return (this.jugadores.size() == 2);}
 
     public void setExclusividad(){
         this.pregunta.setExclusividad();
