@@ -41,15 +41,13 @@ public class Ronda {
     }
 
     public boolean sePuedeActivarMultiplicador( Multiplicador multiplicador ){
-        return (getJugadorActual().multiplicadorDisponible(multiplicador) || this.pregunta.admiteMultiplicador());
+        return (getJugadorActual().multiplicadorDisponible(multiplicador) && this.pregunta.admiteMultiplicador());
     }
 
     public void activarMultiplicador(Multiplicador multiplicador) throws CantidadUsoMultiplicadorExcedidoException, PreguntaNoAdmiteMultiplicadorException {
 
         jugadorActual.activarMultiplicador(multiplicador, this.pregunta);
     }
-
-
 
     // Devuelve true si sigue habiendo jugadores para que respondan, caso contrario false.
     public boolean hayProximoTurno(){
