@@ -1,9 +1,7 @@
 package edu.fiuba.algo3.controller;
 
-import edu.fiuba.algo3.App;
 import edu.fiuba.algo3.modelo.Exceptions.CantidadUsoMultiplicadorExcedidoException;
 import edu.fiuba.algo3.modelo.Exceptions.PreguntaNoAdmiteMultiplicadorException;
-import edu.fiuba.algo3.modelo.Juego.Juego;
 import edu.fiuba.algo3.modelo.Multiplicador.MultiplicadorX2;
 import edu.fiuba.algo3.modelo.Multiplicador.MultiplicadorX3;
 import edu.fiuba.algo3.modelo.Opcion.Opcion;
@@ -55,7 +53,7 @@ public abstract class GeneralPreguntaController {
 
         rondaActual.responder(opcionesSeleccionadas);
 
-        if(rondaActual.proximoTurno()) {
+        if(rondaActual.hayProximoTurno()) {
             Loader.cargarEscena("VFJuego");
         }
         else if(!JuegoController.estaTerminado()){

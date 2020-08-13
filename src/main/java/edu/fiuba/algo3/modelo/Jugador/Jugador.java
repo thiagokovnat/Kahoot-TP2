@@ -36,7 +36,7 @@ public class Jugador {
         return this.puntuacion;
     }
 
-    public void usarMultiplicador(Multiplicador multiplicador){
+    private void usarMultiplicador(Multiplicador multiplicador){
 
         int usosDisponibles = usosMultiplicadores.get(multiplicador.getIdentificador());
 

@@ -45,7 +45,7 @@ public class Ronda {
     }
 
     // Devuelve true si sigue habiendo jugadores para que respondan, caso contrario false.
-    public boolean proximoTurno(){
+    public boolean hayProximoTurno(){
 
         if( this.iterador.hasNext() ) {
             this.jugadorActual = this.iterador.next();
