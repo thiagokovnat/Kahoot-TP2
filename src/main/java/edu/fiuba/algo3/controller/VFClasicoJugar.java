@@ -15,16 +15,19 @@ public class VFClasicoJugar {
 
     public void initialize() {
 
-        Juego juego = App.getJuego();
+        Juego juego = JuegoController.obtenerInstancia();
 
         Pregunta pregunta = juego.tomarPregunta();
         textField.setText(pregunta.getTexto()); 
         textField.setEditable(false);
+
     }
 
     public void volverMenuPrincipal(ActionEvent event){
 
-        App.getJuego().quitarJugadores();
+        Juego juego = JuegoController.obtenerInstancia();
+
+        juego.quitarJugadores();
         Loader.cargarEscena("mainPage");
     }
 

@@ -29,10 +29,12 @@ public class Ronda {
     }
 
     public void finalizar(){
+
         this.pregunta.puntuarRespuestas(respuestas);
     }
 
     public void responder(List<Opcion> opcionesElegidas ){
+
         Respuesta respuesta = jugadorActual.responder(opcionesElegidas);
         respuestas.add(respuesta);
     }
@@ -44,12 +46,30 @@ public class Ronda {
 
     // Devuelve true si sigue habiendo jugadores para que respondan, caso contrario false.
     public boolean proximoTurno(){
+
         if( this.iterador.hasNext() ) {
             this.jugadorActual = this.iterador.next();
             return true;
-        }else{
+        }
+        else{
             finalizar();
             return false;
         }
+    }
+
+    public Jugador getJugadorActual(){
+        return jugadorActual;
+    }
+
+    public boolean admiteExclusividad(){
+        return this.pregunta.admiteExclusividad();
+    }
+
+    public void setExclusividad(){
+        this.pregunta.setExclusividad();
+    }
+
+    public String getTextoPregunta(){
+        return this.pregunta.getTexto();
     }
 }

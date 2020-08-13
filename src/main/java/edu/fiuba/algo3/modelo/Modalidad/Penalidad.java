@@ -30,4 +30,9 @@ public class Penalidad implements ModalidadVerdaderoFalso, ModalidadMultipleChoi
     public boolean admiteMultiplicador() {
         return true;
     }
+
+    @Override
+    public boolean admiteExclusividad(){
+        return false;
+    }
 }

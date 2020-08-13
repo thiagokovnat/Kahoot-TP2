@@ -34,4 +34,9 @@ public class GroupChoice implements TipoDePregunta {
     public boolean admiteMultiplicador() {
         return modalidad.admiteMultiplicador();
     }
+
+    @Override
+    public boolean admiteExclusividad(){
+        return this.modalidad.admiteExclusividad();
+    }
 }

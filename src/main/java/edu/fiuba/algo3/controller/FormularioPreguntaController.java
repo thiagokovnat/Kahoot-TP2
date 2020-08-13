@@ -76,7 +76,7 @@ public class FormularioPreguntaController {
 
         Pregunta pregunta = Pregunta.crearPreguntaVerdaderoFalsoClasico(texto, opcionesDisponibles, opcionesCorrectas);
 
-        Juego juego = App.getJuego();
+        Juego juego = JuegoController.obtenerInstancia();
         juego.agregarPregunta(pregunta);
 
         Loader.cargarEscena("mainPage");

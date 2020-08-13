@@ -27,12 +27,12 @@ public class AgregarJugadorController {
     public void initialize(){
 
         confirmButton.setDisable(true);
-        addPlayer.setDisable(!App.getJuego().sePuedenCrearJugadores());
+        addPlayer.setDisable(!JuegoController.obtenerInstancia().sePuedenCrearJugadores());
     }
 
     public void agregarJugador(ActionEvent event) {
 
-        Juego juego = App.getJuego();
+        Juego juego = JuegoController.obtenerInstancia();
 
         if (!textField.getText().isEmpty()){
             try {
@@ -50,13 +50,15 @@ public class AgregarJugadorController {
     }
 
     public void continuar(){
-
+        JuegoController.comenzarJuego();
         Loader.cargarEscena("VFJuego");
     }
 
     public void volver(ActionEvent event){
 
-        App.getJuego().quitarJugadores();
+        Juego juego = JuegoController.obtenerInstancia();
+
+        juego.quitarJugadores();
         Loader.cargarEscena("mainPage");
     }
 }

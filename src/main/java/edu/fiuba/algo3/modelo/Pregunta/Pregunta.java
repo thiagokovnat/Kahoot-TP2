@@ -116,4 +116,8 @@ public class Pregunta {
 
         this.estado = new Exclusivo();
     }
+
+    public boolean admiteExclusividad(){
+        return this.tipoDePregunta.admiteExclusividad();
+    }
 }

@@ -22,4 +22,9 @@ public class Parcial implements ModalidadMultipleChoice {
     public boolean admiteMultiplicador() {
         return false;
     }
+
+    @Override
+    public boolean admiteExclusividad(){
+        return true;
+    }
 }

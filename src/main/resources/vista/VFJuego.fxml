@@ -4,18 +4,24 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
-<?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="511.0" prefWidth="779.0" style="-fx-background-color: BLACK;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.fiuba.algo3.controller.VFClasicoJugar">
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: BLACK;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.fiuba.algo3.controller.VerdaderoFalsoController">
    <children>
       <ImageView fitHeight="511.0" fitWidth="779.0">
          <image>
             <Image url="@../images/responder.png" />
          </image>
       </ImageView>
-      <TextField fx:id="textField" layoutX="78.0" layoutY="89.0" prefHeight="101.0" prefWidth="622.0" />
-      <Button fx:id="goBackButton" layoutX="30.0" layoutY="24.0" mnemonicParsing="false" onAction="#volverMenuPrincipal" prefHeight="26.0" prefWidth="95.0" text="Volver" />
-      <Button fx:id="confirmButton" layoutX="396.0" layoutY="209.0" mnemonicParsing="false" onAction="#seleccionarVerdadero" prefHeight="250.0" prefWidth="305.0" text="VERDADERA" />
-      <Button fx:id="confirmButton1" layoutX="78.0" layoutY="209.0" mnemonicParsing="false" onAction="#seleccionarFalso" prefHeight="250.0" prefWidth="305.0" text="FALSO" />
+      <Text fx:id="textoPregunta" fill="WHITE" layoutX="30.0" layoutY="90.0" strokeType="OUTSIDE" strokeWidth="0.0" text="test123" textAlignment="CENTER" wrappingWidth="540.7294921875" />
+      <Button fx:id="multiplicadorDoble" layoutX="29.0" layoutY="27.0" mnemonicParsing="false" onAction="#onMultiplicadorDoble" text="MultiplicadorX2" />
+      <Button fx:id="multiplicadorTriple" layoutX="161.0" layoutY="27.0" mnemonicParsing="false" onAction="#onMultiplicadorTriple" prefHeight="26.0" prefWidth="129.0" text="MultiplicadorX3" />
+      <Button fx:id="activarExclusividad" layoutX="300.0" layoutY="27.0" mnemonicParsing="false" onAction="#onExclusividad" prefHeight="26.0" prefWidth="120.0" text="Exclusividad" />
+      <Button fx:id="opcionVerdadero" layoutX="46.0" layoutY="151.0" mnemonicParsing="false" onAction="#onOpcionVerdadera" prefHeight="171.0" prefWidth="230.0" text="Verdadero" />
+      <Button fx:id="opcionFalso" layoutX="312.0" layoutY="151.0" mnemonicParsing="false" onAction="#onOpcionFalso" prefHeight="171.0" prefWidth="230.0" text="Falso" />
+      <Button layoutX="467.0" layoutY="360.0" mnemonicParsing="false" onAction="#onConfirmarRespuesta" prefHeight="26.0" prefWidth="104.0" text="Confirmar" />
    </children>
 </AnchorPane>

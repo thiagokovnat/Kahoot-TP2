@@ -8,4 +8,5 @@ import java.util.List;
 public interface ModalidadGroupChoice {
     void puntuarGroupChoice(Respuesta respuesta, List<Opcion> opcionesCorrectas);
     boolean admiteMultiplicador();
+    boolean admiteExclusividad();
 }

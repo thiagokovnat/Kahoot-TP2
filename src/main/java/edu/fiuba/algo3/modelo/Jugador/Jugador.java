@@ -63,4 +63,8 @@ public class Jugador {
 
         this.multiplicador = multiplicador;
     }
+
+    public String getNombre(){
+        return this.nickname;
+    }
 }
