@@ -18,7 +18,7 @@
       </ImageView>
       <Text layoutX="110.0" layoutY="83.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Agregar Pregunta" textAlignment="CENTER" wrappingWidth="559.7294921875">
          <font>
-            <Font name="FreeMono" size="28.0" />
+            <Font name="Montserrat Bold" size="28.0" />
          </font>
       </Text>
       <VBox alignment="CENTER" layoutX="110.0" layoutY="114.0" prefHeight="324.0" prefWidth="560.0" spacing="15.0">

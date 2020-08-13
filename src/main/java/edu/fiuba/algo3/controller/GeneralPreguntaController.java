@@ -6,6 +6,7 @@ import edu.fiuba.algo3.modelo.Multiplicador.MultiplicadorX2;
 import edu.fiuba.algo3.modelo.Multiplicador.MultiplicadorX3;
 import edu.fiuba.algo3.modelo.Opcion.Opcion;
 import edu.fiuba.algo3.modelo.Ronda.Ronda;
+import edu.fiuba.algo3.modelo.TipoDePregunta.MultipleChoice;
 import edu.fiuba.algo3.vista.Loader;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -36,18 +37,36 @@ public abstract class GeneralPreguntaController {
     @FXML
     TextField nombreJugadorActual;
 
+    @FXML
+    Text opcion1;
+
+    @FXML
+    Text opcion2;
+
     protected static Ronda rondaActual = JuegoController.getProximaRonda();
 
     protected List<Opcion> opcionesSeleccionadas;
 
     public void initialize(){
 
+        boolean sePuedeUsarElMultiplicadorX2 = !rondaActual.getJugadorActual().multiplicadorDisponible(new MultiplicadorX2()) ||
+                                               !rondaActual.admiteMultiplicador();
+
+        boolean sePuedeUsarElMultiplicadorX3 = !rondaActual.getJugadorActual().multiplicadorDisponible(new MultiplicadorX3()) ||
+                                               !rondaActual.admiteMultiplicador();
+
+        boolean sePuedeUsarLaExclusividad = !rondaActual.admiteExclusividad() || !rondaActual.juegoAdmiteExclusividad();
+
         opcionesSeleccionadas = new ArrayList<>();
-        multiplicadorDoble.setDisable(!rondaActual.getJugadorActual().multiplicadorDisponible(new MultiplicadorX2()));
-        multiplicadorTriple.setDisable(!rondaActual.getJugadorActual().multiplicadorDisponible(new MultiplicadorX3()));
-        activarExclusividad.setDisable(!rondaActual.admiteExclusividad());
+        multiplicadorDoble.setDisable(sePuedeUsarElMultiplicadorX2);
+        multiplicadorTriple.setDisable(sePuedeUsarElMultiplicadorX3);
+        activarExclusividad.setDisable(sePuedeUsarLaExclusividad);
         textoPregunta.setText(rondaActual.getTextoPregunta());
+        this.setUp();
+
     }
+
+    protected abstract void setUp();
 
     public void onConfirmarRespuesta(){
 

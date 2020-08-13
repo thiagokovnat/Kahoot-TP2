@@ -23,7 +23,7 @@
       <Button fx:id="terminar" layoutX="395.0" layoutY="351.0" mnemonicParsing="false" onAction="#onEnter" prefHeight="28.0" prefWidth="140.0" stylesheets="@../styles/botonceleste.css" text="Terminado" />
       <Text layoutX="20.0" layoutY="43.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Verdadero y Falso Clásico" textAlignment="CENTER" wrappingWidth="559.7294921875">
          <font>
-            <Font name="FreeMono" size="28.0" />
+            <Font name="Montserrat Bold" size="28.0" />
          </font>
       </Text>
    </children>

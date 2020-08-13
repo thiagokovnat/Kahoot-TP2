@@ -36,8 +36,6 @@ public class Pregunta {
         }
     }
 
-
-
     // Método de clase, instancia una Pregunta con su tipo seteado en Verdadero/Falso Clásico.
     public static Pregunta crearPreguntaVerdaderoFalsoClasico(String pregunta, List<Opcion> opcionesDisponibles, List<Opcion> respuestasCorrectas){
 

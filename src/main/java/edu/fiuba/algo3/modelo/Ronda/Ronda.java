@@ -61,9 +61,13 @@ public class Ronda {
         return jugadorActual;
     }
 
+    public boolean admiteMultiplicador(){ return this.pregunta.admiteMultiplicador(); }
+
     public boolean admiteExclusividad(){
         return this.pregunta.admiteExclusividad();
     }
+
+    public boolean juegoAdmiteExclusividad(){return (this.jugadores.size() == 2);}
 
     public void setExclusividad(){
         this.pregunta.setExclusividad();
@@ -72,4 +76,5 @@ public class Ronda {
     public String getTextoPregunta(){
         return this.pregunta.getTexto();
     }
+
 }
