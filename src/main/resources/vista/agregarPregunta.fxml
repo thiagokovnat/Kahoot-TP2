@@ -26,11 +26,11 @@
             <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Seleccione el tipo de Pregunta" textAlignment="CENTER" wrappingWidth="478.7294921875" />
             <Button fx:id="GroupChoice" mnemonicParsing="false" prefHeight="26.0" prefWidth="480.0" stylesheets="@../styles/agregarpregunta.css" text="Group Choice Clasico" />
             <Button fx:id="OrderedChoice" mnemonicParsing="false" prefHeight="26.0" prefWidth="480.0" stylesheets="@../styles/agregarpregunta.css" text="Ordered Choice Clasico" />
-            <Button fx:id="VFClasico" mnemonicParsing="false" onAction="#onVFClasico" prefHeight="26.0" prefWidth="482.0" stylesheets="@../styles/agregarpregunta.css" text="Verdadero Falso Clasico" />
-            <Button fx:id="VFPenalidad" mnemonicParsing="false" onAction="#onVFPenalidad" prefHeight="26.0" prefWidth="483.0" stylesheets="@../styles/agregarpregunta.css" text="Verdadero Falso Penalidad" />
-            <Button fx:id="MCPenalidad" mnemonicParsing="false" onAction="#onMCPenalidad" prefHeight="26.0" prefWidth="481.0" stylesheets="@../styles/agregarpregunta.css" text="Multiple Choice Penalidad" />
-            <Button fx:id="MCClasico" mnemonicParsing="false" onAction="#onMCClasico" prefHeight="26.0" prefWidth="483.0" stylesheets="@../styles/agregarpregunta.css" text="Multiple Choice Clasico" />
-            <Button fx:id="MCParcial" mnemonicParsing="false" onAction="#onMCParcial" prefHeight="26.0" prefWidth="484.0" stylesheets="@../styles/agregarpregunta.css" text="Multiple Choice Parcial" />
+            <Button fx:id="VFClasico" mnemonicParsing="false" onAction="#onVFClasico" prefHeight="26.0" prefWidth="480.0" stylesheets="@../styles/agregarpregunta.css" text="Verdadero Falso Clasico" />
+            <Button fx:id="VFPenalidad" mnemonicParsing="false" onAction="#onVFPenalidad" prefHeight="26.0" prefWidth="480.0" stylesheets="@../styles/agregarpregunta.css" text="Verdadero Falso Penalidad" />
+            <Button fx:id="MCPenalidad" mnemonicParsing="false" onAction="#onMCPenalidad" prefHeight="26.0" prefWidth="480.0" stylesheets="@../styles/agregarpregunta.css" text="Multiple Choice Penalidad" />
+            <Button fx:id="MCClasico" mnemonicParsing="false" onAction="#onMCClasico" prefHeight="26.0" prefWidth="480.0" stylesheets="@../styles/agregarpregunta.css" text="Multiple Choice Clasico" />
+            <Button fx:id="MCParcial" mnemonicParsing="false" onAction="#onMCParcial" prefHeight="26.0" prefWidth="480.0" stylesheets="@../styles/agregarpregunta.css" text="Multiple Choice Parcial" />
          </children>
       </VBox>
       <Button fx:id="goBackButton" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#volver" prefHeight="28.0" prefWidth="108.0" stylesheets="@../styles/agregarpregunta.css" text="Volver" />
