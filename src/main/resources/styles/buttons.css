@@ -1,0 +1,9 @@
+#goBackButton{
+    -fx-background-color: #6833be;
+    -fx-background-insets: 0 0 -1 0,0,1;
+    -fx-background-radius: 5,5,4;
+    -fx-padding: 3 30 3 30;
+    -fx-border-color: BLACK;
+    -fx-text-fill: WHITE;
+    -fx-font-size: 14px;
+}
