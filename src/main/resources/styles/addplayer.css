@@ -1,5 +1,5 @@
-#goBackButton{
-    -fx-background-color: #6833be;
+.button{
+    -fx-background-color: #32a20b;
     -fx-background-insets: 0 0 -1 0,0,1;
     -fx-background-radius: 5,5,4;
     -fx-padding: 3 30 3 30;

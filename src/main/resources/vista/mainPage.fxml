@@ -13,12 +13,12 @@
             <Image url="@../images/fondo.png" />
          </image>
       </ImageView>
-      <Button fx:id="comenzar" layoutX="37.0" layoutY="407.0" mnemonicParsing="false" onAction="#comenzarJuego" prefHeight="28.0" prefWidth="172.0" stylesheets="@../styles/main.css" text="Comenzar">
+      <Button layoutX="37.0" layoutY="407.0" mnemonicParsing="false" onAction="#comenzarJuego" prefHeight="28.0" prefWidth="172.0" stylesheets="@../styles/main.css" text="Comenzar">
          <font>
             <Font size="33.0" />
          </font>
       </Button>
-      <Button fx:id="agregar" layoutX="37.0" layoutY="450.0" mnemonicParsing="false" onAction="#agregarPreguntas" prefHeight="28.0" prefWidth="172.0" stylesheets="@../styles/main.css" text="Añadir preguntas">
+      <Button layoutX="37.0" layoutY="450.0" mnemonicParsing="false" onAction="#agregarPreguntas" prefHeight="28.0" prefWidth="172.0" stylesheets="@../styles/main.css" text="Añadir preguntas">
          <font>
             <Font size="21.0" />
          </font>
