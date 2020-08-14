@@ -8,13 +8,18 @@ import edu.fiuba.algo3.modelo.Opcion.Opcion;
 import edu.fiuba.algo3.modelo.Ronda.Ronda;
 import edu.fiuba.algo3.modelo.TipoDePregunta.MultipleChoice;
 import edu.fiuba.algo3.vista.Loader;
+import javafx.animation.KeyFrame;
+import javafx.animation.Timeline;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.scene.text.Text;
+import javafx.util.Duration;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Timer;
+import java.util.TimerTask;
 
 
 public abstract class GeneralPreguntaController {
@@ -47,6 +52,8 @@ public abstract class GeneralPreguntaController {
 
     protected List<Opcion> opcionesSeleccionadas;
 
+    Timeline timeline;
+
     public void initialize(){
 
         boolean sePuedeUsarElMultiplicadorX2 = !rondaActual.sePuedeActivarMultiplicador(new MultiplicadorX2());
@@ -55,7 +62,8 @@ public abstract class GeneralPreguntaController {
 
         boolean sePuedeUsarLaExclusividad = !rondaActual.admiteExclusividad();
 
-
+        timeline = new Timeline(new KeyFrame(Duration.millis(30000), ae -> onConfirmarRespuesta()));
+        timeline.play();
 
         opcionesSeleccionadas = new ArrayList<>();
         multiplicadorDoble.setDisable(sePuedeUsarElMultiplicadorX2);
@@ -70,6 +78,8 @@ public abstract class GeneralPreguntaController {
 
     public void onConfirmarRespuesta(){
 
+        timeline.stop();
+        
         rondaActual.responder(opcionesSeleccionadas);
 
         if(rondaActual.hayProximoTurno()) {
