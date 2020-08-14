@@ -6,11 +6,8 @@ public class MultiplicadorX3 implements Multiplicador {
         return puntos*3;
     }
 
-    public String getIdentificador(){
-        return "MultiplicadorX3";
-    }
-
-    public int getCantidadUsosPermitidos(){
-        return 2;
+    @Override
+    public boolean equals(Object obj){
+        return this.getClass() == obj.getClass();
     }
 }

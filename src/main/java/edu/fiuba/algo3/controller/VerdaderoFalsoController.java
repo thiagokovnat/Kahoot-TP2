@@ -28,9 +28,13 @@ public class VerdaderoFalsoController extends GeneralPreguntaController{
     public void onOpcionVerdadera(){
 
         this.opcionesSeleccionadas.add(new OpcionSinGrupo(opcionVerdadero.getText()));
+        opcionVerdadero.setDisable(true);
+        opcionFalso.setDisable(true);
     }
 
     public void onOpcionFalso(){
         this.opcionesSeleccionadas.add(new OpcionSinGrupo(opcionFalso.getText()));
+        opcionVerdadero.setDisable(true);
+        opcionFalso.setDisable(true);
     }
 }

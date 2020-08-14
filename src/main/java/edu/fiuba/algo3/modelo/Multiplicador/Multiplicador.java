@@ -4,7 +4,4 @@ public interface Multiplicador {
 
     int aplicar(int puntos);
 
-    String getIdentificador();
-
-    int getCantidadUsosPermitidos();
 }

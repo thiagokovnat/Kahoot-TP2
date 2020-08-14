@@ -1,12 +1,16 @@
 package edu.fiuba.algo3.modelo.Jugador;
+import edu.fiuba.algo3.modelo.Constants.Constants;
 import edu.fiuba.algo3.modelo.Exceptions.CantidadUsoMultiplicadorExcedidoException;
 import edu.fiuba.algo3.modelo.Exceptions.PreguntaNoAdmiteMultiplicadorException;
 import edu.fiuba.algo3.modelo.Multiplicador.Multiplicador;
 import edu.fiuba.algo3.modelo.Multiplicador.MultiplicadorX1;
+import edu.fiuba.algo3.modelo.Multiplicador.MultiplicadorX2;
+import edu.fiuba.algo3.modelo.Multiplicador.MultiplicadorX3;
 import edu.fiuba.algo3.modelo.Opcion.Opcion;
 import edu.fiuba.algo3.modelo.Pregunta.Pregunta;
 import edu.fiuba.algo3.modelo.Respuesta.Respuesta;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
@@ -15,12 +19,13 @@ public class Jugador {
     private String nickname;
     private int puntuacion;
     private Multiplicador multiplicador;
-    private HashMap<String, Integer> usosMultiplicadores = new HashMap<>();
+    private List<Multiplicador> multiplicadoresRestantes = new ArrayList<>();
 
     public Jugador(String nickname){
         this.nickname = nickname;
         this.puntuacion = 0;
         this.multiplicador = new MultiplicadorX1();
+        this.agregarMultiplicadores();
     }
 
     public Respuesta responder(List<Opcion> opcionesElegidas){
@@ -38,23 +43,16 @@ public class Jugador {
 
     private void usarMultiplicador(Multiplicador multiplicador){
 
-        int usosDisponibles = usosMultiplicadores.get(multiplicador.getIdentificador());
-
-        if(usosDisponibles > 0)
-            usosMultiplicadores.put(multiplicador.getIdentificador(), usosDisponibles - 1);
+       if(multiplicadoresRestantes.contains(multiplicador)){
+           Multiplicador multiplicadorBuscado = multiplicadoresRestantes.get(multiplicadoresRestantes.indexOf(multiplicador));
+           multiplicadoresRestantes.remove(multiplicador);
+           this.multiplicador = multiplicadorBuscado;
+       }
     }
 
     public Boolean multiplicadorDisponible(Multiplicador multiplicador){
 
-        if(!usosMultiplicadores.containsKey(multiplicador.getIdentificador())) {
-            usosMultiplicadores.put(multiplicador.getIdentificador(), multiplicador.getCantidadUsosPermitidos());
-            return true;
-        }
-
-        int usosDisponibles = usosMultiplicadores.get(multiplicador.getIdentificador());
-
-        return usosDisponibles > 0;
-
+        return multiplicadoresRestantes.contains(multiplicador);
     }
 
     public void activarMultiplicador(Multiplicador multiplicador, Pregunta pregunta) throws CantidadUsoMultiplicadorExcedidoException, PreguntaNoAdmiteMultiplicadorException {
@@ -71,5 +69,16 @@ public class Jugador {
 
     public String getNombre(){
         return this.nickname;
+    }
+
+    private void agregarMultiplicadores(){
+
+        for (int i = 0; i < Constants.CantidadMultiplicadorDoble; i++) {
+            multiplicadoresRestantes.add(new MultiplicadorX2());
+        }
+
+        for (int i = 0; i < Constants.CantidadMultiplicadorTriple; i++) {
+            multiplicadoresRestantes.add(new MultiplicadorX3());
+        }
     }
 }
