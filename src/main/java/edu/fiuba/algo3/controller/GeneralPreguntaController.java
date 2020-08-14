@@ -31,7 +31,7 @@ public abstract class GeneralPreguntaController {
     Button confirmarRespuesta;
 
     @FXML
-    Text textoPregunta;
+    Label textoPregunta;
 
     @FXML
     Button multiplicadorDoble;
@@ -92,6 +92,8 @@ public abstract class GeneralPreguntaController {
         multiplicadorTriple.setDisable(sePuedeUsarElMultiplicadorX3);
         activarExclusividad.setDisable(sePuedeUsarLaExclusividad);
         textoPregunta.setText(rondaActual.getTextoPregunta());
+        textoPregunta.setWrapText(true);
+
         this.setUp();
 
     }
