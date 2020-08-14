@@ -93,4 +93,8 @@ public class Juego {
     public boolean estaTerminado(){
         return cantidadRondas <= indiceRondaActual;
     }
+
+    public boolean sePuedeIniciarJuego(){
+        return this.jugadores.size() > 0 && !this.noHayPreguntasCargadas();
+    }
 }

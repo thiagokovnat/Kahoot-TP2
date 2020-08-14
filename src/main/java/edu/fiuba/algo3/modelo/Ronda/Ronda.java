@@ -32,6 +32,10 @@ public class Ronda {
     public void finalizar(){
 
         this.pregunta.puntuarRespuestas(respuestas);
+
+        for(Jugador jugador : jugadores){
+            System.out.println(jugador.getPuntos());
+        }
     }
 
     public void responder(List<Opcion> opcionesElegidas ){

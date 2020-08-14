@@ -15,6 +15,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.paint.Color;
 import javafx.scene.text.Text;
 import javafx.util.Duration;
 
@@ -53,15 +54,18 @@ public abstract class GeneralPreguntaController {
     @FXML
     Label counter;
 
+    @FXML
+    Label nombreJugador;
+
     protected static Ronda rondaActual = JuegoController.getProximaRonda();
 
     protected List<Opcion> opcionesSeleccionadas;
 
     protected Timeline timeline;
+
     protected Timeline counterTimeLine;
+
     protected Integer segundosCounter = 30;
-
-
 
     public void initialize(){
 
@@ -70,6 +74,9 @@ public abstract class GeneralPreguntaController {
         boolean sePuedeUsarElMultiplicadorX3 = !rondaActual.sePuedeActivarMultiplicador(new MultiplicadorX3());
 
         boolean sePuedeUsarLaExclusividad = !rondaActual.admiteExclusividad();
+
+        String playerName = rondaActual.getJugadorActual().getNombre();
+        nombreJugador.setText("Turno: " + playerName);
 
         counter.setText(segundosCounter.toString());
 
@@ -139,5 +146,8 @@ public abstract class GeneralPreguntaController {
         segundosCounter--;
 
         counter.setText(segundosCounter.toString());
+
+        if(segundosCounter <= 10)
+            counter.setTextFill(Color.RED);
     }
 }

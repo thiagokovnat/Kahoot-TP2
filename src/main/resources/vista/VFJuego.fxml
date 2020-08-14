@@ -38,10 +38,14 @@
          </font>
 
       </Text>
-      <Label text="Label" />
       <Label fx:id="counter" layoutX="693.0" layoutY="14.0" prefHeight="45.0" prefWidth="107.0" text="Label">
          <font>
-            <Font size="25.0" />
+            <Font name="Lohit Kannada" size="25.0" />
+         </font>
+      </Label>
+      <Label fx:id="nombreJugador" layoutX="298.0" layoutY="33.0" prefHeight="16.0" prefWidth="238.0" text="Turno:">
+         <font>
+            <Font size="19.0" />
          </font>
       </Label>
       </children>

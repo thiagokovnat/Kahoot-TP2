@@ -26,7 +26,7 @@ public class AgregarJugadorController {
     // Verificamos al principio de instanciar el controlador si se pueden añadir jugadores.
     public void initialize(){
 
-        confirmButton.setDisable(true);
+        confirmButton.setDisable(!JuegoController.obtenerInstancia().sePuedeIniciarJuego());
         addPlayer.setDisable(!JuegoController.obtenerInstancia().sePuedenCrearJugadores());
     }
 
