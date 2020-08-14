@@ -18,7 +18,7 @@
       </ImageView>
       <Text fx:id="textoPregunta" layoutX="44.0" layoutY="251.0" stroke="BLACK" strokeType="OUTSIDE" strokeWidth="0.0" text="PREGUNTAPREGUNTAPREGUNTAPREGUNTA" textAlignment="CENTER" wrappingWidth="691.7294921875">
          <font>
-            <Font name="Montserrat Bold" size="18.0" />
+            <Font name="Montserrat Bold Italic" size="18.0" />
          </font></Text>
       <Button fx:id="multiplicadorDoble" layoutX="46.0" layoutY="29.0" mnemonicParsing="false" onAction="#onMultiplicadorDoble" prefHeight="28.0" prefWidth="170.0" stylesheets="@../styles/botonceleste.css" text="¡MultiplicadorX2!" />
       <Button fx:id="multiplicadorTriple" layoutX="46.0" layoutY="66.0" mnemonicParsing="false" onAction="#onMultiplicadorTriple" prefHeight="28.0" prefWidth="170.0" stylesheets="@../styles/botonceleste.css" text="¡MultiplicadorX3!" />
@@ -40,7 +40,7 @@
 
       </Text>
       <Circle layoutX="738.0" layoutY="39.0" radius="28.0" stroke="BLACK" strokeType="INSIDE" />
-      <Label fx:id="counter" layoutX="723.0" layoutY="16.0" prefHeight="45.0" prefWidth="107.0" text="Label" textFill="WHITE">
+      <Label fx:id="counter" alignment="CENTER" contentDisplay="CENTER" layoutX="685.0" layoutY="17.0" prefHeight="45.0" prefWidth="107.0" text="Label" textFill="WHITE">
          <font>
             <Font name="Montserrat ExtraBold" size="25.0" />
          </font>
