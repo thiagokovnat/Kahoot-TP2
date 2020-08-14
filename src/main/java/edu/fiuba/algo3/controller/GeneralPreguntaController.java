@@ -144,6 +144,6 @@ public abstract class GeneralPreguntaController {
         counter.setText(segundosCounter.toString());
 
         if(segundosCounter <= 10)
-            counter.setTextFill(Color.RED);
+            counter.setTextFill(Color.GOLD);
     }
 }

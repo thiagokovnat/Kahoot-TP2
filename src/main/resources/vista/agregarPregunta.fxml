@@ -13,7 +13,7 @@
    <children>
       <ImageView fitHeight="511.0" fitWidth="780.0">
          <image>
-            <Image url="@../images/responder.png" />
+            <Image url="@../images/respondersintimer.png" />
          </image>
       </ImageView>
       <Text layoutX="110.0" layoutY="83.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Agregar Pregunta" textAlignment="CENTER" wrappingWidth="559.7294921875">

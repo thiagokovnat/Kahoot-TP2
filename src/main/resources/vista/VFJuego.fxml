@@ -6,7 +6,6 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
-<?import javafx.scene.shape.Circle?>
 <?import javafx.scene.text.Font?>
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="511.0" prefWidth="780.0" style="-fx-background-color: BLACK;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.fiuba.algo3.controller.VerdaderoFalsoController">
@@ -20,18 +19,17 @@
       <Button fx:id="multiplicadorTriple" layoutX="46.0" layoutY="67.0" mnemonicParsing="false" onAction="#onMultiplicadorTriple" prefHeight="28.0" prefWidth="217.0" stylesheets="@../styles/botonceleste.css" text="¡MultiplicadorX3!" />
       <Button fx:id="activarExclusividad" layoutX="46.0" layoutY="108.0" mnemonicParsing="false" onAction="#onExclusividad" prefHeight="28.0" prefWidth="217.0" stylesheets="@../styles/botonceleste.css" text="¡Exclusividad!" />
       <Button layoutX="547.0" layoutY="463.0" mnemonicParsing="false" onAction="#onConfirmarRespuesta" prefHeight="28.0" prefWidth="170.0" stylesheets="@../styles/botonceleste.css" text="Confirmar" />
-      <Circle layoutX="738.0" layoutY="39.0" radius="28.0" stroke="BLACK" strokeType="INSIDE" />
-      <Label fx:id="counter" alignment="CENTER" contentDisplay="CENTER" layoutX="685.0" layoutY="17.0" prefHeight="45.0" prefWidth="107.0" text="Label" textFill="WHITE">
+      <Label fx:id="counter" alignment="CENTER" contentDisplay="CENTER" layoutX="684.0" layoutY="16.0" prefHeight="45.0" prefWidth="107.0" text="Label" textFill="WHITE">
          <font>
             <Font name="Montserrat ExtraBold" size="25.0" />
          </font>
       </Label>
-      <Label fx:id="nombreJugador" layoutX="401.0" layoutY="30.0" prefHeight="16.0" prefWidth="238.0" text="Turno:">
+      <Label fx:id="nombreJugador" layoutX="25.0" layoutY="466.0" prefHeight="16.0" prefWidth="238.0" text="Turno:" textFill="#cd7f32">
          <font>
             <Font name="Montserrat ExtraBold" size="18.0" />
          </font>
       </Label>
-      <Label fx:id="textoPregunta" alignment="CENTER" layoutX="50.0" layoutY="152.0" prefHeight="146.0" prefWidth="689.0" text="AAAAAAAAAAAAAAA">
+      <Label fx:id="textoPregunta" alignment="CENTER" layoutX="50.0" layoutY="152.0" prefHeight="146.0" prefWidth="689.0" text="AAAAAAAAAAAAAAA" textFill="#cd7f32">
          <font>
             <Font name="Montserrat ExtraBold Italic" size="16.0" />
          </font></Label>
