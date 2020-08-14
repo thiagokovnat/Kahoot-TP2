@@ -16,6 +16,6 @@
       <TextField fx:id="textField" layoutX="15.0" layoutY="405.0" prefHeight="26.0" prefWidth="355.0" stylesheets="@../styles/texto.css" />
       <Button fx:id="goBackButton" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#volver" prefHeight="28.0" prefWidth="125.0" stylesheets="@../styles/botonverde.css" text="Volver" />
       <Button fx:id="addPlayer" layoutX="18.0" layoutY="465.0" mnemonicParsing="false" onAction="#agregarJugador" prefHeight="28.0" prefWidth="125.0" stylesheets="@../styles/botonverde.css" text="Añadir" />
-      <Button fx:id="confirmButton" layoutX="164.0" layoutY="465.0" mnemonicParsing="false" onAction="#continuar" prefHeight="28.0" prefWidth="125.0" stylesheets="@../styles/botonverde.css" text="Continuar" />
+      <Button fx:id="confirmButton" layoutX="164.0" layoutY="465.0" mnemonicParsing="false" onAction="#continuar" prefHeight="28.0" prefWidth="142.0" stylesheets="@../styles/botonverde.css" text="Continuar" />
    </children>
 </AnchorPane>

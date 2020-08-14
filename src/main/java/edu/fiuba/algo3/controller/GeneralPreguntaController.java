@@ -46,12 +46,6 @@ public abstract class GeneralPreguntaController {
     TextField nombreJugadorActual;
 
     @FXML
-    Text opcion1;
-
-    @FXML
-    Text opcion2;
-
-    @FXML
     Label counter;
 
     @FXML

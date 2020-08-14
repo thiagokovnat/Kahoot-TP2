@@ -79,4 +79,8 @@ public class Ronda {
         return this.pregunta.getTexto();
     }
 
+    public List<Opcion> getOpciones() {
+
+        return pregunta.getOpciones();
+    }
 }

@@ -5,9 +5,9 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.shape.Circle?>
 <?import javafx.scene.text.Font?>
-<?import javafx.scene.text.Text?>
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="511.0" prefWidth="780.0" style="-fx-background-color: BLACK;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.fiuba.algo3.controller.VerdaderoFalsoController">
    <children>
@@ -16,39 +16,30 @@
             <Image url="@../images/responder.png" />
          </image>
       </ImageView>
-      <Button fx:id="multiplicadorDoble" layoutX="46.0" layoutY="29.0" mnemonicParsing="false" onAction="#onMultiplicadorDoble" prefHeight="28.0" prefWidth="170.0" stylesheets="@../styles/botonceleste.css" text="¡MultiplicadorX2!" />
-      <Button fx:id="multiplicadorTriple" layoutX="46.0" layoutY="66.0" mnemonicParsing="false" onAction="#onMultiplicadorTriple" prefHeight="28.0" prefWidth="170.0" stylesheets="@../styles/botonceleste.css" text="¡MultiplicadorX3!" />
-      <Button fx:id="activarExclusividad" layoutX="46.0" layoutY="104.0" mnemonicParsing="false" onAction="#onExclusividad" prefHeight="28.0" prefWidth="170.0" stylesheets="@../styles/botonceleste.css" text="¡Exclusividad!" />
-      <Button fx:id="opcionVerdadero" layoutX="576.0" layoutY="370.0" mnemonicParsing="false" onAction="#onOpcionVerdadera" prefHeight="28.0" prefWidth="170.0" stylesheets="@../styles/botonceleste.css" text="Verdadero" />
-      <Button fx:id="opcionFalso" layoutX="576.0" layoutY="412.0" mnemonicParsing="false" onAction="#onOpcionFalso" prefHeight="28.0" prefWidth="170.0" stylesheets="@../styles/botonceleste.css" text="Falso" />
-      <Button layoutX="576.0" layoutY="453.0" mnemonicParsing="false" onAction="#onConfirmarRespuesta" prefHeight="28.0" prefWidth="170.0" stylesheets="@../styles/botonceleste.css" text="Confirmar" />
-
-      <Text fx:id="opcion1" layoutX="29.0" layoutY="391.0" stroke="BLACK" strokeType="OUTSIDE" strokeWidth="0.0" text="Opcion1" textAlignment="CENTER" wrappingWidth="538.7294921875">
-         <font>
-            <Font name="Montserrat Bold" size="18.0" />
-         </font>
-      </Text>
-
-      <Text fx:id="opcion2" layoutX="29.0" layoutY="433.0" stroke="BLACK" strokeType="OUTSIDE" strokeWidth="0.0" text="Opcion2" textAlignment="CENTER" wrappingWidth="538.7294921875">
-         <font>
-            <Font name="Montserrat Bold" size="18.0" />
-         </font>
-
-      </Text>
+      <Button fx:id="multiplicadorDoble" layoutX="46.0" layoutY="26.0" mnemonicParsing="false" onAction="#onMultiplicadorDoble" prefHeight="28.0" prefWidth="217.0" stylesheets="@../styles/botonceleste.css" text="¡MultiplicadorX2!" />
+      <Button fx:id="multiplicadorTriple" layoutX="46.0" layoutY="67.0" mnemonicParsing="false" onAction="#onMultiplicadorTriple" prefHeight="28.0" prefWidth="217.0" stylesheets="@../styles/botonceleste.css" text="¡MultiplicadorX3!" />
+      <Button fx:id="activarExclusividad" layoutX="46.0" layoutY="108.0" mnemonicParsing="false" onAction="#onExclusividad" prefHeight="28.0" prefWidth="217.0" stylesheets="@../styles/botonceleste.css" text="¡Exclusividad!" />
+      <Button layoutX="547.0" layoutY="463.0" mnemonicParsing="false" onAction="#onConfirmarRespuesta" prefHeight="28.0" prefWidth="170.0" stylesheets="@../styles/botonceleste.css" text="Confirmar" />
       <Circle layoutX="738.0" layoutY="39.0" radius="28.0" stroke="BLACK" strokeType="INSIDE" />
       <Label fx:id="counter" alignment="CENTER" contentDisplay="CENTER" layoutX="685.0" layoutY="17.0" prefHeight="45.0" prefWidth="107.0" text="Label" textFill="WHITE">
          <font>
             <Font name="Montserrat ExtraBold" size="25.0" />
          </font>
       </Label>
-      <Label fx:id="nombreJugador" layoutX="46.0" layoutY="456.0" prefHeight="16.0" prefWidth="238.0" text="Turno:">
+      <Label fx:id="nombreJugador" layoutX="401.0" layoutY="30.0" prefHeight="16.0" prefWidth="238.0" text="Turno:">
          <font>
             <Font name="Montserrat ExtraBold" size="18.0" />
          </font>
       </Label>
-      <Label fx:id="textoPregunta" alignment="CENTER" layoutX="46.0" layoutY="152.0" prefHeight="193.0" prefWidth="699.0" text="AAAAAAAAAAAAAAA">
+      <Label fx:id="textoPregunta" alignment="CENTER" layoutX="50.0" layoutY="152.0" prefHeight="146.0" prefWidth="689.0" text="AAAAAAAAAAAAAAA">
          <font>
             <Font name="Montserrat ExtraBold Italic" size="16.0" />
          </font></Label>
+      <HBox alignment="CENTER" layoutY="277.0" prefHeight="131.0" prefWidth="779.0" spacing="40.0">
+         <children>
+            <Button fx:id="opcionVerdadero" mnemonicParsing="false" onAction="#onOpcionVerdadera" prefHeight="56.0" prefWidth="211.0" stylesheets="@../styles/botonceleste.css" text="Verdadero" />
+            <Button fx:id="opcionFalso" mnemonicParsing="false" onAction="#onOpcionFalso" prefHeight="56.0" prefWidth="211.0" stylesheets="@../styles/botonceleste.css" text="Falso" />
+         </children>
+      </HBox>
    </children>
 </AnchorPane>

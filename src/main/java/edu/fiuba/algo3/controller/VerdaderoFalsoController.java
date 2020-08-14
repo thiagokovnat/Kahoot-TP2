@@ -19,9 +19,6 @@ public class VerdaderoFalsoController extends GeneralPreguntaController{
 
 
     protected void setUp(){
-
-        opcion1.setText(opcionVerdadero.getText());
-        opcion2.setText(opcionFalso.getText());
     }
 
 

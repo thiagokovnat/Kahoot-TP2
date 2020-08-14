@@ -118,4 +118,9 @@ public class Pregunta {
     public boolean admiteExclusividad(){
         return this.tipoDePregunta.admiteExclusividad();
     }
+
+    public List<Opcion> getOpciones() {
+
+        return opcionesDisponibles;
+    }
 }
