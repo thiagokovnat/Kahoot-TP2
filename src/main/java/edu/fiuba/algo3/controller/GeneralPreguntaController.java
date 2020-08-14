@@ -8,10 +8,12 @@ import edu.fiuba.algo3.modelo.Opcion.Opcion;
 import edu.fiuba.algo3.modelo.Ronda.Ronda;
 import edu.fiuba.algo3.modelo.TipoDePregunta.MultipleChoice;
 import edu.fiuba.algo3.vista.Loader;
+import javafx.animation.Animation;
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.text.Text;
 import javafx.util.Duration;
@@ -48,11 +50,18 @@ public abstract class GeneralPreguntaController {
     @FXML
     Text opcion2;
 
+    @FXML
+    Label counter;
+
     protected static Ronda rondaActual = JuegoController.getProximaRonda();
 
     protected List<Opcion> opcionesSeleccionadas;
 
-    Timeline timeline;
+    protected Timeline timeline;
+    protected Timeline counterTimeLine;
+    protected Integer segundosCounter = 30;
+
+
 
     public void initialize(){
 
@@ -62,8 +71,14 @@ public abstract class GeneralPreguntaController {
 
         boolean sePuedeUsarLaExclusividad = !rondaActual.admiteExclusividad();
 
+        counter.setText(segundosCounter.toString());
+
         timeline = new Timeline(new KeyFrame(Duration.millis(30000), ae -> onConfirmarRespuesta()));
         timeline.play();
+
+        counterTimeLine = new Timeline(new KeyFrame(Duration.millis(1000), ae -> modificarContador()));
+        counterTimeLine.setCycleCount(Animation.INDEFINITE);
+        counterTimeLine.play();
 
         opcionesSeleccionadas = new ArrayList<>();
         multiplicadorDoble.setDisable(sePuedeUsarElMultiplicadorX2);
@@ -79,7 +94,7 @@ public abstract class GeneralPreguntaController {
     public void onConfirmarRespuesta(){
 
         timeline.stop();
-        
+
         rondaActual.responder(opcionesSeleccionadas);
 
         if(rondaActual.hayProximoTurno()) {
@@ -117,5 +132,12 @@ public abstract class GeneralPreguntaController {
 
     public void onExclusividad(){
         this.rondaActual.setExclusividad();
+    }
+
+    public void modificarContador(){
+
+        segundosCounter--;
+
+        counter.setText(segundosCounter.toString());
     }
 }

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -37,5 +38,11 @@
          </font>
 
       </Text>
+      <Label text="Label" />
+      <Label fx:id="counter" layoutX="693.0" layoutY="14.0" prefHeight="45.0" prefWidth="107.0" text="Label">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
       </children>
 </AnchorPane>
