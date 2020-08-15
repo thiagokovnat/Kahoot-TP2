@@ -4,6 +4,7 @@ import edu.fiuba.algo3.App;
 import edu.fiuba.algo3.modelo.Exceptions.CantidadMaximaDeJugadoresSuperadaException;
 import edu.fiuba.algo3.modelo.Juego.Juego;
 import edu.fiuba.algo3.vista.Loader;
+import edu.fiuba.algo3.vista.LoaderPregunta;
 import javafx.event.ActionEvent;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
@@ -51,7 +52,7 @@ public class AgregarJugadorController {
 
     public void continuar(){
         JuegoController.comenzarJuego();
-        Loader.cargarEscena("VFJuego");
+        LoaderPregunta.cargarProximaPregunta();
     }
 
     public void volver(ActionEvent event){

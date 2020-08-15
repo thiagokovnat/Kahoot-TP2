@@ -1,18 +1,15 @@
 package edu.fiuba.algo3;
 
 import edu.fiuba.algo3.controller.JuegoController;
-import edu.fiuba.algo3.modelo.Juego.Juego;
 import edu.fiuba.algo3.vista.Loader;
-import edu.fiuba.algo3.vista.StartButton;
 import javafx.application.Application;
 
 
-import javafx.scene.Scene;
-import javafx.scene.control.Label;
 import javafx.scene.image.Image;
-import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 ;import java.net.URL;
+
+
 
 /**
  * JavaFX App

@@ -123,4 +123,8 @@ public class Pregunta {
 
         return opcionesDisponibles;
     }
+
+    public TipoDePregunta getTipo(){
+        return this.tipoDePregunta;
+    }
 }

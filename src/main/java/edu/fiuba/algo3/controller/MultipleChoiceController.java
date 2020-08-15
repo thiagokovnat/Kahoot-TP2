@@ -51,7 +51,7 @@ public class MultipleChoiceController extends GeneralPreguntaController{
         }
 
         for (int j = cantidadOpciones; j < Constants.CantidadMaximaOpciones ; j++) {
-                listaBotones.get(j).setDisable(true);
+                listaBotones.get(j).setVisible(false);
         }
     }
 

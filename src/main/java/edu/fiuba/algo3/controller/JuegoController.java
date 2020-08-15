@@ -28,5 +28,9 @@ public class JuegoController {
         return juego.estaTerminado();
     }
 
+    public static Ronda getRondaActual(){
+        return juego.getRondaActual();
+    }
+
 
 }

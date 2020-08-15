@@ -35,6 +35,11 @@
             <version>${mockito-mockito-core-version}</version>
             <scope>test</scope>
         </dependency>
+        <dependency>
+            <groupId>org.openjfx</groupId>
+            <artifactId>javafx-media</artifactId>
+            <version>15-ea+8</version>
+        </dependency>
     </dependencies>
     <build>
         <testSourceDirectory>src/main/test</testSourceDirectory>

@@ -80,6 +80,15 @@ public class Juego {
        return null;
     }
 
+    public Ronda getRondaActual(){
+        if(indiceRondaActual <= cantidadRondas){
+            Ronda ronda = rondasDisponibles.get(indiceRondaActual - 1);
+            return ronda;
+        }
+
+        return null;
+    }
+
     public void comenzarJuego(){
 
         for(Pregunta pregunta : this.preguntas){

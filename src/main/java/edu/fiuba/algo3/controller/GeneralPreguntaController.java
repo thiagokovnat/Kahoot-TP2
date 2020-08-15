@@ -8,6 +8,7 @@ import edu.fiuba.algo3.modelo.Opcion.Opcion;
 import edu.fiuba.algo3.modelo.Ronda.Ronda;
 import edu.fiuba.algo3.modelo.TipoDePregunta.MultipleChoice;
 import edu.fiuba.algo3.vista.Loader;
+import edu.fiuba.algo3.vista.LoaderPregunta;
 import javafx.animation.Animation;
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
@@ -51,7 +52,7 @@ public abstract class GeneralPreguntaController {
     @FXML
     Label nombreJugador;
 
-    protected static Ronda rondaActual = JuegoController.getProximaRonda();
+    protected static Ronda rondaActual;
 
     protected List<Opcion> opcionesSeleccionadas;
 
@@ -62,6 +63,8 @@ public abstract class GeneralPreguntaController {
     protected Integer segundosCounter = 30;
 
     public void initialize(){
+
+        rondaActual = JuegoController.getRondaActual();
 
         boolean sePuedeUsarElMultiplicadorX2 = !rondaActual.sePuedeActivarMultiplicador(new MultiplicadorX2());
 
@@ -101,11 +104,10 @@ public abstract class GeneralPreguntaController {
         rondaActual.responder(opcionesSeleccionadas);
 
         if(rondaActual.hayProximoTurno()) {
-            Loader.cargarEscena("VFJuego");
+            LoaderPregunta.cargarProximoTurno();
         }
         else if(!JuegoController.estaTerminado()){
-            rondaActual = JuegoController.getProximaRonda();
-            Loader.cargarEscena("VFJuego");
+            LoaderPregunta.cargarProximaPregunta();
         }
         else{
             Loader.cargarEscena("mainPage");
@@ -146,4 +148,5 @@ public abstract class GeneralPreguntaController {
         if(segundosCounter <= 10)
             counter.setTextFill(Color.GOLD);
     }
+
 }

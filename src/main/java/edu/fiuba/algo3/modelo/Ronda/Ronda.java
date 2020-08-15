@@ -83,4 +83,8 @@ public class Ronda {
 
         return pregunta.getOpciones();
     }
+
+    public Pregunta getPregunta(){
+        return pregunta;
+    }
 }
