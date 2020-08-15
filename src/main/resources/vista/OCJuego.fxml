@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="511.0" prefWidth="780.0" style="-fx-background-color: BLACK;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.fiuba.algo3.controller.VerdaderoFalsoController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="511.0" prefWidth="780.0" style="-fx-background-color: BLACK;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.fiuba.algo3.controller.OrderedChoiceController">
    <children>
       <ImageView fitHeight="511.0" fitWidth="779.0">
          <image>
@@ -36,15 +36,15 @@
       </Label>
       <HBox alignment="CENTER" layoutX="1.0" layoutY="202.0" prefHeight="210.0" prefWidth="779.0" spacing="20.0">
          <children>
-            <Button fx:id="opcionVerdadero" mnemonicParsing="false" onAction="#onOpcionVerdadera" prefHeight="88.0" prefWidth="200.0" stylesheets="@../styles/botonmorado.css" text="Opción 1" />
-            <Button fx:id="opcionFalso1" mnemonicParsing="false" onAction="#onOpcionFalso" prefHeight="88.0" prefWidth="200.0" stylesheets="@../styles/botonmorado.css" text="Opción 2" />
-            <Button fx:id="opcionFalso" mnemonicParsing="false" onAction="#onOpcionFalso" prefHeight="88.0" prefWidth="200.0" stylesheets="@../styles/botonmorado.css" text="Opción 3" />
+            <Button fx:id="opcionVerdadero" mnemonicParsing="false" onAction="#onOpcionUno" prefHeight="88.0" prefWidth="200.0" stylesheets="@../styles/botonmorado.css" text="Opción 1" />
+            <Button fx:id="opcionFalso1" mnemonicParsing="false" onAction="#onOpcionDos" prefHeight="88.0" prefWidth="200.0" stylesheets="@../styles/botonmorado.css" text="Opción 2" />
+            <Button fx:id="opcionFalso" mnemonicParsing="false" onAction="#onOpcionTres" prefHeight="88.0" prefWidth="200.0" stylesheets="@../styles/botonmorado.css" text="Opción 3" />
          </children>
       </HBox>
       <HBox alignment="CENTER" layoutY="307.0" prefHeight="210.0" prefWidth="779.0" spacing="20.0">
          <children>
-            <Button fx:id="opcionVerdadero1" mnemonicParsing="false" onAction="#onOpcionVerdadera" prefHeight="88.0" prefWidth="200.0" stylesheets="@../styles/botonmorado.css" text="Opción 4" />
-            <Button fx:id="opcionFalso11" mnemonicParsing="false" onAction="#onOpcionFalso" prefHeight="88.0" prefWidth="200.0" stylesheets="@../styles/botonmorado.css" text="Opción 5" />
+            <Button fx:id="opcionVerdadero1" mnemonicParsing="false" onAction="#onOpcionCuatro" prefHeight="88.0" prefWidth="200.0" stylesheets="@../styles/botonmorado.css" text="Opción 4" />
+            <Button fx:id="opcionFalso11" mnemonicParsing="false" onAction="#onOpcionCinco" prefHeight="88.0" prefWidth="200.0" stylesheets="@../styles/botonmorado.css" text="Opción 5" />
          </children>
       </HBox>
    </children>
