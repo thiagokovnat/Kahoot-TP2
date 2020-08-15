@@ -24,17 +24,17 @@
       <VBox alignment="CENTER" layoutX="110.0" layoutY="114.0" prefHeight="324.0" prefWidth="560.0" spacing="15.0">
          <children>
             <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Seleccione el tipo de Pregunta" textAlignment="CENTER" wrappingWidth="478.7294921875" />
-            <Button fx:id="GroupChoice" mnemonicParsing="false" prefHeight="26.0" prefWidth="480.0" stylesheets="@../styles/botonceleste.css" text="Group Choice Clasico" />
-            <Button fx:id="OrderedChoice" mnemonicParsing="false" prefHeight="26.0" prefWidth="480.0" stylesheets="@../styles/botonceleste.css" text="Ordered Choice Clasico" />
-            <Button fx:id="VFClasico" mnemonicParsing="false" onAction="#onVFClasico" prefHeight="26.0" prefWidth="480.0" stylesheets="@../styles/botonceleste.css" text="Verdadero Falso Clasico" />
-            <Button fx:id="VFPenalidad" mnemonicParsing="false" onAction="#onVFPenalidad" prefHeight="26.0" prefWidth="480.0" stylesheets="@../styles/botonceleste.css" text="Verdadero Falso Penalidad" />
-            <Button fx:id="MCPenalidad" mnemonicParsing="false" onAction="#onMCPenalidad" prefHeight="26.0" prefWidth="480.0" stylesheets="@../styles/botonceleste.css" text="Multiple Choice Penalidad" />
-            <Button fx:id="MCClasico" mnemonicParsing="false" onAction="#onMCClasico" prefHeight="26.0" prefWidth="480.0" stylesheets="@../styles/botonceleste.css" text="Multiple Choice Clasico" />
-            <Button fx:id="MCParcial" mnemonicParsing="false" onAction="#onMCParcial" prefHeight="26.0" prefWidth="480.0" stylesheets="@../styles/botonceleste.css" text="Multiple Choice Parcial" />
+            <Button fx:id="GroupChoice" mnemonicParsing="false" prefHeight="26.0" prefWidth="480.0" stylesheets="@../styles/botonmorado.css" text="Group Choice Clasico" />
+            <Button fx:id="OrderedChoice" mnemonicParsing="false" prefHeight="26.0" prefWidth="480.0" stylesheets="@../styles/botonmorado.css" text="Ordered Choice Clasico" />
+            <Button fx:id="VFClasico" mnemonicParsing="false" onAction="#onVFClasico" prefHeight="26.0" prefWidth="480.0" stylesheets="@../styles/botonmorado.css" text="Verdadero Falso Clasico" />
+            <Button fx:id="VFPenalidad" mnemonicParsing="false" onAction="#onVFPenalidad" prefHeight="26.0" prefWidth="480.0" stylesheets="@../styles/botonmorado.css" text="Verdadero Falso Penalidad" />
+            <Button fx:id="MCPenalidad" mnemonicParsing="false" onAction="#onMCPenalidad" prefHeight="26.0" prefWidth="480.0" stylesheets="@../styles/botonmorado.css" text="Multiple Choice Penalidad" />
+            <Button fx:id="MCClasico" mnemonicParsing="false" onAction="#onMCClasico" prefHeight="26.0" prefWidth="480.0" stylesheets="@../styles/botonmorado.css" text="Multiple Choice Clasico" />
+            <Button fx:id="MCParcial" mnemonicParsing="false" onAction="#onMCParcial" prefHeight="26.0" prefWidth="480.0" stylesheets="@../styles/botonmorado.css" text="Multiple Choice Parcial" />
          </children>
       </VBox>
-      <Button fx:id="goBackButton" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#volver" prefHeight="28.0" prefWidth="108.0" stylesheets="@../styles/botonceleste.css" text="Volver" />
-      <Button layoutX="657.0" layoutY="14.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="108.0" stylesheets="@../styles/botonceleste.css" text="Ayuda" />
+      <Button fx:id="goBackButton" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#volver" prefHeight="28.0" prefWidth="108.0" stylesheets="@../styles/botonmorado.css" text="Volver" />
+      <Button layoutX="657.0" layoutY="14.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="108.0" stylesheets="@../styles/botonmorado.css" text="Ayuda" />
       <Line endX="764.0" endY="60.5" layoutX="15.0" layoutY="45.0" startX="-15.0" startY="60.5" />
    </children>
 </AnchorPane>

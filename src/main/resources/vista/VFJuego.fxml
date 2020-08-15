@@ -15,10 +15,10 @@
             <Image url="@../images/responder.png" />
          </image>
       </ImageView>
-      <Button fx:id="multiplicadorDoble" layoutX="46.0" layoutY="26.0" mnemonicParsing="false" onAction="#onMultiplicadorDoble" prefHeight="28.0" prefWidth="217.0" stylesheets="@../styles/botonceleste.css" text="¡MultiplicadorX2!" />
-      <Button fx:id="multiplicadorTriple" layoutX="46.0" layoutY="67.0" mnemonicParsing="false" onAction="#onMultiplicadorTriple" prefHeight="28.0" prefWidth="217.0" stylesheets="@../styles/botonceleste.css" text="¡MultiplicadorX3!" />
-      <Button fx:id="activarExclusividad" layoutX="46.0" layoutY="108.0" mnemonicParsing="false" onAction="#onExclusividad" prefHeight="28.0" prefWidth="217.0" stylesheets="@../styles/botonceleste.css" text="¡Exclusividad!" />
-      <Button layoutX="569.0" layoutY="464.0" mnemonicParsing="false" onAction="#onConfirmarRespuesta" prefHeight="28.0" prefWidth="170.0" stylesheets="@../styles/botonceleste.css" text="Confirmar" />
+      <Button fx:id="multiplicadorDoble" layoutX="46.0" layoutY="26.0" mnemonicParsing="false" onAction="#onMultiplicadorDoble" prefHeight="28.0" prefWidth="217.0" stylesheets="@../styles/botonmorado.css" text="¡MultiplicadorX2!" />
+      <Button fx:id="multiplicadorTriple" layoutX="46.0" layoutY="67.0" mnemonicParsing="false" onAction="#onMultiplicadorTriple" prefHeight="28.0" prefWidth="217.0" stylesheets="@../styles/botonmorado.css" text="¡MultiplicadorX3!" />
+      <Button fx:id="activarExclusividad" layoutX="46.0" layoutY="108.0" mnemonicParsing="false" onAction="#onExclusividad" prefHeight="28.0" prefWidth="217.0" stylesheets="@../styles/botonmorado.css" text="¡Exclusividad!" />
+      <Button layoutX="569.0" layoutY="464.0" mnemonicParsing="false" onAction="#onConfirmarRespuesta" prefHeight="28.0" prefWidth="170.0" stylesheets="@../styles/botonmorado.css" text="Confirmar" />
       <Label fx:id="counter" alignment="CENTER" contentDisplay="CENTER" layoutX="684.0" layoutY="16.0" prefHeight="45.0" prefWidth="107.0" text="Label" textFill="WHITE">
          <font>
             <Font name="Montserrat ExtraBold" size="25.0" />
@@ -35,8 +35,8 @@
          </font></Label>
       <HBox alignment="CENTER" layoutY="277.0" prefHeight="131.0" prefWidth="779.0" spacing="40.0">
          <children>
-            <Button fx:id="opcionVerdadero" mnemonicParsing="false" onAction="#onOpcionVerdadera" prefHeight="56.0" prefWidth="211.0" stylesheets="@../styles/botonceleste.css" text="Verdadero" />
-            <Button fx:id="opcionFalso" mnemonicParsing="false" onAction="#onOpcionFalso" prefHeight="56.0" prefWidth="211.0" stylesheets="@../styles/botonceleste.css" text="Falso" />
+            <Button fx:id="opcionVerdadero" mnemonicParsing="false" onAction="#onOpcionVerdadera" prefHeight="56.0" prefWidth="211.0" stylesheets="@../styles/botonmorado.css" text="Verdadero" />
+            <Button fx:id="opcionFalso" mnemonicParsing="false" onAction="#onOpcionFalso" prefHeight="56.0" prefWidth="211.0" stylesheets="@../styles/botonmorado.css" text="Falso" />
          </children>
       </HBox>
    </children>

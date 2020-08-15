@@ -18,9 +18,9 @@
       <TextField fx:id="campoPregunta" layoutX="63.0" layoutY="100.0" prefHeight="26.0" prefWidth="474.0" promptText="Pregunta" stylesheets="@../styles/texto.css" />
       <TextField layoutX="63.0" layoutY="161.0" prefHeight="26.0" prefWidth="266.0" stylesheets="@../styles/texto.css" text="Verdadero" />
       <TextField layoutX="63.0" layoutY="214.0" prefHeight="26.0" prefWidth="266.0" stylesheets="@../styles/texto.css" text="Falso" />
-      <Button fx:id="toggleOpcionDos" layoutX="349.0" layoutY="223.0" mnemonicParsing="false" onAction="#onOpcionDosCorrecta" prefHeight="28.0" prefWidth="186.0" stylesheets="@../styles/botonceleste.css" text="Marcar Correcta" />
-      <Button fx:id="toggleOpcionUno" layoutX="349.0" layoutY="170.0" mnemonicParsing="false" onAction="#onOpcionUnoCorrecta" prefHeight="28.0" prefWidth="186.0" stylesheets="@../styles/botonceleste.css" text="Marcar Correcta" />
-      <Button fx:id="terminar" layoutX="395.0" layoutY="351.0" mnemonicParsing="false" onAction="#onEnter" prefHeight="28.0" prefWidth="140.0" stylesheets="@../styles/botonceleste.css" text="Terminado" />
+      <Button fx:id="toggleOpcionDos" layoutX="349.0" layoutY="223.0" mnemonicParsing="false" onAction="#onOpcionDosCorrecta" prefHeight="28.0" prefWidth="186.0" stylesheets="@../styles/botonmorado.css" text="Marcar Correcta" />
+      <Button fx:id="toggleOpcionUno" layoutX="349.0" layoutY="170.0" mnemonicParsing="false" onAction="#onOpcionUnoCorrecta" prefHeight="28.0" prefWidth="186.0" stylesheets="@../styles/botonmorado.css" text="Marcar Correcta" />
+      <Button fx:id="terminar" layoutX="395.0" layoutY="351.0" mnemonicParsing="false" onAction="#onEnter" prefHeight="28.0" prefWidth="140.0" stylesheets="@../styles/botonmorado.css" text="Terminado" />
       <Text layoutX="20.0" layoutY="43.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Verdadero y Falso Clásico" textAlignment="CENTER" wrappingWidth="559.7294921875">
          <font>
             <Font name="Montserrat Bold" size="28.0" />
