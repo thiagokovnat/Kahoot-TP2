@@ -26,10 +26,6 @@ public class MultipleChoiceController extends GeneralPreguntaController{
     @FXML
     Button opcionCinco;
 
-    @FXML
-    Button opcionSeis;
-
-
     private List<Button> listaBotones = new ArrayList<>();
 
     private int cantidadOpciones = 0;
@@ -45,7 +41,6 @@ public class MultipleChoiceController extends GeneralPreguntaController{
         listaBotones.add(opcionTres);
         listaBotones.add(opcionCuatro);
         listaBotones.add(opcionCinco);
-        listaBotones.add(opcionSeis);
 
         List<Opcion> opcionesPregunta = rondaActual.getOpciones();
 
@@ -95,10 +90,4 @@ public class MultipleChoiceController extends GeneralPreguntaController{
         opcionCinco.setDisable(true);
     }
 
-    public void onOpcionSeis(){
-
-        OpcionSinGrupo opcion = new OpcionSinGrupo(opcionSeis.getText());
-        opcionesSeleccionadas.add(opcion);
-        opcionSeis.setDisable(true);
-    }
 }
