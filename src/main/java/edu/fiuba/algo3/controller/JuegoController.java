@@ -1,7 +1,10 @@
 package edu.fiuba.algo3.controller;
 
 import edu.fiuba.algo3.modelo.Juego.Juego;
+import edu.fiuba.algo3.modelo.Jugador.Jugador;
 import edu.fiuba.algo3.modelo.Ronda.Ronda;
+
+import java.util.List;
 
 public class JuegoController {
 
@@ -30,6 +33,10 @@ public class JuegoController {
 
     public static Ronda getRondaActual(){
         return juego.getRondaActual();
+    }
+
+    public static List<Jugador> getJugadores(){
+        return juego.getJugadores();
     }
 
 

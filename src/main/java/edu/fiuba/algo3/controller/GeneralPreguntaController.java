@@ -2,14 +2,17 @@ package edu.fiuba.algo3.controller;
 
 import edu.fiuba.algo3.modelo.Exceptions.CantidadUsoMultiplicadorExcedidoException;
 import edu.fiuba.algo3.modelo.Exceptions.PreguntaNoAdmiteMultiplicadorException;
+import edu.fiuba.algo3.modelo.Jugador.Jugador;
 import edu.fiuba.algo3.modelo.Multiplicador.MultiplicadorX2;
 import edu.fiuba.algo3.modelo.Multiplicador.MultiplicadorX3;
 import edu.fiuba.algo3.modelo.Opcion.Opcion;
 import edu.fiuba.algo3.modelo.Ronda.Ronda;
 import edu.fiuba.algo3.modelo.TipoDePregunta.MultipleChoice;
+import edu.fiuba.algo3.vista.ConstantesVista;
 import edu.fiuba.algo3.vista.Loader;
 import edu.fiuba.algo3.vista.LoaderPregunta;
 import javafx.animation.Animation;
+import javafx.animation.FadeTransition;
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
 import javafx.fxml.FXML;
@@ -64,6 +67,8 @@ public abstract class GeneralPreguntaController {
 
     public void initialize(){
 
+        comenzarAnimaciones();
+
         rondaActual = JuegoController.getRondaActual();
 
         boolean sePuedeUsarElMultiplicadorX2 = !rondaActual.sePuedeActivarMultiplicador(new MultiplicadorX2());
@@ -95,6 +100,17 @@ public abstract class GeneralPreguntaController {
 
     }
 
+    private void comenzarAnimaciones(){
+
+        FadeTransition fadeIn = new FadeTransition(Duration.seconds(1));
+        fadeIn.setNode(nombreJugador);
+        fadeIn.setFromValue(0.0);
+        fadeIn.setToValue(1.0);
+        fadeIn.setCycleCount(2);
+        fadeIn.setAutoReverse(false);
+        fadeIn.play();
+    }
+
     protected abstract void setUp();
 
     public void onConfirmarRespuesta(){
@@ -110,7 +126,8 @@ public abstract class GeneralPreguntaController {
             LoaderPregunta.cargarProximaPregunta();
         }
         else{
-            Loader.cargarEscena("scoreScreen");
+
+            Loader.cargarEscena(ConstantesVista.LEADERBOARD);
         }
 
     }
@@ -121,7 +138,7 @@ public abstract class GeneralPreguntaController {
             rondaActual.activarMultiplicador(new MultiplicadorX2());
         }
         catch(CantidadUsoMultiplicadorExcedidoException | PreguntaNoAdmiteMultiplicadorException e){
-            Loader.cargarEscena("errorPage.fxml");
+            Loader.cargarEscena(ConstantesVista.ERROR);
         }
     }
 
@@ -131,12 +148,13 @@ public abstract class GeneralPreguntaController {
             rondaActual.activarMultiplicador(new MultiplicadorX3());
         }
         catch(CantidadUsoMultiplicadorExcedidoException | PreguntaNoAdmiteMultiplicadorException e){
-            Loader.cargarEscena("errorPage.fxml");
+            Loader.cargarEscena(ConstantesVista.ERROR);
         }
     }
 
     public void onExclusividad(){
         this.rondaActual.setExclusividad();
+        activarExclusividad.setDisable(true);
     }
 
     public void modificarContador(){
@@ -145,8 +163,14 @@ public abstract class GeneralPreguntaController {
 
         counter.setText(segundosCounter.toString());
 
-        if(segundosCounter <= 10)
+        if(segundosCounter <= 10){
+            FadeTransition ft = new FadeTransition(Duration.seconds(1));
+            ft.setNode(counter);
+            ft.setFromValue(1.0);
+            ft.setToValue(0.0);
+            ft.play();
             counter.setTextFill(Color.GOLD);
+        }
     }
 
 }

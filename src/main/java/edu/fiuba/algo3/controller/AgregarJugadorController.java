@@ -3,6 +3,7 @@ package edu.fiuba.algo3.controller;
 import edu.fiuba.algo3.App;
 import edu.fiuba.algo3.modelo.Exceptions.CantidadMaximaDeJugadoresSuperadaException;
 import edu.fiuba.algo3.modelo.Juego.Juego;
+import edu.fiuba.algo3.vista.ConstantesVista;
 import edu.fiuba.algo3.vista.Loader;
 import edu.fiuba.algo3.vista.LoaderPregunta;
 import javafx.event.ActionEvent;
@@ -40,7 +41,7 @@ public class AgregarJugadorController {
                 juego.crearJugador(textField.getText());
                 textField.clear();
             } catch (CantidadMaximaDeJugadoresSuperadaException e) {
-                Loader.cargarEscena("errorPage");
+                Loader.cargarEscena(ConstantesVista.ERROR);
             }
             confirmButton.setDisable(juego.noHayPreguntasCargadas());
         }
@@ -60,6 +61,6 @@ public class AgregarJugadorController {
         Juego juego = JuegoController.obtenerInstancia();
 
         juego.quitarJugadores();
-        Loader.cargarEscena("mainPage");
+        Loader.cargarEscena(ConstantesVista.MAIN);
     }
 }

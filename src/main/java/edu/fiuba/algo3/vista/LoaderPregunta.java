@@ -32,16 +32,16 @@ public class LoaderPregunta {
 
         switch(className){
             case "VerdaderoFalso":
-                return "VFJuego";
+                return ConstantesVista.VERDADEROFALSO;
 
             case "MultipleChoice":
-                return "MCJuego";
+                return ConstantesVista.MULTIPLECHOICE;
 
             case "OrderedChoice":
-                return "OCJuego";
+                return ConstantesVista.ORDEREDCHOICE;
 
             case "GroupChoice":
-                return "GCJuego";
+                return ConstantesVista.GROUPCHOICE;
 
         }
 

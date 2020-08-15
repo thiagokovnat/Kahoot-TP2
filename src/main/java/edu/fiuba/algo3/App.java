@@ -1,6 +1,7 @@
 package edu.fiuba.algo3;
 
 import edu.fiuba.algo3.controller.JuegoController;
+import edu.fiuba.algo3.vista.ConstantesVista;
 import edu.fiuba.algo3.vista.Loader;
 import javafx.application.Application;
 
@@ -31,7 +32,7 @@ public class App extends Application {
         URL path = App.class.getResource("/images/icon.png");
         stage.getIcons().add(new Image(path.toExternalForm()));
 
-        Loader.cargarEscena("mainPage");
+        Loader.cargarEscena(ConstantesVista.MAIN);
 
     }
 
