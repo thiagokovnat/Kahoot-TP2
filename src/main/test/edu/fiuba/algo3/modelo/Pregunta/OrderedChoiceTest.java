@@ -30,7 +30,8 @@ public class OrderedChoiceTest {
         opcionesOrdenadas.add(OpcionUno);
         opcionesOrdenadas.add(OpcionDos);
 
-        Pregunta pregunta = Pregunta.crearPreguntaOrderedChoice(texto, opcionesOrdenadas, opcionesOrdenadas);
+        CreadorDePreguntas fabrica = new CreadorDePreguntas();
+        Pregunta pregunta = fabrica.crearOrderedChoice(texto, opcionesOrdenadas, opcionesOrdenadas);
 
         assertEquals(OpcionUno, pregunta.getOpcion(0));
 
@@ -47,7 +48,8 @@ public class OrderedChoiceTest {
         opcionesOrdenadas.add(OpcionUno);
         opcionesOrdenadas.add(OpcionDos);
 
-        Pregunta pregunta = Pregunta.crearPreguntaOrderedChoice(texto, opcionesOrdenadas, opcionesOrdenadas);
+        CreadorDePreguntas fabrica = new CreadorDePreguntas();
+        Pregunta pregunta = fabrica.crearOrderedChoice(texto, opcionesOrdenadas, opcionesOrdenadas);
 
         Jugador JugadorUno = new Jugador("Jugador1");
         Jugador JugadorDos = new Jugador("Jugador2");
@@ -79,7 +81,8 @@ public class OrderedChoiceTest {
         opcionesOrdenadas.add(OpcionUno);
         opcionesOrdenadas.add(OpcionDos);
 
-        Pregunta pregunta = Pregunta.crearPreguntaOrderedChoice(texto, opcionesOrdenadas, opcionesOrdenadas);
+        CreadorDePreguntas fabrica = new CreadorDePreguntas();
+        Pregunta pregunta = fabrica.crearOrderedChoice(texto, opcionesOrdenadas, opcionesOrdenadas);
 
         Jugador jugador1 = new Jugador("Jugador_1");
 

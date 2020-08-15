@@ -4,6 +4,7 @@ import edu.fiuba.algo3.modelo.Exceptions.CantidadMaximaDeJugadoresSuperadaExcept
 import edu.fiuba.algo3.modelo.Juego.Juego;
 import edu.fiuba.algo3.modelo.Opcion.Opcion;
 import edu.fiuba.algo3.modelo.Opcion.OpcionSinGrupo;
+import edu.fiuba.algo3.modelo.Pregunta.CreadorDePreguntas;
 import edu.fiuba.algo3.modelo.Pregunta.Pregunta;
 import org.junit.jupiter.api.Test;
 
@@ -35,7 +36,9 @@ public class JuegoTest {
         OpcionSinGrupo opcion = new OpcionSinGrupo("unaOpcion");
         List<Opcion> opciones = new ArrayList<>();
         opciones.add(opcion);
-        Pregunta pregunta = Pregunta.crearPreguntaVerdaderoFalsoClasico("Test", opciones, opciones);
+
+        CreadorDePreguntas fabrica = new CreadorDePreguntas();
+        Pregunta pregunta = fabrica.crearVerdaderoFalsoClasico("Test", opciones, opciones);
 
         juego.agregarPregunta(pregunta);
         assertEquals(pregunta, juego.tomarPregunta());

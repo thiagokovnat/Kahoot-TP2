@@ -4,15 +4,17 @@ import edu.fiuba.algo3.modelo.TipoDePregunta.TipoDePregunta;
 
 import java.util.List;
 
+import static edu.fiuba.algo3.modelo.Constants.Constants.*;
+
 public class Exclusivo implements TipoDeEstado{
 
     public void asignarPuntaje(List<Respuesta> respuestas){
-        Respuesta jugadorUno = respuestas.get(0);
-        Respuesta jugadorDos = respuestas.get(1);
-        if( jugadorUno.esExclusivaCon(jugadorDos) ){
-            jugadorUno.getJugador().modificarPuntos(2*jugadorUno.getPuntaje());
-        }else if( jugadorDos.esExclusivaCon(jugadorUno) ){
-            jugadorDos.getJugador().modificarPuntos(2*jugadorDos.getPuntaje());
+        Respuesta respuestaJugadorUno = respuestas.get(0);
+        Respuesta respuestaJugadorDos = respuestas.get(1);
+        if( respuestaJugadorUno.esExclusivaCon(respuestaJugadorDos) ){
+            respuestaJugadorUno.getJugador().modificarPuntos(Exclusividad*respuestaJugadorUno.getPuntaje());
+        }else if( respuestaJugadorDos.esExclusivaCon(respuestaJugadorUno) ){
+            respuestaJugadorDos.getJugador().modificarPuntos(Exclusividad*respuestaJugadorDos.getPuntaje());
         }
     }
 }

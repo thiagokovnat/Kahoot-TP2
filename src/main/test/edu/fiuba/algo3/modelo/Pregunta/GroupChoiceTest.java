@@ -39,8 +39,8 @@ class GroupChoiceTest {
         opcionesDisponibles.add(opcionTres);
         opcionesDisponibles.add(opcionCuatro);
 
-
-        Pregunta pregunta = Pregunta.crearPreguntaGroupChoice(texto, opcionesDisponibles );
+        CreadorDePreguntas fabrica = new CreadorDePreguntas();
+        Pregunta pregunta = fabrica.crearGroupChoice(texto, opcionesDisponibles);
 
         assertEquals( opcionUno, pregunta.getOpcion(0) );
         assertEquals( opcionDos, pregunta.getOpcion(1) );
@@ -79,8 +79,8 @@ class GroupChoiceTest {
         opcionesDisponibles.add(opcionTresBien);
         opcionesDisponibles.add(opcionCuatroBien);
 
-
-        Pregunta nuevaPregunta = Pregunta.crearPreguntaGroupChoice(texto, opcionesDisponibles );
+        CreadorDePreguntas fabrica = new CreadorDePreguntas();
+        Pregunta nuevaPregunta = fabrica.crearGroupChoice(texto, opcionesDisponibles);
 
         Jugador jugadorUno = new Jugador("Jugador_1");
         Jugador jugadorDos = new Jugador("Jugador_2");
@@ -137,7 +137,8 @@ class GroupChoiceTest {
         correctasGrupoDos.add(opcionTres);
         correctasGrupoDos.add(opcionCuatro);
 
-        Pregunta pregunta = Pregunta.crearPreguntaGroupChoice(texto, opcionesDisponibles );
+        CreadorDePreguntas fabrica = new CreadorDePreguntas();
+        Pregunta pregunta = fabrica.crearGroupChoice(texto, opcionesDisponibles);
 
         opcionUno.setGrupo("1");
         opcionDos.setGrupo("1");
