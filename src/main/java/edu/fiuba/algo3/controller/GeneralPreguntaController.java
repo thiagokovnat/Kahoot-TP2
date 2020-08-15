@@ -110,7 +110,7 @@ public abstract class GeneralPreguntaController {
             LoaderPregunta.cargarProximaPregunta();
         }
         else{
-            Loader.cargarEscena("mainPage");
+            Loader.cargarEscena("scoreScreen");
         }
 
     }

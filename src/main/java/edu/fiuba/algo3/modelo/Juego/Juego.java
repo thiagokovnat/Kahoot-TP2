@@ -24,6 +24,11 @@ public class Juego {
         this.jugadores = new HashMap<String, Jugador>();
     }
 
+    public List<Jugador> getJugadores(){
+
+        return (new ArrayList<Jugador>(this.jugadores.values()));
+    }
+
     public static Juego obtenerInstancia() {
 
         return instanciaJuego;
