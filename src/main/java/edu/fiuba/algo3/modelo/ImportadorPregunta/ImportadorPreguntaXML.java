@@ -5,6 +5,7 @@ import edu.fiuba.algo3.modelo.Exceptions.TipoDePreguntaInvalidoXMLException;
 import edu.fiuba.algo3.modelo.Opcion.Opcion;
 import edu.fiuba.algo3.modelo.Opcion.OpcionConGrupo;
 import edu.fiuba.algo3.modelo.Opcion.OpcionSinGrupo;
+import edu.fiuba.algo3.modelo.Pregunta.CreadorDePreguntas;
 import edu.fiuba.algo3.modelo.Pregunta.Pregunta;
 import org.dom4j.Document;
 import org.dom4j.DocumentException;
@@ -44,6 +45,7 @@ public class ImportadorPreguntaXML {
     }
 
     private static Pregunta construirPregunta(Element elemPregunta) throws TipoDePreguntaInvalidoXMLException {
+        CreadorDePreguntas fabrica = new CreadorDePreguntas();
         Pregunta pregunta;
         String tipoPregunta = elemPregunta.attributeValue("tipoModalidad");
         String textoPregunta = elemPregunta.attributeValue("textoPregunta");
@@ -51,31 +53,31 @@ public class ImportadorPreguntaXML {
         switch (tipoPregunta) {
             case "VerdaderoFalsoClasico":
                 opciones = construirOpcionesMultipleChoice(elemPregunta);
-                pregunta = Pregunta.crearPreguntaVerdaderoFalsoClasico(textoPregunta, opciones.get(0), opciones.get(1));
+                pregunta = fabrica.crearVerdaderoFalsoClasico(textoPregunta, opciones.get(0), opciones.get(1));
                 break;
             case "VerdaderoFalsoPenalidad":
                 opciones = construirOpcionesMultipleChoice(elemPregunta);
-                pregunta = Pregunta.crearPreguntaVerdaderoFalsoConPenalidad(textoPregunta, opciones.get(0), opciones.get(1));
+                pregunta = fabrica.crearVerdaderoFalsoPenalidad(textoPregunta, opciones.get(0), opciones.get(1));
                 break;
             case "MultipleChoiceClasico":
                 opciones = construirOpcionesMultipleChoice(elemPregunta);
-                pregunta = Pregunta.crearPreguntaMultipleChoiceClasico(textoPregunta, opciones.get(0), opciones.get(1));
+                pregunta = fabrica.crearMultipleChoiceClasico(textoPregunta, opciones.get(0), opciones.get(1));
                 break;
             case "MultipleChoiceParcial":
                 opciones = construirOpcionesMultipleChoice(elemPregunta);
-                pregunta = Pregunta.crearPreguntaMultipleChoiceParcial(textoPregunta, opciones.get(0), opciones.get(1));
+                pregunta = fabrica.crearMultipleChoiceParcial(textoPregunta, opciones.get(0), opciones.get(1));
                 break;
             case "MultipleChoicePenalidad":
                 opciones = construirOpcionesMultipleChoice(elemPregunta);
-                pregunta = Pregunta.crearPreguntaMultipleChoicePenalidad(textoPregunta, opciones.get(0), opciones.get(1));
+                pregunta = fabrica.crearMultipleChoicePenalidad(textoPregunta, opciones.get(0), opciones.get(1));
                 break;
             case "OrderedChoice":
                 opciones = construirOpcionesOrderedChoice(elemPregunta);
-                pregunta = Pregunta.crearPreguntaOrderedChoice(textoPregunta, opciones.get(0), opciones.get(0));
+                pregunta = fabrica.crearOrderedChoice(textoPregunta, opciones.get(0), opciones.get(0));
                 break;
             case "GroupChoice":
                 opciones = construirOpcionesGroupChoice(elemPregunta);
-                pregunta = Pregunta.crearPreguntaGroupChoice(textoPregunta, opciones.get(0));
+                pregunta = fabrica.crearGroupChoice(textoPregunta, opciones.get(0));
                 break;
             default:
                 throw new TipoDePreguntaInvalidoXMLException("Atributo tipoPregunta inválido: " + tipoPregunta);
