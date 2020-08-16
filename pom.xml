@@ -35,10 +35,10 @@
             <version>${mockito-mockito-core-version}</version>
             <scope>test</scope>
         </dependency>
-        <dependency>
+       <dependency>
             <groupId>org.openjfx</groupId>
             <artifactId>javafx-media</artifactId>
-            <version>15-ea+8</version>
+            <version>13</version>
         </dependency>
     </dependencies>
     <build>
