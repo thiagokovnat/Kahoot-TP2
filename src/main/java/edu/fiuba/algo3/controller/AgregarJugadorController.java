@@ -3,6 +3,7 @@ package edu.fiuba.algo3.controller;
 import edu.fiuba.algo3.App;
 import edu.fiuba.algo3.modelo.Exceptions.CantidadMaximaDeJugadoresSuperadaException;
 import edu.fiuba.algo3.modelo.Juego.Juego;
+import edu.fiuba.algo3.modelo.Jugador.Jugador;
 import edu.fiuba.algo3.vista.ConstantesVista;
 import edu.fiuba.algo3.vista.Loader;
 import edu.fiuba.algo3.vista.LoaderPregunta;
@@ -10,6 +11,8 @@ import javafx.event.ActionEvent;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.fxml.FXML;
+
+import java.util.List;
 
 public class AgregarJugadorController {
 
@@ -35,8 +38,9 @@ public class AgregarJugadorController {
     public void agregarJugador(ActionEvent event) {
 
         Juego juego = JuegoController.obtenerInstancia();
+        List<Jugador> jugadores = juego.getJugadores();
 
-        if (!textField.getText().isEmpty()){
+        if (!textField.getText().isEmpty() || (textField.getText().equals(jugadores.get(0).getNombre()))){
             try {
                 juego.crearJugador(textField.getText());
                 textField.clear();
