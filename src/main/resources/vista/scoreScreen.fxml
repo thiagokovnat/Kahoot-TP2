@@ -34,6 +34,6 @@
             <Font name="Montserrat ExtraBold" size="25.0" />
          </font>
       </Label>
-      <Button layoutX="649.0" layoutY="22.0" mnemonicParsing="false" onAction="#exit" prefHeight="27.0" prefWidth="109.0" stylesheets="@../styles/botonverde.css" text="EXIT" />
+      <Button layoutX="649.0" layoutY="22.0" mnemonicParsing="false" onAction="#exit" prefHeight="27.0" prefWidth="109.0" stylesheets="@../styles/botonvioleta.css" text="EXIT" />
    </children>
 </AnchorPane>

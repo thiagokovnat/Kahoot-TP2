@@ -60,11 +60,14 @@ public class AgregarJugadorController {
         LoaderPregunta.cargarProximaPregunta();
     }
 
+    public void eliminarJugadores(){
+
+        addPlayer.setDisable(false);
+        JuegoController.obtenerInstancia().quitarJugadores();
+    }
+
     public void volver(ActionEvent event){
 
-        Juego juego = JuegoController.obtenerInstancia();
-
-        juego.quitarJugadores();
         Loader.cargarEscena(ConstantesVista.MAIN);
     }
 }
