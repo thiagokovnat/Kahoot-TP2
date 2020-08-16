@@ -23,6 +23,11 @@
             <artifactId>javafx-fxml</artifactId>
             <version>11.0.1</version>
         </dependency>
+      <dependency>
+            <groupId>org.openjfx</groupId>
+            <artifactId>javafx-media</artifactId>
+            <version>13</version>
+        </dependency>
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter</artifactId>
@@ -34,11 +39,6 @@
             <artifactId>mockito-core</artifactId>
             <version>${mockito-mockito-core-version}</version>
             <scope>test</scope>
-        </dependency>
-       <dependency>
-            <groupId>org.openjfx</groupId>
-            <artifactId>javafx-media</artifactId>
-            <version>13</version>
         </dependency>
     </dependencies>
     <build>
