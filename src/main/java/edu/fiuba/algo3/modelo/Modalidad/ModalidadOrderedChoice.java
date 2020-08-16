@@ -8,4 +8,6 @@ import java.util.List;
 public interface ModalidadOrderedChoice {
     void puntuarOrderedChoice(Respuesta respuesta, List<Opcion> opcionesCorrectas);
     boolean admiteMultiplicador();
+    boolean admiteExclusividad();
+
 }

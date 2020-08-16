@@ -1,17 +1,16 @@
 package edu.fiuba.algo3;
 
-import edu.fiuba.algo3.modelo.Juego.Juego;
+import edu.fiuba.algo3.controller.JuegoController;
+import edu.fiuba.algo3.vista.ConstantesVista;
 import edu.fiuba.algo3.vista.Loader;
-import edu.fiuba.algo3.vista.StartButton;
 import javafx.application.Application;
 
 
-import javafx.scene.Scene;
-import javafx.scene.control.Label;
 import javafx.scene.image.Image;
-import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 ;import java.net.URL;
+
+
 
 /**
  * JavaFX App
@@ -19,12 +18,13 @@ import javafx.stage.Stage;
 public class App extends Application {
 
     private static Stage stage;
-    private static Juego juego = Juego.obtenerInstancia();
+
 
     @Override
     public void start(Stage stage) {
 
         App.stage = stage;
+        JuegoController.iniciarJuego();
 
         stage.setTitle("Algohoot!");
         stage.setResizable(false);
@@ -32,7 +32,7 @@ public class App extends Application {
         URL path = App.class.getResource("/images/icon.png");
         stage.getIcons().add(new Image(path.toExternalForm()));
 
-        Loader.cargarEscena("mainPage");
+        Loader.cargarEscena(ConstantesVista.MAIN);
 
     }
 
@@ -45,8 +45,5 @@ public class App extends Application {
         return stage;
     }
 
-    public static Juego getJuego(){
-        return juego;
-    }
 
 }

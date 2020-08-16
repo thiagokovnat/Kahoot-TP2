@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="511.0" prefWidth="779.0" style="-fx-background-color: BLACK;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.fiuba.algo3.controller.ScoreScreenController">
+   <children>
+      <ImageView fitHeight="519.0" fitWidth="779.0">
+         <image>
+            <Image url="@../images/fondojuegoterminado.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="player1" layoutX="40.0" layoutY="277.0" prefHeight="68.0" prefWidth="219.0" text="Jugador 1:">
+         <font>
+            <Font name="Montserrat ExtraBold" size="25.0" />
+         </font>
+      </Label>
+      <Label fx:id="player2" layoutX="40.0" layoutY="400.0" prefHeight="68.0" prefWidth="219.0" text="Jugador 2:">
+         <font>
+            <Font name="Montserrat ExtraBold" size="25.0" />
+         </font>
+      </Label>
+      <Label fx:id="score1" layoutX="40.0" layoutY="318.0" prefHeight="68.0" prefWidth="219.0" text="Score1">
+         <font>
+            <Font name="Montserrat ExtraBold" size="25.0" />
+         </font>
+      </Label>
+      <Label fx:id="score2" layoutX="40.0" layoutY="441.0" prefHeight="68.0" prefWidth="219.0" text="Score2">
+         <font>
+            <Font name="Montserrat ExtraBold" size="25.0" />
+         </font>
+      </Label>
+      <Button layoutX="649.0" layoutY="22.0" mnemonicParsing="false" onAction="#exit" prefHeight="27.0" prefWidth="109.0" stylesheets="@../styles/botonvioleta.css" text="EXIT" />
+   </children>
+</AnchorPane>

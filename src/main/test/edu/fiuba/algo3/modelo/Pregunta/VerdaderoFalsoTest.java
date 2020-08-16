@@ -32,7 +32,8 @@ class VerdaderoFalsoTest {
         opciones.add(opcionDos);
         opcionesCorrectas.add(opcionUno);
 
-        Pregunta nuevaPregunta = Pregunta.crearPreguntaVerdaderoFalsoClasico(textoPregunta, opciones, opcionesCorrectas);
+        CreadorDePreguntas fabrica = new CreadorDePreguntas();
+        Pregunta nuevaPregunta = fabrica.crearVerdaderoFalsoClasico(textoPregunta, opciones, opcionesCorrectas);
 
         assertEquals(opcionUno, nuevaPregunta.getOpcion(0));
 
@@ -59,7 +60,8 @@ class VerdaderoFalsoTest {
         List<Opcion> respuestaJugadorDos = new ArrayList<Opcion>();
         respuestaJugadorDos.add(opcionDos);
 
-        Pregunta nuevaPregunta = Pregunta.crearPreguntaVerdaderoFalsoClasico(textoPregunta, opciones, opcionesCorrectas);
+        CreadorDePreguntas fabrica = new CreadorDePreguntas();
+        Pregunta nuevaPregunta = fabrica.crearVerdaderoFalsoClasico(textoPregunta, opciones, opcionesCorrectas);
 
         List<Respuesta> respuestas = new ArrayList<>();
         respuestas.add(jugador1.responder(respuestaJugadorUno)); // Responde bien
@@ -85,7 +87,8 @@ class VerdaderoFalsoTest {
         opciones.add(opcionDos);
         opcionesCorrectas.add(opcionUno);
 
-        Pregunta nuevaPregunta = Pregunta.crearPreguntaVerdaderoFalsoClasico(textoPregunta, opciones, opcionesCorrectas);
+        CreadorDePreguntas fabrica = new CreadorDePreguntas();
+        Pregunta nuevaPregunta = fabrica.crearVerdaderoFalsoClasico(textoPregunta, opciones, opcionesCorrectas);
 
         Jugador jugador1 = new Jugador("Jugador_1");
 
@@ -115,7 +118,8 @@ class VerdaderoFalsoTest {
         opciones.add(opcionDos);
         opcionesCorrectas.add(opcionUno);
 
-        Pregunta nuevaPregunta = Pregunta.crearPreguntaVerdaderoFalsoConPenalidad(textoPregunta, opciones, opcionesCorrectas);
+        CreadorDePreguntas fabrica = new CreadorDePreguntas();
+        Pregunta nuevaPregunta = fabrica.crearVerdaderoFalsoPenalidad(textoPregunta, opciones, opcionesCorrectas);
 
         assertEquals(opcionUno, nuevaPregunta.getOpcion(0));
 
@@ -142,7 +146,8 @@ class VerdaderoFalsoTest {
         List<Opcion> respuestaJugadorDos = new ArrayList<Opcion>();
         respuestaJugadorDos.add(opcionDos);
 
-        Pregunta nuevaPregunta = Pregunta.crearPreguntaVerdaderoFalsoConPenalidad(textoPregunta, opciones, opcionesCorrectas);
+        CreadorDePreguntas fabrica = new CreadorDePreguntas();
+        Pregunta nuevaPregunta = fabrica.crearVerdaderoFalsoPenalidad(textoPregunta, opciones, opcionesCorrectas);
 
         List<Respuesta> respuestas = new ArrayList<>();
         respuestas.add(jugador1.responder(respuestaJugadorUno)); // Responde bien
@@ -168,7 +173,8 @@ class VerdaderoFalsoTest {
         opciones.add(opcionDos);
         opcionesCorrectas.add(opcionUno);
 
-        Pregunta nuevaPregunta = Pregunta.crearPreguntaVerdaderoFalsoConPenalidad(textoPregunta, opciones, opcionesCorrectas);
+        CreadorDePreguntas fabrica = new CreadorDePreguntas();
+        Pregunta nuevaPregunta = fabrica.crearVerdaderoFalsoPenalidad(textoPregunta, opciones, opcionesCorrectas);
 
         assertTrue(nuevaPregunta.admiteMultiplicador());
     }
@@ -190,7 +196,8 @@ class VerdaderoFalsoTest {
         opciones.add(opcionDos);
         opcionesCorrectas.add(opcionUno);
 
-        Pregunta nuevaPregunta = Pregunta.crearPreguntaVerdaderoFalsoClasico(textoPregunta, opciones, opcionesCorrectas);
+        CreadorDePreguntas fabrica = new CreadorDePreguntas();
+        Pregunta nuevaPregunta = fabrica.crearVerdaderoFalsoClasico(textoPregunta, opciones, opcionesCorrectas);
         nuevaPregunta.setExclusividad();
 
         List<Opcion> respuestaJugadorUno = new ArrayList<Opcion>();

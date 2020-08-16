@@ -13,9 +13,10 @@
             <Image url="@../images/fondoañadirjugador.png" />
          </image>
       </ImageView>
-      <TextField fx:id="textField" layoutX="14.0" layoutY="432.0" prefHeight="26.0" prefWidth="355.0" />
-      <Button fx:id="goBackButton" layoutX="19.0" layoutY="16.0" mnemonicParsing="false" onAction="#volver" prefHeight="26.0" prefWidth="95.0" text="Volver" />
-      <Button fx:id="addPlayer" layoutX="132.0" layoutY="471.0" mnemonicParsing="false" onAction="#agregarJugador" prefHeight="26.0" prefWidth="105.0" text="Añadir" />
-      <Button fx:id="confirmButton" layoutX="14.0" layoutY="471.0" mnemonicParsing="false" onAction="#continuar" prefHeight="26.0" prefWidth="105.0" text="Continuar" />
+      <Button fx:id="addPlayer" layoutX="14.0" layoutY="463.0" mnemonicParsing="false" onAction="#agregarJugador" prefHeight="28.0" prefWidth="125.0" stylesheets="@../styles/botonverde.css" text="Añadir" />
+      <Button fx:id="goBackButton" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#volver" prefHeight="28.0" prefWidth="125.0" stylesheets="@../styles/botonverde.css" text="Volver" />
+      <TextField fx:id="textField" layoutX="14.0" layoutY="414.0" prefHeight="26.0" prefWidth="355.0" stylesheets="@../styles/texto.css" />
+      <Button fx:id="confirmButton" layoutX="150.0" layoutY="463.0" mnemonicParsing="false" onAction="#continuar" prefHeight="28.0" prefWidth="142.0" stylesheets="@../styles/botonverde.css" text="Continuar" />
+      <Button fx:id="eliminarboton" layoutX="560.0" layoutY="463.0" mnemonicParsing="false" onAction="#eliminarJugadores" prefHeight="28.0" prefWidth="205.0" stylesheets="@../styles/botonvioleta.css" text="ELIMINAR JUGADORES" />
    </children>
 </AnchorPane>

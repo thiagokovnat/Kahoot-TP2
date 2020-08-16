@@ -3,11 +3,16 @@ package edu.fiuba.algo3.controller;
 import edu.fiuba.algo3.App;
 import edu.fiuba.algo3.modelo.Exceptions.CantidadMaximaDeJugadoresSuperadaException;
 import edu.fiuba.algo3.modelo.Juego.Juego;
+import edu.fiuba.algo3.modelo.Jugador.Jugador;
+import edu.fiuba.algo3.vista.ConstantesVista;
 import edu.fiuba.algo3.vista.Loader;
+import edu.fiuba.algo3.vista.LoaderPregunta;
 import javafx.event.ActionEvent;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.fxml.FXML;
+
+import java.util.List;
 
 public class AgregarJugadorController {
 
@@ -26,20 +31,21 @@ public class AgregarJugadorController {
     // Verificamos al principio de instanciar el controlador si se pueden añadir jugadores.
     public void initialize(){
 
-        confirmButton.setDisable(true);
-        addPlayer.setDisable(!App.getJuego().sePuedenCrearJugadores());
+        confirmButton.setDisable(!JuegoController.obtenerInstancia().sePuedeIniciarJuego());
+        addPlayer.setDisable(!JuegoController.obtenerInstancia().sePuedenCrearJugadores());
     }
 
     public void agregarJugador(ActionEvent event) {
 
-        Juego juego = App.getJuego();
+        Juego juego = JuegoController.obtenerInstancia();
+        List<Jugador> jugadores = juego.getJugadores();
 
-        if (!textField.getText().isEmpty()){
+        if (!textField.getText().isEmpty() || (textField.getText().equals(jugadores.get(0).getNombre()))){
             try {
                 juego.crearJugador(textField.getText());
                 textField.clear();
             } catch (CantidadMaximaDeJugadoresSuperadaException e) {
-                Loader.cargarEscena("errorPage");
+                Loader.cargarEscena(ConstantesVista.ERROR);
             }
             confirmButton.setDisable(juego.noHayPreguntasCargadas());
         }
@@ -50,13 +56,18 @@ public class AgregarJugadorController {
     }
 
     public void continuar(){
+        JuegoController.comenzarJuego();
+        LoaderPregunta.cargarProximaPregunta();
+    }
 
-        Loader.cargarEscena("VFJuego");
+    public void eliminarJugadores(){
+
+        addPlayer.setDisable(false);
+        JuegoController.obtenerInstancia().quitarJugadores();
     }
 
     public void volver(ActionEvent event){
 
-        App.getJuego().quitarJugadores();
-        Loader.cargarEscena("mainPage");
+        Loader.cargarEscena(ConstantesVista.MAIN);
     }
 }

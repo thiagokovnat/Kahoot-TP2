@@ -50,4 +50,9 @@ public class Clasica implements ModalidadVerdaderoFalso, ModalidadMultipleChoice
     public boolean admiteMultiplicador() {
         return false;
     }
+
+    @Override
+    public boolean admiteExclusividad(){
+        return true;
+    }
 }

@@ -7,4 +7,6 @@ public interface TipoDePregunta {
     void puntuarRespuesta(Respuesta respuesta);
 
     boolean admiteMultiplicador();
+
+    boolean admiteExclusividad();
 }

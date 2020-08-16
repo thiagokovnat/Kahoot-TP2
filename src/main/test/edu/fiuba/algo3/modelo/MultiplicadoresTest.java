@@ -9,6 +9,7 @@ import edu.fiuba.algo3.modelo.Opcion.OpcionConGrupo;
 
 
 import edu.fiuba.algo3.modelo.Opcion.OpcionSinGrupo;
+import edu.fiuba.algo3.modelo.Pregunta.CreadorDePreguntas;
 import edu.fiuba.algo3.modelo.Pregunta.Pregunta;
 import edu.fiuba.algo3.modelo.Respuesta.Respuesta;
 import org.junit.jupiter.api.Test;
@@ -38,7 +39,8 @@ public class MultiplicadoresTest {
         List<Opcion> respuestaJugadorUno = new ArrayList<Opcion>();
         respuestaJugadorUno.add(opcionUno);
 
-        Pregunta nuevaPregunta = Pregunta.crearPreguntaVerdaderoFalsoConPenalidad(textoPregunta, opciones, opcionesCorrectas);
+        CreadorDePreguntas fabrica = new CreadorDePreguntas();
+        Pregunta nuevaPregunta = fabrica.crearVerdaderoFalsoPenalidad(textoPregunta, opciones, opcionesCorrectas);
 
         List<Respuesta> respuestas = new ArrayList<>();
         respuestas.add(jugador1.responder(respuestaJugadorUno));
@@ -84,7 +86,8 @@ public class MultiplicadoresTest {
         respuestaJugadorDos.add(opcionCuatro);
         respuestaJugadorDos.add(opcionSeis);
 
-        Pregunta nuevaPregunta = Pregunta.crearPreguntaMultipleChoicePenalidad(textoPregunta, opciones, opcionesCorrectas);
+        CreadorDePreguntas fabrica = new CreadorDePreguntas();
+        Pregunta nuevaPregunta = fabrica.crearMultipleChoicePenalidad(textoPregunta, opciones, opcionesCorrectas);
 
         List<Respuesta> respuestas = new ArrayList<>();
         respuestas.add(jugador1.responder(respuestaJugadorDos));
@@ -117,7 +120,8 @@ public class MultiplicadoresTest {
         opciones.add(opcionDos);
         opcionesCorrectas.add(opcionUno);
 
-        Pregunta nuevaPregunta = Pregunta.crearPreguntaVerdaderoFalsoConPenalidad(textoPregunta, opciones, opcionesCorrectas);
+        CreadorDePreguntas fabrica = new CreadorDePreguntas();
+        Pregunta nuevaPregunta = fabrica.crearVerdaderoFalsoPenalidad(textoPregunta, opciones, opcionesCorrectas);
 
         assertThrows(CantidadUsoMultiplicadorExcedidoException.class,
                 ()->{

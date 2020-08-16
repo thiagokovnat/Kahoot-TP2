@@ -36,8 +36,6 @@ public class Pregunta {
         }
     }
 
-
-
     // Método de clase, instancia una Pregunta con su tipo seteado en Verdadero/Falso Clásico.
     public static Pregunta crearPreguntaVerdaderoFalsoClasico(String pregunta, List<Opcion> opcionesDisponibles, List<Opcion> respuestasCorrectas){
 
@@ -115,5 +113,18 @@ public class Pregunta {
     public void setExclusividad(){
 
         this.estado = new Exclusivo();
+    }
+
+    public boolean admiteExclusividad(){
+        return this.tipoDePregunta.admiteExclusividad();
+    }
+
+    public List<Opcion> getOpciones() {
+
+        return opcionesDisponibles;
+    }
+
+    public TipoDePregunta getTipo(){
+        return this.tipoDePregunta;
     }
 }

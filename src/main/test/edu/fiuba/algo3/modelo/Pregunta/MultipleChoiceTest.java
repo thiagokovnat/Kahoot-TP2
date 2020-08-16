@@ -37,7 +37,8 @@ class MultipleChoiceTest {
         opcionesCorrectas.add(opcionUno);
         opcionesCorrectas.add(opcionDos);
 
-        Pregunta nuevaPregunta = Pregunta.crearPreguntaMultipleChoiceClasico(textoPregunta, opciones, opcionesCorrectas);
+        CreadorDePreguntas fabrica = new CreadorDePreguntas();
+        Pregunta nuevaPregunta = fabrica.crearMultipleChoiceClasico(textoPregunta, opciones, opcionesCorrectas);
 
         assertEquals(opcionUno, nuevaPregunta.getOpcion(0));
         assertEquals(opcionDos, nuevaPregunta.getOpcion(1));
@@ -73,7 +74,8 @@ class MultipleChoiceTest {
         respuestaJugadorDos.add(opcionCuatro);
         respuestaJugadorDos.add(opcionCinco);
 
-        Pregunta nuevaPregunta = Pregunta.crearPreguntaMultipleChoiceClasico(textoPregunta, opciones, opcionesCorrectas);
+        CreadorDePreguntas fabrica = new CreadorDePreguntas();
+        Pregunta nuevaPregunta = fabrica.crearMultipleChoiceClasico(textoPregunta, opciones, opcionesCorrectas);
 
         List<Respuesta> respuestas = new ArrayList<>();
         respuestas.add(jugador1.responder(respuestaJugadorUno));
@@ -105,7 +107,8 @@ class MultipleChoiceTest {
         opcionesCorrectas.add(opcionUno);
         opcionesCorrectas.add(opcionDos);
 
-        Pregunta nuevaPregunta = Pregunta.crearPreguntaMultipleChoiceClasico(textoPregunta, opciones, opcionesCorrectas);
+        CreadorDePreguntas fabrica = new CreadorDePreguntas();
+        Pregunta nuevaPregunta = fabrica.crearMultipleChoiceClasico(textoPregunta, opciones, opcionesCorrectas);
 
         Jugador jugador1 = new Jugador("Jugador_1");
 
@@ -140,7 +143,8 @@ class MultipleChoiceTest {
         opcionesCorrectas.add(opcionTres);
         opcionesCorrectas.add(opcionCuatro);
 
-        Pregunta nuevaPregunta = Pregunta.crearPreguntaMultipleChoiceParcial(textoPregunta, opciones, opcionesCorrectas);
+        CreadorDePreguntas fabrica = new CreadorDePreguntas();
+        Pregunta nuevaPregunta = fabrica.crearMultipleChoiceParcial(textoPregunta, opciones, opcionesCorrectas);
 
         assertEquals(opcionTres, nuevaPregunta.getOpcion(2));
         assertEquals(opcionCuatro, nuevaPregunta.getOpcion(3));
@@ -176,7 +180,8 @@ class MultipleChoiceTest {
         respuestaJugadorDos.add(opcionCuatro);
         respuestaJugadorDos.add(opcionCinco);
 
-        Pregunta nuevaPregunta = Pregunta.crearPreguntaMultipleChoiceParcial(textoPregunta, opciones, opcionesCorrectas);
+        CreadorDePreguntas fabrica = new CreadorDePreguntas();
+        Pregunta nuevaPregunta = fabrica.crearMultipleChoiceParcial(textoPregunta, opciones, opcionesCorrectas);
 
         List<Respuesta> respuestas = new ArrayList<>();
         respuestas.add(jugador1.responder(respuestaJugadorUno));
@@ -219,7 +224,8 @@ class MultipleChoiceTest {
         respuestaJugadorUno.add(opcionDos);
         respuestaJugadorUno.add(opcionTres);
 
-        Pregunta nuevaPregunta = Pregunta.crearPreguntaMultipleChoiceParcial(textoPregunta, opciones, opcionesCorrectas);
+        CreadorDePreguntas fabrica = new CreadorDePreguntas();
+        Pregunta nuevaPregunta = fabrica.crearMultipleChoiceParcial(textoPregunta, opciones, opcionesCorrectas);
 
         List<Respuesta> respuestas = new ArrayList<>();
         respuestas.add(jugador1.responder(respuestaJugadorUno));
@@ -251,7 +257,8 @@ class MultipleChoiceTest {
         opcionesCorrectas.add(opcionTres);
         opcionesCorrectas.add(opcionCuatro);
 
-        Pregunta nuevaPregunta = Pregunta.crearPreguntaMultipleChoiceParcial(textoPregunta, opciones, opcionesCorrectas);
+        CreadorDePreguntas fabrica = new CreadorDePreguntas();
+        Pregunta nuevaPregunta = fabrica.crearMultipleChoiceParcial(textoPregunta, opciones, opcionesCorrectas);
 
         Jugador jugador1 = new Jugador("Jugador_1");
 
@@ -286,7 +293,8 @@ class MultipleChoiceTest {
         opcionesCorrectas.add(opcionDos);
         opcionesCorrectas.add(opcionTres);
 
-        Pregunta nuevaPregunta = Pregunta.crearPreguntaMultipleChoicePenalidad(textoPregunta, opciones, opcionesCorrectas);
+        CreadorDePreguntas fabrica = new CreadorDePreguntas();
+        Pregunta nuevaPregunta = fabrica.crearMultipleChoicePenalidad(textoPregunta, opciones, opcionesCorrectas);
 
         assertEquals(opcionDos, nuevaPregunta.getOpcion(1));
         assertEquals(opcionTres, nuevaPregunta.getOpcion(2));
@@ -326,7 +334,8 @@ class MultipleChoiceTest {
         respuestaJugadorDos.add(opcionCuatro);
         respuestaJugadorDos.add(opcionSeis);
 
-        Pregunta nuevaPregunta = Pregunta.crearPreguntaMultipleChoicePenalidad(textoPregunta, opciones, opcionesCorrectas);
+        CreadorDePreguntas fabrica = new CreadorDePreguntas();
+        Pregunta nuevaPregunta = fabrica.crearMultipleChoicePenalidad(textoPregunta, opciones, opcionesCorrectas);
 
         List<Respuesta> respuestas = new ArrayList<>();
         respuestas.add(jugador1.responder(respuestaJugadorUno));
@@ -369,7 +378,8 @@ class MultipleChoiceTest {
 
         List<Opcion> respuestaJugadorDos = new ArrayList<Opcion>(); //Verificamos que funciona con un jugador sin respuestas.
 
-        Pregunta nuevaPregunta = Pregunta.crearPreguntaMultipleChoicePenalidad(textoPregunta, opciones, opcionesCorrectas);
+        CreadorDePreguntas fabrica = new CreadorDePreguntas();
+        Pregunta nuevaPregunta = fabrica.crearMultipleChoicePenalidad(textoPregunta, opciones, opcionesCorrectas);
 
         List<Respuesta> respuestas = new ArrayList<>();
         respuestas.add(jugador1.responder(respuestaJugadorUno));
@@ -420,8 +430,8 @@ class MultipleChoiceTest {
         respuestaJugadorDos.add(opcionCuatro);
         respuestaJugadorDos.add(opcionSeis);
 
-
-        Pregunta nuevaPregunta = Pregunta.crearPreguntaMultipleChoicePenalidad(textoPregunta, opciones, opcionesCorrectas);
+        CreadorDePreguntas fabrica = new CreadorDePreguntas();
+        Pregunta nuevaPregunta = fabrica.crearMultipleChoicePenalidad(textoPregunta, opciones, opcionesCorrectas);
 
         List<Respuesta> respuestas = new ArrayList<>();
         respuestas.add(jugador1.responder(respuestaJugadorUno));
@@ -452,7 +462,8 @@ class MultipleChoiceTest {
         opcionesCorrectas.add(opcionTres);
         opcionesCorrectas.add(opcionCuatro);
 
-        Pregunta nuevaPregunta = Pregunta.crearPreguntaMultipleChoicePenalidad(textoPregunta, opciones, opcionesCorrectas);
+        CreadorDePreguntas fabrica = new CreadorDePreguntas();
+        Pregunta nuevaPregunta = fabrica.crearMultipleChoicePenalidad(textoPregunta, opciones, opcionesCorrectas);
 
         assertTrue(nuevaPregunta.admiteMultiplicador());
     }

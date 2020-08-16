@@ -1,4 +1,3 @@
-
 \documentclass[titlepage,a4paper]{article}
 
 \usepackage{a4wide}
@@ -13,7 +12,7 @@
 \usepackage{float}
 \pagestyle{fancy} % Encabezado y pie de página
 \fancyhf{}
-\fancyhead[L]{TP1S - Max Mustermann}
+\fancyhead[L]{TP2 - Grupo 4}
 \fancyhead[R]{Algoritmos y Programación III - FIUBA}
 \renewcommand{\headrulewidth}{0.4pt}
 \fancyfoot[C]{\thepage}
@@ -24,12 +23,13 @@
 	\hfill\includegraphics[width=6cm]{img/logofiuba.jpg}
     \centering
     \vfill
-    \Huge \textbf{Trabajo Práctico 2 - Algohoot\\ Entrega 2}
+    \Huge \textbf{Trabajo Práctico 2 - Algohoot\\ Entrega 3}
     \vskip2cm
     \Large [7507/9502] Algoritmos y Programación III\\
     Curso 1\\ % Curso 1 para el de la tarde y 2 para el de la noche
     Primer cuatrimestre de 2020 
     \vfill
+    \textbf{Grupo 4:}\\$ $\\
     \begin{tabular}{  l  } % Datos del alumno
       Kovnat, Leoni, Locatelli, Rosenblatt y Venglar. %Orden alfabético
   	\end{tabular}
@@ -49,6 +49,11 @@ El presente informe reune la documentación de la solución del segundo trabajo 
 \subsection{Puntaje Negativo}
 
 Un jugador admite puntaje negativo si responde mal una pregunta con penalidad y tiene puntaje nulo. 
+
+\subsection{Carga de Datos}
+
+Suponemos mejor no cargar los datos de los jugadores desde un botón en el menú, sino, previo a 
+las rondas de preguntas. Además, si se ingresa algún jugador y se vuelve al menú inicial, se eliminarán todos los jugadores ingresados.
 
 \section{Diagramas de Clases}\label{sec:diagramasdeclase}
 % Uno o varios diagramas de clases mostrando las relaciones estáticas entre las clases.  Puede agregarse todo el texto necesario para aclarar y explicar su diseño. Recuerden que la idea de todo el documento es que quede documentado y entendible cómo está implementada la solución.
@@ -139,34 +144,8 @@ Después de eso se le da a Pregunta, mediante el método puntuarRespuesta, una l
 
 El hecho de que cada objeto Pregunta y TipoDePregunta tenga objetos asociados que definan el comportamiento del mismo (Pregunta tiene Estado y TipoDePregunta, mientras que TipoDePregunta tiene Modalidad), corresponde al patrón de diseño Strategy.
 
+\subsection{Conexión entre el Controlador y el Modelo}
 
-\section{Documentación}
-
-\subsection{Jugador}
-Cada instancia de Jugador tendrá un nombre, puntos y un multiplicador asociados al mismo. Se inicializa con puntaje en cero y nombre recibido por parámetro. Esta clase posee los métodos:
-\begin{enumerate}
-\item \begin{verbatim}public Respuesta responder(List<Opcion> opcionesElegidas);\end{verbatim} Recibe una lista de opciones seleccionadas por el jugador durante el turno vigente, y devuelve una instancia de Respuesta que posee una referencia al jugador y dichas opciones.
-\item \begin{verbatim}public void modificarPuntos(int puntos);\end{verbatim} Este método recibe el número de puntos que obtuvo el jugador (ya sean positivos o negativos), se les aplica un multiplicador si el Jugador tiene uno activado, y se los añade.
-\end{enumerate}
-
-\subsection{Pregunta}
-Esta clase está formada por el texto literal de la pregunta, la lista de opciones disponibles, la lista con las opciones correctas su tipo y su modalidad.
-
-Las preguntas se clasificarán por:\\
-
-\begin{tabular}{l}
-Tipo: "Verdadero o Falso"$ $ y "Multiple Choice" $ $(hasta el momento).\\
-Modalidad: Clásica, con puntaje Parcial y con Penalidad.\\\\
-\end{tabular}
-
-Por cada turno, la pregunta en curso recibirá una lista de respuestas emitidas por cada jugador. \\
-
-\begin{enumerate}
-\item \begin{verbatim}public static Pregunta crearPreguntaTipoYModalidad\end{verbatim} \begin{verbatim} (String pregunta, List<Opcion> opcionesDisponibles, List<Opcion> respuestasCorrectas);\end{verbatim}
- Recibe el texto de la pregunta, una lista de opciones disponibles y una lista de opciones correctas, y devuelve una instancia de Pregunta del tipo y modalidad especificados.
-\item \begin{verbatim}
-public void puntuarRespuesta(List<Respuesta> respuestasElegidas);\end{verbatim}
-Este método recibe una lista con las respuestas elegidas por cada uno de los jugadores, evalúa la veracidad de cada una, y modifica el puntaje de cada jugador según corresponda.
-\end{enumerate}
+TO DO
 
 \end{document}

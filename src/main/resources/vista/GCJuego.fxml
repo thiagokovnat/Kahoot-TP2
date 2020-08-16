@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="511.0" prefWidth="780.0" style="-fx-background-color: BLACK;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.fiuba.algo3.controller.VerdaderoFalsoController">
+   <children>
+      <ImageView fitHeight="511.0" fitWidth="779.0">
+         <image>
+            <Image url="@../images/responder.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="multiplicadorDoble" layoutX="46.0" layoutY="26.0" mnemonicParsing="false" onAction="#onMultiplicadorDoble" prefHeight="28.0" prefWidth="217.0" stylesheets="@../styles/botonmorado.css" text="¡MultiplicadorX2!" />
+      <Button fx:id="multiplicadorTriple" layoutX="46.0" layoutY="67.0" mnemonicParsing="false" onAction="#onMultiplicadorTriple" prefHeight="28.0" prefWidth="217.0" stylesheets="@../styles/botonmorado.css" text="¡MultiplicadorX3!" />
+      <Button fx:id="activarExclusividad" layoutX="46.0" layoutY="108.0" mnemonicParsing="false" onAction="#onExclusividad" prefHeight="28.0" prefWidth="217.0" stylesheets="@../styles/botonmorado.css" text="¡Exclusividad!" />
+      <Button layoutX="536.0" layoutY="464.0" mnemonicParsing="false" onAction="#onConfirmarRespuesta" prefHeight="28.0" prefWidth="233.0" stylesheets="@../styles/botonmorado.css" text="Confirmar" />
+      <Label fx:id="counter" alignment="CENTER" contentDisplay="CENTER" layoutX="684.0" layoutY="16.0" prefHeight="45.0" prefWidth="107.0" text="Label" textFill="WHITE">
+         <font>
+            <Font name="Montserrat ExtraBold" size="25.0" />
+         </font>
+      </Label>
+      <Label fx:id="nombreJugador" layoutX="50.0" layoutY="466.0" prefHeight="16.0" prefWidth="238.0" text="Turno:" textFill="#cd7f32">
+         <font>
+            <Font name="Montserrat ExtraBold" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="textoPregunta" alignment="CENTER" layoutX="277.0" layoutY="26.0" prefHeight="110.0" prefWidth="407.0" text="AAAAAAAAAAAAAAA" textFill="#cd7f32">
+         <font>
+            <Font name="Montserrat ExtraBold Italic" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="46.0" layoutY="152.0" prefHeight="38.0" prefWidth="482.0" text="#########################################################">
+         <font>
+            <Font name="Montserrat ExtraBold" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="46.0" layoutY="204.0" prefHeight="38.0" prefWidth="482.0" text="#########################################################">
+         <font>
+            <Font name="Montserrat ExtraBold" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="46.0" layoutY="257.0" prefHeight="38.0" prefWidth="482.0" text="#########################################################">
+         <font>
+            <Font name="Montserrat ExtraBold" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="46.0" layoutY="310.0" prefHeight="38.0" prefWidth="482.0" text="#########################################################">
+         <font>
+            <Font name="Montserrat ExtraBold" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="46.0" layoutY="362.0" prefHeight="38.0" prefWidth="482.0" text="#########################################################">
+         <font>
+            <Font name="Montserrat ExtraBold" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="46.0" layoutY="414.0" prefHeight="38.0" prefWidth="482.0" text="#########################################################">
+         <font>
+            <Font name="Montserrat ExtraBold" size="20.0" />
+         </font>
+      </Label>
+      <Button layoutX="536.0" layoutY="152.0" mnemonicParsing="false" prefHeight="0.0" prefWidth="113.0" stylesheets="@../styles/botonmorado.css" text="Grupo 1" />
+      <Button layoutX="655.0" layoutY="152.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="113.0" stylesheets="@../styles/botonmorado.css" text="Grupo 2" />
+      <Button layoutX="536.0" layoutY="204.0" mnemonicParsing="false" prefHeight="0.0" prefWidth="113.0" stylesheets="@../styles/botonmorado.css" text="Grupo 1" />
+      <Button layoutX="655.0" layoutY="204.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="113.0" stylesheets="@../styles/botonmorado.css" text="Grupo 2" />
+      <Button layoutX="536.0" layoutY="257.0" mnemonicParsing="false" prefHeight="0.0" prefWidth="113.0" stylesheets="@../styles/botonmorado.css" text="Grupo 1" />
+      <Button layoutX="655.0" layoutY="257.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="113.0" stylesheets="@../styles/botonmorado.css" text="Grupo 2" />
+      <Button layoutX="536.0" layoutY="310.0" mnemonicParsing="false" prefHeight="0.0" prefWidth="113.0" stylesheets="@../styles/botonmorado.css" text="Grupo 1" />
+      <Button layoutX="655.0" layoutY="310.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="113.0" stylesheets="@../styles/botonmorado.css" text="Grupo 2" />
+      <Button layoutX="536.0" layoutY="362.0" mnemonicParsing="false" prefHeight="0.0" prefWidth="113.0" stylesheets="@../styles/botonmorado.css" text="Grupo 1" />
+      <Button layoutX="655.0" layoutY="362.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="113.0" stylesheets="@../styles/botonmorado.css" text="Grupo 2" />
+      <Button layoutX="536.0" layoutY="414.0" mnemonicParsing="false" prefHeight="0.0" prefWidth="113.0" stylesheets="@../styles/botonmorado.css" text="Grupo 1" />
+      <Button layoutX="655.0" layoutY="414.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="113.0" stylesheets="@../styles/botonmorado.css" text="Grupo 2" />
+   </children>
+</AnchorPane>

@@ -1,14 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="511.0" prefWidth="779.0" style="-fx-background-color: BLACK;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.fiuba.algo3.controller.VFClasicoJugar">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="511.0" prefWidth="780.0" style="-fx-background-color: BLACK;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.fiuba.algo3.controller.VerdaderoFalsoController">
    <children>
-      <TextField fx:id="textField" layoutX="78.0" layoutY="89.0" prefHeight="101.0" prefWidth="622.0" />
-      <Button fx:id="goBackButton" layoutX="30.0" layoutY="24.0" mnemonicParsing="false" onAction="#volverMenuPrincipal" prefHeight="26.0" prefWidth="95.0" text="Volver" />
-      <Button fx:id="confirmButton" layoutX="396.0" layoutY="209.0" mnemonicParsing="false" onAction="#seleccionarVerdadero" prefHeight="250.0" prefWidth="305.0" text="VERDADERA" />
-      <Button fx:id="confirmButton1" layoutX="78.0" layoutY="209.0" mnemonicParsing="false" onAction="#seleccionarFalso" prefHeight="250.0" prefWidth="305.0" text="FALSO" />
+      <ImageView fitHeight="511.0" fitWidth="779.0">
+         <image>
+            <Image url="@../images/responder.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="multiplicadorDoble" layoutX="46.0" layoutY="26.0" mnemonicParsing="false" onAction="#onMultiplicadorDoble" prefHeight="28.0" prefWidth="217.0" stylesheets="@../styles/botonmorado.css" text="¡MultiplicadorX2!" />
+      <Button fx:id="multiplicadorTriple" layoutX="46.0" layoutY="67.0" mnemonicParsing="false" onAction="#onMultiplicadorTriple" prefHeight="28.0" prefWidth="217.0" stylesheets="@../styles/botonmorado.css" text="¡MultiplicadorX3!" />
+      <Button fx:id="activarExclusividad" layoutX="46.0" layoutY="108.0" mnemonicParsing="false" onAction="#onExclusividad" prefHeight="28.0" prefWidth="217.0" stylesheets="@../styles/botonmorado.css" text="¡Exclusividad!" />
+      <Button layoutX="569.0" layoutY="464.0" mnemonicParsing="false" onAction="#onConfirmarRespuesta" prefHeight="28.0" prefWidth="170.0" stylesheets="@../styles/botonmorado.css" text="Confirmar" />
+      <Label fx:id="counter" alignment="CENTER" contentDisplay="CENTER" layoutX="684.0" layoutY="16.0" prefHeight="45.0" prefWidth="107.0" text="Label" textFill="WHITE">
+         <font>
+            <Font name="Montserrat ExtraBold" size="25.0" />
+         </font>
+      </Label>
+      <Label fx:id="nombreJugador" layoutX="46.0" layoutY="466.0" prefHeight="16.0" prefWidth="238.0" text="Turno:" textFill="#cd7f32">
+         <font>
+            <Font name="Montserrat ExtraBold" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="textoPregunta" alignment="CENTER" layoutX="50.0" layoutY="152.0" prefHeight="146.0" prefWidth="689.0" text="AAAAAAAAAAAAAAA" textFill="#cd7f32">
+         <font>
+            <Font name="Montserrat ExtraBold Italic" size="16.0" />
+         </font></Label>
+      <HBox alignment="CENTER" layoutY="277.0" prefHeight="131.0" prefWidth="779.0" spacing="40.0">
+         <children>
+            <Button fx:id="opcionVerdadero" mnemonicParsing="false" onAction="#onOpcionVerdadera" prefHeight="56.0" prefWidth="211.0" stylesheets="@../styles/botonverde.css" text="Verdadero" />
+            <Button fx:id="opcionFalso" mnemonicParsing="false" onAction="#onOpcionFalso" prefHeight="56.0" prefWidth="211.0" stylesheets="@../styles/botonrojo.css" text="Falso" />
+         </children>
+      </HBox>
    </children>
 </AnchorPane>

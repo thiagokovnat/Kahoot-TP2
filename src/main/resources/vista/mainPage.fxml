@@ -6,22 +6,26 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="511.0" prefWidth="779.0" style="-fx-background-color: BLACK;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.fiuba.algo3.controller.MainPageController">
+<AnchorPane fx:id="rootPane" prefHeight="511.0" prefWidth="779.0" style="-fx-background-color: BLACK;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.fiuba.algo3.controller.MainPageController">
    <children>
-      <ImageView fitHeight="511.0" fitWidth="779.0">
-         <image>
-            <Image url="@../images/fondo.png" />
-         </image>
-      </ImageView>
-      <Button layoutX="37.0" layoutY="367.0" mnemonicParsing="false" onAction="#comenzarJuego" prefHeight="99.0" prefWidth="199.0" style="-fx-background-color: BLACK; -fx-text-fill: WHITE; -fx-background-radius: 22; -fx-border-color: WHITE; -fx-border-radius: 22;" text="Comenzar">
-         <font>
-            <Font size="33.0" />
-         </font>
-      </Button>
-      <Button layoutX="281.0" layoutY="367.0" mnemonicParsing="false" onAction="#agregarPreguntas" prefHeight="99.0" prefWidth="199.0" style="-fx-background-color: BLACK; -fx-text-fill: WHITE; -fx-background-radius: 22; -fx-border-color: WHITE; -fx-border-radius: 22;" text="Añadir preguntas">
-         <font>
-            <Font size="21.0" />
-         </font>
-      </Button>
+      <AnchorPane fx:id="parentContainer" prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <ImageView fitHeight="511.0" fitWidth="779.0">
+               <image>
+                  <Image url="@../images/fondo.png" />
+               </image>
+            </ImageView>
+            <Button layoutX="21.0" layoutY="452.0" mnemonicParsing="false" onAction="#agregarPreguntas" prefHeight="28.0" prefWidth="185.0" stylesheets="@../styles/botonvioleta.css" text="Añadir preguntas">
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </Button>
+            <Button layoutX="21.0" layoutY="411.0" mnemonicParsing="false" onAction="#comenzarJuego" prefHeight="28.0" prefWidth="185.0" stylesheets="@../styles/botonvioleta.css" text="Comenzar">
+               <font>
+                  <Font size="33.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
    </children>
 </AnchorPane>
