@@ -11,7 +11,6 @@ import edu.fiuba.algo3.modelo.Pregunta.Pregunta;
 import edu.fiuba.algo3.modelo.Respuesta.Respuesta;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 
 
@@ -73,11 +72,11 @@ public class Jugador {
 
     private void agregarMultiplicadores(){
 
-        for (int i = 0; i < Constants.CantidadMultiplicadorDoble; i++) {
+        for (int i = 0; i < Constants.CANTIDAD_MULTIPLICADOR_DOBLE; i++) {
             multiplicadoresRestantes.add(new MultiplicadorX2());
         }
 
-        for (int i = 0; i < Constants.CantidadMultiplicadorTriple; i++) {
+        for (int i = 0; i < Constants.CANTIDAD_MULTIPLICADOR_TRIPLE; i++) {
             multiplicadoresRestantes.add(new MultiplicadorX3());
         }
     }

@@ -7,11 +7,14 @@ import edu.fiuba.algo3.modelo.Pregunta.Pregunta;
 import edu.fiuba.algo3.modelo.Respuesta.Respuesta;
 import edu.fiuba.algo3.modelo.Ronda.Ronda;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+
+import static edu.fiuba.algo3.modelo.Constants.Constants.CANTIDAD_MAXIMA_JUGADORES;
 
 public class Juego {
 
-    private final int CANTIDAD_MAXIMA_JUGADORES = 2;
     private final static Juego instanciaJuego = new Juego();
     private HashMap<String, Jugador> jugadores;
     private List<Pregunta> preguntas = new ArrayList<>();
@@ -42,7 +45,7 @@ public class Juego {
 
     public void crearJugador(String nickname) throws CantidadMaximaDeJugadoresSuperadaException {
 
-        if (this.jugadores.size() >= this.CANTIDAD_MAXIMA_JUGADORES) {
+        if (this.jugadores.size() >= CANTIDAD_MAXIMA_JUGADORES) {
             throw new CantidadMaximaDeJugadoresSuperadaException();
         }
 

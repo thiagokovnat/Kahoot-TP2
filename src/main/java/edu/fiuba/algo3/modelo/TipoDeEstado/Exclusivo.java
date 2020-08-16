@@ -1,6 +1,5 @@
 package edu.fiuba.algo3.modelo.TipoDeEstado;
 import edu.fiuba.algo3.modelo.Respuesta.Respuesta;
-import edu.fiuba.algo3.modelo.TipoDePregunta.TipoDePregunta;
 
 import java.util.List;
 
@@ -12,9 +11,9 @@ public class Exclusivo implements TipoDeEstado{
         Respuesta respuestaJugadorUno = respuestas.get(0);
         Respuesta respuestaJugadorDos = respuestas.get(1);
         if( respuestaJugadorUno.esExclusivaCon(respuestaJugadorDos) ){
-            respuestaJugadorUno.getJugador().modificarPuntos(Exclusividad*respuestaJugadorUno.getPuntaje());
+            respuestaJugadorUno.getJugador().modificarPuntos(EXCLUSIVIDAD *respuestaJugadorUno.getPuntaje());
         }else if( respuestaJugadorDos.esExclusivaCon(respuestaJugadorUno) ){
-            respuestaJugadorDos.getJugador().modificarPuntos(Exclusividad*respuestaJugadorDos.getPuntaje());
+            respuestaJugadorDos.getJugador().modificarPuntos(EXCLUSIVIDAD *respuestaJugadorDos.getPuntaje());
         }
     }
 }

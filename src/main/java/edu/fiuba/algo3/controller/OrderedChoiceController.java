@@ -53,7 +53,7 @@ public class OrderedChoiceController extends GeneralPreguntaController{
             cantidadOpciones++;
         }
 
-        for (int j = cantidadOpciones; j < Constants.CantidadMaximaOpciones ; j++) {
+        for (int j = cantidadOpciones; j < Constants.CANTIDAD_MAXIMA_OPCIONES; j++) {
             listaBotones.get(j).setDisable(true);
         }
     }
