@@ -1,0 +1,22 @@
+<Preguntas>
+    <Pregunta tipoModalidad="VerdaderoFalsoClasico" textoPregunta="¿Se aprueba el TP2?">
+        <Opción textoOpcion="Verdadero" esCorrecta="true"/>
+        <Opción textoOpcion="Falso" esCorrecta="false"/>
+    </Pregunta>
+    <Pregunta tipoModalidad="MultipleChoiceClasico" textoPregunta="¿Que lenguajes se aprenden en Algo III?">
+        <Opción textoOpcion="Smalltalk" esCorrecta="true"/>
+        <Opción textoOpcion="Java" esCorrecta="true"/>
+        <Opción textoOpcion="C#" esCorrecta="false"/>
+        <Opción textoOpcion="Python" esCorrecta="false"/>
+    </Pregunta>
+    <Pregunta tipoModalidad="GroupChoice" textoPregunta="Poner en el grupo 1 los lenguajes de tipado estático, y en el grupo 2 los de tipado dinámico:">
+        <Opción textoOpcion="Java" grupo="1"/>
+        <Opción textoOpcion="C" grupo="1"/>
+        <Opción textoOpcion="Smalltalk" grupo="2"/>
+        <Opción textoOpcion="Python" grupo="2"/>
+    </Pregunta>
+    <Pregunta tipoModalidad="OrderedChoice" textoPregunta="Ordenar los siguientes lenguajes por orden enseñado en Algoritmos 3">
+        <Opción textoOpcion="Smalltalk"/>
+        <Opción textoOpcion="Java"/>
+    </Pregunta>
+</Preguntas>
