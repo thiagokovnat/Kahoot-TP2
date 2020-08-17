@@ -30,9 +30,19 @@ maven 3.6.0
 
 Explicación de como ejecutar las pruebas
 
+```
+mvn test -B
+...
+```
+
 ## Ejecutando la aplicación
 
 Explicación de como ejecutar la aplicación
+
+```
+mvn javafx:run
+...
+```
 
 ## Pruebas
 
