@@ -73,7 +73,7 @@ public class ImportadorPreguntaXML {
                 break;
             case "OrderedChoice":
                 opciones = construirOpcionesOrderedChoice(elemPregunta);
-                pregunta = fabrica.crearOrderedChoice(textoPregunta, opciones.get(0), opciones.get(0));
+                pregunta = fabrica.crearOrderedChoice(textoPregunta, opciones.get(0));
                 break;
             case "GroupChoice":
                 opciones = construirOpcionesGroupChoice(elemPregunta);

@@ -5,7 +5,6 @@ import edu.fiuba.algo3.modelo.Exceptions.PreguntaNoAdmiteMultiplicadorException;
 import edu.fiuba.algo3.modelo.Multiplicador.MultiplicadorX2;
 import edu.fiuba.algo3.modelo.Multiplicador.MultiplicadorX3;
 import edu.fiuba.algo3.modelo.Opcion.Opcion;
-import edu.fiuba.algo3.modelo.Opcion.OpcionConGrupo;
 import edu.fiuba.algo3.modelo.Opcion.OpcionSinGrupo;
 import edu.fiuba.algo3.modelo.Respuesta.Respuesta;
 
@@ -31,7 +30,7 @@ public class OrderedChoiceTest {
         opcionesOrdenadas.add(OpcionDos);
 
         CreadorDePreguntas fabrica = new CreadorDePreguntas();
-        Pregunta pregunta = fabrica.crearOrderedChoice(texto, opcionesOrdenadas, opcionesOrdenadas);
+        Pregunta pregunta = fabrica.crearOrderedChoice(texto, opcionesOrdenadas);
 
         assertEquals(OpcionUno, pregunta.getOpcion(0));
 
@@ -49,7 +48,7 @@ public class OrderedChoiceTest {
         opcionesOrdenadas.add(OpcionDos);
 
         CreadorDePreguntas fabrica = new CreadorDePreguntas();
-        Pregunta pregunta = fabrica.crearOrderedChoice(texto, opcionesOrdenadas, opcionesOrdenadas);
+        Pregunta pregunta = fabrica.crearOrderedChoice(texto, opcionesOrdenadas);
 
         Jugador JugadorUno = new Jugador("Jugador1");
         Jugador JugadorDos = new Jugador("Jugador2");
@@ -82,7 +81,7 @@ public class OrderedChoiceTest {
         opcionesOrdenadas.add(OpcionDos);
 
         CreadorDePreguntas fabrica = new CreadorDePreguntas();
-        Pregunta pregunta = fabrica.crearOrderedChoice(texto, opcionesOrdenadas, opcionesOrdenadas);
+        Pregunta pregunta = fabrica.crearOrderedChoice(texto, opcionesOrdenadas);
 
         Jugador jugador1 = new Jugador("Jugador_1");
 

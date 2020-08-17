@@ -25,8 +25,8 @@ public class CreadorDePreguntas<Modalidad> {
     }
 
 
-    public Pregunta crearOrderedChoice(String pregunta, List<Opcion> opcionesDisponibles, List<Opcion> respuestasCorrectas){
-        Pregunta nuevaPregunta = Pregunta.crearPreguntaOrderedChoice(pregunta, opcionesDisponibles, respuestasCorrectas);
+    public Pregunta crearOrderedChoice(String pregunta, List<Opcion> opcionesOrdenadas){
+        Pregunta nuevaPregunta = Pregunta.crearPreguntaOrderedChoice(pregunta, opcionesOrdenadas);
         return nuevaPregunta;
     }
 

@@ -78,10 +78,10 @@ public class Pregunta {
         return nuevaPregunta;
     }
 
-    public static Pregunta crearPreguntaOrderedChoice(String pregunta, List<Opcion> opcionesDisponibles, List<Opcion> respuestasCorrectas){
+    public static Pregunta crearPreguntaOrderedChoice(String pregunta, List<Opcion> opcionesOrdenadas){
 
-        Pregunta nuevaPregunta = new Pregunta(pregunta, opcionesDisponibles);
-        nuevaPregunta.tipoDePregunta = OrderedChoice.OrderedChoice(respuestasCorrectas);
+        Pregunta nuevaPregunta = new Pregunta(pregunta, opcionesOrdenadas);
+        nuevaPregunta.tipoDePregunta = OrderedChoice.OrderedChoice(opcionesOrdenadas);
 
         return nuevaPregunta;
     }
