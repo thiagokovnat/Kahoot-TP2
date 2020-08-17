@@ -140,6 +140,8 @@ public abstract class GeneralPreguntaController {
         catch(CantidadUsoMultiplicadorExcedidoException | PreguntaNoAdmiteMultiplicadorException e){
             Loader.cargarEscena(ConstantesVista.ERROR);
         }
+
+        multiplicadorDoble.setDisable(true);
     }
 
     public void onMultiplicadorTriple(){
@@ -150,6 +152,8 @@ public abstract class GeneralPreguntaController {
         catch(CantidadUsoMultiplicadorExcedidoException | PreguntaNoAdmiteMultiplicadorException e){
             Loader.cargarEscena(ConstantesVista.ERROR);
         }
+
+        multiplicadorTriple.setDisable(true);
     }
 
     public void onExclusividad(){

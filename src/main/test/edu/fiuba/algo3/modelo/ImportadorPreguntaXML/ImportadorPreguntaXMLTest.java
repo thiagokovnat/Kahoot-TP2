@@ -2,6 +2,7 @@ package edu.fiuba.algo3.modelo.ImportadorPreguntaXML;
 
 import edu.fiuba.algo3.modelo.ImportadorPregunta.ImportadorPreguntaXML;
 import edu.fiuba.algo3.modelo.Pregunta.Pregunta;
+import edu.fiuba.algo3.vista.ConstantesVista;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
@@ -11,7 +12,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 
 public class ImportadorPreguntaXMLTest {
-    String PATH_ARCHIVO_PREGUNTAS_TEST = "archivoPreguntasTest.xml";
+    String PATH_ARCHIVO_PREGUNTAS_TEST = ConstantesVista.ARCHIVOPREGUNTAS;
 
     @Test
     public void PreguntasDeArchivoSeCarganCorrectamente() {

@@ -54,7 +54,7 @@ public class OrderedChoiceController extends GeneralPreguntaController{
         }
 
         for (int j = cantidadOpciones; j < Constants.CANTIDAD_MAXIMA_OPCIONES; j++) {
-            listaBotones.get(j).setDisable(true);
+            listaBotones.get(j).setVisible(false);
         }
     }
 
@@ -63,10 +63,10 @@ public class OrderedChoiceController extends GeneralPreguntaController{
         OpcionSinGrupo opcion = new OpcionSinGrupo(opcionUno.getText());
         if (ordenDeOpciones.contains(opcion)){
             ordenDeOpciones.remove(opcion);
-            opcionUno.setStyle(noSeleccionado);
+            opcionUno.setStyle(seleccionado);
         } else {
             ordenDeOpciones.addLast(opcion);
-            opcionUno.setStyle(seleccionado);
+            opcionUno.setStyle(noSeleccionado);
         }
     }
 
@@ -75,10 +75,10 @@ public class OrderedChoiceController extends GeneralPreguntaController{
         OpcionSinGrupo opcion = new OpcionSinGrupo(opcionDos.getText());
         if (ordenDeOpciones.contains(opcion)){
             ordenDeOpciones.remove(opcion);
-            opcionUno.setStyle(noSeleccionado);
+            opcionDos.setStyle(seleccionado);
         } else {
             ordenDeOpciones.addLast(opcion);
-            opcionUno.setStyle(seleccionado);
+            opcionDos.setStyle(noSeleccionado);
         }
     }
 
@@ -87,10 +87,10 @@ public class OrderedChoiceController extends GeneralPreguntaController{
         OpcionSinGrupo opcion = new OpcionSinGrupo(opcionTres.getText());
         if (ordenDeOpciones.contains(opcion)){
             ordenDeOpciones.remove(opcion);
-            opcionUno.setStyle(noSeleccionado);
+            opcionTres.setStyle(seleccionado);
         } else {
             ordenDeOpciones.addLast(opcion);
-            opcionUno.setStyle(seleccionado);
+            opcionTres.setStyle(noSeleccionado);
         }
     }
 
@@ -99,10 +99,10 @@ public class OrderedChoiceController extends GeneralPreguntaController{
         OpcionSinGrupo opcion = new OpcionSinGrupo(opcionCuatro.getText());
         if (ordenDeOpciones.contains(opcion)){
             ordenDeOpciones.remove(opcion);
-            opcionUno.setStyle(noSeleccionado);
+            opcionCuatro.setStyle(seleccionado);
         } else {
             ordenDeOpciones.addLast(opcion);
-            opcionUno.setStyle(seleccionado);
+            opcionCuatro.setStyle(noSeleccionado);
         }
     }
 
@@ -111,10 +111,10 @@ public class OrderedChoiceController extends GeneralPreguntaController{
         OpcionSinGrupo opcion = new OpcionSinGrupo(opcionCinco.getText());
         if (ordenDeOpciones.contains(opcion)){
             ordenDeOpciones.remove(opcion);
-            opcionUno.setStyle(noSeleccionado);
+            opcionCinco.setStyle(seleccionado);
         } else {
             ordenDeOpciones.addLast(opcion);
-            opcionUno.setStyle(seleccionado);
+            opcionCinco.setStyle(noSeleccionado);
         }
     }
 }

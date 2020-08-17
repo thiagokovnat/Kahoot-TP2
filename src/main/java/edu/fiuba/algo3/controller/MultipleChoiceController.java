@@ -47,6 +47,7 @@ public class MultipleChoiceController extends GeneralPreguntaController{
 
         for(Opcion opcion : opcionesPregunta){
             listaBotones.get(cantidadOpciones).setText(opcion.getTexto());
+            listaBotones.get(cantidadOpciones).setWrapText(true);
             cantidadOpciones++;
         }
 
