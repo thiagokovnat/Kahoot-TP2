@@ -14,4 +14,8 @@ public class Clasico implements TipoDeEstado{
         }
 
     }
+
+    public boolean esExclusivo(){
+        return false;
+    }
 }

@@ -1,8 +1,10 @@
 package edu.fiuba.algo3.modelo.Pregunta;
 
+import edu.fiuba.algo3.modelo.Exceptions.PreguntaNoAdmiteExclusividadException;
 import edu.fiuba.algo3.modelo.Opcion.Opcion;
 import edu.fiuba.algo3.modelo.TipoDeEstado.Clasico;
 import edu.fiuba.algo3.modelo.TipoDeEstado.Exclusivo;
+import edu.fiuba.algo3.modelo.TipoDeEstado.ExclusivoDoble;
 import edu.fiuba.algo3.modelo.TipoDeEstado.TipoDeEstado;
 import edu.fiuba.algo3.modelo.TipoDePregunta.*;
 import edu.fiuba.algo3.modelo.Respuesta.Respuesta;
@@ -110,9 +112,15 @@ public class Pregunta {
         return this.pregunta;
     }
 
-    public void setExclusividad(){
+    public void setExclusividad() throws PreguntaNoAdmiteExclusividadException {
 
-        this.estado = new Exclusivo();
+        if(!admiteExclusividad())
+            throw new PreguntaNoAdmiteExclusividadException();
+
+        if(!this.estado.esExclusivo())
+            this.estado = new Exclusivo();
+        else
+            this.estado = new ExclusivoDoble();
     }
 
     public boolean admiteExclusividad(){

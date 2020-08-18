@@ -1,5 +1,6 @@
 package edu.fiuba.algo3.modelo.Pregunta;
 
+import edu.fiuba.algo3.modelo.Exceptions.PreguntaNoAdmiteExclusividadException;
 import edu.fiuba.algo3.modelo.Jugador.Jugador;
 import edu.fiuba.algo3.modelo.Exceptions.PreguntaNoAdmiteMultiplicadorException;
 import edu.fiuba.algo3.modelo.Multiplicador.MultiplicadorX2;
@@ -198,7 +199,13 @@ class VerdaderoFalsoTest {
 
         CreadorDePreguntas fabrica = new CreadorDePreguntas();
         Pregunta nuevaPregunta = fabrica.crearVerdaderoFalsoClasico(textoPregunta, opciones, opcionesCorrectas);
-        nuevaPregunta.setExclusividad();
+
+        try{
+            nuevaPregunta.setExclusividad();
+        }
+        catch(PreguntaNoAdmiteExclusividadException e){
+            e.printStackTrace();
+        }
 
         List<Opcion> respuestaJugadorUno = new ArrayList<Opcion>();
         List<Opcion> respuestaJugadorDos = new ArrayList<Opcion>();

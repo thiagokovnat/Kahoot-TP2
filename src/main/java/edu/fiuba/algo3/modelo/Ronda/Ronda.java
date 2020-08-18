@@ -2,6 +2,7 @@ package edu.fiuba.algo3.modelo.Ronda;
 
 import edu.fiuba.algo3.modelo.Exceptions.CantidadMaximaDeJugadoresSuperadaException;
 import edu.fiuba.algo3.modelo.Exceptions.CantidadUsoMultiplicadorExcedidoException;
+import edu.fiuba.algo3.modelo.Exceptions.PreguntaNoAdmiteExclusividadException;
 import edu.fiuba.algo3.modelo.Exceptions.PreguntaNoAdmiteMultiplicadorException;
 import edu.fiuba.algo3.modelo.Jugador.Jugador;
 import edu.fiuba.algo3.modelo.Multiplicador.Multiplicador;
@@ -71,7 +72,7 @@ public class Ronda {
         return (this.pregunta.admiteExclusividad() && (this.jugadores.size() == 2));
     }
 
-    public void setExclusividad(){
+    public void setExclusividad() throws PreguntaNoAdmiteExclusividadException {
         this.pregunta.setExclusividad();
     }
 

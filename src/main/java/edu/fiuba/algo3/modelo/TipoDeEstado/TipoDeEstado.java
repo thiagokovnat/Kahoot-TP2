@@ -6,4 +6,5 @@ import java.util.List;
 
 public interface TipoDeEstado {
     void asignarPuntaje(List<Respuesta> respuestas);
+     boolean esExclusivo();
 }

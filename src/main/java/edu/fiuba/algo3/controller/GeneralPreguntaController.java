@@ -1,6 +1,7 @@
 package edu.fiuba.algo3.controller;
 
 import edu.fiuba.algo3.modelo.Exceptions.CantidadUsoMultiplicadorExcedidoException;
+import edu.fiuba.algo3.modelo.Exceptions.PreguntaNoAdmiteExclusividadException;
 import edu.fiuba.algo3.modelo.Exceptions.PreguntaNoAdmiteMultiplicadorException;
 import edu.fiuba.algo3.modelo.Jugador.Jugador;
 import edu.fiuba.algo3.modelo.Multiplicador.MultiplicadorX2;
@@ -157,8 +158,13 @@ public abstract class GeneralPreguntaController {
     }
 
     public void onExclusividad(){
-        this.rondaActual.setExclusividad();
-        activarExclusividad.setDisable(true);
+        try{
+            this.rondaActual.setExclusividad();
+            activarExclusividad.setDisable(true);
+        }
+        catch(PreguntaNoAdmiteExclusividadException e){
+            Loader.cargarEscena(ConstantesVista.ERROR);
+        }
     }
 
     public void modificarContador(){
