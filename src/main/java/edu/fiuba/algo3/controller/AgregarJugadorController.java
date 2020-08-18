@@ -40,7 +40,7 @@ public class AgregarJugadorController {
         Juego juego = JuegoController.obtenerInstancia();
         List<Jugador> jugadores = juego.getJugadores();
 
-        if (!textField.getText().isEmpty() || (textField.getText().equals(jugadores.get(0).getNombre()))){
+        if (!textField.getText().isEmpty()){
             try {
                 juego.crearJugador(textField.getText());
                 textField.clear();

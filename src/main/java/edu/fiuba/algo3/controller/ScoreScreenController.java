@@ -42,12 +42,12 @@ public class ScoreScreenController {
         jugadores.sort(new comparadorJugadores());
 
         player1.setText(jugadores.get(0).getNombre());
-        score1.setText(String.valueOf(jugadores.get(0).getPuntos()));
+        score1.setText(String.valueOf(jugadores.get(0).getPuntos()) + " Puntos");
 
         // Evitamos acceder acá si no tenemos dos jugadores.
         if (jugadores.size() != 1) {
             player2.setText(jugadores.get(1).getNombre());
-            score2.setText(String.valueOf(jugadores.get(1).getPuntos()));
+            score2.setText(String.valueOf(jugadores.get(1).getPuntos()) + " Puntos");
         } else {
             player2.setText(ELIMINAR_TEXTO);
             score2.setText(ELIMINAR_TEXTO);

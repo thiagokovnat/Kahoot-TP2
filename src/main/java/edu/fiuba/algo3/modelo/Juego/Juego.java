@@ -53,11 +53,6 @@ public class Juego {
         this.jugadores.put(nickname, jugador);
     }
 
-    public Respuesta responder(String nickname, List<Opcion> opcionesElegidas) {
-        Jugador jugador = this.jugadores.get(nickname);
-        return jugador.responder(opcionesElegidas);
-    }
-
     public void agregarPregunta(Pregunta pregunta){
         this.preguntas.add(pregunta);
     }

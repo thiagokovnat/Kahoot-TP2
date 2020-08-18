@@ -11,8 +11,7 @@ import org.junit.jupiter.api.Test;
 import java.util.ArrayList;
 import java.util.List;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertThrows;
+import static org.junit.jupiter.api.Assertions.*;
 
 
 public class JuegoTest {
@@ -43,4 +42,27 @@ public class JuegoTest {
         juego.agregarPregunta(pregunta);
         assertEquals(pregunta, juego.tomarPregunta());
     }
-}
+
+    @Test
+    public void juegoConRondasRestantesNoEstaTermiando(){
+
+        Juego juego = Juego.obtenerInstancia();
+
+        CreadorDePreguntas fabrica = new CreadorDePreguntas();
+
+        OpcionSinGrupo opcion = new OpcionSinGrupo("Verdadero");
+        try {
+            juego.crearJugador("A");
+        } catch (CantidadMaximaDeJugadoresSuperadaException e) {
+            e.printStackTrace();
+        }
+
+        Pregunta pregunta1 = fabrica.crearVerdaderoFalsoClasico("", List.of(opcion), List.of(opcion));
+        Pregunta pregunta2 = fabrica.crearVerdaderoFalsoClasico("", List.of(opcion), List.of(opcion));
+        juego.comenzarJuego();
+
+        assertFalse(juego.estaTerminado());
+
+        }
+    }
+
