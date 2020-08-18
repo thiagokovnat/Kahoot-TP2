@@ -28,37 +28,37 @@
             <Font name="Montserrat ExtraBold" size="18.0" />
          </font>
       </Label>
-      <Label fx:id="textoPregunta" alignment="CENTER" layoutX="277.0" layoutY="26.0" prefHeight="110.0" prefWidth="407.0" text="AAAAAAAAAAAAAAA" textFill="#f2db2e">
+      <Label fx:id="textoPregunta" alignment="CENTER" layoutX="277.0" layoutY="26.0" prefHeight="110.0" prefWidth="407.0" text="AAAAAAAAAAAAAAA">
          <font>
             <Font name="Montserrat ExtraBold Italic" size="16.0" />
          </font>
       </Label>
-      <Label fx:id="opcionUno" layoutX="46.0" layoutY="152.0" prefHeight="38.0" prefWidth="482.0" text="#########################################################" textFill="#d6bb33">
+      <Label fx:id="opcionUno" layoutX="46.0" layoutY="152.0" prefHeight="38.0" prefWidth="482.0" text="#########################################################" textFill="#cd7f32">
          <font>
             <Font name="Montserrat ExtraBold" size="20.0" />
          </font>
       </Label>
-      <Label fx:id="opcionDos" layoutX="46.0" layoutY="204.0" prefHeight="38.0" prefWidth="482.0" text="#########################################################" textFill="#ffff20">
+      <Label fx:id="opcionDos" layoutX="46.0" layoutY="204.0" prefHeight="38.0" prefWidth="482.0" text="#########################################################" textFill="#cd7f32">
          <font>
             <Font name="Montserrat ExtraBold" size="20.0" />
          </font>
       </Label>
-      <Label fx:id="opcionTres" layoutX="46.0" layoutY="257.0" prefHeight="38.0" prefWidth="482.0" text="#########################################################" textFill="#eee70b">
+      <Label fx:id="opcionTres" layoutX="46.0" layoutY="257.0" prefHeight="38.0" prefWidth="482.0" text="#########################################################" textFill="#cd7f32">
          <font>
             <Font name="Montserrat ExtraBold" size="20.0" />
          </font>
       </Label>
-      <Label fx:id="opcionCuatro" layoutX="46.0" layoutY="310.0" prefHeight="38.0" prefWidth="482.0" text="#########################################################" textFill="#f8f842">
+      <Label fx:id="opcionCuatro" layoutX="46.0" layoutY="310.0" prefHeight="38.0" prefWidth="482.0" text="#########################################################" textFill="#cd7f32">
          <font>
             <Font name="Montserrat ExtraBold" size="20.0" />
          </font>
       </Label>
-      <Label fx:id="opcionCinco" layoutX="46.0" layoutY="362.0" prefHeight="38.0" prefWidth="482.0" text="#########################################################" textFill="#f8f835">
+      <Label fx:id="opcionCinco" layoutX="46.0" layoutY="362.0" prefHeight="38.0" prefWidth="482.0" text="#########################################################" textFill="#cd7f32">
          <font>
             <Font name="Montserrat ExtraBold" size="20.0" />
          </font>
       </Label>
-      <Label layoutX="46.0" layoutY="414.0" prefHeight="38.0" prefWidth="482.0" text="#########################################################">
+      <Label layoutX="46.0" layoutY="414.0" prefHeight="38.0" prefWidth="482.0" text="#########################################################" textFill="#cd7f32">
          <font>
             <Font name="Montserrat ExtraBold" size="20.0" />
          </font>

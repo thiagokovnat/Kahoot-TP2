@@ -29,19 +29,19 @@
             <Font name="Montserrat ExtraBold" size="18.0" />
          </font>
       </Label>
-      <Label fx:id="textoPregunta" alignment="CENTER" layoutX="269.0" layoutY="26.0" prefHeight="110.0" prefWidth="422.0" text="AAAAAAAAAAAAAAA" textFill="#cd7f32">
+      <Label fx:id="textoPregunta" alignment="CENTER" layoutX="269.0" layoutY="26.0" prefHeight="110.0" prefWidth="422.0" text="AAAAAAAAAAAAAAA" textAlignment="CENTER">
          <font>
             <Font name="Montserrat ExtraBold Italic" size="16.0" />
          </font>
       </Label>
-      <HBox alignment="CENTER" layoutX="14.0" layoutY="178.0" prefHeight="129.0" prefWidth="779.0" spacing="20.0">
+      <HBox alignment="CENTER" layoutX="1.0" layoutY="205.0" prefHeight="129.0" prefWidth="779.0" spacing="20.0">
          <children>
             <Button fx:id="opcionUno" mnemonicParsing="false" onAction="#onOpcionUno" prefHeight="88.0" prefWidth="200.0" stylesheets="@../styles/botonmorado.css" text="Opción 1" />
             <Button fx:id="opcionDos" mnemonicParsing="false" onAction="#onOpcionDos" prefHeight="88.0" prefWidth="200.0" stylesheets="@../styles/botonmorado.css" text="Opción 2" />
             <Button fx:id="opcionTres" mnemonicParsing="false" onAction="#onOpcionTres" prefHeight="88.0" prefWidth="200.0" stylesheets="@../styles/botonmorado.css" text="Opción 3" />
          </children>
       </HBox>
-      <HBox alignment="CENTER" layoutX="1.0" layoutY="315.0" prefHeight="121.0" prefWidth="779.0" spacing="20.0">
+      <HBox alignment="CENTER" layoutX="1.0" layoutY="320.0" prefHeight="121.0" prefWidth="779.0" spacing="20.0">
          <children>
             <Button fx:id="opcionCuatro" mnemonicParsing="false" onAction="#onOpcionCuatro" prefHeight="88.0" prefWidth="200.0" stylesheets="@../styles/botonmorado.css" text="Opción 4" />
             <Button fx:id="opcionCinco" mnemonicParsing="false" onAction="#onOpcionCinco" prefHeight="88.0" prefWidth="200.0" stylesheets="@../styles/botonmorado.css" text="Opción 5" />
