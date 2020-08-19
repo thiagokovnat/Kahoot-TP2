@@ -134,18 +134,26 @@ No se solicita para esta entrega.
 
 \subsection{Como se contesta una pregunta}
 
-Una vez creada una Pregunta usando varios objetos Opcion, y creado uno o varios objetos Jugador, estos últimos generan cada uno un objeto Respuesta (mediante el método responder) el cual contiene una referencia al propio Jugador y una lista de (algunos o todos) los objetos Opcion usados en Pregunta. Esta lista corresponde a las opciones que el correspondiente Jugador eligió.
+Una vez que el Jugador selecciona las opciones que desea, se le pide al Jugador que cree una instancia de Respuesta que contenga dichas opciones junto a una referencia al Jugador quien haya instanciado esa respuesta. Luego, esa respuesta es enviada por parametro a la instancia de Pregunta a traves del método puntuarRespuesta.
 
-Después de eso se le da a Pregunta, mediante el método puntuarRespuesta, una lista compuesta de las Respuestas creadas por cada uno de los objetos Jugador. Entonces, puntuarRespuesta hace lo siguiente:
+Luego, la Pregunta hace lo siguiente:
+
 \begin{enumerate}
-\item Itera por todas las Respuestas de la lista, y delega la verificación de las mismas, así como la correspondiente asignación de puntaje para cada Jugador, al objeto Estado (asociado a Pregunta), que a su vez se lo delega a TipoDePregunta, que a su vez se lo delega a Modalidad.
-\item Por último, Modalidad se encarga de comparar los objetos Opcion de la pregunta con los objetos Opcion de la Respuesta, y asigna los puntos correspondientes al Jugador asociado a esa respuesta, usando el método puntuarRespuesta.
+\item Delega la puntuacion de la respuesta a TipoDePregunta, que a su vez lo delega a la Modalidad(Clasico, Parcial, Penalidad).
+\item Modalidad le envia a Respuesta la lista de las opciones correctas y esta devuelve la cantidad de opciones correctas e incorrectas. Modalidad se encarga de darle un puntaje a Respuesta dadas dichas cantidades. El método con el cual Modalidad puntua a la respuesta es exclusivo de cada tipo de Modalidad.
+\item Una vez que se tiene la o las respuestas puntuadas, Pregunta se las envía a su Estado(Clasica, Exclusiva o Exclusiva Doble) la cual se encarga de puntuar al Jugador dado los puntajes de las respuestas de los jugadores.
 \end{enumerate}
 
 El hecho de que cada objeto Pregunta y TipoDePregunta tenga objetos asociados que definan el comportamiento del mismo (Pregunta tiene Estado y TipoDePregunta, mientras que TipoDePregunta tiene Modalidad), corresponde al patrón de diseño Strategy.
 
+\subsection{Manejo de Turnos}
+
+El modelo cuenta con una clase Ronda, la cual se encarga del manejo de turnos para una pregunta en particular. Cuando se inicia el juego se instancia una Ronda por cada pregunta que se haya añadido al juego. La Ronda se encarga de mandar a puntuar las respuestas, cambiar de turno y de informar si ya no hay jugadores restantes para jugar. Una vez que se indica que no hay jugadores restantes, se mandan a puntuar las respuestas y se cambia de Ronda.
+
 \subsection{Conexión entre el Controlador y el Modelo}
 
-TO DO
+El controlador se encarga de conectar la Vista con el Modelo. Es decir, si se tiene una Vista que muestra los botones que representan las opciones, el controlador se encargara de recolectar las opciones seleccionadas mediante los clicks del usuario con las cuales se crea la instancia de Respuesta del jugador actual y, una vez que hayan respondido todos los jugadores, mandar a puntuar dichas respuestas. Tambien se encarga de modificar la vista teniendo en cuenta las limitaciones del modelo. Por ejemplo, si un jugador no tiene mas multiplicadores disponibles, el controlador se encarga de modificar la vista para que el boton que activa los multiplicadores este desactivado.
+
+
 
 \end{document}
