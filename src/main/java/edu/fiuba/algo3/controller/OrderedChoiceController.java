@@ -28,7 +28,7 @@ public class OrderedChoiceController extends GeneralPreguntaController{
     Button opcionCinco;
 
     private List<Button> listaBotones = new ArrayList<>();
-    private LinkedList<Opcion> ordenDeOpciones = new LinkedList<>();
+
     private int cantidadOpciones = 0;
     private static String seleccionado = "-fx-background-color: #801336; -fx-text-fill: WHITE";
     private static String noSeleccionado = "-fx-background-color: #5a441b; -fx-text-fill: BLACK";
@@ -61,11 +61,11 @@ public class OrderedChoiceController extends GeneralPreguntaController{
     public void onOpcionUno(){
 
         OpcionSinGrupo opcion = new OpcionSinGrupo(opcionUno.getText());
-        if (ordenDeOpciones.contains(opcion)){
-            ordenDeOpciones.remove(opcion);
+        if (opcionesSeleccionadas.contains(opcion)){
+            opcionesSeleccionadas.remove(opcionesSeleccionadas.indexOf(opcion));
             opcionUno.setStyle(seleccionado);
         } else {
-            ordenDeOpciones.addLast(opcion);
+            opcionesSeleccionadas.add(opcion);
             opcionUno.setStyle(noSeleccionado);
         }
     }
@@ -73,11 +73,11 @@ public class OrderedChoiceController extends GeneralPreguntaController{
     public void onOpcionDos(){
 
         OpcionSinGrupo opcion = new OpcionSinGrupo(opcionDos.getText());
-        if (ordenDeOpciones.contains(opcion)){
-            ordenDeOpciones.remove(opcion);
-            opcionDos.setStyle(seleccionado);
+        if (opcionesSeleccionadas.contains(opcion)){
+            opcionesSeleccionadas.remove(opcionesSeleccionadas.indexOf(opcion));
+            opcionUno.setStyle(seleccionado);
         } else {
-            ordenDeOpciones.addLast(opcion);
+            opcionesSeleccionadas.add(opcion);
             opcionDos.setStyle(noSeleccionado);
         }
     }
@@ -85,11 +85,11 @@ public class OrderedChoiceController extends GeneralPreguntaController{
     public void onOpcionTres(){
 
         OpcionSinGrupo opcion = new OpcionSinGrupo(opcionTres.getText());
-        if (ordenDeOpciones.contains(opcion)){
-            ordenDeOpciones.remove(opcion);
-            opcionTres.setStyle(seleccionado);
+        if (opcionesSeleccionadas.contains(opcion)){
+            opcionesSeleccionadas.remove(opcionesSeleccionadas.indexOf(opcion));
+            opcionUno.setStyle(seleccionado);
         } else {
-            ordenDeOpciones.addLast(opcion);
+            opcionesSeleccionadas.add(opcion);
             opcionTres.setStyle(noSeleccionado);
         }
     }
@@ -97,11 +97,11 @@ public class OrderedChoiceController extends GeneralPreguntaController{
     public void onOpcionCuatro(){
 
         OpcionSinGrupo opcion = new OpcionSinGrupo(opcionCuatro.getText());
-        if (ordenDeOpciones.contains(opcion)){
-            ordenDeOpciones.remove(opcion);
-            opcionCuatro.setStyle(seleccionado);
+        if (opcionesSeleccionadas.contains(opcion)){
+            opcionesSeleccionadas.remove(opcionesSeleccionadas.indexOf(opcion));
+            opcionUno.setStyle(seleccionado);
         } else {
-            ordenDeOpciones.addLast(opcion);
+            opcionesSeleccionadas.add(opcion);
             opcionCuatro.setStyle(noSeleccionado);
         }
     }
@@ -109,11 +109,11 @@ public class OrderedChoiceController extends GeneralPreguntaController{
     public void onOpcionCinco(){
 
         OpcionSinGrupo opcion = new OpcionSinGrupo(opcionCinco.getText());
-        if (ordenDeOpciones.contains(opcion)){
-            ordenDeOpciones.remove(opcion);
-            opcionCinco.setStyle(seleccionado);
+        if (opcionesSeleccionadas.contains(opcion)){
+            opcionesSeleccionadas.remove(opcionesSeleccionadas.indexOf(opcion));
+            opcionUno.setStyle(seleccionado);
         } else {
-            ordenDeOpciones.addLast(opcion);
+            opcionesSeleccionadas.add(opcion);
             opcionCinco.setStyle(noSeleccionado);
         }
     }

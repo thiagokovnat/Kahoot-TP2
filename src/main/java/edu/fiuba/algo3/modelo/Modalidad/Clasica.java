@@ -36,6 +36,7 @@ public class Clasica implements ModalidadVerdaderoFalso, ModalidadMultipleChoice
 
         if(respuesta.opcionesEnOrden(opcionesCorrectas))
             respuesta.setPuntuacion(1);
+
     }
 
     @Override

@@ -33,7 +33,6 @@ public class Ronda {
     public void finalizar(){
 
         this.pregunta.puntuarRespuestas(respuestas);
-
     }
 
     public void responder(List<Opcion> opcionesElegidas ){
