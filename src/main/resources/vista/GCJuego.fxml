@@ -6,6 +6,7 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="511.0" prefWidth="780.0" style="-fx-background-color: BLACK;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.fiuba.algo3.controller.GroupChoiceController">
    <children>
@@ -28,37 +29,37 @@
             <Font name="Montserrat ExtraBold" size="18.0" />
          </font>
       </Label>
-      <Label fx:id="textoPregunta" alignment="CENTER" layoutX="277.0" layoutY="26.0" prefHeight="110.0" prefWidth="407.0" text="AAAAAAAAAAAAAAA">
+      <Label fx:id="textoPregunta" alignment="CENTER" layoutX="307.0" layoutY="43.0" prefHeight="93.0" prefWidth="377.0" text="AAAAAAAAAAAAAAA" textAlignment="CENTER">
          <font>
             <Font name="Montserrat ExtraBold Italic" size="16.0" />
          </font>
       </Label>
-      <Label fx:id="opcionUno" layoutX="46.0" layoutY="152.0" prefHeight="38.0" prefWidth="482.0" text="#########################################################" textFill="#cd7f32">
+      <Label fx:id="opcionUno" layoutX="46.0" layoutY="152.0" prefHeight="38.0" prefWidth="482.0" text="#########################################################" textFill="#f5de34">
          <font>
             <Font name="Montserrat ExtraBold" size="20.0" />
          </font>
       </Label>
-      <Label fx:id="opcionDos" layoutX="46.0" layoutY="204.0" prefHeight="38.0" prefWidth="482.0" text="#########################################################" textFill="#cd7f32">
+      <Label fx:id="opcionDos" layoutX="46.0" layoutY="204.0" prefHeight="38.0" prefWidth="482.0" text="#########################################################" textFill="#f5de34">
          <font>
             <Font name="Montserrat ExtraBold" size="20.0" />
          </font>
       </Label>
-      <Label fx:id="opcionTres" layoutX="46.0" layoutY="257.0" prefHeight="38.0" prefWidth="482.0" text="#########################################################" textFill="#cd7f32">
+      <Label fx:id="opcionTres" layoutX="46.0" layoutY="257.0" prefHeight="38.0" prefWidth="482.0" text="#########################################################" textFill="#f5de34">
          <font>
             <Font name="Montserrat ExtraBold" size="20.0" />
          </font>
       </Label>
-      <Label fx:id="opcionCuatro" layoutX="46.0" layoutY="310.0" prefHeight="38.0" prefWidth="482.0" text="#########################################################" textFill="#cd7f32">
+      <Label fx:id="opcionCuatro" layoutX="46.0" layoutY="310.0" prefHeight="38.0" prefWidth="482.0" text="#########################################################" textFill="#f5de34">
          <font>
             <Font name="Montserrat ExtraBold" size="20.0" />
          </font>
       </Label>
-      <Label fx:id="opcionCinco" layoutX="46.0" layoutY="362.0" prefHeight="38.0" prefWidth="482.0" text="#########################################################" textFill="#cd7f32">
+      <Label fx:id="opcionCinco" layoutX="46.0" layoutY="362.0" prefHeight="38.0" prefWidth="482.0" text="#########################################################" textFill="#f5de34">
          <font>
             <Font name="Montserrat ExtraBold" size="20.0" />
          </font>
       </Label>
-      <Label layoutX="46.0" layoutY="414.0" prefHeight="38.0" prefWidth="482.0" text="#########################################################" textFill="#cd7f32">
+      <Label fx:id="opcionSeis" layoutX="46.0" layoutY="414.0" prefHeight="38.0" prefWidth="482.0" text="#########################################################" textFill="#f5de34">
          <font>
             <Font name="Montserrat ExtraBold" size="20.0" />
          </font>
@@ -73,7 +74,8 @@
       <Button fx:id="opcionCuatroGrupoDos" layoutX="655.0" layoutY="310.0" mnemonicParsing="false" onAction="#onOpcionCuatroGrupoDos" prefHeight="25.0" prefWidth="113.0" stylesheets="@../styles/botonmorado.css" text="2" />
       <Button fx:id="opcionCincoGrupoUno" layoutX="536.0" layoutY="362.0" mnemonicParsing="false" onAction="#onOpcionCincoGrupoUno" prefHeight="0.0" prefWidth="113.0" stylesheets="@../styles/botonmorado.css" text="1" />
       <Button fx:id="opcionCincoGrupoDos" layoutX="655.0" layoutY="362.0" mnemonicParsing="false" onAction="#onOpcionCincoGrupoDos" prefHeight="25.0" prefWidth="113.0" stylesheets="@../styles/botonmorado.css" text="2" />
-      <Button layoutX="536.0" layoutY="414.0" mnemonicParsing="false" prefHeight="0.0" prefWidth="113.0" stylesheets="@../styles/botonmorado.css" text="1" />
-      <Button layoutX="655.0" layoutY="414.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="113.0" stylesheets="@../styles/botonmorado.css" text="2" />
+      <Button fx:id="opcionSeisGrupoUno" layoutX="536.0" layoutY="414.0" mnemonicParsing="false" onAction="#onOpcionSeisGrupoUno" prefHeight="0.0" prefWidth="113.0" stylesheets="@../styles/botonmorado.css" text="1" />
+      <Button fx:id="opcionSeisGrupoDos" layoutX="655.0" layoutY="414.0" mnemonicParsing="false" onAction="#onOpcionSeisGrupoDos" prefHeight="25.0" prefWidth="113.0" stylesheets="@../styles/botonmorado.css" text="2" />
+      <Text layoutX="593.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Group Choice" wrappingWidth="113.0" />
    </children>
 </AnchorPane>

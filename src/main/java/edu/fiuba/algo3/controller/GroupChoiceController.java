@@ -14,13 +14,13 @@ import java.util.List;
 public class GroupChoiceController extends GeneralPreguntaController{
 
     @FXML
-    Label opcionUno, opcionDos, opcionTres, opcionCuatro, opcionCinco;
+    Label opcionUno, opcionDos, opcionTres, opcionCuatro, opcionCinco, opcionSeis;
 
     @FXML
     Button opcionUnoGrupoUno, opcionUnoGrupoDos, opcionDosGrupoUno, opcionDosGrupoDos, opcionTresGrupoUno, opcionTresGrupoDos;
 
     @FXML
-    Button opcionCuatroGrupoUno, opcionCuatroGrupoDos, opcionCincoGrupoUno, opcionCincoGrupoDos;
+    Button opcionCuatroGrupoUno, opcionCuatroGrupoDos, opcionCincoGrupoUno, opcionCincoGrupoDos, opcionSeisGrupoUno, opcionSeisGrupoDos;
 
     public void setUp(){
 
@@ -41,10 +41,12 @@ public class GroupChoiceController extends GeneralPreguntaController{
         botones.add(opcionCuatroGrupoDos);
         botones.add(opcionCincoGrupoUno);
         botones.add(opcionCincoGrupoDos);
+        botones.add(opcionSeisGrupoUno);
+        botones.add(opcionSeisGrupoDos);
 
         List<Opcion> opcionesPregunta = rondaActual.getOpciones();
 
-        for(int i = (2 * opcionesPregunta.size()); i < 2 * Constants.CANTIDAD_MAXIMA_OPCIONES; i++)
+        for(int i = (2 * opcionesPregunta.size()); i < 2 * Constants.CANTIDAD_MAXIMA_OPCIONES_GROUP_CHOICE; i++)
             botones.get(i).setVisible(false);
     }
 
@@ -56,6 +58,7 @@ public class GroupChoiceController extends GeneralPreguntaController{
         labels.add(opcionTres);
         labels.add(opcionCuatro);
         labels.add(opcionCinco);
+        labels.add(opcionSeis);
 
         List<Opcion> opcionesPregunta = rondaActual.getOpciones();
         int cantidadOpciones = 0;
@@ -65,7 +68,7 @@ public class GroupChoiceController extends GeneralPreguntaController{
             cantidadOpciones++;
         }
 
-        for (int j = cantidadOpciones; j < Constants.CANTIDAD_MAXIMA_OPCIONES; j++) {
+        for (int j = cantidadOpciones; j < Constants.CANTIDAD_MAXIMA_OPCIONES_GROUP_CHOICE; j++) {
             labels.get(j).setVisible(false);
         }
 
@@ -169,5 +172,25 @@ public class GroupChoiceController extends GeneralPreguntaController{
         opcionesSeleccionadas.add(opcion);
         opcionCincoGrupoUno.setDisable(true);
         opcionCincoGrupoDos.setDisable(true);
+    }
+
+    public void onOpcionSeisGrupoUno(){
+
+        OpcionConGrupo opcion = new OpcionConGrupo(opcionSeis.getText());
+        opcion.setGrupo(opcionSeisGrupoUno.getText());
+
+        opcionesSeleccionadas.add(opcion);
+        opcionSeisGrupoUno.setDisable(true);
+        opcionSeisGrupoDos.setDisable(true);
+    }
+
+    public void onOpcionSeisGrupoDos(){
+
+        OpcionConGrupo opcion = new OpcionConGrupo(opcionSeis.getText());
+        opcion.setGrupo(opcionSeisGrupoDos.getText());
+
+        opcionesSeleccionadas.add(opcion);
+        opcionSeisGrupoUno.setDisable(true);
+        opcionSeisGrupoDos.setDisable(true);
     }
 }

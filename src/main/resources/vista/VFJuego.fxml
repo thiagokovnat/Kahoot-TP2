@@ -7,6 +7,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="511.0" prefWidth="780.0" style="-fx-background-color: BLACK;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.fiuba.algo3.controller.VerdaderoFalsoController">
    <children>
@@ -29,7 +30,7 @@
             <Font name="Montserrat ExtraBold" size="18.0" />
          </font>
       </Label>
-      <Label fx:id="textoPregunta" alignment="CENTER" layoutX="50.0" layoutY="152.0" prefHeight="146.0" prefWidth="689.0" text="AAAAAAAAAAAAAAA" textFill="#cd7f32">
+      <Label fx:id="textoPregunta" alignment="CENTER" layoutX="50.0" layoutY="152.0" prefHeight="146.0" prefWidth="689.0" text="AAAAAAAAAAAAAAA" textFill="#f5de34">
          <font>
             <Font name="Montserrat ExtraBold Italic" size="16.0" />
          </font></Label>
@@ -39,5 +40,6 @@
             <Button fx:id="opcionFalso" mnemonicParsing="false" onAction="#onOpcionFalso" prefHeight="56.0" prefWidth="211.0" stylesheets="@../styles/botonrojo.css" text="Falso" />
          </children>
       </HBox>
+      <Text layoutX="569.0" layoutY="39.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Verdadero Falso" wrappingWidth="121.7294921875" />
    </children>
 </AnchorPane>

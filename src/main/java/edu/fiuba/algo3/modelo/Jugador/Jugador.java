@@ -19,6 +19,7 @@ public class Jugador {
     private int puntuacion;
     private Multiplicador multiplicador;
     private List<Multiplicador> multiplicadoresRestantes = new ArrayList<>();
+    private int usosExclusividad = 0;
 
     public Jugador(String nickname){
         this.nickname = nickname;
@@ -79,5 +80,13 @@ public class Jugador {
         for (int i = 0; i < Constants.CANTIDAD_MULTIPLICADOR_TRIPLE; i++) {
             multiplicadoresRestantes.add(new MultiplicadorX3());
         }
+    }
+
+    public void sumarUsoExclusividad(){
+        this.usosExclusividad += 1;
+    }
+
+    public boolean puedeUsarExclusividad() {
+        return usosExclusividad < Constants.USOS_EXCLUSIVIDAD;
     }
 }

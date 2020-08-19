@@ -68,11 +68,15 @@ public class Ronda {
     }
 
     public boolean admiteExclusividad(){
-        return (this.pregunta.admiteExclusividad() && (this.jugadores.size() == 2));
+        return (this.pregunta.admiteExclusividad() && (this.jugadores.size() == 2) && this.jugadorActual.puedeUsarExclusividad());
     }
 
     public void setExclusividad() throws PreguntaNoAdmiteExclusividadException {
-        this.pregunta.setExclusividad();
+
+        if(admiteExclusividad()){
+            this.pregunta.setExclusividad();
+            this.jugadorActual.sumarUsoExclusividad();
+        }
     }
 
     public String getTextoPregunta(){

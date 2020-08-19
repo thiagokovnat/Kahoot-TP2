@@ -15,12 +15,7 @@
                   <Image url="@../images/fondo.png" />
                </image>
             </ImageView>
-            <Button layoutX="21.0" layoutY="452.0" mnemonicParsing="false" onAction="#agregarPreguntas" prefHeight="28.0" prefWidth="185.0" stylesheets="@../styles/botonvioleta.css" text="Añadir preguntas">
-               <font>
-                  <Font size="21.0" />
-               </font>
-            </Button>
-            <Button layoutX="21.0" layoutY="411.0" mnemonicParsing="false" onAction="#comenzarJuego" prefHeight="28.0" prefWidth="185.0" stylesheets="@../styles/botonvioleta.css" text="Comenzar">
+            <Button layoutX="22.0" layoutY="446.0" mnemonicParsing="false" onAction="#comenzarJuego" prefHeight="28.0" prefWidth="185.0" stylesheets="@../styles/botonvioleta.css" text="Comenzar">
                <font>
                   <Font size="33.0" />
                </font>
