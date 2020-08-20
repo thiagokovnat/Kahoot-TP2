@@ -4,7 +4,9 @@
 
 # TP2 Algoritmos 3: Kahoot
 
-Trabajo Práctico número 2 de la materia Algoritmos y Programación III de FIUBA. Recreacion del juego de preguntas Kahoot. Incluye preguntas Verdadero/Falso, Multiple Choice, Ordered Choice y Group Choice junto a distintos multiplicadores y bonificaciones
+Trabajo Práctico número 2 de la materia Algoritmos y Programación III de FIUBA.
+
+Recreacion del juego de preguntas Kahoot. Incluye preguntas Verdadero/Falso, Multiple Choice, Ordered Choice y Group Choice junto a distintos multiplicadores y bonificaciones
 
 ## Grupo 
 
