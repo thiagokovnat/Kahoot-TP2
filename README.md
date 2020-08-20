@@ -16,6 +16,12 @@ Trabajo Práctico número 2 de la materia Algoritmos y Programación III de FIUB
 
 Corrector: **Sebastián Blázquez**
 
+<img src="https://github.com/thiagokovnat/Kahoot-TP2/blob/master/screenshots/mainScreen.png?raw=true">
+
+
+<img src="https://github.com/thiagokovnat/Kahoot-TP2/blob/master/screenshots/pregunta.png?raw=true">
+
+
 ### Pre-requisitos
 
 Listado de software/herramientas necesarias para el proyecto
